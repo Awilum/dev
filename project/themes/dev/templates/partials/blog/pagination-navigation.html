@@ -1,0 +1,11 @@
+<div class="text-center">
+    {% if (page - 1) > 0 %}
+        <a href="?page={{ page - 1 }}{% if tag %}&tag={{ tag }}{% endif %}">&larr;</a>
+    {% endif %}
+    {% if blogPostsPages is not null and blogPostsPages > 1 %}
+        {{ page }} / {{ blogPostsPages }}
+    {% endif %}
+    {% if (page) < blogPostsPages %}
+        <a href="?page={{ page + 1 }}{% if tag %}&tag={{ tag|trim }}{% endif %}">&rarr;</a>
+    {% endif %}
+</div>

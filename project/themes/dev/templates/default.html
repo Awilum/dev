@@ -1,0 +1,5 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+    {{ entry.content|raw }}
+{% endblock %}

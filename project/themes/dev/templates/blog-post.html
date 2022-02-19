@@ -1,0 +1,19 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+<h2 class="text-4xl font-bold">{{ entry.title }}</h2>
+<div class="blog-post">
+    {{ entry.content|shortcode|markdown|raw}}
+    <p>
+        <strong>Date:</strong> {{ entry.published_at|date(flextype.registry.get('flextype.date_display_format')) }}
+        <strong class="ml-2">Tags:</strong>
+        {% if entry.tags is not empty %}
+            {% for tag in entry.tags|split(',') %}
+            <a href="{{ url() }}/blog?tag={{ tag|trim }}">{{ tag|trim }}</a>{% if loop.last %}{% else %},{% endif %}
+            {% endfor %}
+        {% endif %}
+        <strong class="ml-2">Views:</strong>
+        {{ pageViewCounter() }}
+    </p>
+</div>
+{% endblock %}

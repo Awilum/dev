@@ -1,0 +1,87 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+
+    {% set blogID = flextype.registry.get('themes.dev.settings.blog_id') %}
+    {% set blogCollectionCacheID = strings('blog-collection-' ~ blogID).hash().toString() %}
+    {% if flextype.cache.has(blogCollectionCacheID) %}
+        {% set blog = flextype.cache.get(blogCollectionCacheID) %}
+    {% else %}
+        {% set blog = flextype.entries.fetch(blogID, {'collection': true}).exceptFromCollection(['content']) %}
+        {% do flextype.cache.set(blogCollectionCacheID, blog) %}
+    {% endif %}
+
+    {% set blogPostData = flextype.entries.fetch(blogID) %}
+    {% if blogPostData.posts_limit == 0 %}{% set blogPostsLimit = 5 %}{% else %}{% set blogPostsLimit = blogPostData.posts_limit %}{% endif %}
+    {% if blogPostData.posts_recent_limit == 0 %}{% set blogPostsRecentLimit = 5 %}{% else %}{% set blogPostsRecentLimit = blogPostData.posts_recent_limit %}{% endif %}
+    {% if blogPostData.posts_random_limit == 0 %}{% set blogPostsRandomLimit = 5 %}{% else %}{% set blogPostsRandomLimit = blogPostData.posts_random_limit %}{% endif %}
+
+    {% set blogPostsLength = blog.copy().where('visibility', 'nin', ['draft', 'hidden']).count() %}
+    {% set blogPostsPages = (blogPostsLength / blogPostsLimit)|round(0, 'ceil') %}
+
+    {% if page < 1 %}
+        {% set page = 1 %}
+    {% elseif page > blogPostsPages %}
+        {% set page = blogPostsPages %}
+    {% endif %}
+
+    {% set blogPostsOffset = (page - 1) * blogPostsLimit %}
+    {% if blogPostsOffset < 0 %}{% set blogPostsOffset = 0 %}{% endif %}
+
+    {% set blogPosts = blog.copy()
+                            .where('visibility', 'nin', ['draft', 'hidden'])
+                            .sortBy('published_at', 'DESC')
+                            .slice(blogPostsOffset, blogPostsLimit) %}
+
+    <div class="p-6 bg-slate-50 mb-4 border-2 border-black">
+        <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+            Hi there, I'm Sergey Romanenko
+            <a href="{{ url() }}/about" class="ml-2">
+                [ABOUT]
+            </a>
+        </h3>
+        <div class="flex">
+            <div class="w-1/12">
+                <img src="https://avatars.githubusercontent.com/u/477114?v=4" alt="" class="rounded-full border-2 border-black w-20">
+            </div>
+            <div class="w-11/12 pl-8">
+                I'm a developer with strong will for learning and researching new technologies and architectural solutions. I like creating and using specialised tools for making development processes as efficient as possible. I have experience with big projects and big development teams.
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="w-6/12 p-6 bg-slate-50 mr-2 border-2 border-black">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+                RECENT BLOG POSTS
+            </h3>
+            {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/recent-posts.html' %}    
+        </div>
+        <div class="w-6/12 p-6 bg-slate-50 ml-2 border-2 border-black">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+                OPENSOURCE CONTRIBUTIONS
+                <a href="#" class="ml-2">
+                    [GITHUB]
+                </a>
+            </h3>
+            <p class="mb-0"><strong>Lines of code added:</strong> <span class="github-lines-added"></span></p>
+            <p class="mb-0"><strong>Lines of code deleted:</strong> <span class="github-lines-deleted"></span></p>
+            <p class="mb-0"><strong>Repositories created:</strong> 188</p> 
+            <!-- user:Awilum user:flextype user:flextype-components user:glowyphp user:glowyjs user:flextype-plugins user:flextype-themes user:thermage user:faker-javascript user:dart-packages user:wp-extends archived:false -->
+            <p class="mb-0"><strong>Repositories contributed:</strong> <span class="github-repositories-contributed-to"></span></p>
+            <p class="mb-0"><strong>Commits:</strong> <span class="github-commits"></span></p>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="w-full p-6 bg-slate-50 mt-4 border-2 border-black">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black">WORK AND TECHNOLOGIES EXPERIENCES (2005 - PRESENT)</h3>
+            <div class="flex">
+                <div class="w-6/12 pr-2">
+                    Full Stack Web Development and IT Consulting. Open-Source Development. Software Architect and Project Management. Frontend and backend automation. Frontend and backend architecture development. Projects documentation development. Projects localization. Localization Testing. API Testing. Unit Testing. Manual Testing. Peromance Testing. UI/UX Testing. Web interfaces standardisation. Modular development. Emails development.
+                </div>
+                <div class="w-6/12 border-l border-black pl-2">
+                    PHP JAVASCRIPT HTML CSS LESS SCSS DART NODEJS DELPHI PASCAL OBJECT PASCAL C/C++ GRUNTJS GULPJS BOOTSTRAP TAILWIND ZURB FOUNDATION SLIMPHP SYMFONY LARAVEL CODEIGNITER SUBVERSION MERCURIAL GIT WORDPRESS SMF PUNBB PHPBB FLARUM JIRA
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

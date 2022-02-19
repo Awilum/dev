@@ -1,0 +1,37 @@
+{
+    "name": "flextype-plugins/site",
+    "type": "project",
+    "description": "Site plugin to display entries content on the website frontend.",
+    "keywords": ["site", "plugin", "flextype", "php", "html"],
+    "homepage": "https://github.com/flextype-plugins/site",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Romanenko",
+            "email": "sergey.romanenko@flextype.org",
+            "homepage": "https://flextype.org"
+        }
+    ],
+    "support": {
+      "issues": "https://github.com/flextype-plugins/site/issues"
+    },
+    "require": {
+        "php": ">=7.4.0",
+        "ext-json": "*",
+        "middlewares/trailing-slash": "~1.1.0",
+        "flextype-components/arrays" : "3.0.1",
+        "flextype-components/filesystem": "2.0.8"
+    },
+    "config": {
+        "apcu-autoloader": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.0"
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "app"
+        ]
+    }
+}

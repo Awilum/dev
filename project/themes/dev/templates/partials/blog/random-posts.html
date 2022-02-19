@@ -1,0 +1,8 @@
+<h3 class="text-left mb-2">Random Posts</h3>
+<ul class="pl-0 list-unstyled">
+{% for post in blog.copy()
+                    .where('visibility', 'nin', ['draft', 'hidden'])
+                    .random(blogPostsRandomLimit) %}
+        <li class="mb-1"><a href="{{ url() }}/{{ post.id }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="{{ flextype.registry.get('flextype.settings.locale') }}">
+<head>
+    {% block head %}
+        <meta charset="{{ flextype.registry.get('flextype.settings.charset')|lower }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% if entry.description %}{{ entry.description }}{% else %}{{ flextype.registry.get('plugins.site.settings.description') }}{% endif %}">
+        <meta name="keywords" content="{% if entry.keywords %}{{ entry.keywords }}{% else %}{{ flextype.registry.get('plugins.site.settings.keywords') }}{% endif %}">
+        <meta name="robots" content="{% if entry.robots %}{{ entry.robots }}{% else %}{{ flextype.registry.get('plugins.site.settings.robots') }}{% endif %}">
+        <meta name="generator" content="Powered by Flextype"/>
+
+        {% do
+            flextype.emitter.emit('onThemeMeta') %}
+
+        <title>
+            {% if entry.title %}{{ entry.title|e('html') }}
+                |
+            {% endif %}{{ flextype.registry.get('plugins.site.settings.title')|e('html') }}</title>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/dark.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+        {% set theme = flextype.registry.get('plugins.site.settings.theme') %}
+        {% do flextype.registry.set('assets.site.css.dev', 'project/themes/' ~ theme ~ '/assets/dist/css/dev.min.css') %}
+        {% do flextype.registry.set('assets.site.css.styles', 'project/themes/' ~ theme ~ '/assets/src/css/styles.css') %}
+
+        {% if flextype.registry.has('assets.site.css') %}
+            {% for css in flextype.registry.get('assets.site.css') %}
+                <link href="{{ url() }}/{{ css }}" rel="stylesheet">
+            {% endfor %}
+        {% endif %}
+
+        {% do
+            flextype.emitter.emit('onThemeHeader') %}
+    {% endblock %}
+</head>
+<body class="antialiased text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
+    <header class="container mx-auto max-w-[1000px] my-10">
+        <h1 class="text-6xl font-bold text-center"><a href="{{ url() }}">AWILUM.DEV</a></h1>
+        <nav class="text-center mt-4">
+            {% for item in flextype.entries.fetch('', {'collection': true}).sortBy('menu_item_order', 'ASC').all() %}
+                {% if item.menu_item_title %}
+                    <a class="font-bold px-2 text-xl uppercase {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
+                {% endif %}
+            {% endfor %} 
+        </nav>   
+    </header>
+
+    <main role="main" class="container mx-auto max-w-[1100px]">
+        <section>
+            {% block content %}{% endblock %}
+        </section>
+        <footer class="p-6 text-sm text-center">
+            Copyright © Sergey Romanenko
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </main>
+    {% if flextype.registry.has('assets.site.js') %}
+        {% for js in flextype.registry.get('assets.site.js') %}
+            {% if js %}
+                <script type="text/javascript" src="{{ url() }}/{{ js }}"></script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <script>
+        hljs.highlightAll();
+
+            var formatter = new Intl.NumberFormat('en-US');
+            fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
+            .then(response => response.json())
+            .then(function(data) { 
+                document.querySelector(".github-commits").innerHTML = formatter.format(data.computed.commits);
+                document.querySelector(".github-lines-added").innerHTML = formatter.format(data.plugins.lines.added);
+                document.querySelector(".github-lines-deleted").innerHTML = formatter.format(data.plugins.lines.deleted);
+                //document.querySelector(".github-repositories").innerHTML = formatter.format(data.user.repositories.totalCount);
+                document.querySelector(".github-repositories-contributed-to").innerHTML = formatter.format(data.user.repositoriesContributedTo.totalCount);
+                document.querySelector(".github-favorite-license").innerHTML = data.computed.licenses.favorite[0];
+                document.querySelector(".github-languages-used").innerHTML = Object.keys(data.plugins.languages.stats);
+                document.querySelector(".github-languages-used").innerHTML = document.querySelector(".github-languages-used").innerHTML.replaceAll(',', ', ').replaceAll(', Hack', '');
+            });
+    
+    </script>
+    {% do
+        flextype.emitter.emit('onThemeTail') %}
+    </body>
+</html>

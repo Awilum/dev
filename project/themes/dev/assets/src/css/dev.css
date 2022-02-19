@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body {
+        /*font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
+        font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    h1,h2,h3,h4,h5 {
+        @apply mb-8;
+    }
+
+    h1 {
+        @apply text-5xl;
+    }
+
+    h2 {
+        @apply text-3xl pt-6;
+    }
+
+    h3 {
+        @apply text-2xl pt-6;
+    }
+    
+    p {
+        @apply mb-6;
+    }
+
+    a {
+        @apply underline;
+    }
+
+    a.active,
+    a:hover {
+        @apply text-red-500;
+    }
+
+    h1 > a {
+        @apply no-underline;
+    }
+
+    ul > li {
+        @apply list-disc ml-6;
+    }
+
+    strong {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+    code {
+        font-size: 0.8em;
+        opacity: .9;
+        @apply bg-slate-900 text-white px-1;
+    }
+    pre > code.hljs {
+        font-size: 0.8em;
+        opacity: .9;
+        @apply p-6 bg-slate-900 mr-2 mb-10;
+    }
+}

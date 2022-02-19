@@ -1,0 +1,239 @@
+timezone: UTC
+charset: UTF-8
+locale: en_US
+url: ''
+date_format: 'd-m-Y H:i'
+date_display_format: 'd-m-Y H:i'
+errors:
+  display: false
+entries:
+  extension: md
+  fields:
+    media:
+      files:
+        fetch: { enabled: true, result: toObject }
+      folders:
+        fetch: { enabled: true, result: toObject }
+    registry:
+      get:
+        enabled: true
+    entries:
+      fetch:
+        enabled: true
+        result: toObject
+    slug:
+      enabled: true
+    published_at:
+      enabled: true
+    published_by:
+      enabled: true
+    modified_at:
+      enabled: true
+    created_at:
+      enabled: true
+    created_by:
+      enabled: true
+    routable:
+      enabled: true
+    parsers:
+      enabled: true
+    visibility:
+      enabled: true
+    uuid:
+      enabled: true
+    id:
+      enabled: true
+cache:
+  enabled: false
+  driver: files
+  drivers:
+    apcu: {  }
+    cassandra:
+      host: 127.0.0.1
+      port: 9042
+      timeout: 2
+      username: ''
+      password: ''
+      ssl_enabled: false
+      ssl_verify: false
+      default_ttl: 900
+    cookie:
+      aware_of_untrustable_data: false
+      limited_memory_by_object: 4096
+      default_ttl: 900
+    couchbase:
+      host: 127.0.0.1
+      port: 8091
+      username: ''
+      password: ''
+      bucket_name: default
+      default_ttl: 900
+    couchdb:
+      database: flextype
+      path: /
+      host: 127.0.0.1
+      port: 8091
+      username: ''
+      password: ''
+      bucket_name: default
+      ssl: false
+      timeout: 10
+      default_ttl: 900
+    devnull: {  }
+    devfalse: {  }
+    devtrue: {  }
+    files:
+      path: /data
+      security_key: auto
+      htaccess: true
+      secure_file_manipulation: false
+      cache_file_extension: txt
+      default_ttl: 604800
+    leveldb:
+      path: /data
+      security_key: auto
+      htaccess: true
+      default_ttl: 900
+    memcache:
+      host: 127.0.0.1
+      port: 11211
+      sasl_user: ''
+      sasl_password: ''
+      path: ''
+      compress_data: false
+      servers: {  }
+      default_ttl: 900
+    memcached:
+      host: 127.0.0.1
+      port: 11211
+      sasl_user: ''
+      sasl_password: ''
+      path: ''
+      compress_data: false
+      servers: {  }
+      default_ttl: 900
+    memstatic: {  }
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      username: ''
+      password: ''
+      timeout: 3
+      servers: {  }
+      collection_name: Cache
+      default_ttl: 900
+    predis:
+      host: 127.0.0.1
+      port: 6379
+      password: ''
+      timeout: 5
+      database: 0
+      opt_prefix: ''
+      persistent: false
+      default_ttl: 900
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: ''
+      timeout: 5
+      database: 0
+      opt_prefix: ''
+      default_ttl: 900
+    riak:
+      host: 127.0.0.1
+      port: 8098
+      prefix: riak
+      default_ttl: 900
+    sqlite:
+      path: /data
+      security_key: auto
+      htaccess: true
+      default_ttl: 900
+    ssdb:
+      host: 127.0.0.1
+      port: 8888
+      password: ''
+      timeout: 5
+    wincache: {  }
+    xcache: {  }
+    zenddisk: {  }
+    zendshm: {  }
+whoops:
+  editor: atom
+  page_title: Error!
+display_error_details: false
+add_content_length_header: true
+router_cache_file: false
+determine_route_before_app_middleware: false
+output_buffering: append
+response_chunk_size: 4096
+http_version: '1.1'
+slugify:
+  separator: '-'
+  lowercase: true
+  trim: true
+  regexp: '/[^A-Za-z0-9]+/'
+  lowercase_after_regexp: false
+  strip_tags: false
+image:
+  driver: gd
+markdown:
+  auto_line_breaks: false
+  auto_url_links: false
+  escape_markup: false
+shortcode:
+  shortcodes:
+    entries:
+      enabled: true
+    raw:
+      enabled: true
+    registry:
+      enabled: true
+    url:
+      enabled: true
+cors:
+  enabled: true
+  origin: '*'
+  headers:
+    - X-Requested-With
+    - Content-Type
+    - Accept
+    - Origin
+    - Authorization
+  methods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - PATCH
+    - OPTIONS
+  expose: {  }
+  credentials: false
+media:
+  accept_file_types: 'gif, jpg, jpeg, png, ico, zip, tgz, txt, md, doc, docx, pdf, epub, xls, xlsx, ppt, pptx, mp3, ogg, wav, m4a, mp4, m4v, ogv, wmv, avi, webm, svg'
+  max_file_size: 8000000
+  safe_names: true
+  image_width: 1600
+  image_height: 0
+  image_quality: 70
+  max_image_width: null
+  max_image_height: null
+session:
+  name: Flextype
+api:
+  entries:
+    enabled: true
+    default_token: 320b58db388ae70a943804bcd7f3b63c
+  registry:
+    enabled: true
+    default_token: 750bae1e49618fcbf98b9a1a236b8d8e
+  media:
+    files:
+      enabled: true
+      default_token: 68e63edb39e070b45bd616b960b6499e
+    folders:
+      enabled: true
+      default_token: c0f248844a9cbb89a2ba7ea4bf346b7e
+  images:
+    enabled: true
+    default_token: ec5bf49f9fe75b10ac5cf625a68128af
