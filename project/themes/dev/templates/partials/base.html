@@ -70,14 +70,28 @@
             fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
             .then(response => response.json())
             .then(function(data) { 
+                let i = 0;
+                for (activity in data.plugins.activity.events) {
+                    if (data.plugins.activity.events[i].type == 'push') {
+                        var type = 'Pushed';
+                    }
+                    document.querySelector(".github-activity-" + i + "-url").href = 'https://github.com/' + data.plugins.activity.events[i].repo + "/commits/" + data.plugins.activity.events[i].branch;
+                    document.querySelector(".github-activity-" + i + "-type").innerHTML = type;
+                    document.querySelector(".github-activity-" + i + "-size").innerHTML = data.plugins.activity.events[i].size;
+                    document.querySelector(".github-activity-" + i + "-branch").innerHTML = data.plugins.activity.events[i].branch;
+                    document.querySelector(".github-activity-" + i + "-repo").innerHTML = data.plugins.activity.events[i].repo;
+                    i++;
+                }
+
+
                 document.querySelector(".github-commits").innerHTML = formatter.format(data.computed.commits);
                 document.querySelector(".github-lines-added").innerHTML = formatter.format(data.plugins.lines.added);
                 document.querySelector(".github-lines-deleted").innerHTML = formatter.format(data.plugins.lines.deleted);
                 //document.querySelector(".github-repositories").innerHTML = formatter.format(data.user.repositories.totalCount);
                 document.querySelector(".github-repositories-contributed-to").innerHTML = formatter.format(data.user.repositoriesContributedTo.totalCount);
-                document.querySelector(".github-favorite-license").innerHTML = data.computed.licenses.favorite[0];
-                document.querySelector(".github-languages-used").innerHTML = Object.keys(data.plugins.languages.stats);
-                document.querySelector(".github-languages-used").innerHTML = document.querySelector(".github-languages-used").innerHTML.replaceAll(',', ', ').replaceAll(', Hack', '');
+               // document.querySelector(".github-favorite-license").innerHTML = data.computed.licenses.favorite[0];
+                //document.querySelector(".github-languages-used").innerHTML = Object.keys(data.plugins.languages.stats);
+                //document.querySelector(".github-languages-used").innerHTML = document.querySelector(".github-languages-used").innerHTML.replaceAll(',', ', ').replaceAll(', Hack', '');
             });
     
     </script>

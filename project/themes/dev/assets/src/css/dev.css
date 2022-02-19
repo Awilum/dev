@@ -11,7 +11,7 @@
     }
 
     h1,h2,h3,h4,h5 {
-        @apply mb-8;
+        @apply mb-8 font-bold;
     }
 
     h1 {
@@ -56,11 +56,11 @@
     code {
         font-size: 0.8em;
         opacity: .9;
-        @apply bg-slate-900 text-white px-1;
+        @apply bg-slate-800 text-white px-1;
     }
     pre > code.hljs {
         font-size: 0.8em;
         opacity: .9;
-        @apply p-6 bg-slate-900 mr-2 mb-10;
+        @apply p-6 bg-slate-800 mr-2 mb-10;
     }
 }

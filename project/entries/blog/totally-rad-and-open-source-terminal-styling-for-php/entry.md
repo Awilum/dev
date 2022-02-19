@@ -105,15 +105,6 @@ Thermage provides a rich library of built in [components(elements)](https://digi
 
 I will post more tutorials about Thermage usage for Console APPs development in PHP.
 
-### Goals for the near future
-* Improve documentation.
-* Improve test coverage.
-* Create a converter/parser from HTML to ANSI.
-* Create a converter/parser from MARKDOWN to ANSI.
-* Create a parser for PHP logs.
-* Create a code highlighter. 
-* Add more elements.
-
 ### Resources
-Repository: [https://github.com/termage/termage](https://github.com/termage/termage)  
-Documentation: [https://digital.flextype.org/termage](https://digital.flextype.org/termage)
+Repository: [https://github.com/thermage/thermage](https://github.com/thermage/thermage)  
+Documentation: [https://digital.flextype.org/thermage](https://digital.flextype.org/thermage)
