@@ -91,7 +91,7 @@ Save the `app.php` file and execute it in the console.
 $ php app.php
 ```
 
-![cliapp](../project/entries/blog/creating-cli-apps-with-thermage/cliapp-1.png)
+![cliapp](../project/entries/blog/totally-rad-and-open-source-terminal-styling-for-php/cliapp-1.png)
 
 BTW you may use Thermage Magic Classes API to create the same div element; see the example below:
 
@@ -101,10 +101,10 @@ render (
 );
 ```
 
-Thermage provides a rich library of built in [components(elements)](https://digital.flextype.org/thermage/documentation/elements). You may use any of them to create your Console APP.
+Thermage provides a rich library of built in [components(elements)](https://awilum.dev/projects/thermage/documentation/elements). You may use any of them to create your Console APP.
 
 I will post more tutorials about Thermage usage for Console APPs development in PHP.
 
 ### Resources
 Repository: [https://github.com/thermage/thermage](https://github.com/thermage/thermage)  
-Documentation: [https://digital.flextype.org/thermage](https://digital.flextype.org/thermage)
+Documentation: [https://awilum.dev/projects/thermage](https://awilum.dev/projects/thermage)
