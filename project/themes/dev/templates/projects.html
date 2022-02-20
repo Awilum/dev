@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="flex">
-        <div class="w-6/12 p-6 bg-slate-50 dark:bg-slate-800 mr-2 border-2 border-black">
+        <div class="w-full p-6 bg-slate-50 dark:bg-slate-800 border-2 border-black">
             <div class="font-bold pb-4 pt-0 mb-4 p-0 border-b border-black flex items-center">
                 <h3 class="m-0 p-0 w-1/2">
                     Thermage
@@ -15,21 +15,43 @@
                 Thermage provides a fluent and incredibly powerful object-oriented interface for customizing CLI output text color, background, formatting, theming and more.
             </p>
             <p>
-                <strong>Technologies used</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Features</h4>
+                <ul>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Consistent colors</strong><br>
+                        Thermage uses the ANSI color scheme which is widely used by terminals to ensure consistent colors in different terminal themes. If that’s not enough, Thermage can be used to access the full RGB color scheme (16+ million colors) in terminals that support TrueColor.   
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Component system</strong><br> 
+                        Thermage consists of built-in components, called Elements, which can be used individually or together to generate pretty console output.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Theming</strong><br>
+                        Thermage provides ability to create and use custom themes to change the style of command line output with preconfigured themes variables.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Shortcodes</strong><br>
+                        Thermage provides incredible simple and powerful Shortcodes API to create and use shortcodes markup for customizing CLI output text color, background, formatting.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Framework agnostic</strong><br>
+                        Thermage can be used with any Modern PHP Framework: Symfony, Laravel, Yii, CakePHP, CodeIgniter, Phalcon and others.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <h4 class="m-0 mb-3 text-xl">Technologies used</h4>
                 PHP
             </p>
             <p>
-                <strong>License</strong><br>
+                <h4 class="m-0 mb-3 text-xl">License</h4>
                 MIT
             </p>
             <p>
-                <strong>Links</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Links</h4>
                 <a href="https://thermage.awilum.dev/" class="mr-1">DOCUMENTAION</a>
                 <a href="https://github.com/thermage" class="mr-1">GITHUB</a>
                 <a href="https://twitter.com/_thermage">TWITTER</a>
             </p>
         </div>
-        <div class="w-6/12 p-6 bg-slate-50 dark:bg-slate-800 ml-2 border-2 border-black">
+    </div>
+    <div class="flex mt-4">
+        <div class="w-full p-6 bg-slate-50 dark:bg-slate-800 border-2 border-black">
             <div class="font-bold pb-4 pt-0 mb-4 p-0 border-b border-black flex items-center">
                 <h3 class="m-0 p-0 w-1/2">
                     Glowy PHP
@@ -42,15 +64,44 @@
                 Set of decoupled and reusable PHP building blocks for kickass Web Applications.
             </p>
             <p>
-                <strong>Technologies used</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Packages</h4>
+                <ul>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Strings</strong><br>
+                        Strings Package provide a fluent, object-oriented interface for working with multibyte strings, allowing you to chain multiple string operations together using a more readable syntax compared to traditional PHP strings functions. 
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>View</strong><br>
+                        View Package provides basic methods for creating extendable PHP Views.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Session</strong><br>
+                        Session Package provide a fluent, object-oriented interface for working with Session.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Filesystem</strong><br>
+                        Filesystem Package provide a fluent, object-oriented interface for working with filesystem.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Registry</strong><br>
+                        Registry Package provides a fluent, object-oriented interface for storing data globally in a well managed fashion, helping to prevent global meltdown.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Csrf</strong><br>
+                        Csrf Package provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Arrays</strong><br>
+                        Arrays Package provide a fluent, object-oriented interface for working with arrays, allowing you to chain multiple arrays operations together using a more readable syntax compared to traditional PHP arrays functions.
+                    </li>
+                    <li class="mb-3 mt-2 ml-0 list-none"><strong>Macroable</strong><br>
+                        Macroable Package is a trait that, gives you the ability in effect to add new methods to a class at runtime.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <h4 class="m-0 mb-3 text-xl">Technologies used</h4>
                 PHP
             </p>
             <p>
-                <strong>License</strong><br>
+                <h4 class="m-0 mb-3 text-xl">License</h4>
                 MIT
             </p>
             <p>
-                <strong>Links</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Links</h4>
                 <a href="https://awilum.dev/glowyphp" class="mr-1">DOCUMENTAION</a>
                 <a href="https://github.com/glowyphp" class="mr-1">GITHUB</a>
                 <a href="https://twitter.com/_glowyphp">TWITTER</a>
@@ -71,15 +122,15 @@
                 A set of decoupled and reusable packages that generates fake data for you.
             </p>
             <p>
-                <strong>Technologies used</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Technologies used</h4>
                 JAVASCRIPT
             </p>
             <p>
-                <strong>License</strong><br>
+                <h4 class="m-0 mb-3 text-xl">License</h4>
                 MIT
             </p>
             <p>
-                <strong>Links</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Links</h4>
                 <a href="https://github.com/fakerjs" class="mr-1">GITHUB</a>
                 <a href="https://twitter.com/_fakerjs">TWITTER</a>
             </p>
@@ -97,15 +148,15 @@
                 Open-source self-hosted Hybrid Content Management System with the freedom of a Headless CMS with the full functionality of a Traditional CMS.
             </p>
             <p>
-                <strong>Technologies used</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Technologies used</h4>
                 PHP, HTML, CSS, JAVASCRIPT
             </p>
             <p>
-                <strong>License</strong><br>
+                <h4 class="m-0 mb-3 text-xl">License</h4>
                 MIT
             </p>
             <p>
-                <strong>Links</strong><br>
+                <h4 class="m-0 mb-3 text-xl">Links</h4>
                 <a href="https://flextype.org" class="mr-1">WEBSITE</a>
                 <a href="https://github.com/flextype" class="mr-1">GITHUB</a>
                 <a href="https://twitter.com/getflextype">TWITTER</a>
