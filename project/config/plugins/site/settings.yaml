@@ -5,13 +5,13 @@ enabled: true
 priority: 10000
 
 # The title of the website
-title: Flextype
+title: AWILUM.DEV
 
 # The description of the website
-description: Build fast, flexible, easier to manage websites with Flextype.
+description: Developer with a strong will for learning and researching new technologies and architectural solutions. Founder of Thermage, Flextype, Glowy PHP, Faker JavaScript, Dart Packages and other.
 
 # The keywords of the website
-keywords: flextype, php, cms, flat-file cms, flat cms, flatfile cms, html
+keywords: flextype, php, cms, thermage, glowyphp, html
 
 # The robots of the website
 robots: index, follow
