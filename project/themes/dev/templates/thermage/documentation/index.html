@@ -1,0 +1,90 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
+
+<div class="uppercase text-center pt-24 pb-24 m-0">
+    <div>
+        <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/documentation">{{ entry.title }}</a></h1>
+    </div>
+</div>
+<div class="flex flex-col-reverse lg:flex-row relative">
+    <div class="w-full lg:w-4/12">
+        <h4>Getting Started</h4>
+        <ul class="m-0 p-0 list-none">
+            <li>
+                <a href="{{ url() }}/thermage/documentation/getting-started/what-is-thermage" class="no-underline">What is Thermage?</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/getting-started/license" class="no-underline">License</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-full lg:w-4/12">
+        <h4>Core Concepts</h4>
+        <ul class="m-0 p-0 list-none">
+            <li>
+                <a href="{{ url() }}/thermage/documentation/core-concepts/thermage" class="no-underline">Thermage</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/core-concepts/themes" class="no-underline">Themes</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-full lg:w-4/12">
+        <h4>Parsers</h4>
+        <ul class="m-0 p-0 list-none">
+            <li>
+                <a href="{{ url() }}/thermage/documentation/parsers/shortcodes" class="no-underline">Shortcodes</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-full lg:w-4/12">
+        <h4>Elements</h4>
+        <ul class="m-0 p-0 list-none">
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/alert" class="no-underline">Alert</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/anchor" class="no-underline">Anchor</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/bold" class="no-underline">Bold</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/breakline" class="no-underline">Breakline</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/canvas" class="no-underline">Canvas</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/chart" class="no-underline">Chart</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/div" class="no-underline">Div</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/heading" class="no-underline">Heading</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/hr" class="no-underline">Hr</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/italic" class="no-underline">Italic</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/paragraph" class="no-underline">Paragraph</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/span" class="no-underline">Span</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/strikethrough" class="no-underline">Strikethrough</a>
+            </li>
+            <li>
+                <a href="{{ url() }}/thermage/documentation/elements/underline" class="no-underline">Underline</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

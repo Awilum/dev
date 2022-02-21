@@ -33,8 +33,8 @@
             flextype.emitter.emit('onThemeHeader') %}
     {% endblock %}
 </head>
-<body class="antialiased text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
-    <header class="bg-slate-50 dark:bg-slate-800 mb-4 border-b-2 border-l-2 border-r-2 border-black flex items-center container mx-auto max-w-[1100px]">
+<body class="antialiased text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
+    <header class="bg-slate-50 dark:bg-slate-800 border-b-2 border-l-2 border-r-2 border-black flex items-center container mx-auto max-w-[1200px]">
         <h1 class="m-0 p-0 p-6 py-2 px-6 text-xl font-bold text-center border-r-2 border-black"><a href="{{ url() }}">AWILUM.DEV</a></h1>
         {% for item in flextype.entries.fetch('', {'collection': true}).sortBy('menu_item_order', 'ASC').all() %}
             {% if item.menu_item_title %}
@@ -49,7 +49,7 @@
         </div>
     </header>
 
-    <main role="main" class="container mx-auto max-w-[1100px]">
+    <main role="main" class="container mx-auto max-w-[1200px]">
         <section>
             {% block content %}{% endblock %}
         </section>
@@ -69,6 +69,75 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
+
+        var $tabs = function (target) {
+        var
+        _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
+        _eventTabsShow,
+        _showTab = function (tabsLinkTarget) {
+            var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
+            tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
+            tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
+            tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
+            
+            if (tabsLinkTarget === tabsLinkActive) {
+                return;
+            }
+            
+            if (tabsLinkActive !== null) {
+                tabsLinkActive.classList.remove('tabs__link_active');
+            }
+
+            if (tabsPaneShow !== null) {
+                tabsPaneShow.classList.remove('tabs__pane_show');
+            }
+            
+            
+            tabsLinkTarget.classList.add('tabs__link_active');
+            tabsPaneTarget.classList.add('tabs__pane_show');
+            document.dispatchEvent(_eventTabsShow);
+        },
+        _switchTabTo = function (tabsLinkIndex) {
+            var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
+            if (tabsLinks.length > 0) {
+                if (tabsLinkIndex > tabsLinks.length) {
+                tabsLinkIndex = tabsLinks.length;
+                } else if (tabsLinkIndex < 1) {
+                tabsLinkIndex = 1;
+                }
+                _showTab(tabsLinks[tabsLinkIndex - 1]);
+            }
+        };
+
+        _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
+
+        _elemTabs.addEventListener('click', function(e) {
+            var target = e.target.closest('.tabs__link');
+            // завершаем выполнение функции, если кликнули не по ссылке
+            if (!target) {
+            return;
+            }
+            // отменяем стандартное действие
+            e.preventDefault();
+            _showTab(target);
+    });
+
+    return {
+        showTab: function (target) {
+        _showTab(target);
+        },
+        switchTabTo: function (index) {
+        _switchTabTo(index);
+        }
+    }
+
+    };
+
+    {% if entry.id == 'thermage' %}
+        $tabs('.components');
+        $tabs('.themes');
+        $tabs('.frameworks');
+    {% endif %}
 
             var formatter = new Intl.NumberFormat('en-US');
             fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
