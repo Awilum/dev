@@ -1,0 +1,25 @@
+{
+  "name": "Icon",
+  "version": "2.1.0",
+  "description": "Icon plugin to present Font Awesome icons set for Flextype.",
+  "homepage": "https://flextype.org",
+  "author": "Sergey Romanenko",
+  "license": "MIT",
+  "keywords": [
+    "flextype",
+    "cms",
+    "flat cms",
+    "flatfile cms",
+    "plugin",
+    "icon"
+  ],
+  "bugs": {
+    "url": "https://github.com/flextype-plugins/icon/issues"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.2",
+    "bootstrap-icons": "1.3.0",
+    "@tabler/icons": "1.38.1",
+    "gulp": "4.0.2"
+  }
+}
