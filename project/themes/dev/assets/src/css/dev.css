@@ -847,4 +847,41 @@
         @apply border-b text-slate-100 border-black bg-slate-800;
     }
 
+
+
+
+    .icon-svg-black > svg {
+        fill: black;
+    }
+
+    .icon-svg-white > svg {
+        fill: white;
+    }
+
+    .icon-svg-large > svg {
+        height: 72px;
+        @apply inline-block;
+    }
+
+    .icon-svg-medium > svg {
+        height: 55px;
+        @apply inline-block;
+    }
+
+    .icon-svg-normal > svg {
+        height: 18px;
+        @apply inline-block;
+    }
+
+    .icon-svg-small > svg {
+        height: 16px;
+        @apply inline-block;
+    }
+
+    .icon-svg-xsmall > svg {
+        height: 13px;
+        @apply inline-block;
+    }
+
+
 }

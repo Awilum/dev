@@ -1,0 +1,134 @@
+{% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
+
+{% block content %}
+
+{% set name = uri|split('/')|last %}
+
+<div class="container mx-auto bg-white text-black pb-24">
+    <div class="uppercase text-center pt-24 pb-24 m-0">
+        <div>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/downloads/extend/themes/{{ name }}">{{ entry.title }}</a></h1>
+        </div>
+        <div>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads">DOWNLOADS</a></span>
+            <span class="opacity-50">/</span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads/extend">EXTEND</a></span>
+            <span class="opacity-50">/</span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads/extend/themes">THEMES</a></span>
+        </div>
+    </div>
+    <div>
+        {% set repo_name = entry.github|split('/')  %}
+        {% set repo_name_length = repo_name|length %}
+
+        {% set theme = flextype.serializers.yaml.decode(filesystem().file("https://raw.githubusercontent.com/" ~ repo_name[repo_name_length-2] ~ "/" ~ repo_name[repo_name_length-1] ~ "/master/theme.yaml").get()) %}
+
+        <div class="flex content-center flex-wrap">
+            <div class="w-full lg:w-9/12 pl-2 pr-7 text-left">
+                <div class="text-black mb-6">
+                    <div class="flex align-middle items-center">
+                        <div class="text-left">
+                            <h4 class="text-2xl pb-0 mb-0 block">{{ theme.name }}</h4>
+                            <p class="m-0">
+                                {{ theme.description }}
+                            </p>
+                            <p class="m-0 text-sm">
+                                {{ txt.by }} <a class="no-underline" href="#"><b>{{ theme.author.name }}</b></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mb-6 border-b border-black">
+
+                {{ entry.content|shortcode|markdown|raw }}
+            </div>
+            <div class="w-full lg:w-3/12 p-2">
+                <div class="text-black text-left p-6 mb-6 plate">
+                    <div class="flex content-center flex-wrap">
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Version</p>
+                            <p>{{ theme.version }}</p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Lincense</p>
+                            <p>{{ theme.license }}</p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Dependencies</p>
+                            {% for key, val in theme.dependencies %}
+                                <a href="{{ url() }}/downloads/extend/themes/{{ key }}">{{ key }}</a>: {{ val }}<br>
+                            {% endfor %}
+                            <p></p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Links</p>
+                            <p>
+                                {% if theme.homepage %}<a href="{{ theme.homepage }}">Homepage</a><br>{% elseif entry.github %}<a href="{{ entry.github }}">Homepage</a><br>{% endif %}
+                                {% if theme.documentation %}<a href="{{ theme.documentation }}">Documentation</a><br>{% elseif entry.github %}<a href="{{ entry.github }}">Documentation</a><br>{% endif %}
+                                {% if theme.changelog %}<a href="{{ theme.changelog }}">Changelog</a><br>{% elseif entry.github %}<a href="{{ entry.github }}">Changelog</a><br>{% endif %}
+                                {% if theme.bugs %}<a href="{{ theme.bugs }}">Issues</a>{% elseif entry.github %}<a href="{{ entry.github }}">Issues</a><br>{% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex content-center flex-wrap">
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Categories</p>
+                            <p>
+                                {% set categories = entry.category|replace({' ': ''}) %}
+                                {% for category in categories|split(',') %}
+                                    <a class="no-underline" href="{{ url() }}/downloads/extend/themes?category={{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="pl-6 pr-6 pt-2 pb-2 w-full fadeIn button  uppercase"
+                    href="{{ entry.github }}/releases/download/v{{ theme.version }}/{{ entry.slug }}-{{ theme.version }}.zip">DOWNLOAD</a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mb-6 border-b border-black">
+
+        <div class="p-2 text-black mb-6">
+            <h4>Other themes by {{ theme.author.name }}</h4>
+            {% if entry.author.email is not empty %}
+                {% set related_themes = flextype.entries.fetch('/downloads/extend/themes', {'collection': true})
+                                               .where('author.email', 'eq', entry.author.email)
+                                               .where('visibility', 'nin', ['draft', 'hidden'])
+                                               .random(6) %}
+
+                {% if related_themes|length > 0 %}
+
+                <div class="flex content-center flex-wrap mt-5">
+                    {% for related_theme in related_themes %}
+                        {% if related_theme.slug != entry.slug %}
+                        <a href="{{ url() }}/{{ related_theme.id }}" class="w-full p-2 lg:w-6/12 no-underline">
+                            <div class="flex p-6 text-black align-middle extend">
+                                <img src="{{ related_theme.preview }}" alt="{{ related_theme.title }}" style="height: 120px; margin-right: 20px;">
+                                <div class="text-left">
+                                    <h4 class="text-xl pb-0 mb-0 block">{{ related_theme.title }}</h4>
+                                    <p class="m-0">
+                                        {{ related_theme.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <hr class="mb-6 border-b border-black">
+
+        <div class="p-2">
+            <a href="{{ url() }}/downloads/extend/themes">More themes</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

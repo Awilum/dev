@@ -52,7 +52,10 @@
     <div class="flex">
         <div class="w-6/12 p-6 bg-slate-50 dark:bg-slate-800 mr-2 border border-black" style="box-shadow: 2px 2px 0 black">
             <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
-                RECENT BLOG POSTS
+                RECENT POSTS
+                <a rel="nofollow" href="{{ url() }}/blog" class="ml-2">
+                    [BLOG]
+                </a>
             </h3>
             {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/recent-posts.html' %}    
         </div>

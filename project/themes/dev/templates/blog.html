@@ -15,9 +15,7 @@
     {% endif %}
 
     {% set blogPostData = flextype.entries.fetch(blogID) %}
-    {% if blogPostData.posts_limit == 0 %}{% set blogPostsLimit = 5 %}{% else %}{% set blogPostsLimit = blogPostData.posts_limit %}{% endif %}
-    {% if blogPostData.posts_recent_limit == 0 %}{% set blogPostsRecentLimit = 5 %}{% else %}{% set blogPostsRecentLimit = blogPostData.posts_recent_limit %}{% endif %}
-    {% if blogPostData.posts_random_limit == 0 %}{% set blogPostsRandomLimit = 5 %}{% else %}{% set blogPostsRandomLimit = blogPostData.posts_random_limit %}{% endif %}
+    {% if blogPostData.posts_limit == 0 %}{% set blogPostsLimit = 10 %}{% else %}{% set blogPostsLimit = blogPostData.posts_limit %}{% endif %}
 
     {% if tag %}
         {% set blogPostsLength = blog.copy()
@@ -86,7 +84,6 @@
             </div>
         </div>
     </div>
-
 
     {# pagination-navigation #}
     {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/pagination-navigation.html' %}
