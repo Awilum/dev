@@ -346,154 +346,154 @@ final public function getDefaultVariables(): Collection
 
 <div class="flex">
 <div class="">
-<div class="p-3 swatch-blue">
+<div class="p-4 swatch-blue">
 <strong class="d-block">blue</strong>
 #007bff
 </div>
-<div class="p-3 bd-blue100">blue100</div>
-<div class="p-3 bd-blue200">blue200</div>
-<div class="p-3 bd-blue300">blue300</div>
-<div class="p-3 bd-blue400">blue400</div>
-<div class="p-3 bd-blue500">blue500</div>
-<div class="p-3 bd-blue600">blue600</div>
-<div class="p-3 bd-blue700">blue700</div>
-<div class="p-3 bd-blue800">blue800</div>
-<div class="p-3 bd-blue900">blue900</div>
+<div class="p-4 bd-blue100">blue100</div>
+<div class="p-4 bd-blue200">blue200</div>
+<div class="p-4 bd-blue300">blue300</div>
+<div class="p-4 bd-blue400">blue400</div>
+<div class="p-4 bd-blue500">blue500</div>
+<div class="p-4 bd-blue600">blue600</div>
+<div class="p-4 bd-blue700">blue700</div>
+<div class="p-4 bd-blue800">blue800</div>
+<div class="p-4 bd-blue900">blue900</div>
 </div>
 <div class="">
-<div class="p-3 swatch-indigo">
+<div class="p-4 swatch-indigo">
 <strong class="d-block">indigo</strong>
 #6610f2
 </div>
-<div class="p-3 bd-indigo100">indigo100</div>
-<div class="p-3 bd-indigo200">indigo200</div>
-<div class="p-3 bd-indigo300">indigo300</div>
-<div class="p-3 bd-indigo400">indigo400</div>
-<div class="p-3 bd-indigo500">indigo500</div>
-<div class="p-3 bd-indigo600">indigo600</div>
-<div class="p-3 bd-indigo700">indigo700</div>
-<div class="p-3 bd-indigo800">indigo800</div>
-<div class="p-3 bd-indigo900">indigo900</div>
+<div class="p-4 bd-indigo100">indigo100</div>
+<div class="p-4 bd-indigo200">indigo200</div>
+<div class="p-4 bd-indigo300">indigo300</div>
+<div class="p-4 bd-indigo400">indigo400</div>
+<div class="p-4 bd-indigo500">indigo500</div>
+<div class="p-4 bd-indigo600">indigo600</div>
+<div class="p-4 bd-indigo700">indigo700</div>
+<div class="p-4 bd-indigo800">indigo800</div>
+<div class="p-4 bd-indigo900">indigo900</div>
 </div>
 <div class="">
-<div class="p-3 swatch-purple">
+<div class="p-4 swatch-purple">
 <strong class="d-block">purple</strong>
 #6f42c1
 </div>
-<div class="p-3 bd-purple100">purple100</div>
-<div class="p-3 bd-purple200">purple200</div>
-<div class="p-3 bd-purple300">purple300</div>
-<div class="p-3 bd-purple400">purple400</div>
-<div class="p-3 bd-purple500">purple500</div>
-<div class="p-3 bd-purple600">purple600</div>
-<div class="p-3 bd-purple700">purple700</div>
-<div class="p-3 bd-purple800">purple800</div>
-<div class="p-3 bd-purple900">purple900</div>
+<div class="p-4 bd-purple100">purple100</div>
+<div class="p-4 bd-purple200">purple200</div>
+<div class="p-4 bd-purple300">purple300</div>
+<div class="p-4 bd-purple400">purple400</div>
+<div class="p-4 bd-purple500">purple500</div>
+<div class="p-4 bd-purple600">purple600</div>
+<div class="p-4 bd-purple700">purple700</div>
+<div class="p-4 bd-purple800">purple800</div>
+<div class="p-4 bd-purple900">purple900</div>
 </div>
 <div>
-<div class="p-3 swatch-pink">
+<div class="p-4 swatch-pink">
 <strong class="d-block">pink</strong>
 #e83e8c
 </div>
-<div class="p-3 bd-pink100">pink100</div>
-<div class="p-3 bd-pink200">pink200</div>
-<div class="p-3 bd-pink300">pink300</div>
-<div class="p-3 bd-pink400">pink400</div>
-<div class="p-3 bd-pink500">pink500</div>
-<div class="p-3 bd-pink600">pink600</div>
-<div class="p-3 bd-pink700">pink700</div>
-<div class="p-3 bd-pink800">pink800</div>
-<div class="p-3 bd-pink900">pink900</div>
+<div class="p-4 bd-pink100">pink100</div>
+<div class="p-4 bd-pink200">pink200</div>
+<div class="p-4 bd-pink300">pink300</div>
+<div class="p-4 bd-pink400">pink400</div>
+<div class="p-4 bd-pink500">pink500</div>
+<div class="p-4 bd-pink600">pink600</div>
+<div class="p-4 bd-pink700">pink700</div>
+<div class="p-4 bd-pink800">pink800</div>
+<div class="p-4 bd-pink900">pink900</div>
 </div>
 <div>
-<div class="p-3 swatch-red">
+<div class="p-4 swatch-red">
 <strong class="d-block">red</strong>
 #dc3545
 </div>
-<div class="p-3 bd-red100">red100</div>
-<div class="p-3 bd-red200">red200</div>
-<div class="p-3 bd-red300">red300</div>
-<div class="p-3 bd-red400">red400</div>
-<div class="p-3 bd-red500">red500</div>
-<div class="p-3 bd-red600">red600</div>
-<div class="p-3 bd-red700">red700</div>
-<div class="p-3 bd-red800">red800</div>
-<div class="p-3 bd-red900">red900</div>
+<div class="p-4 bd-red100">red100</div>
+<div class="p-4 bd-red200">red200</div>
+<div class="p-4 bd-red300">red300</div>
+<div class="p-4 bd-red400">red400</div>
+<div class="p-4 bd-red500">red500</div>
+<div class="p-4 bd-red600">red600</div>
+<div class="p-4 bd-red700">red700</div>
+<div class="p-4 bd-red800">red800</div>
+<div class="p-4 bd-red900">red900</div>
 </div>
 <div>
-<div class="p-3 swatch-orange">
+<div class="p-4 swatch-orange">
 <strong class="d-block">orange</strong>
 #fd7e14
 </div>
-<div class="p-3 bd-orange100">orange100</div>
-<div class="p-3 bd-orange200">orange200</div>
-<div class="p-3 bd-orange300">orange300</div>
-<div class="p-3 bd-orange400">orange400</div>
-<div class="p-3 bd-orange500">orange500</div>
-<div class="p-3 bd-orange600">orange600</div>
-<div class="p-3 bd-orange700">orange700</div>
-<div class="p-3 bd-orange800">orange800</div>
-<div class="p-3 bd-orange900">orange900</div>
+<div class="p-4 bd-orange100">orange100</div>
+<div class="p-4 bd-orange200">orange200</div>
+<div class="p-4 bd-orange300">orange300</div>
+<div class="p-4 bd-orange400">orange400</div>
+<div class="p-4 bd-orange500">orange500</div>
+<div class="p-4 bd-orange600">orange600</div>
+<div class="p-4 bd-orange700">orange700</div>
+<div class="p-4 bd-orange800">orange800</div>
+<div class="p-4 bd-orange900">orange900</div>
 </div>
 <div>
-<div class="p-3 swatch-yellow">
+<div class="p-4 swatch-yellow">
 <strong class="d-block">yellow</strong>
 #ffc107
 </div>
-<div class="p-3 bd-yellow100">yellow100</div>
-<div class="p-3 bd-yellow200">yellow200</div>
-<div class="p-3 bd-yellow300">yellow300</div>
-<div class="p-3 bd-yellow400">yellow400</div>
-<div class="p-3 bd-yellow500">yellow500</div>
-<div class="p-3 bd-yellow600">yellow600</div>
-<div class="p-3 bd-yellow700">yellow700</div>
-<div class="p-3 bd-yellow800">yellow800</div>
-<div class="p-3 bd-yellow900">yellow900</div>
+<div class="p-4 bd-yellow100">yellow100</div>
+<div class="p-4 bd-yellow200">yellow200</div>
+<div class="p-4 bd-yellow300">yellow300</div>
+<div class="p-4 bd-yellow400">yellow400</div>
+<div class="p-4 bd-yellow500">yellow500</div>
+<div class="p-4 bd-yellow600">yellow600</div>
+<div class="p-4 bd-yellow700">yellow700</div>
+<div class="p-4 bd-yellow800">yellow800</div>
+<div class="p-4 bd-yellow900">yellow900</div>
 </div>
 <div>
-<div class="p-3 swatch-green">
+<div class="p-4 swatch-green">
 <strong class="d-block">green</strong>
 #28a745
 </div>
-<div class="p-3 bd-green100">green100</div>
-<div class="p-3 bd-green200">green200</div>
-<div class="p-3 bd-green300">green300</div>
-<div class="p-3 bd-green400">green400</div>
-<div class="p-3 bd-green500">green500</div>
-<div class="p-3 bd-green600">green600</div>
-<div class="p-3 bd-green700">green700</div>
-<div class="p-3 bd-green800">green800</div>
-<div class="p-3 bd-green900">green900</div>
+<div class="p-4 bd-green100">green100</div>
+<div class="p-4 bd-green200">green200</div>
+<div class="p-4 bd-green300">green300</div>
+<div class="p-4 bd-green400">green400</div>
+<div class="p-4 bd-green500">green500</div>
+<div class="p-4 bd-green600">green600</div>
+<div class="p-4 bd-green700">green700</div>
+<div class="p-4 bd-green800">green800</div>
+<div class="p-4 bd-green900">green900</div>
 </div>
 <div>
-<div class="p-3 swatch-teal">
+<div class="p-4 swatch-teal">
 <strong class="d-block">teal</strong>
 #20c997
 </div>
-<div class="p-3 bd-teal100">teal100</div>
-<div class="p-3 bd-teal200">teal200</div>
-<div class="p-3 bd-teal300">teal300</div>
-<div class="p-3 bd-teal400">teal400</div>
-<div class="p-3 bd-teal500">teal500</div>
-<div class="p-3 bd-teal600">teal600</div>
-<div class="p-3 bd-teal700">teal700</div>
-<div class="p-3 bd-teal800">teal800</div>
-<div class="p-3 bd-teal900">teal900</div>
+<div class="p-4 bd-teal100">teal100</div>
+<div class="p-4 bd-teal200">teal200</div>
+<div class="p-4 bd-teal300">teal300</div>
+<div class="p-4 bd-teal400">teal400</div>
+<div class="p-4 bd-teal500">teal500</div>
+<div class="p-4 bd-teal600">teal600</div>
+<div class="p-4 bd-teal700">teal700</div>
+<div class="p-4 bd-teal800">teal800</div>
+<div class="p-4 bd-teal900">teal900</div>
 </div>
 <div>
-<div class="p-3 swatch-cyan">
+<div class="p-4 swatch-cyan">
 <strong class="d-block">cyan</strong>
 #17a2b8
 </div>
-<div class="p-3 bd-cyan100">cyan100</div>
-<div class="p-3 bd-cyan200">cyan200</div>
-<div class="p-3 bd-cyan300">cyan300</div>
-<div class="p-3 bd-cyan400">cyan400</div>
-<div class="p-3 bd-cyan500">cyan500</div>
-<div class="p-3 bd-cyan600">cyan600</div>
-<div class="p-3 bd-cyan700">cyan700</div>  
-<div class="p-3 bd-cyan800">cyan800</div>
-<div class="p-3 bd-cyan900">cyan900</div>
+<div class="p-4 bd-cyan100">cyan100</div>
+<div class="p-4 bd-cyan200">cyan200</div>
+<div class="p-4 bd-cyan300">cyan300</div>
+<div class="p-4 bd-cyan400">cyan400</div>
+<div class="p-4 bd-cyan500">cyan500</div>
+<div class="p-4 bd-cyan600">cyan600</div>
+<div class="p-4 bd-cyan700">cyan700</div>  
+<div class="p-4 bd-cyan800">cyan800</div>
+<div class="p-4 bd-cyan900">cyan900</div>
 </div>
 </div>
 <br><br>

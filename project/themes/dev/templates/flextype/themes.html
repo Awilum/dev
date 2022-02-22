@@ -7,12 +7,12 @@
 <div class="container mx-auto bg-white text-black pb-24">
     <div class="uppercase text-center pt-24 pb-24 m-0">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/downloads/extend/{{ name }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/{{ name }}">{{ entry.title }}</a></h1>
         </div>
         <div>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads">DOWNLOADS</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">DOWNLOADS</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads/extend">EXTEND</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend">EXTEND</a></span>
         </div>
     </div>
     <div class="flex content-center flex-wrap">
@@ -80,7 +80,7 @@
               {# /pagination #}
 
              {% for item in themes_items %}
-             <a href="{{ url() }}/{{ item.id }}" class="p-6 flex align-middle mb-6 extend">
+             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 flex align-middle mb-6 extend">
                  <img src="{{ item.preview }}" alt="{{ item.title }}" style="height: 120px; margin-right: 20px;">
                  <div class="text-left">
                      <h4 class="text-xl pb-0 mb-0 block">{{ item.title }}</h4>
@@ -136,7 +136,7 @@
                     <h4 class="text-center mb-2 pb-3 border-b border-black uppercase font-semibold">{{ entry.txt_categories }}</h4>
                     <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
-                            <a class="no-underline px-1 mb-2 flex items-center" href="{{ url() }}/downloads/extend/themes?category={{ category|trim }}">
+                            <a class="no-underline px-1 mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/themes?category={{ category|trim }}">
                                 {% if category == 'framework' %}
                                 <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('bootstrap', 'fontawesome|brands') }}</span>
                                 {% else %}

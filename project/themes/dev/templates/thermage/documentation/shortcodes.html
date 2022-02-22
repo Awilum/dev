@@ -1,58 +1,59 @@
 {% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
 
 {% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
 
-{% set uri1 = request.getUri().getPath()|split('/').2 %}
-{% set uri2 = request.getUri().getPath()|split('/').3 %}
-{% set uri3 = request.getUri().getPath()|split('/').4 %}
+{% set uri1 = request.getUri().getPath()|split('/').3 %}
+{% set uri2 = request.getUri().getPath()|split('/').4 %}
+{% set uri3 = request.getUri().getPath()|split('/').5 %}
 
-{% set gettingStartedCacheID = strings('gettingStartedCacheID' ~ 'documentation/parsers/' ~ uri1 ~ '/getting-started').hash().toString() %}
+{% set gettingStartedCacheID = strings('gettingStartedCacheID' ~ 'thermage/documentation/parsers/' ~ uri1 ~ '/getting-started').hash().toString() %}
 {% if flextype.cache.has(gettingStartedCacheID) %}
     {% set gettingStarted = flextype.cache.get(gettingStartedCacheID) %}
 {% else %}
-    {% set gettingStarted = flextype.entries.fetch('documentation/parsers/' ~ uri1 ~ '/getting-started', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
+    {% set gettingStarted = flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1 ~ '/getting-started', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
     {% do flextype.cache.set(gettingStartedCacheID, gettingStarted) %}
 {% endif %}
 
-{% set shortcodesCacheID = strings('shortcodesCacheID' ~ 'documentation/parsers/' ~ uri1 ~ '/shortcodes').hash().toString() %}
+{% set shortcodesCacheID = strings('shortcodesCacheID' ~ 'thermage/documentation/parsers/' ~ uri1 ~ '/shortcodes').hash().toString() %}
 {% if flextype.cache.has(shortcodesCacheID) %}
     {% set shortcodes = flextype.cache.get(shortcodesCacheID) %}
 {% else %}
-    {% set shortcodes = flextype.entries.fetch('documentation/parsers/' ~ uri1 ~ '/shortcodes', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
+    {% set shortcodes = flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1 ~ '/shortcodes', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
     {% do flextype.cache.set(shortcodesCacheID, shortcodes) %}
 {% endif %}
 
-{% set methodsCacheID = strings('methodsCacheID' ~ 'documentation/parsers/' ~ uri1 ~ '/methods').hash().toString() %}
+{% set methodsCacheID = strings('methodsCacheID' ~ 'thermage/documentation/parsers/' ~ uri1 ~ '/methods').hash().toString() %}
 {% if flextype.cache.has(methodsCacheID) %}
     {% set methods = flextype.cache.get(methodsCacheID) %}
 {% else %}
-    {% set methods = flextype.entries.fetch('documentation/parsers/' ~ uri1 ~ '/methods', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
+    {% set methods = flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1 ~ '/methods', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
     {% do flextype.cache.set(methodsCacheID, methods) %}
 {% endif %}
 
-<div class="text-center pt-4 pb-16 lg:pt-10 lg:pb-24">
+<div class="uppercase text-center pt-24 pb-24 m-0">
     <h1 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h1>
     <div class="text-sm lg:text-lg">
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/documentation">DOCUMENTATION</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline" href="{{ url() }}/documentation/parsers">PARSERS</a></span>
+        <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation/parsers">PARSERS</a></span>
         {% if uri2 == 'methods' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('documentation/parsers/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}/{{ uri2 }}">METHODS</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}/{{ uri2 }}">METHODS</a></span>
         {% endif %}
         {% if uri2 == 'shortcodes' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('documentation/parsers/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}/{{ uri2 }}">SHORTCODES</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}/{{ uri2 }}">SHORTCODES</a></span>
         {% endif %}
         {% if uri2 == 'getting-started' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('documentation/parsers/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/parsers/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/documentation/parsers/{{ uri1 }}/{{ uri2 }}">GETTING STARTED</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/parsers/{{ uri1 }}/{{ uri2 }}">GETTING STARTED</a></span>
         {% endif %}
     </div>
 </div>

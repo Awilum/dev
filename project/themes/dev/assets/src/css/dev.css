@@ -50,6 +50,10 @@
     strong {
         @apply font-bold;
     }
+
+    ul li {
+        @apply m-0 list-none;
+    }
 }
 
 @layer components {
@@ -899,7 +903,7 @@
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;
-        box-shadow: 2px 2px 0 #333;
+        box-shadow: 3px 3px 0 #000;
         @apply border-black border;
     }
 

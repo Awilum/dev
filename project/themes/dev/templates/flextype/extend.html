@@ -1,18 +1,18 @@
 {% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
 
 {% block content %}
-    <div class="container mx-auto bg-white text-black pb-24">
+    <div class="container mx-auto bg-white text-black pb-24" >
         <div class="uppercase text-center pt-24 pb-24 m-0">
             <div>
-                <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/downloads/extend/plugins/{{ name }}">{{ entry.title }}</a></h1>
+                <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ name }}">{{ entry.title }}</a></h1>
             </div>
             <div>
-                <span class="opacity-50"><a class="no-underline" href="{{ url() }}/downloads">{{ entry.txt_downloads|raw }}</a></span>
+                <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">{{ entry.txt_downloads|raw }}</a></span>
             </div>
         </div>
         <div>
-            <div class="flex content-center flex-wrap">
-                <div class="w-full lg:w-6/12 p-6 text-center">
+            <div class="flex">
+                <div class="w-6/12 p-6 bg-white dark:bg-slate-800 mr-2 border border-black text-center" style="box-shadow: 3px 3px 0 black">
                     <div class="p-12 h-full text-black plate">
                         <div class="icon-svg-large mb-5 text-center">{{ icon('plug', 'fontawesome|solid') }}</div>
                         <h4 class="text-2xl">{{ entry.txt_plugins|raw }}</h4>
@@ -20,17 +20,17 @@
                             {{ entry.txt_plugins_p|raw }}
                             <br>
                         </div>
-                        <a class="pl-6 pr-6 pt-2 pb-2 button "  href="{{ url() }}/{{ entry.id }}/plugins">{{ entry.txt_plugins_browse|raw }}</a>
+                        <a class="pl-6 pr-6 pt-2 pb-2 button"  href="{{ url() }}/flextype/downloads/extend/plugins">{{ entry.txt_plugins_browse|raw }}</a>
                     </div>
                 </div>
-                <div class="w-full lg:w-6/12 p-6 text-center">
+                <div class="w-6/12 p-6 bg-white dark:bg-slate-800 ml-2 border border-black text-center" style="box-shadow: 3px 3px 0 black">
                     <div class="p-12 h-full text-black plate">
                         <div class="icon-svg-large mb-5 text-center">{{ icon('palette', 'fontawesome|solid') }}</div>
                         <h4 class="text-2xl">{{ entry.txt_themes|raw }}</h4>
                         <div class="h-24 mb-10">
                             {{ entry.txt_themes_p|raw }}
                         </div>
-                        <a class="pl-6 pr-6 pt-2 pb-2 button "  href="{{ url() }}/{{ entry.id }}/themes">{{ entry.txt_themes_browse|raw }}</a>
+                        <a class="pl-6 pr-6 pt-2 pb-2 button "  href="{{ url() }}/flextype/downloads/extend/themes">{{ entry.txt_themes_browse|raw }}</a>
                     </div>
                 </div>
             </div>
