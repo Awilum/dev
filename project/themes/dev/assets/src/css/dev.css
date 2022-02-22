@@ -5,7 +5,7 @@
 @layer base {
     html, body {
         /*font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
-        font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
         font-size: 18px;
         font-weight: 300;
     }
@@ -36,7 +36,7 @@
 
     a.active,
     a:hover {
-        @apply text-red-500;
+        @apply text-pink-500;
     }
 
     h1 > a {
@@ -56,20 +56,20 @@
     code {
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-800 border-2 border-black px-1;
+        @apply bg-slate-800 px-2 text-slate-100;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
     pre > code.hljs {
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-800 mr-2 mb-10;
+        @apply p-4 bg-slate-800 mb-10;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
 
     .terminal {
-        @apply bg-slate-800 mb-8 border-2 border-black;
+        @apply bg-slate-800 mb-8 border-2 border-black text-slate-100;
         overflow: hidden;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
@@ -825,7 +825,6 @@
         padding-right: 20px;
         padding-top: 10px;
         vertical-align: middle;
-        @apply border-b-2 border-black bg-slate-800;
     }
 
     .table {
@@ -833,7 +832,8 @@
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;
-        @apply border-black border-2;
+        box-shadow: 2px 2px 0 #333;
+        @apply border-black border;
     }
 
     th {
@@ -844,7 +844,7 @@
 
     .table table thead {
         font-weight: 300;
-        @apply border-b-2 border-black bg-black;
+        @apply border-b text-slate-100 border-black bg-slate-800;
     }
 
 }

@@ -34,18 +34,29 @@
     {% endblock %}
 </head>
 <body class="antialiased text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
-    <header class="bg-slate-50 dark:bg-slate-800 border-b-2 border-l-2 border-r-2 border-black flex items-center container mx-auto max-w-[1200px]">
-        <h1 class="m-0 p-0 p-6 py-2 px-6 text-xl font-bold text-center border-r-2 border-black"><a href="{{ url() }}">AWILUM.DEV</a></h1>
+    <header class="bg-blue-50 dark:bg-slate-800 border-b border-l border-r border-black flex items-center container mx-auto max-w-[1200px]" style="box-shadow: 2px 2px 0 black">
+        <h1 class="m-0 p-0 p-6 py-2 px-6 text-xl mr-6 font-bold text-center border-r border-black"><a href="{{ url() }}">AWILUM.DEV</a></h1>
         {% for item in flextype.entries.fetch('', {'collection': true}).sortBy('menu_item_order', 'ASC').all() %}
             {% if item.menu_item_title %}
-                <a class="font-bold pl-6 text-base uppercase {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
+                <a class="font-bold pr-3 text-xs uppercase {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
             {% endif %}
         {% endfor %}
 
-        <div style="margin-left: auto;">
-            <a class="font-bold pl-6 text-base uppercase" rel="nofollow" href="https://github.com/Awilum">GH</a>
-            <a class="font-bold pl-3 text-base uppercase" rel="nofollow" href="https://twitter.com/_awilum">TW</a>
-            <a class="font-bold pl-3 pr-6 text-base uppercase" rel="nofollow" href="https://profile.codersrank.io/user/awilum">CR</a>
+        <div class="flex" style="margin-left: auto;">
+            <a class="font-bold pl-3 text-xs uppercase" rel="nofollow" href="{{ url() }}/supporters">
+                <svg xmlns="http://www.w3.org/2000/svg" class="m-0 p-0" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                  </svg>
+            </a>
+            <a class="font-bold pl-3 pr-6 text-xs uppercase" rel="nofollow" href="{{ url() }}/about">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                  </svg>
+            </a>
         </div>
     </header>
 
