@@ -896,6 +896,7 @@
         padding-right: 20px;
         padding-top: 10px;
         vertical-align: middle;
+        border-color: black;
     }
 
     .table {
@@ -918,8 +919,15 @@
         @apply border-b text-slate-100 border-black bg-slate-800;
     }
 
-
-
+    @media (prefers-color-scheme: dark) {
+        .icon-svg-xsmall > svg,
+        .icon-svg-small > svg,
+        .icon-svg-normal > svg,
+        .icon-svg-medium > svg,
+        .icon-svg-large > svg {
+            @apply stroke-slate-300 fill-slate-300;
+        }
+    }
 
     .icon-svg-black > svg {
         fill: black;
@@ -1023,5 +1031,17 @@
 
     .button:hover {
         @apply text-pink-500 shadow-pink-500 border-pink-500;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .button {
+            box-shadow: 3px 3px 0 black;
+            @apply bg-slate-800 pl-6 pr-6 pt-2 pb-2 shadow-black border rounded font-bold text-xs border-black no-underline relative;
+        }
+    
+        .button:hover {
+            @apply text-pink-500 border-pink-500;
+            box-shadow: 3px 3px 0 #ec4899;
+        }
     }
 }

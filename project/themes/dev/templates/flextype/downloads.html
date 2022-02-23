@@ -2,7 +2,7 @@
 
 {% block content %}
 {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/flextype/partials/nav.html' %}
-<div class="container mx-auto bg-white text-black pb-24">
+<div class="container mx-auto pb-24">
     <h1 class="uppercase text-center text-3xl lg:text-6xl m-0 mt-24 mb-24">
         {{ entry.title|raw }}
     </h1>
@@ -11,7 +11,7 @@
     </h2>
     <div class="flex content-center flex-wrap mt-12 justify-center">
         <div class="w-full lg:w-6/12 p-6 text-center">
-            <div class="p-12 h-full text-black plate">
+            <div class="p-12 h-full plate">
                 <div class="icon-svg-large mb-5 text-center">{{ icon('download', 'fontawesome|solid') }}</div>
                 <h4 class="text-2xl">Flextype CMS</h4>
                 <div class="h-48 mb-10">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="w-full lg:w-6/12 p-6 text-center">
-            <div class="p-12 h-full text-black plate">
+            <div class="p-12 h-full plate">
                 <div class="icon-svg-large mb-5 text-center">{{ icon('download', 'fontawesome|solid') }}</div>
                 <h4 class="text-2xl">Flextype Core</h4>
                 <div class="h-48 mb-10">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="w-full lg:w-6/12 p-6 text-center">
-            <div class="p-12 h-full text-black plate">
+            <div class="p-12 h-full plate">
                 <div class="icon-svg-large mb-5 text-center">{{ icon('star', 'fontawesome|solid') }}</div>
                 <h4 class="text-2xl">{{ entry.txt_extend|raw }}</h4>
                 <div class="h-20 mb-10">
