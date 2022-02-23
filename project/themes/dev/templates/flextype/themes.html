@@ -1,10 +1,11 @@
 {% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
 
 {% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/flextype/partials/nav.html' %}
 
 {% set name = uri|split('/')|last %}
 
-<div class="container mx-auto bg-white text-black pb-24">
+<div class="container mx-auto pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
             <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/{{ name }}">{{ entry.title }}</a></h1>
@@ -16,7 +17,7 @@
         </div>
     </div>
     <div class="flex content-center flex-wrap">
-        <div class="w-full lg:w-9/12 p-2 text-center">
+        <div class="w-full lg:w-9/12 text-center">
 
             {# pagination #}
               {% set page = request.getQueryParams().page %}
@@ -27,7 +28,7 @@
               {% if flextype.cache.has(themesCacheID) %}
                   {% set themes = flextype.cache.get(themesCacheID) %}
               {% else %}
-                  {% set themes = flextype.entries.fetch('/downloads/extend/themes', {'collection': true}) %}
+                  {% set themes = flextype.entries.fetch('flextype/downloads/extend/themes', {'collection': true}) %}
                   {% do flextype.cache.set(themesCacheID, themes) %}
               {% endif %}
 
@@ -80,22 +81,22 @@
               {# /pagination #}
 
              {% for item in themes_items %}
-             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 flex align-middle mb-6 extend">
-                 <img src="{{ item.preview }}" alt="{{ item.title }}" style="height: 120px; margin-right: 20px;">
-                 <div class="text-left">
-                     <h4 class="text-xl pb-0 mb-0 block">{{ item.title }}</h4>
-                     <p class="m-0">
+             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
+                <img src="{{ item.preview }}" alt="{{ item.title }}" style="height: 120px; margin-right: 20px;">
+                <div class="text-left">
+                    <h4 class="text-xl pb-0 mb-0 block">{{ item.title }}</h4>
+                    <p class="m-0">
                          {{ item.description }}
-                     </p>
-                     <div class="text-xs text-center text-gray-800 px-2 pb-2 absolute right-0 bottom-0">
-                         {{ txt.by }} <b>{{ item.author.name }}</b>
-                     </div>
-                 </div>
+                    </p>
+                    <div class="text-xs opacity-50">
+                        by <b>{{ item.author.name }}</b>
+                   </div>
+                </div>
              </a>
            {% endfor %}
 
            {# pagination navigation #}
-           <div class="text-center mt-10">
+           <div class="text-left mt-10">
                {% if (page - 1) > 0 %}
                    <a href="?page={{ page - 1 }}{% if category %}&category={{ category }}{% endif %}">&larr;</a>
                {% endif %}
@@ -109,8 +110,9 @@
            {# /pagination navigation #}
 
         </div>
-        <div class="w-full lg:w-3/12 p-2">
-            <div class="text-black text-left p-6 mb-6 plate">
+        <div class="w-full lg:w-3/12 pl-5">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black" style="box-shadow: 3px 3px 0 black">
+            
                 {# CATEGORY CLOUD #}
                 {% set categoryThemesCloudCacheID = strings('categoryThemesCloudCacheID' ~ locale).hash().toString() %}
                 {% if flextype.cache.has(categoryThemesCloudCacheID) %}
@@ -133,10 +135,10 @@
                 {% endfor %}
 
                 {% if category_cloud|length > 0 %}
-                    <h4 class="text-center mb-2 pb-3 border-b border-black uppercase font-semibold">{{ entry.txt_categories }}</h4>
-                    <div class="mr-12 mt-5">
+                <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black">Categories</h3>
+                <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
-                            <a class="no-underline px-1 mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/themes?category={{ category|trim }}">
+                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/themes?category={{ category|trim }}">
                                 {% if category == 'framework' %}
                                 <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('bootstrap', 'fontawesome|brands') }}</span>
                                 {% else %}
@@ -148,8 +150,6 @@
                 {% endif %}
                 {# /TAGS CLOUD #}
             </div>
-            <a class="pl-6 pr-6 pt-2 pb-2 w-full fadeIn button  uppercase"
-            href="https://github.com/flextype/flextype.org/tree/dev/project/entries/en/downloads/extend/themes">{{ entry.txt_submit_theme }}</a>
         </div>
     </div>
 </div>

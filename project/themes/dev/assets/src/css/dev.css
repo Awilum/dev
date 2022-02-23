@@ -919,6 +919,12 @@
         @apply border-b text-slate-100 border-black bg-slate-800;
     }
 
+
+    @media (prefers-color-scheme: dark) {
+        td {
+            @apply bg-slate-800;
+        }
+    }
     @media (prefers-color-scheme: dark) {
         .icon-svg-xsmall > svg,
         .icon-svg-small > svg,
