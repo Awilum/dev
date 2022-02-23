@@ -1,8 +1,9 @@
 {% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
 
 {% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/flextype/partials/nav.html' %}
 <div class="container mx-auto bg-white text-black pb-24">
-    <h1 class="uppercase text-center text-3xl lg:text-6xl m-0 pt-24 pb-24">
+    <h1 class="uppercase text-center text-3xl lg:text-6xl m-0 mt-24 mb-24">
         {{ entry.title|raw }}
     </h1>
     <h2 class="text-center m-0 pl-6 pr-6 lg:pl-40 lg:pr-40 pb-24 text-xl font-normal">
@@ -16,7 +17,7 @@
                 <div class="h-24 mb-10">
                     {{ entry.txt_github_p|raw }}
                 </div>
-                <a class="pl-6 pr-6 pt-2 pb-2 button " href="https://github.com/flextype">{{ entry.txt_github_button|raw }}</a>
+                <a class="button" href="https://github.com/flextype">{{ entry.txt_github_button|raw }}</a>
             </div>
         </div>
         <div class="w-full lg:w-6/12 p-6 text-center">
@@ -26,7 +27,7 @@
                 <div class="h-24 mb-10">
                     {{ entry.txt_discord_p|raw }}
                 </div>
-                <a class="pl-6 pr-6 pt-2 pb-2 button " href="https://discord.gg/CCKPKVG">{{ entry.txt_discord_button|raw }}</a>
+                <a class="button" href="https://discord.gg/CCKPKVG">{{ entry.txt_discord_button|raw }}</a>
             </div>
         </div>
         <div class="w-full lg:w-6/12 p-6 text-center">
@@ -36,7 +37,7 @@
                 <div class="h-24 mb-10">
                     {{ entry.txt_twitter_p|raw }}
                 </div>
-                <a class="pl-6 pr-6 pt-2 pb-2 button " href="https://twitter.com/getflextype">{{ entry.txt_twitter_button|raw }}</a>
+                <a class="button" href="https://twitter.com/getflextype">{{ entry.txt_twitter_button|raw }}</a>
             </div>
         </div>
     </div>

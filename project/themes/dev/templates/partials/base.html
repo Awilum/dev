@@ -34,20 +34,28 @@
     {% endblock %}
 </head>
 <body class="antialiased text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
-    <header class="bg-white dark:bg-slate-800 border-b border-l border-r border-black flex items-center container mx-auto max-w-[1200px]" style="box-shadow: 3px 3px 0 black">
-        <h1 class="m-0 p-0 p-6 py-2 px-6 text-xl mr-6 font-bold text-center border-r border-black brand-logo"><a href="{{ url() }}">AWILUM.DEV</a></h1>
+    <header class="bg-white dark:bg-slate-800 border-b border-l border-r border-black flex items-center shadow-slate-700 container mx-auto max-w-[1200px]" style="box-shadow: 3px 3px 0;">
+        <a href="{{ url() }}" class="m-0 p-0 p-6 py-2 px-3 text-xl font-bold text-center border-r border-black brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="{% if entry.id == 'home' %}stroke-pink-500{% endif %}" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <path d="M6 12h4m-2 -2v4" />
+                <line x1="15" y1="11" x2="15" y2="11.01" />
+                <line x1="18" y1="13" x2="18" y2="13.01" />
+            </svg>
+        </a>
         {% for item in flextype.entries.fetch('', {'collection': true}).sortBy('menu_item_order', 'ASC').all() %}
             {% if item.menu_item_title %}
-                <a class="font-bold pr-3 text-xs uppercase {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
+                <a class="m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-black {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
             {% endif %}
         {% endfor %}
 
         <div class="flex" style="margin-left: auto;">
-            <a class="font-bold pl-3 text-xs uppercase" rel="nofollow" href="{{ url() }}/supporters">
-                SUPPORTERS
+            <a class="m-0 p-0 px-3 py-2 border-l border-black font-bold text-xs  uppercase no-underline" rel="nofollow" href="{{ url() }}/supporters">
+                Sponsors
             </a>
-            <a class="font-bold pl-3 pr-6 text-xs uppercase" rel="nofollow" href="{{ url() }}/about">
-                ABOUT
+            <a class="m-0 p-0 px-3 py-2 border-l border-black font-bold text-xs uppercase no-underline" rel="nofollow" href="{{ url() }}/about">
+                About
             </a>
         </div>
     </header>

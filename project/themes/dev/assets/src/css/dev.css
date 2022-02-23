@@ -61,7 +61,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-800 px-2 text-slate-100;
+        @apply bg-slate-800 px-2 text-slate-100 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -69,7 +69,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-800 mb-10;
+        @apply p-4 bg-slate-800 mb-10 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -140,7 +140,7 @@
 
 
     .terminal {
-        @apply bg-slate-800 mb-8 border-2 border-black text-slate-100;
+        @apply bg-slate-800 mb-8 border-2 border-black text-slate-100 rounded;
         overflow: hidden;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
@@ -1012,5 +1012,16 @@
         margin-right: 5px;
     }
 
+    a.brand-logo:hover > svg {
+        @apply stroke-pink-500;
+    }
 
+    .button {
+        @apply pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-black no-underline relative;
+        box-shadow: 3px 3px 0;
+    }
+
+    .button:hover {
+        @apply text-pink-500 shadow-pink-500 border-pink-500;
+    }
 }
