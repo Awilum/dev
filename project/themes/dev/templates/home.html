@@ -49,8 +49,8 @@
             </div>
         </div>
     </div>
-    <div class="flex">
-        <div class="w-6/12 p-6 bg-white dark:bg-slate-800 mr-2 border border-black" style="box-shadow: 3px 3px 0 black">
+    <div class="lg:flex">
+        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 lg:mr-2 border border-black" style="box-shadow: 3px 3px 0 black">
             <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
                 RECENT POSTS
                 <a rel="nofollow" href="{{ url() }}/blog" class="ml-2">
@@ -59,7 +59,7 @@
             </h3>
             {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/recent-posts.html' %}    
         </div>
-        <div class="w-6/12 p-6 bg-white dark:bg-slate-800 ml-2 border border-black" style="box-shadow: 3px 3px 0 black">
+        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 mt-4 lg:mt-0 lg:ml-2 border border-black" style="box-shadow: 3px 3px 0 black">
             <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
                 OPENSOURCE CONTRIBUTIONS
                 <a rel="nofollow" href="https://github.com/Awilum" class="ml-2">

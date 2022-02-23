@@ -44,13 +44,127 @@
                 <line x1="18" y1="13" x2="18" y2="13.01" />
             </svg>
         </a>
-        {% for item in flextype.entries.fetch('', {'collection': true}).sortBy('menu_item_order', 'ASC').all() %}
-            {% if item.menu_item_title %}
-                <a class="m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-black {% if item.menu_item_url in entry.id %}active{% endif %}" href="{{ url() }}/{{ item.menu_item_url }}">{{ item.menu_item_title }}</a>
-            {% endif %}
-        {% endfor %}
+        <a class="m-0 p-0 px-3 py-2 border-r border-black font-bold text-xs uppercase no-underline hidden lg:block" rel="nofollow" href="{{ url() }}/blog">
+            Blog
+        </a>
+        <div class="flex justify-center hidden lg:block">
+            <div
+                x-data="{
+                    open: false,
+                    toggle() {
+                        if (this.open) {
+                            return this.close()
+                        }
 
-        <div class="flex" style="margin-left: auto;">
+                        this.open = true
+                    },
+                    close(focusAfter) {
+                        this.open = false
+
+                        focusAfter && focusAfter.focus()
+                    }
+                }"
+                x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                x-id="['dropdown-button']"
+                class="relative"
+            >
+                <!-- Button -->
+                <button
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')"
+                    type="button"
+                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-black"
+                >
+                    <span>Projects</span>
+                </button>
+
+                <!-- Panel -->
+                <div
+                    x-ref="panel"
+                    x-show="open"
+                    x-transition.origin.top.left
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    style="display: none; box-shadow: 3px 3px 0 black"
+                    class="absolute left-0 mt-2 w-48 bg-white border border-black rounded shadow-md overflow-hidden z-50"
+                >
+                    <div>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/thermage">Thermage</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/glowyphp">Glowy PHP</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/flextype">Flextype</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/faker-javascript">Faker JavasScript</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-black" href="{{ url() }}/dart-packages">Dart Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center lg:hidden">
+            <div
+                x-data="{
+                    open: false,
+                    toggle() {
+                        if (this.open) {
+                            return this.close()
+                        }
+
+                        this.open = true
+                    },
+                    close(focusAfter) {
+                        this.open = false
+
+                        focusAfter && focusAfter.focus()
+                    }
+                }"
+                x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                x-id="['dropdown-button']"
+                class="relative"
+            >
+                <!-- Button -->
+                <button
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')"
+                    type="button"
+                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-black"
+                >
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="4" y="14" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                            <line x1="14" y1="7" x2="20" y2="7" />
+                            <line x1="17" y1="4" x2="17" y2="10" />
+                          </svg>
+                    </span>
+                </button>
+
+                <!-- Panel -->
+                <div
+                    x-ref="panel"
+                    x-show="open"
+                    x-transition.origin.top.left
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    style="display: none; box-shadow: 3px 3px 0 black"
+                    class="absolute left-0 mt-2 w-48 bg-white border border-black rounded shadow-md overflow-hidden z-50"
+                >
+                    <div>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/thermage">Thermage</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/glowyphp">Glowy PHP</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/flextype">Flextype</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/faker-javascript">Faker JavasScript</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-black" href="{{ url() }}/dart-packages">Dart Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex hidden lg:block" style="margin-left: auto;">
             <a class="m-0 p-0 px-3 py-2 border-l border-black font-bold text-xs  uppercase no-underline" rel="nofollow" href="{{ url() }}/supporters">
                 Sponsors
             </a>
@@ -78,6 +192,8 @@
         {% endfor %}
     {% endif %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <script>
         hljs.highlightAll();
 
