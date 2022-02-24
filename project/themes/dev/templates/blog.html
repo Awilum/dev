@@ -60,7 +60,7 @@
     {% endif %}
 
     <div class="flex mt-4">
-        <div class="w-9/12">
+        <div class="w-full lg:w-9/12">
             {# blog-posts #}
             {% for post in blogPosts %} 
                 <div class="p-6 py-0 bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
@@ -75,7 +75,7 @@
             {% endfor %}
             {# /blog-posts #}
         </div>
-        <div class="w-3/12 pl-5">
+        <div class="hidden lg:block lg:w-3/12 pl-5">
             <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black" style="box-shadow: 3px 3px 0 black">
                 <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black">Popular Tags</h3>
                 {# tags-cloud #}
