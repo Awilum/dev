@@ -18,7 +18,7 @@ Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg)
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET YOUR_APP_URL/api/images/entries/image.jpg?fm=gif&token=YOUR_IMAGES_TOKEN
 ```
 
@@ -26,7 +26,7 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?fm=gif&token=YOUR_IMAGES_TOKEN
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET [url]/api/images/entries/image.jpg?fm=gif&token=3b29b31ae05c89c2009f6e3f96e3d703
 ```
 

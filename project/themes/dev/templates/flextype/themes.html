@@ -81,7 +81,7 @@
               {# /pagination #}
 
              {% for item in themes_items %}
-             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
+             <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
                 <img src="{{ item.preview }}" alt="{{ item.title }}" style="height: 120px; margin-right: 20px;">
                 <div class="text-left">
                     <h4 class="text-xl pb-0 mb-0 block">{{ item.title }}</h4>
@@ -111,7 +111,7 @@
 
         </div>
         <div class="w-full lg:w-3/12 pl-5">
-            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black" style="box-shadow: 3px 3px 0 black">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
             
                 {# CATEGORY CLOUD #}
                 {% set categoryThemesCloudCacheID = strings('categoryThemesCloudCacheID' ~ locale).hash().toString() %}

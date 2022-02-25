@@ -19,9 +19,8 @@
                                                .sortByAsc('order')
                                                .onlyFromCollection(['title', 'id'])%}
                 <ul class="list-none m-0">
-                {% for page in pages %}
-                {{ page.id }}
-                    <li class="flex items-center"><a href="{{ page.id }}">{{ page.title }}</a></li>
+                {% for page in pages %}                
+                    <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}">{{ page.title }}</a></li>
                 {% endfor %}
                 </ul>
             </div>

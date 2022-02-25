@@ -18,7 +18,7 @@ Sets the height of the image, in pixels.
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET YOUR_APP_URL/api/images/entries/image.jpg?h=100&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?h=200&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?h=300&token=YOUR_IMAGES_TOKEN
@@ -28,7 +28,7 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?h=300&token=YOUR_IMAGES_TOKEN
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET [url]/api/images/entries/image.jpg?h=100&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?h=200&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?h=300&token=3b29b31ae05c89c2009f6e3f96e3d703

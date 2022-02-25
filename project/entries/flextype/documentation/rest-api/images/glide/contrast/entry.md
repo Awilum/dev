@@ -18,7 +18,7 @@ Adjusts the image contrast. Use values between `-100` and `+100`, where `0` repr
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET YOUR_APP_URL/api/images/entries/image.jpg?con=-50&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?con=50&token=YOUR_IMAGES_TOKEN
 ```
@@ -27,7 +27,7 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?con=50&token=YOUR_IMAGES_TOKEN
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET [url]/documentation/api/images/entries/image.jpg?con=-50&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/documentation/api/images/entries/image.jpg?con=50&token=3b29b31ae05c89c2009f6e3f96e3d703
 ```

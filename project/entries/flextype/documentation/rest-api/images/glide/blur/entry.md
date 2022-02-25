@@ -18,7 +18,7 @@ Adds a blur effect to the image. Use values between `0` and `100`.
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET YOUR_APP_URL/api/images/entries/image.jpg?blur=0&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?blur=50&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?blur=100&token=YOUR_IMAGES_TOKEN
@@ -28,7 +28,7 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?blur=100&token=YOUR_IMAGES_TOKEN
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET [url]/api/images/entries/image.jpg?blur=0&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?blur=50&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?blur=100&token=3b29b31ae05c89c2009f6e3f96e3d703

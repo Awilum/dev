@@ -40,7 +40,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/registry?id=YOUR_REGISTRY_ITEM_ID&token=YOUR_REGISTRY_TOKEN
 ```
 
@@ -78,7 +78,7 @@ Fetch Flextype Version from Flextype Registry
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/registry?id=flextype.manifest.version&token=efe1e36e4d60fcd547e22eb9f795dff9
 ```
 

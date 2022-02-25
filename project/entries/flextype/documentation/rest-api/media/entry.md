@@ -126,7 +126,7 @@ The Flextype Files API organized around Representational State Transfer (REST) f
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/files?id=YOUR_MEDIA_FILES_ID&token=YOUR_MEDIA_FILES_TOKEN
 ```
 
@@ -170,13 +170,13 @@ Fetch file
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/files?id=entries/movies/sg-1/season-5/episode-21/cover.jpg&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>
 
-```http
+```
 {
     "data": {
         "title": "Episode 21",
@@ -194,7 +194,7 @@ GET /api/media/files?id=entries/movies/sg-1/season-5/episode-21/cover.jpg&token=
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/files?id=YOUR_MEDIA_FILES_ID&options[collection]=true&token=YOUR_MEDIA_FILES_TOKEN
 ```
 
@@ -238,13 +238,13 @@ Fetch Movies Folders Collection
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/files?id=entries/movies/sg-1/season-5/episode-21&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>
 
-```http
+```
 {
     "data": {
         "cover.jpg": {
@@ -264,7 +264,7 @@ GET /api/media/files?id=entries/movies/sg-1/season-5/episode-21&token=6f047babd1
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/media/files
 ```
 
@@ -311,13 +311,13 @@ Upload new file to **entries/movies/sg-1/season-5/episode-21**
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/media/files
 ```
 
 <div class="file-header">Body</div>
 
-```http
+```
 curl -i -X POST \
   -H "Content-Type: multipart/form-data" \
   -F "token=efe1e36e4d60fcd547e22eb9f795dff92" \
@@ -357,7 +357,7 @@ curl -i -X POST \
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files
 ```
 
@@ -404,7 +404,7 @@ Move file **entries/movies/sg-1/season-5/episode-21/cover.jpg** to the **entries
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files
 ```
 
@@ -439,7 +439,7 @@ Move file **entries/movies/sg-1/season-5/episode-21/cover.jpg** to the **entries
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files
 ```
 
@@ -474,7 +474,7 @@ PUT /api/media/files
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files/copy
 ```
 
@@ -521,7 +521,7 @@ Copy for entry **entries/movies/sg-1/season-5/cover.jpg** to **entries/movies/sg
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files/copy
 ```
 
@@ -556,7 +556,7 @@ PUT /api/media/files/copy
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/files
 ```
 
@@ -598,7 +598,7 @@ Delete entry **entries/movies/sg-1/season-5/episode-21/new-cover.jpg**
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/files
 ```
 
@@ -616,7 +616,7 @@ DELETE /api/media/files
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/files
 ```
 
@@ -668,7 +668,7 @@ Update title for file **entries/movies/sg-1/season-5/cover.jpg**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PATCH /api/media/files/meta
 ```
 
@@ -705,7 +705,7 @@ PATCH /api/media/files/meta
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/media/files
 ```
 
@@ -757,7 +757,7 @@ Add tags for file **entries/movies/sg-1/season-5/cover.jpg**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PATCH /api/media/files/meta
 ```
 
@@ -796,7 +796,7 @@ PATCH /api/media/files/meta
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/files
 ```
 
@@ -843,7 +843,7 @@ Delete tags meta field for file **entries/movies/sg-1/season-5/cover.jpg**
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/files/meta
 ```
 
@@ -924,7 +924,7 @@ The Flextype Folders API organized around Representational State Transfer (REST)
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/folders?id=YOUR_FOLDER_ID&options=[]&token=YOUR_FOLDERS_TOKEN
 ```
 
@@ -967,7 +967,7 @@ Fetch Movies Folder
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/folders?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -975,7 +975,7 @@ GET /api/media/folders?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=YOUR_FOLDER_ID&options[collection]=true&token=YOUR_FOLDERS_TOKEN
 ```
 
@@ -1018,7 +1018,7 @@ Fetch Movies Folders Collection
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/media/folders?id=entries/movies&collection=true&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -1026,7 +1026,7 @@ GET /api/media/folders?id=entries/movies&collection=true&token=6f047babd1894064f
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/media/folders
 ```
 
@@ -1068,7 +1068,7 @@ Create new folder **entries/movies/platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/media/folders
 ```
 
@@ -1099,7 +1099,7 @@ POST /api/media/folders
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/folders
 ```
 
@@ -1146,7 +1146,7 @@ Rename entry **entries/movies/platform** to the **entries/movies/the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/folders
 ```
 
@@ -1178,7 +1178,7 @@ Move entry **entries/movies/the-platform** to the **entries/movies/2019/the-plat
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/folders
 ```
 
@@ -1210,7 +1210,7 @@ PUT /api/media/folders
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/folders/copy
 ```
 
@@ -1257,7 +1257,7 @@ Copy for entry **entries/movies/2019/the-platform** to **entries/movies/horror/t
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/media/folders/copy
 ```
 
@@ -1289,7 +1289,7 @@ PUT /api/media/folders/copy
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/folders
 ```
 
@@ -1331,7 +1331,7 @@ Delete entry **entires/movies/horror/the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/media/folders
 ```
 

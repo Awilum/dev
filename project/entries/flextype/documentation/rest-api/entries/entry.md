@@ -5,7 +5,7 @@ order: 2
 breadcrumbs:
   -
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/documentation/rest-api/"
 on_this_page:
   -
     title: "Endpoints"
@@ -82,7 +82,7 @@ The Flextype Entries API organized around Representational State Transfer (REST)
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
 ```
 
@@ -125,7 +125,7 @@ Fetch Movies Entry
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -133,7 +133,7 @@ GET /api/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
 ```
 
@@ -177,7 +177,7 @@ Fetch Movies Collection
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -185,7 +185,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan**
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -193,7 +193,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan** and where y
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET /api/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -201,7 +201,7 @@ GET /api/entries?id=movies&options[collection]=true&options[filter][where][0][ke
 
 We can send options for the query to search items in a collection that matches the specific filter's conditions.  
 
-`options` is an array of valid values for [filter()](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php) and [find()](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php) helpers.
+`options` is an array of valid values for [filter()](s://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php) and [find()](s://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php) helpers.
 
 ##### Extending
 
@@ -209,7 +209,7 @@ We can you use any custom macroabe function assigned to Entries API in the fetch
 
 ##### Examples
 
-```http
+```
 GET /api/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
@@ -217,7 +217,7 @@ GET /api/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd18940
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/entries
 ```
 
@@ -264,7 +264,7 @@ Create new entry **platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 POST /api/entries
 ```
 
@@ -306,7 +306,7 @@ POST /api/entries
 
 <div class="file-header">Request</div>
 
-```http
+```
 PATCH /api/entries
 ```
 
@@ -353,7 +353,7 @@ Update content for entry **platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PATCH /api/entries
 ```
 
@@ -394,7 +394,7 @@ PATCH /api/entries
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/entries
 ```
 
@@ -441,7 +441,7 @@ Move entry **platform** to the **the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/entries
 ```
 
@@ -480,7 +480,7 @@ Move entry **movies/the-platform** to the **movies/2019/the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/entries
 ```
 
@@ -519,7 +519,7 @@ PUT /api/entries
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/entries/copy
 ```
 
@@ -566,7 +566,7 @@ Copy for entry **movies/2019/the-platform** to **movies/horror/the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 PUT /api/entries/copy
 ```
 
@@ -605,7 +605,7 @@ PUT /api/entries/copy
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/entries
 ```
 
@@ -639,7 +639,7 @@ DELETE /api/entries
 </table>
 
 ##### Result
-Returns an empty body with HTTP status 204
+Returns an empty body with  status 204
 
 ##### Examples
 
@@ -647,7 +647,7 @@ Delete entry **movies/horror/the-platform**
 
 <div class="file-header">Request</div>
 
-```http
+```
 DELETE /api/entries
 ```
 

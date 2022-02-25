@@ -25,6 +25,10 @@
     h3 {
         @apply text-2xl pt-6;
     }
+
+    h4 {
+        @apply pt-6 pb-0 mb-2;
+    }
     
     p {
         @apply mb-6;
@@ -43,6 +47,12 @@
         @apply no-underline;
     }
 
+    ul,
+    ol {
+        @apply mb-6;
+    }
+
+    ol > li,
     ul > li {
         @apply list-disc ml-6;
     }
@@ -61,7 +71,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-900 px-2 text-slate-100 rounded;
+        @apply bg-slate-900 px-2 py-1 text-slate-100 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -69,13 +79,13 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-900 mb-10 rounded;
+        @apply p-4 bg-slate-900 py-4 mb-10 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
     .hljs:before {
         letter-spacing: 1px;
-        padding: 7px 12px;
+        padding: 16px 12px;
         font-size: 10px;
         line-height: 10px;
         right: 0;
@@ -900,7 +910,7 @@
         border-color: #0f172a;
     }
 
-    .table {
+    table {
         font-weight: 300;
         overflow: hidden;
         margin-bottom: 40px;
@@ -912,10 +922,10 @@
     th {
         font-weight: 500;
         background-size: 8px 8px;
-        @apply bg-slate-900;
+        @apply bg-slate-900 text-slate-100 font-normal;
     }
 
-    .table table thead {
+    table table thead {
         font-weight: 300;
         @apply border-b text-slate-100 border-slate-900 bg-slate-800;
     }
@@ -975,20 +985,20 @@
     }
 
 
-
     .file-list {
         padding: 20px!important;
         background: #fff;
         color: #090e24;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         margin-bottom: 20px;
         list-style: none;
         margin-left: 0;
-
-
-        box-shadow: 3px 3px 0 #090e24;
-        border: 1px solid #090e24;
         margin-bottom: 40px;
+
+        position: relative;
+        font-size: 0.75em;
+        opacity: .9;
+        @apply p-4 bg-slate-900 mb-10 px-2 text-slate-100 rounded;
+        font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
     .file-list svg {
@@ -1017,14 +1027,11 @@
     }
 
     .file-header {
-        padding: 8px 20px 18px!important;
-        color: #090e24;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        background: #f8f9fb;
-        border-bottom: 1px solid #f8f8f8;
+        font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        padding: 8px 18px 8px!important;
         margin-bottom: -10px;
-        border: 1px solid #090e24;
-        box-shadow: 3px 3px 0 #090e24;
+        font-size: 0.75em;
+        @apply bg-slate-900 text-slate-100 rounded-tr rounded-tl;
     }
 
     .file-header svg {

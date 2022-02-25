@@ -81,7 +81,7 @@
               {# /pagination #}
 
              {% for item in plugins_items %}
-             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center" style="box-shadow: 3px 3px 0 #0f172a;">
+             <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center" style="box-shadow: 3px 3px 0 #0f172a;">
                  <span class="icon-svg-medium mr-5">{{ icon(item.icon.name, item.icon.set) }}</span>
                  <div class="text-left">
                      <h4 class="w-full text-xl pb-0 mb-0">{{ item.title }}</h4>

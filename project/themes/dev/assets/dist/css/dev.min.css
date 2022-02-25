@@ -452,6 +452,12 @@ h3 {
   line-height: 2rem;
 }
 
+h4 {
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0px;
+}
+
 p {
   margin-bottom: 1.5rem;
 }
@@ -471,7 +477,11 @@ h1 > a {
           text-decoration-line: none;
 }
 
-ul > li {
+ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+ol > li, ul > li {
   margin-left: 1.5rem;
   list-style-type: disc;
 }
@@ -573,6 +583,8 @@ code {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
   font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -587,12 +599,14 @@ pre > code.hljs {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 .hljs:before {
   letter-spacing: 1px;
-  padding: 7px 12px;
+  padding: 16px 12px;
   font-size: 10px;
   line-height: 10px;
   right: 0;
@@ -1422,7 +1436,7 @@ th, td {
   border-color: #0f172a;
 }
 
-.table {
+table {
   font-weight: 300;
   overflow: hidden;
   margin-bottom: 40px;
@@ -1434,13 +1448,15 @@ th, td {
 }
 
 th {
-  font-weight: 500;
   background-size: 8px 8px;
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
-.table table thead {
+table table thead {
   font-weight: 300;
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
@@ -1508,12 +1524,22 @@ th {
   padding: 20px!important;
   background: #fff;
   color: #090e24;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   list-style: none;
   margin-left: 0;
-  box-shadow: 3px 3px 0 #090e24;
-  border: 1px solid #090e24;
   margin-bottom: 40px;
+  position: relative;
+  font-size: 0.75em;
+  opacity: .9;
+  margin-bottom: 2.5rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 .file-list svg {
@@ -1542,14 +1568,16 @@ th {
 }
 
 .file-header {
-  padding: 8px 20px 18px!important;
-  color: #090e24;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background: #f8f9fb;
-  border-bottom: 1px solid #f8f8f8;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  padding: 8px 18px 8px!important;
   margin-bottom: -10px;
-  border: 1px solid #090e24;
-  box-shadow: 3px 3px 0 #090e24;
+  font-size: 0.75em;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 .file-header svg {
@@ -1699,14 +1727,6 @@ a.brand-logo:hover > svg {
   margin-bottom: 0.25rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1737,6 +1757,10 @@ a.brand-logo:hover > svg {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mt-6 {
@@ -1813,6 +1837,10 @@ a.brand-logo:hover > svg {
 
 .mt-36 {
   margin-top: 9rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .ml-0 {
@@ -1915,12 +1943,12 @@ a.brand-logo:hover > svg {
   max-width: 450px;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .list-none {
   list-style-type: none;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .flex-col-reverse {
@@ -1951,10 +1979,6 @@ a.brand-logo:hover > svg {
   overflow: hidden;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1963,16 +1987,20 @@ a.brand-logo:hover > svg {
   border-radius: 0.5rem;
 }
 
-.border-2 {
-  border-width: 2px;
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-tr {
+  border-top-right-radius: 0.25rem;
 }
 
 .border {
   border-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
+.border-2 {
+  border-width: 2px;
 }
 
 .border-b {
@@ -1987,6 +2015,10 @@ a.brand-logo:hover > svg {
   border-right-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-l {
   border-left-width: 1px;
 }
@@ -1995,24 +2027,14 @@ a.brand-logo:hover > svg {
   border-bottom-width: 0px;
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-slate-900 {
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
 }
 
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -2035,6 +2057,16 @@ a.brand-logo:hover > svg {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
@@ -2042,10 +2074,6 @@ a.brand-logo:hover > svg {
 
 .stroke-slate-300 {
   stroke: #cbd5e1;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .p-6 {
@@ -2064,17 +2092,16 @@ a.brand-logo:hover > svg {
   padding: 3rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .px-6 {
@@ -2095,6 +2122,11 @@ a.brand-logo:hover > svg {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .py-1 {
@@ -2120,22 +2152,6 @@ a.brand-logo:hover > svg {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .pl-8 {
@@ -2178,12 +2194,28 @@ a.brand-logo:hover > svg {
   padding-bottom: 6rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
 
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .pb-20 {
@@ -2238,21 +2270,6 @@ a.brand-logo:hover > svg {
   vertical-align: middle;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2271,6 +2288,21 @@ a.brand-logo:hover > svg {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-lg {
@@ -2298,9 +2330,9 @@ a.brand-logo:hover > svg {
   letter-spacing: 0.025em;
 }
 
-.text-slate-100 {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -2308,19 +2340,19 @@ a.brand-logo:hover > svg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-pink-500 {
-  --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.text-slate-100 {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
+}
+
+.text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
 }
 
 .no-underline {

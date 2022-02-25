@@ -18,7 +18,7 @@ Rotates the image. Accepts auto, `0`, `90`, `180` or `270`. Default is `auto`. T
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET YOUR_APP_URL/api/images/entries/image.jpg?or=0&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?or=90&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?or=180&token=YOUR_IMAGES_TOKEN
@@ -29,7 +29,7 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?or=270&token=YOUR_IMAGES_TOKEN
 
 <div class="file-header">Request</div>
 
-```http
+```
 GET [url]/api/images/entries/image.jpg?or=0&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?or=90&token=3b29b31ae05c89c2009f6e3f96e3d703
 GET [url]/api/images/entries/image.jpg?or=180&token=3b29b31ae05c89c2009f6e3f96e3d703

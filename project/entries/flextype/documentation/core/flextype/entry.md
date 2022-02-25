@@ -39,7 +39,6 @@ With help of Flextype Core Class we are able to access all features and develop 
 
 ### <a name="methods"></a> Methods
 
-
 <table>
     <thead>
         <tr>
