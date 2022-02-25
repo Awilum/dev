@@ -61,7 +61,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-800 px-2 text-slate-100 rounded;
+        @apply bg-slate-900 px-2 text-slate-100 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -69,7 +69,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-800 mb-10 rounded;
+        @apply p-4 bg-slate-900 mb-10 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -126,7 +126,7 @@
     }
 
     .hljs-shortcode > input {
-        background: black;
+        background: #0f172a;
         text-shadow: 0 0 0 white;
         color: transparent;
         width: 100%;
@@ -140,7 +140,7 @@
 
 
     .terminal {
-        @apply bg-slate-800 mb-8 border-2 border-black text-slate-100 rounded;
+        @apply bg-slate-900 mb-8 border-2 border-black text-slate-100 rounded;
         overflow: hidden;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
@@ -149,7 +149,8 @@
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
         text-align: center;
         padding: 6px 0px;
-        @apply border-b-2 border-black bg-black text-white uppercase text-xs;
+        font-size: 12px;
+        @apply border-b-2 border-black bg-black text-white uppercase;
     }
 
     .terminal-body {
@@ -896,7 +897,7 @@
         padding-right: 20px;
         padding-top: 10px;
         vertical-align: middle;
-        border-color: black;
+        border-color: #0f172a;
     }
 
     .table {
@@ -904,19 +905,19 @@
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;
-        box-shadow: 3px 3px 0 #000;
-        @apply border-black border;
+        box-shadow: 3px 3px 0 #0f172a;
+        @apply border-slate-900 border;
     }
 
     th {
         font-weight: 500;
         background-size: 8px 8px;
-        @apply bg-black;
+        @apply bg-slate-900;
     }
 
     .table table thead {
         font-weight: 300;
-        @apply border-b text-slate-100 border-black bg-slate-800;
+        @apply border-b text-slate-100 border-slate-900 bg-slate-800;
     }
 
 
@@ -936,35 +937,40 @@
     }
 
     .icon-svg-black > svg {
-        fill: black;
+        fill: #0f172a;
     }
 
     .icon-svg-white > svg {
-        fill: white;
+        fill: #0f172a;
     }
 
     .icon-svg-large > svg {
         height: 72px;
+        fill: #0f172a;
         @apply inline-block;
     }
 
     .icon-svg-medium > svg {
         height: 55px;
+        fill: #0f172a;
         @apply inline-block;
     }
 
     .icon-svg-normal > svg {
         height: 18px;
+        fill: #0f172a;
         @apply inline-block;
     }
 
     .icon-svg-small > svg {
         height: 16px;
+        fill: #0f172a;
         @apply inline-block;
     }
 
     .icon-svg-xsmall > svg {
         height: 13px;
+        fill: #0f172a;
         @apply inline-block;
     }
 
@@ -1031,7 +1037,7 @@
     }
 
     .button {
-        @apply pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-black no-underline relative;
+        @apply pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-slate-900 no-underline relative;
         box-shadow: 3px 3px 0;
     }
 
@@ -1042,7 +1048,7 @@
     @media (prefers-color-scheme: dark) {
         .button {
             box-shadow: 3px 3px 0 black;
-            @apply bg-slate-800 pl-6 pr-6 pt-2 pb-2 shadow-black border rounded font-bold text-xs border-black no-underline relative;
+            @apply bg-slate-900 pl-6 pr-6 pt-2 pb-2 shadow-slate-900 border rounded font-bold text-xs border-slate-900 no-underline relative;
         }
     
         .button:hover {

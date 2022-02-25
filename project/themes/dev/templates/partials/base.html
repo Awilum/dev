@@ -32,11 +32,11 @@
     {% endblock %}
 </head>
 <body class="antialiased text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
-    <header class="bg-white dark:bg-slate-800 border-b border-l border-r border-black flex items-center container mx-auto max-w-[1200px]" style="box-shadow: 3px 3px 0 black;">
-        <a href="{{ url() }}" class="m-0 p-0 p-6 py-2 px-3 text-xs font-bold text-center border-r border-black brand-logo no-underline">
+    <header class="bg-white dark:bg-slate-800 border-b border-l border-r border-slate-900 flex items-center container mx-auto max-w-[1200px]" style="box-shadow: 3px 3px 0 #0f172a;">
+        <a href="{{ url() }}" class="m-0 p-0 p-6 py-2 px-3 text-xs font-bold text-center border-r border-slate-900 brand-logo no-underline">
             AWILUM.DEV
         </a>
-        <a class="m-0 p-0 px-3 py-2 border-r border-black font-bold text-xs uppercase no-underline hidden lg:block" rel="nofollow" href="{{ url() }}/blog">
+        <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" rel="nofollow" href="{{ url() }}/blog">
             Blog
         </a>
         <div class="flex justify-center hidden lg:block">
@@ -68,7 +68,7 @@
                     :aria-expanded="open"
                     :aria-controls="$id('dropdown-button')"
                     type="button"
-                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-black"
+                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-slate-900"
                 >
                     <span>Projects</span>
                 </button>
@@ -80,28 +80,28 @@
                     x-transition.origin.top.left
                     x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')"
-                    style="display: none; box-shadow: 3px 3px 0 black"
-                    class="absolute left-0 mt-2 w-48 bg-white border border-black rounded shadow-md overflow-hidden z-50 dark:bg-slate-800"
+                    style="display: none; box-shadow: 3px 3px 0 #0f172a"
+                    class="absolute left-0 mt-2 w-48 bg-white border border-slate-900 rounded shadow-md overflow-hidden z-50 dark:bg-slate-800"
                 >
                     <div>
-                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/thermage">Thermage</a>
-                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-black" href="{{ url() }}/flextype">Flextype</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-slate-900" href="{{ url() }}/thermage">Thermage</a>
+                        <a class="block px-3 py-2 font-bold text-xs uppercase no-underline border-b border-slate-900" href="{{ url() }}/flextype">Flextype</a>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="m-0 p-0 px-3 py-2 border-r border-black font-bold text-xs uppercase no-underline hidden lg:block" href="{{ url() }}/supporters">
+        <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" href="{{ url() }}/supporters">
             Sponsors
         </a>
-        <a class="m-0 p-0 px-3 py-2 border-r border-black font-bold text-xs uppercase no-underline hidden lg:block" href="{{ url() }}/about">
+        <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" href="{{ url() }}/about">
             About
         </a>
         {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/mobile-nav.html' %}
         <div class="flex" style="margin-left: auto;">
-            <a class="m-0 p-0 px-3 py-2 border-l border-black font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
                 GITHUB
             </a>
-            <a class="m-0 p-0 px-3 py-2 border-l border-black font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
                 TWITTER
             </a>
         </div>

@@ -63,11 +63,11 @@
         <div class="w-full lg:w-9/12">
             {# blog-posts #}
             {% for post in blogPosts %} 
-                <div class="p-6 py-0 bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
-                    <h3 class="w-10/12 py-2 text-base font-bold m-0 border-r border-black" style="padding-top: 13.5px; padding-bottom: 13.5px;">
+                <div class="p-6 py-0 bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center" style="box-shadow: 3px 3px 0 #0f172a">
+                    <h3 class="w-10/12 py-2 text-base font-bold m-0 border-r border-slate-900" style="padding-top: 13.5px; padding-bottom: 13.5px;">
                         <a href="{{ post.id }}" style="text-decoration: none;">{{ post.title }}</a>
                     </h3>
-                    <div class="w-3/12 py-2 text-xs pl-4 opacity-60">
+                    <div class="w-3/12 py-2 text-xs pl-4 opacity-80">
                         <strong>Date:</strong> {{ post.published_at|date("M d Y") }}<br>
                         <strong>Views:</strong> {{ pageViewCounterStats(post.id) }}
                     </div>
@@ -76,8 +76,8 @@
             {# /blog-posts #}
         </div>
         <div class="hidden lg:block lg:w-3/12 pl-5">
-            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black" style="box-shadow: 3px 3px 0 black">
-                <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black">Popular Tags</h3>
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+                <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Popular Tags</h3>
                 {# tags-cloud #}
                 {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/tags-cloud.html' %}
                 {# /tags-cloud #}

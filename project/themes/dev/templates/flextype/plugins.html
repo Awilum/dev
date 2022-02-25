@@ -81,7 +81,7 @@
               {# /pagination #}
 
              {% for item in plugins_items %}
-             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-black flex items-center" style="box-shadow: 3px 3px 0 black">
+             <a href="{{ url() }}/flextype/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center" style="box-shadow: 3px 3px 0 #0f172a;">
                  <span class="icon-svg-medium mr-5">{{ icon(item.icon.name, item.icon.set) }}</span>
                  <div class="text-left">
                      <h4 class="w-full text-xl pb-0 mb-0">{{ item.title }}</h4>
@@ -111,7 +111,7 @@
 
         </div>
         <div class="w-full lg:w-3/12 pl-5">
-            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black" style="box-shadow: 3px 3px 0 black">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
             
                 {# CATEGORY CLOUD #}
                 {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID' ~ locale).hash().toString() %}
@@ -135,7 +135,7 @@
                 {% endfor %}
 
                 {% if category_cloud|length > 0 %}
-                    <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black">Categories</h3>
+                    <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Categories</h3>
                     <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
                             {% if category != '' %}

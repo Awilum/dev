@@ -33,8 +33,8 @@
                             .sortBy('published_at', 'DESC')
                             .slice(blogPostsOffset, blogPostsLimit) %}
 
-    <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-black mt-4" style="box-shadow: 3px 3px 0 black">
-        <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+    <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900 mt-4" style="box-shadow: 3px 3px 0 #0f172a">
+        <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 flex items-center">
             Hi there, I'm Sergey Romanenko
             <a href="{{ url() }}/about" class="ml-2">
                 [ABOUT]
@@ -42,7 +42,7 @@
         </h3>
         <div class="flex">
             <div class="w-1/12">
-                <img src="https://avatars.githubusercontent.com/u/477114?v=4" alt="" class="rounded-full border-2 border-black w-20">
+                <img src="https://avatars.githubusercontent.com/u/477114?v=4" alt="" class="rounded-full border-2 border-slate-900 w-20">
             </div>
             <div class="w-11/12 pl-8">
                 I'm a developer with a strong will for learning and researching new technologies and architectural solutions. I like creating and using specialized tools for making development processes as efficient as possible. I have the experience to work with big projects and big development teams.
@@ -50,8 +50,8 @@
         </div>
     </div>
     <div class="lg:flex">
-        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 lg:mr-2 border border-black" style="box-shadow: 3px 3px 0 black">
-            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 lg:mr-2 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 flex items-center">
                 RECENT POSTS
                 <a rel="nofollow" href="{{ url() }}/blog" class="ml-2">
                     [BLOG]
@@ -59,8 +59,8 @@
             </h3>
             {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/recent-posts.html' %}    
         </div>
-        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 mt-4 lg:mt-0 lg:ml-2 border border-black" style="box-shadow: 3px 3px 0 black">
-            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-black flex items-center">
+        <div class="w-full lg:w-6/12 p-6 bg-white dark:bg-slate-800 mt-4 lg:mt-0 lg:ml-2 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 flex items-center">
                 OPENSOURCE CONTRIBUTIONS
                 <a rel="nofollow" href="https://github.com/Awilum" class="ml-2">
                     [GITHUB]

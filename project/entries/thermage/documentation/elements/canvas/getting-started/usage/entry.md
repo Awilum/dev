@@ -59,252 +59,252 @@ render(
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
     <div class="flex">
       <div class="el-pixel" style="width: 13px; height: 13px; background: #dc3545;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
-      <div class="el-pixel" style="width: 13px; height: 13px; background: #1e293b;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
+      <div class="el-pixel" style="width: 13px; height: 13px; background: #0f172a;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: white;"></div>
       <div class="el-pixel" style="width: 13px; height: 13px; background: blue;"></div>
     </div>
