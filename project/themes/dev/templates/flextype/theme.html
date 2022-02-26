@@ -4,7 +4,7 @@
 
 {% set name = uri|split('/')|last %}
 
-<div class="container mx-auto bg-white text-slate-900 pb-24">
+<div class="container mx-auto pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
             <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/themes/{{ name }}">{{ entry.title }}</a></h1>
@@ -25,7 +25,7 @@
 
         <div class="flex content-center flex-wrap">
             <div class="w-full lg:w-9/12 pl-2 pr-7 text-left">
-                <div class="text-slate-900 mb-6">
+                <div class="mb-6">
                     <div class="flex align-middle items-center">
                         <div class="text-left">
                             <h4 class="text-2xl pb-0 mb-0 block">{{ theme.name }}</h4>
@@ -39,12 +39,12 @@
                     </div>
                 </div>
 
-                <hr class="mb-6 border-b border-slate-900">
+                <hr class="mb-6 border-b border-slate-800">
 
                 {{ entry.content|shortcode|markdown|raw }}
             </div>
             <div class="w-full lg:w-3/12 p-2">
-                    <div class="p-6 mb-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+                    <div class="p-6 mb-6 dark:bg-slate-800 mb-4 border border-slate-900 plate-shadow">
                     <div class="flex content-center flex-wrap">
                         <div class="w-full">
                             <p class="m-0 opacity-50">Version</p>
@@ -90,9 +90,9 @@
             </div>
         </div>
 
-        <hr class="mb-6 border-b border-slate-900">
+        <hr class="mb-6 border-b border-slate-800">
 
-        <div class="p-2 text-slate-900 mb-6">
+        <div class="p-2 mb-6">
             <h4>Other themes by {{ theme.author.name }}</h4>
             {% if entry.author.email is not empty %}
                 {% set related_themes = flextype.entries.fetch('flextype/downloads/extend/themes', {'collection': true})
@@ -106,7 +106,7 @@
                     {% for related_theme in related_themes %}
                         {% if related_theme.slug != entry.slug %}
                         <a href="{{ url() }}/flextype/{{ related_theme.id }}" class="w-full p-2 lg:w-6/12 no-underline">
-                            <div class="flex p-6 text-slate-900 align-middle extend">
+                            <div class="flex p-6 align-middle border-slate-800 plate-shadow bg-white dark:bg-slate-800">
                                 <img src="{{ related_theme.preview }}" alt="{{ related_theme.title }}" style="height: 120px; margin-right: 20px;">
                                 <div class="text-left">
                                     <h4 class="text-xl pb-0 mb-0 block">{{ related_theme.title }}</h4>

@@ -40,12 +40,12 @@
                     </div>
                 </div>
 
-                <hr class="mb-6 border-b border-slate-900">
+                <hr class="mb-6 border-b border-slate-800">
 
                 {{ entry.content|shortcode|markdown|raw }}
             </div>
             <div class="w-full lg:w-3/12 p-2">
-                <div class="text-left p-6 mb-6 border-slate-900 border" style="box-shadow: 3px 3px 0 #0f172a">
+                <div class="text-left p-6 mb-6 border-slate-800 bg-slate-800 border plate-shadow">
                     <div class="flex content-center flex-wrap">
                         <div class="w-full">
                             <p class="m-0 opacity-50">Version</p>
@@ -91,9 +91,9 @@
             </div>
         </div>
 
-        <hr class="mb-6 border-b border-plate-900">
+        <hr class="mb-6 border-b border-plate-800">
 
-        <div class="p-2 text-plate-900 mb-6">
+        <div class="p-2 mb-6">
             <h4>Other plugins by {{ plugin.author.name }}</h4>
             {% if entry.author.email is not empty %}
                 {% set related_plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true})
@@ -106,7 +106,7 @@
                         {% for related_plugin in related_plugins %}
                             {% if related_plugin.slug != entry.slug %}
                             <a href="{{ url() }}/flextype/{{ related_plugin.id }}" class="w-full p-2 lg:w-6/12 no-underline">
-                                <div class="flex p-6 text-plate-900 align-middle extend">
+                                <div class="flex p-6 align-middle extend">
                                     <span class="icon-svg-large mr-5">{{ icon(related_plugin.icon.name, related_plugin.icon.set) }}</span>
                                     <div class="text-left">
                                         <h4 class="text-xl pb-0 mb-0 block">{{ related_plugin.title }}</h4>
@@ -123,7 +123,7 @@
             {% endif %}
         </div>
 
-        <hr class="mb-6 border-b border-plate-900">
+        <hr class="mb-6 border-b border-plate-800">
 
         <div class="p-2">
             <a href="{{ url() }}/flextype/downloads/extend/plugins">More plugins</a>

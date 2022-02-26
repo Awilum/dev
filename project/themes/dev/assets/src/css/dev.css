@@ -71,7 +71,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-900 px-2 py-1 text-slate-100 rounded;
+        @apply bg-slate-800 px-2 py-1 text-slate-100 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -79,7 +79,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-900 py-4 mb-10 rounded;
+        @apply p-4 bg-slate-800 py-4 mb-10 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -150,8 +150,10 @@
 
 
     .terminal {
-        @apply bg-slate-900 mb-8 border-2 border-black text-slate-100 rounded;
+        @apply mb-8 border-2 text-slate-100 rounded;
         overflow: hidden;
+        background: #0d111a;
+        border-color: #0c0b14;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -160,7 +162,9 @@
         text-align: center;
         padding: 6px 0px;
         font-size: 12px;
-        @apply border-b-2 border-black bg-black text-white uppercase;
+        background: #0c0b14;
+        border-color: #0c0b14;
+        @apply border-b-2  text-white uppercase;
     }
 
     .terminal-body {
@@ -888,7 +892,6 @@
     }
 
 
-
     /* tables */
 
     .table {
@@ -911,7 +914,7 @@
         padding-right: 20px;
         padding-top: 10px;
         vertical-align: middle;
-        border-color: #0f172a;
+        border-color: #0d111a;
     }
 
     table {
@@ -919,34 +922,36 @@
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;
-        box-shadow: 3px 3px 0 #0f172a;
-        @apply border-slate-900 border;
+        box-shadow: 3px 3px 0 #0d111a;
+        background: #0d111a;
+        @apply border-slate-800;
     }
 
     th {
         font-weight: 500;
-        background-size: 8px 8px;
-        @apply bg-slate-900 text-slate-100 font-normal;
+        background: #0d111a;
+        @apply text-slate-100 font-normal;
     }
 
     table table thead {
         font-weight: 300;
-        @apply border-b text-slate-100 border-slate-900 bg-slate-800;
+        background: #0d111a;
+        @apply border-b text-slate-100 border-slate-900;
     }
 
+    .plate-shadow {
+        box-shadow: 3px 3px 0 #0f172a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .plate-shadow {
+            box-shadow: 3px 3px 0 #0d111a;
+        }
+    }
 
     @media (prefers-color-scheme: dark) {
         td {
             @apply bg-slate-800;
-        }
-    }
-    @media (prefers-color-scheme: dark) {
-        .icon-svg-xsmall > svg,
-        .icon-svg-small > svg,
-        .icon-svg-normal > svg,
-        .icon-svg-medium > svg,
-        .icon-svg-large > svg {
-            @apply stroke-slate-300 fill-slate-300;
         }
     }
 
@@ -989,6 +994,15 @@
     }
 
 
+    @media (prefers-color-scheme: dark) {
+        .icon-svg-xsmall > svg,
+        .icon-svg-small > svg,
+        .icon-svg-normal > svg,
+        .icon-svg-medium > svg,
+        .icon-svg-large > svg {
+            @apply stroke-slate-300 fill-slate-300;
+        }
+    }
     .file-list {
         padding: 20px!important;
         background: #fff;
@@ -1058,8 +1072,8 @@
 
     @media (prefers-color-scheme: dark) {
         .button {
-            box-shadow: 3px 3px 0 black;
-            @apply bg-slate-900 pl-6 pr-6 pt-2 pb-2 shadow-slate-900 border rounded font-bold text-xs border-slate-900 no-underline relative;
+            box-shadow: 3px 3px 0 #0d111a;
+            @apply bg-slate-800 pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-slate-900 no-underline relative;
         }
     
         .button:hover {
