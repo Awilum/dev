@@ -891,6 +891,10 @@
 
     /* tables */
 
+    .table {
+        width: 100%;
+    }
+
     table tbody tr {
         @apply border-t;
     }

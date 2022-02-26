@@ -93,3 +93,7 @@ flextype('twig')->addFunction(new TwigFunction('pageViewCounter', fn () => pageV
 
 // Twig: {{ pageViewCounterStats() }}
 flextype('twig')->addFunction(new TwigFunction('pageViewCounterStats', fn ($entryID) => pageViewCounterStats($entryID)));
+
+flextype('twig')->addFunction(new TwigFunction('currentUriContains', function($uri) {
+    return strpos($_SERVER['REQUEST_URI'], $uri) !== false;
+}));

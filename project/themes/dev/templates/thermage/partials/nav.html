@@ -1,8 +1,12 @@
 <div class="flex justify-around bg-white dark:bg-slate-800 border mt-10 border-slate-900 mx-auto max-w-[450px]" style="box-shadow: 3px 3px 0 #0f172a">
-  <a class="w-full text-center m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-slate-900 text-pink-500" href="{{ url() }}/thermage">Thermage</a>
-  <a class="w-full text-center m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-slate-900" rel="nofollow" href="{{ url() }}/thermage/documentation">Documentation</a>
-  <a class="w-full text-center m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline " rel="nofollow" href="{{ url() }}/thermage/api">API</a>
-  <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" href="{{ url() }}/about">
-    COMMUNITY
+  <a class="w-full text-center m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-slate-900 {% if currentUriContains('/thermage') %}text-pink-500{% endif %}" href="{{ url() }}/thermage">Thermage</a>
+  <a class="w-full text-center m-0 p-0 px-3 py-2 font-bold text-xs uppercase no-underline border-r border-slate-900 {% if currentUriContains('/thermage/documentation') %}text-pink-500{% endif %}" rel="nofollow" href="{{ url() }}/thermage/documentation">Documentation</a>
+  <a class="m-0 p-0 px-3 py-2 border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" href="https://github.com/thermage">
+    GITHUB
+  </a>
+  <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block" href="https://twitter.com/_thermage">
+    TWITTER
   </a>
 </div>
+
+
