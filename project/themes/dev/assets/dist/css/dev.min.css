@@ -1424,6 +1424,14 @@ table tbody tr {
 table {
   width: 100%;
   text-align: left;
+  border: 1px solid #0d111a;
+}
+
+td {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 th, td {
@@ -1438,13 +1446,15 @@ th, td {
 
 table {
   font-weight: 300;
+  font-size: .85em;
   overflow: hidden;
   margin-bottom: 40px;
   width: 100%;
   box-shadow: 3px 3px 0 #0d111a;
   background: #0d111a;
-  --tw-border-opacity: 1;
-  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+  border: 1px solid #0d111a;
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 th {
@@ -1476,6 +1486,11 @@ table table thead {
   td {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+
+  th, td {
+    --tw-text-opacity: 1;
+    color: rgb(241 245 249 / var(--tw-text-opacity));
   }
 }
 
@@ -1529,8 +1544,6 @@ table table thead {
 
 .file-list {
   padding: 20px!important;
-  background: #fff;
-  color: #090e24;
   list-style: none;
   margin-left: 0;
   margin-bottom: 40px;
@@ -1540,7 +1553,7 @@ table table thead {
   margin-bottom: 2.5rem;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   padding: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1577,12 +1590,15 @@ table table thead {
 .file-header {
   font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   padding: 8px 18px 8px!important;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
   font-size: 0.75em;
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
 }
@@ -2001,6 +2017,10 @@ a.brand-logo:hover > svg {
   border-top-right-radius: 0.25rem;
 }
 
+.rounded-tl {
+  border-top-left-radius: 0.25rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -2038,14 +2058,14 @@ a.brand-logo:hover > svg {
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-slate-800 {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-slate-800 {
@@ -2053,9 +2073,9 @@ a.brand-logo:hover > svg {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-.bg-slate-900 {
+.bg-slate-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -2066,11 +2086,6 @@ a.brand-logo:hover > svg {
 .bg-yellow-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}
-
-.bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-50 {

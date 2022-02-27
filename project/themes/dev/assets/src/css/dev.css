@@ -905,6 +905,11 @@
     table {
         width: 100%;
         text-align: left;
+        border: 1px solid #0d111a;
+    }
+
+    td {
+        @apply bg-slate-50 text-slate-900;
     }
 
     th, td {
@@ -919,12 +924,14 @@
 
     table {
         font-weight: 300;
+        font-size: .85em;
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;
         box-shadow: 3px 3px 0 #0d111a;
         background: #0d111a;
-        @apply border-slate-800;
+        border: 1px solid #0d111a;
+        @apply text-slate-100;
     }
 
     th {
@@ -952,6 +959,10 @@
     @media (prefers-color-scheme: dark) {
         td {
             @apply bg-slate-800;
+        }
+
+        th, td {
+            @apply text-slate-100;
         }
     }
 
@@ -1003,10 +1014,9 @@
             @apply stroke-slate-300 fill-slate-300;
         }
     }
+
     .file-list {
         padding: 20px!important;
-        background: #fff;
-        color: #090e24;
         margin-bottom: 20px;
         list-style: none;
         margin-left: 0;
@@ -1015,7 +1025,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-900 mb-10 px-2 text-slate-100 rounded;
+        @apply p-4 bg-slate-800 mb-10 px-2 text-slate-100 rounded;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -1047,9 +1057,9 @@
     .file-header {
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
         padding: 8px 18px 8px!important;
-        margin-bottom: -10px;
+        margin-bottom: -5px;
         font-size: 0.75em;
-        @apply bg-slate-900 text-slate-100 rounded-tr rounded-tl;
+        @apply bg-slate-800 text-slate-100 rounded-tr rounded-tl border-b border-b-slate-500;
     }
 
     .file-header svg {
