@@ -105,7 +105,7 @@
                 <div class="flex content-center flex-wrap mt-5">
                     {% for related_theme in related_themes %}
                         {% if related_theme.slug != entry.slug %}
-                        <a href="{{ url() }}/flextype/{{ related_theme.id }}" class="w-full p-2 lg:w-6/12 no-underline">
+                        <a href="{{ url() }}/{{ related_theme.id }}" class="w-full p-2 lg:w-6/12 no-underline">
                             <div class="flex p-6 align-middle border border-slate-800 plate-shadow bg-white dark:bg-slate-800">
                                 <img src="{{ related_theme.preview }}" alt="{{ related_theme.title }}" style="height: 120px; margin-right: 20px;">
                                 <div class="text-left">

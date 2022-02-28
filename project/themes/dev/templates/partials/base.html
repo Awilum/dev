@@ -4,18 +4,14 @@
     {% block head %}
         <meta charset="{{ flextype.registry.get('flextype.settings.charset')|lower }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="{% if entry.description %}{{ entry.description }}{% else %}{{ flextype.registry.get('plugins.site.settings.description') }}{% endif %}">
+        <meta name="description" content="{% if entry.seo.description %}{{ entry.seo.description }}{% elseif entry.description %}{{ entry.description }}{% else %}{{ flextype.registry.get('plugins.site.settings.description') }}{% endif %}">
         <meta name="keywords" content="{% if entry.keywords %}{{ entry.keywords }}{% else %}{{ flextype.registry.get('plugins.site.settings.keywords') }}{% endif %}">
         <meta name="robots" content="{% if entry.robots %}{{ entry.robots }}{% else %}{{ flextype.registry.get('plugins.site.settings.robots') }}{% endif %}">
         <meta name="generator" content="Powered by Flextype"/>
 
-        {% do
-            flextype.emitter.emit('onThemeMeta') %}
+        {% do flextype.emitter.emit('onThemeMeta') %}
 
-        <title>
-            {% if entry.title %}{{ entry.title|e('html') }}
-                |
-            {% endif %}{{ flextype.registry.get('plugins.site.settings.title')|e('html') }}</title>
+        <title>{% apply spaceless %}{% include "themes/dev/templates/partials/seo-title.html" %}{% endapply %}</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
 
@@ -100,10 +96,10 @@
         </a>
         {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/mobile-nav.html' %}
         <div class="flex" style="margin-left: auto;">
-            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" target="_blank" href="https://github.com/Awilum">
                 GITHUB
             </a>
-            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" href="{{ url() }}/about">
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 font-bold text-xs uppercase no-underline" target="_blank" href="https://twitter.com/_awilum">
                 TWITTER
             </a>
         </div>
@@ -114,7 +110,7 @@
             {% block content %}{% endblock %}
         </section>
         <footer class="p-10 text-sm text-center">
-            Copyright © Sergey Romanenko
+            <p class="m-0">Copyright © <a href="https://github.com/Awilum" target="_blank">Sergey Romanenko</a></p>
             {% block footer %}
             {% endblock %}
         </footer>
@@ -238,7 +234,6 @@
             });
     
     </script>
-    {% do
-        flextype.emitter.emit('onThemeTail') %}
+    {% do flextype.emitter.emit('onThemeTail') %}
     </body>
 </html>

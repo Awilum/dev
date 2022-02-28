@@ -10,4 +10,4 @@ Thermage provides incredible simple and powerful Shortcodes API to create and us
 
 ### Usage
 
-[entries_fetch id="documentation/parsers/shortcodes/getting-started/usage" field="content"]
+[entries_fetch id="thermage/documentation/parsers/shortcodes/getting-started/usage" field="content"]
