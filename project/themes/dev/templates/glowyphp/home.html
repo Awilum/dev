@@ -1,0 +1,49 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+    {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/glowyphp/partials/nav.html' %}
+
+    <!-- introducing section -->
+    <div class="container relative mx-auto mb-20">
+        <div class="pt-24">
+            <div class="text-center w-full px-20">
+                <h1 class="uppercase text-center text-2xl lg:text-6xl lg:m-0" style="letter-spacing: 4px;">A set of decoupled and reusable PHP building blocks for kickass Web Applications</h1>
+            </div>
+        </div>
+    </div>
+    <!-- /introducing section -->
+
+    {% set componentsCacheID = strings('componentsCacheID').hash().toString() %}
+    {% if flextype.cache.has(componentsCacheID) %}
+        {% set components = flextype.cache.get(componentsCacheID) %}
+    {% else %}
+        {% set components = flextype.entries.fetch('glowyphp', {'collection': true}).exceptFromCollection(['content']).sortByAsc('title') %}
+        {% do flextype.cache.set(componentsCacheID, components) %}
+    {% endif %}
+
+    <div class="lg:flex lg:flex-wrap">
+        {% for component in components %}
+        <a href="{{ url() }}/{{ component.id }}" class="p-4 w-full lg:w-4/12 cursor-pointer no-underline">
+            <h3 class="mb-2">{{ component.title }}</h3>
+            <div>
+                {{ component.description }}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {#
+    <div class="text-center pt-4 pb-10 lg:pt-24 lg:pb-24">
+        <h2 class="text-3xl lg:text-5xl mb-0 uppercase">Used By</h2>
+    </div>
+
+    <div class="lg:flex lg:flex-wrap">
+        <a href="https://flextype.org/" class="p-4 w-full lg:w-4/12 cursor-pointer no-underline">
+            <h3 class="mb-2">Flextype</h3>
+            <div>
+                 Open-source Hybrid Content Management System with the freedom of a headless CMS and with the full functionality of a traditional CMS.
+            </div>
+        </a>
+    </div>
+    #}
+{% endblock %}

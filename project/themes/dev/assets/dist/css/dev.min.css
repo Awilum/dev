@@ -1965,6 +1965,18 @@ a.brand-logo:hover > svg {
   max-width: 450px;
 }
 
+.max-w-\[250px\] {
+  max-width: 250px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .list-disc {
   list-style-type: disc;
 }
@@ -2283,6 +2295,10 @@ a.brand-logo:hover > svg {
 
 .pl-0 {
   padding-left: 0px;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .text-left {
@@ -2617,12 +2633,20 @@ a.brand-logo:hover > svg {
     width: 41.666667%;
   }
 
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .lg\:max-w-\[680px\] {
     max-width: 680px;
   }
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .lg\:justify-center {
@@ -2668,6 +2692,30 @@ a.brand-logo:hover > svg {
 
   .lg\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .lg\:pt-28 {
+    padding-top: 7rem;
+  }
+
+  .lg\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
+  .lg\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 6rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .lg\:text-left {
