@@ -16,7 +16,7 @@ public function isEmail(): bool
 #### Examples
 
 ```php
-if (Strings::create('awilum@atomastic.com')->isEmail()) {
+if (Strings::create('awilum@glowy.com')->isEmail()) {
     // do something...
 }
 ```

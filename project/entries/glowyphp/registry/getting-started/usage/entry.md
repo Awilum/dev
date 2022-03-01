@@ -7,7 +7,7 @@ seo:
 ---
 
 ```php
-use Atomastic\Registry\Registry;
+use Glowy\Registry\Registry;
 
 // Using public static method getInstance()
 $registry = Registry::getInstance();
@@ -21,8 +21,8 @@ $registry = registry();
 Registry are "macroable", which allows you to add additional methods to the Registry class at run time. For example, the following code adds a customMethod method to the Registry class:<br><br>
 
 ```php
-use Atomastic\Registry\Registry;
-use Atomastic\Macroable\Macroable;
+use Glowy\Registry\Registry;
+use Glowy\Macroable\Macroable;
 
 Registry::getInstance()->set('foo', 'bar');
 
@@ -39,12 +39,12 @@ echo Registry::getInstance()->customMethod();
 1
 ```
 
-Registry Component is extending [Arrays Component](https://atomastic.com/components/arrays). All methods of Arrays Component are available when using Registry Component in your projects for manipulations with Registry.<br><br>
+Registry Component is extending [Arrays Component](https://glowy.com/components/arrays). All methods of Arrays Component are available when using Registry Component in your projects for manipulations with Registry.<br><br>
 
 #### Examples
 
 ```php
-use Atomastic\Registry\Registry;
+use Glowy\Registry\Registry;
 
 $registry = Registry::getInstance();
 

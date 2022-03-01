@@ -8,7 +8,7 @@ seo:
 
 
 ```php
-use Atomastic\Csrf\Csrf;
+use Glowy\Csrf\Csrf;
 
 // Start PHP session
 session_start();

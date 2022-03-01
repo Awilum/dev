@@ -6,5 +6,5 @@ template: glowyphp/component
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/filesystem
+composer require glowy/filesystem
 ```

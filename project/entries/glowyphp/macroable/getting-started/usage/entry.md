@@ -4,5 +4,5 @@ template: glowyphp/component
 ---
 
 ```php
-use Atomastic\Macroable\Macroable;
+use Glowy\Macroable\Macroable;
 ```

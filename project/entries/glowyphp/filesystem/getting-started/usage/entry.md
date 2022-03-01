@@ -4,7 +4,7 @@ template: glowyphp/component
 ---
 
 ```php
-use Atomastic\Filesystem\Filesystem;
+use Glowy\Filesystem\Filesystem;
 
 // Create a Filesystem instance.
 $filesystem = new Filesystem();
@@ -18,10 +18,10 @@ $filesystem = filesystem();
 Filesystem are "macroable", which allows you to add additional methods to the Filesystem class at run time. For example, the following code adds a customMethod method to the Filesystem class:
 <br><br>
 ```php
-use Atomastic\Filesystem\Filesystem;
-use Atomastic\Filesystem\Directory;
-use Atomastic\Filesystem\File;
-use Atomastic\Macroable\Macroable;
+use Glowy\Filesystem\Filesystem;
+use Glowy\Filesystem\Directory;
+use Glowy\Filesystem\File;
+use Glowy\Macroable\Macroable;
 
 Filesystem::macro('countFiles', function($path) {
     return count(iterator_to_array($this->find()->in($path)->files(), false));

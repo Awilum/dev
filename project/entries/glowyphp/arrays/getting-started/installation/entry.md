@@ -9,5 +9,5 @@ seo:
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/arrays
+composer require glowy/arrays
 ```

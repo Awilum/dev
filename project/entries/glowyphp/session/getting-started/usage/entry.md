@@ -4,7 +4,7 @@ template: glowyphp/component
 ---
 
 ```php
-use Atomastic\Session\Session;
+use Glowy\Session\Session;
 
 // Create the session object.
 $session = new Session();

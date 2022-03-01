@@ -6,5 +6,5 @@ template: glowyphp/component
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/strings
+composer require glowy/strings
 ```

@@ -7,7 +7,7 @@ seo:
 ---
 
 ```php
-use Atomastic\Arrays\Arrays;
+use Glowy\Arrays\Arrays;
 
 // Using public method __construct()
 $arrays = new Arrays();
@@ -24,8 +24,8 @@ $arrays = arrays();
 Arrays are "macroable", which allows you to add additional methods to the Arrays class at run time. For example, the following code adds a customMethod method to the Arrays class:<br><br>
 
 ```php
-use Atomastic\Arrays\Arrays;
-use Atomastic\Macroable\Macroable;
+use Glowy\Arrays\Arrays;
+use Glowy\Macroable\Macroable;
 
 Arrays::macro('customMethod', function($arg1 = 1, $arg2 = 1) {
     return $this->count() + $arg1 + $arg2;

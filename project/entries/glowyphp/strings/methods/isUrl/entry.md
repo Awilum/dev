@@ -16,7 +16,7 @@ public function isUrl(): bool
 #### Examples
 
 ```php
-if (Strings::create('https://atomastic.com')->isUrl()) {
+if (Strings::create('https://glowy.com')->isUrl()) {
     // do something...
 }
 ```

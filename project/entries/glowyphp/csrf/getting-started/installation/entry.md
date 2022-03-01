@@ -9,5 +9,5 @@ seo:
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/csrf
+composer require glowy/csrf
 ```

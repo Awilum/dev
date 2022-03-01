@@ -9,5 +9,5 @@ seo:
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/registry
+composer require glowy/registry
 ```
