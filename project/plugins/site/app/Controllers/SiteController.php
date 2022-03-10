@@ -82,6 +82,35 @@ class SiteController
             return $response->write("Template {$entry['template']} not found");
         }
 
+        /*        
+        $files = filesystem()->find()->files()->in(PATH['project'] . '/entries/');
+
+        $staticSitePath = '../awilum.github.io/';
+
+        filesystem()->directory($staticSitePath)->create(0755, true);
+        filesystem()->directory($staticSitePath . 'project/themes/dev/assets/')->create(0755, true);
+
+        filesystem()->directory(PATH['project'] . '/themes/dev/assets/')->copy($staticSitePath . 'project/themes/dev/assets/');
+
+        foreach($files as $file) {
+           $entryID = strings($file->getPath() . '/' . $file->getFilename())->replace('/entry.md', '')->replace('/Applications/MAMP/htdocs/projects/awilum.dev/project/entries/', '')->toString(); 
+ 
+           $entry = flextype('entries')->fetch($entryID); //flextype('serializers')->frontmatter()->decode(file_get_contents($file->getPath() . '/' . $file->getFilename()));
+           
+            echo $entryID  . "<br>";
+            filesystem()->directory($staticSitePath . $entryID)->create(0755, true);
+            filesystem()
+                ->file($staticSitePath . $entryID . '/index.html')
+                ->put(flextype('twig')->fetch('themes/' . flextype('registry')->get('plugins.site.settings.theme') . '/' . (empty($entry['template']) ? 'templates/default' : 'templates/' . $entry['template']) . '.html', ['entry' => $entry]));
+        }
+
+        filesystem()->file($staticSitePath . '/index.html')->put(file_get_contents($staticSitePath . '/' . flextype('registry')->get('plugins.site.settings.entries.main') . '/index.html'));
+        filesystem()->directory($staticSitePath . '/' . flextype('registry')->get('plugins.site.settings.entries.main'))->delete();
+       
+        filesystem()->file($staticSitePath . '/project/index.html')->put('');
+
+        die('end :)');
+        */
         $data = ['entry'   => $entry,
                  'args'    => $args,
                  'request' => $request];

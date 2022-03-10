@@ -1,0 +1,8 @@
+/* TEAM */
+Creator: Sergey Romanenko
+Twitter: @_awilum
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3
+Components: Flextype, PHP, JavaScript, HTML, CSS

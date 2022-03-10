@@ -84,7 +84,6 @@ function pageViewCounterStats(string $entryID): int
     }
 }
 
-
 // Shortcode: [pageViewCounter]
 flextype('parsers')->shortcode()->addHandler('pageViewCounter', fn () => pageViewCounter());
 
@@ -95,5 +94,6 @@ flextype('twig')->addFunction(new TwigFunction('pageViewCounter', fn () => pageV
 flextype('twig')->addFunction(new TwigFunction('pageViewCounterStats', fn ($entryID) => pageViewCounterStats($entryID)));
 
 flextype('twig')->addFunction(new TwigFunction('currentUriContains', function($uri) {
-    return strpos($_SERVER['REQUEST_URI'], $uri) !== false;
+    return false;
+    // return strpos($_SERVER['REQUEST_URI'], $uri) !== false;
 }));

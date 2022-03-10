@@ -3,11 +3,11 @@
 {% block content %}
     {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/glowyphp/partials/nav.html' %}
 
-    {% set uri1 = request.getUri().getPath()|split('/').1 %}
-    {% set uri2 = request.getUri().getPath()|split('/').2 %}
-    {% set uri3 = request.getUri().getPath()|split('/').3 %}
+    {% set uri1 = entry.id|split('/').1 %}
+    {% set uri2 = entry.id|split('/').2 %}
+    {% set uri3 = entry.id|split('/').3 %}
 
-    {% set gettingStartedCacheID = strings('gettingStartedCacheID' ~ '/' ~ uri1 ~ '/getting-started').hash().toString() %}
+    {% set gettingStartedCacheID = strings('gettingStartedCacheID' ~ 'glowyphp/' ~ uri1 ~ '/getting-started').hash().toString() %}
     {% if flextype.cache.has(gettingStartedCacheID) %}
         {% set gettingStarted = flextype.cache.get(gettingStartedCacheID) %}
     {% else %}
@@ -27,19 +27,19 @@
         {% set methods = arrays(methods).groupBy('class') %}
     {% endif %}
 
-    <div class="uppercase text-center mt-24 mb-24">
+    <div class="text-center mt-24 mb-24">
         <h1 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h1>
         <div class="text-sm lg:text-lg">
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/glowyphp">COMPONENTS</a></span>
             {% if uri2 == 'methods' %}
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}">{{ flextype.entries.fetch('/' ~ uri1).title }}</a></span>
+            <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}">{{ flextype.entries.fetch('glowyphp/' ~ uri1).title }}</a></span>
             <span class="opacity-50">/</span>
             <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}/{{ uri2 }}">METHODS</a></span>
             {% endif %}
             {% if uri2 == 'getting-started' %}
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}">{{ flextype.entries.fetch('/' ~ uri1).title }}</a></span>
+            <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}">{{ flextype.entries.fetch('glowyphp/' ~ uri1).title }}</a></span>
             <span class="opacity-50">/</span>
             <span class="opacity-50"><a class="no-underline uppercase" href="{{ url() }}/glowyphp/{{ uri1 }}/{{ uri2 }}">GETTING STARTED</a></span>
             {% endif %}

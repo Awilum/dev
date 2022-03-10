@@ -1,6 +1,8 @@
 <ul class="p-0 m-0">
 {% for post in blog.copy()
     .where('visibility', 'nin', ['draft', 'hidden'])
+    .where('template', 'ncontains', 'blog-tags')
+    .where('template', 'ncontains', 'blog-tag')
     .sortBy('published_at', 'DESC')
     .limit(blogPostsRecentLimit) %}
     <li class="mb-1 ml-0 list-none">

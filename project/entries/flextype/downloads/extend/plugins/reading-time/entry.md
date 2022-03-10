@@ -45,7 +45,7 @@ Function `readingTime()` in namespace `Flextype\Plugin\ReadingTime`
 
 Display reading time with custom translates in the twig templates
 
-```twig
+```
 {{ readingTime(entry.content, {
                 'minute': 'Minute',
                 'minutes': 'Minutes',
@@ -56,7 +56,7 @@ Display reading time with custom translates in the twig templates
 
 Display reading time with custom translates and format in the twig templates
 
-```twig
+```
 {{ readingTime(entry.content, {
                 'minute': 'Minute',
                 'minutes': 'Minutes',
@@ -68,7 +68,7 @@ Display reading time with custom translates and format in the twig templates
 
 Display reading time with custom translates and format that alternative format that hides the minute label in the twig templates
 
-```twig
+```
 {{ readingTime(entry.content, {
                 'minute': 'Minute',
                 'minutes': 'Minutes',

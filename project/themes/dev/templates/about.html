@@ -1,7 +1,8 @@
 {% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
 
 {% block content %}
-    <div class="p-6 bg-white dark:bg-slate-800 mb-4 mt-4 border border-slate-900 plate-shadow">
+    <h1 class="text-6xl p-0 mt-10 mb-10 font-bold text-center uppercase">{{ entry.title }}</h1>
+    <div class="p-6 bg-white dark:bg-slate-800 mb-4 mt-4 border border-slate-900  plate-shadow">
         <div class="flex">
             <div class="w-1/12">
                 <img src="https://avatars.githubusercontent.com/u/477114?v=4" alt="" class="rounded-full border-2 border-slate-900 w-20">

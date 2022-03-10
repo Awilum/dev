@@ -2,9 +2,6 @@
 
 {% block content %}
 
-    {% set page = request.getQueryParams().page %}
-    {% set tag = request.getQueryParams().tag %}
-
     {% set blogID = flextype.registry.get('themes.dev.settings.blog_id') %}
     {% set blogCollectionCacheID = strings('blog-collection-' ~ blogID).hash().toString() %}
     {% if flextype.cache.has(blogCollectionCacheID) %}
@@ -15,64 +12,31 @@
     {% endif %}
 
     {% set blogPostData = flextype.entries.fetch(blogID) %}
-    {% if blogPostData.posts_limit == 0 %}{% set blogPostsLimit = 10 %}{% else %}{% set blogPostsLimit = blogPostData.posts_limit %}{% endif %}
 
-    {% if tag %}
-        {% set blogPostsLength = blog.copy()
-                                        .where('tags', 'contains', tag)
-                                        .where('visibility', 'nin', ['draft', 'hidden'])
-                                        .count() %}
-        {% set blogPostsPages = (blogPostsLength / blogPostsLimit)|round(0, 'ceil') %}
+    {% set blogPosts = blog.copy()
+                            .where('visibility', 'nin', ['draft', 'hidden'])
+                            .where('template', 'ncontains', 'blog-tags')
+                            .where('template', 'ncontains', 'blog-tag')
+                            .sortBy('published_at', 'DESC')%}
 
-        {% if page < 1 %}
-            {% set page = 1 %}
-        {% elseif page > blogPostsPages %}
-            {% set page = blogPostsPages %}
-        {% endif %}
-
-        {% set blogPostsOffset = (page - 1 ) * blogPostsLimit %}
-        {% if blogPostsOffset < 0 %}{% set blogPostsOffset = 0 %}{% endif %}
-
-        {% set blogPosts = blog.copy()
-                                .where('tags', 'contains', tag)
-                                .where('visibility', 'nin', ['draft', 'hidden'])
-                                .sortBy('published_at', 'DESC')
-                                .slice(blogPostsOffset, blogPostsLimit) %}
-    {% else %}
-
-        {% set blogPostsLength = blog.copy().where('visibility', 'nin', ['draft', 'hidden']).count() %}
-        {% set blogPostsPages = (blogPostsLength / blogPostsLimit)|round(0, 'ceil') %}
-
-        {% if page < 1 %}
-            {% set page = 1 %}
-        {% elseif page > blogPostsPages %}
-            {% set page = blogPostsPages %}
-        {% endif %}
-
-        {% set blogPostsOffset = (page - 1) * blogPostsLimit %}
-        {% if blogPostsOffset < 0 %}{% set blogPostsOffset = 0 %}{% endif %}
-
-        {% set blogPosts = blog.copy()
-                                .where('visibility', 'nin', ['draft', 'hidden'])
-                                .sortBy('published_at', 'DESC')
-                                .slice(blogPostsOffset, blogPostsLimit) %}
-
-    {% endif %}
-
-    <div class="flex mt-4">
+    <h1 class="text-6xl p-0 mt-10 mb-10 font-bold text-center uppercase">{{ entry.title }}</h1>
+    <div class="flex">
         <div class="w-full lg:w-9/12">
             {# blog-posts #}
+            <div class="flex content-center flex-wrap">
             {% for post in blogPosts %} 
-                <div class="p-6 py-0 bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center plate-shadow">
-                    <h3 class="w-10/12 py-2 text-base font-bold m-0 border-r border-slate-900" style="padding-top: 13.5px; padding-bottom: 13.5px;">
-                        <a href="{{ post.id }}" style="text-decoration: none;">{{ post.title }}</a>
+                <div class="w-6/12 px-4 py-0 bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center plate-shadow">
+                    <h3 class="w-10/12 py-2 text-base font-bold m-0  border-slate-900">
+                        <a href="{{ url() }}/{{ post.id }}" style="text-decoration: none;">
+                            {{ post.title }}<br>
+                            <span class="text-xs opacity-50">
+                                {{ post.published_at|date("M d Y") }}
+                            </span>
+                        </a>
                     </h3>
-                    <div class="w-3/12 py-2 text-xs pl-4 opacity-80">
-                        <strong>Date:</strong> {{ post.published_at|date("M d Y") }}<br>
-                        <strong>Views:</strong> {{ pageViewCounterStats(post.id) }}
-                    </div>
                 </div>
             {% endfor %}
+            </div>
             {# /blog-posts #}
         </div>
         <div class="hidden lg:block lg:w-3/12 pl-5">
@@ -84,8 +48,4 @@
             </div>
         </div>
     </div>
-
-    {# pagination-navigation #}
-    {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/blog/pagination-navigation.html' %}
-    {# /pagination-navigation #}
 {% endblock %}

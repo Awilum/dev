@@ -3,9 +3,9 @@
 {% block content %}
 {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
 
-{% set uri1 = request.getUri().getPath()|split('/').3 %}
-{% set uri2 = request.getUri().getPath()|split('/').4 %}
-{% set uri3 = request.getUri().getPath()|split('/').5 %}
+{% set uri1 = entry.id|split('/').3 %}
+{% set uri2 = entry.id|split('/').4 %}
+{% set uri3 = entry.id|split('/').5 %}
 
 {% set gettingStartedCacheID = strings('gettingStartedCacheID' ~ 'thermage/documentation/elements/' ~ uri1 ~ '/getting-started').hash().toString() %}
 {% if flextype.cache.has(gettingStartedCacheID) %}
@@ -23,7 +23,7 @@
     {% do flextype.cache.set(methodsCacheID, methods) %}
 {% endif %}
 
-<div class="uppercase text-center pt-24 pb-24 m-0">
+<div class="text-center pt-24 pb-24 m-0">
     <h2 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h2>
     <div class="text-sm lg:text-lg">
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation">DOCUMENTATION</a></span>
@@ -31,13 +31,13 @@
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation/elements">ELEMENTS</a></span>
         {% if uri2 == 'methods' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('documentation/elements/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
         <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}">METHODS</a></span>
         {% endif %}
         {% if uri2 == 'getting-started' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('documentation/elements/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
         <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}">GETTING STARTED</a></span>
         {% endif %}

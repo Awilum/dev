@@ -9,11 +9,9 @@
         <strong class="ml-2">Tags:</strong>
         {% if entry.tags is not empty %}
             {% for tag in entry.tags|split(',') %}
-            <a href="{{ url() }}/blog?tag={{ tag|trim }}">{{ tag|trim }}</a>{% if loop.last %}{% else %},{% endif %}
+            <a href="{{ url() }}/blog/tags/{{ tag|trim }}">{{ tag|trim }}</a>{% if loop.last %}{% else %},{% endif %}
             {% endfor %}
         {% endif %}
-        <strong class="ml-2">Views:</strong>
-        {{ pageViewCounter() }}
     </div>
 </div>
 {% endblock %}

@@ -14,24 +14,6 @@
     {% set blogPostData = flextype.entries.fetch(blogID) %}
     {% if blogPostData.posts_limit == 0 %}{% set blogPostsLimit = 5 %}{% else %}{% set blogPostsLimit = blogPostData.posts_limit %}{% endif %}
     {% if blogPostData.posts_recent_limit == 0 %}{% set blogPostsRecentLimit = 5 %}{% else %}{% set blogPostsRecentLimit = blogPostData.posts_recent_limit %}{% endif %}
-    {% if blogPostData.posts_random_limit == 0 %}{% set blogPostsRandomLimit = 5 %}{% else %}{% set blogPostsRandomLimit = blogPostData.posts_random_limit %}{% endif %}
-
-    {% set blogPostsLength = blog.copy().where('visibility', 'nin', ['draft', 'hidden']).count() %}
-    {% set blogPostsPages = (blogPostsLength / blogPostsLimit)|round(0, 'ceil') %}
-
-    {% if page < 1 %}
-        {% set page = 1 %}
-    {% elseif page > blogPostsPages %}
-        {% set page = blogPostsPages %}
-    {% endif %}
-
-    {% set blogPostsOffset = (page - 1) * blogPostsLimit %}
-    {% if blogPostsOffset < 0 %}{% set blogPostsOffset = 0 %}{% endif %}
-
-    {% set blogPosts = blog.copy()
-                            .where('visibility', 'nin', ['draft', 'hidden'])
-                            .sortBy('published_at', 'DESC')
-                            .slice(blogPostsOffset, blogPostsLimit) %}
 
     <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900 mt-4 plate-shadow">
         <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 flex items-center">

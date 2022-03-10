@@ -8,7 +8,8 @@
         <meta name="keywords" content="{% if entry.keywords %}{{ entry.keywords }}{% else %}{{ flextype.registry.get('plugins.site.settings.keywords') }}{% endif %}">
         <meta name="robots" content="{% if entry.robots %}{{ entry.robots }}{% else %}{{ flextype.registry.get('plugins.site.settings.robots') }}{% endif %}">
         <meta name="generator" content="Powered by Flextype"/>
-
+        <meta name="yandex-verification" content="43db5e67acec9539" />
+        
         {% do flextype.emitter.emit('onThemeMeta') %}
 
         <title>{% apply spaceless %}{% include "themes/dev/templates/partials/seo-title.html" %}{% endapply %}</title>
@@ -29,8 +30,8 @@
 </head>
 <body class="antialiased text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
     <header class="bg-white dark:bg-slate-800 border-b border-l border-r border-slate-900 flex items-center container mx-auto max-w-[1200px] plate-shadow">
-        <a href="{{ url() }}" class="m-0 p-0 p-6 py-2 px-3 text-xs font-bold text-center border-r border-slate-900 brand-logo no-underline {% if entry.id == 'home' %}text-pink-500{% endif %}">
-            AWILUM.DEV
+        <a href="{{ url() }}" class="m-0 p-0 p-6 py-2 px-3 text-xs font-bold text-center border-r border-slate-900 brand-logo no-underline text-pink-500">
+            AWILUM
         </a>
         <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 font-bold text-xs uppercase no-underline hidden lg:block {% if currentUriContains('/blog') %}text-pink-500{% endif %}" rel="nofollow" href="{{ url() }}/blog">
             Blog
@@ -109,8 +110,9 @@
         <section>
             {% block content %}{% endblock %}
         </section>
-        <footer class="p-10 text-sm text-center">
-            <p class="m-0">Copyright © <a href="https://github.com/Awilum" target="_blank">Sergey Romanenko</a></p>
+        <footer class="py-20 text-sm text-center">
+            <p class="m-0">Copyright © <a href="{{ url() }}/about">Sergey Romanenko</a></p>
+            <p class="m-0 text-xs">POWERED BY <a href="{{ url() }}/flextype"">FLEXTYPE</a></p>
             {% block footer %}
             {% endblock %}
         </footer>
@@ -130,110 +132,103 @@
 
         var $tabs = function (target) {
         var
-        _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
-        _eventTabsShow,
-        _showTab = function (tabsLinkTarget) {
-            var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
-            tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
-            tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
-            tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
-            
-            if (tabsLinkTarget === tabsLinkActive) {
-                return;
-            }
-            
-            if (tabsLinkActive !== null) {
-                tabsLinkActive.classList.remove('tabs__link_active');
-            }
-
-            if (tabsPaneShow !== null) {
-                tabsPaneShow.classList.remove('tabs__pane_show');
-            }
-            
-            
-            tabsLinkTarget.classList.add('tabs__link_active');
-            tabsPaneTarget.classList.add('tabs__pane_show');
-            document.dispatchEvent(_eventTabsShow);
-        },
-        _switchTabTo = function (tabsLinkIndex) {
-            var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
-            if (tabsLinks.length > 0) {
-                if (tabsLinkIndex > tabsLinks.length) {
-                tabsLinkIndex = tabsLinks.length;
-                } else if (tabsLinkIndex < 1) {
-                tabsLinkIndex = 1;
+            _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
+            _eventTabsShow,
+            _showTab = function (tabsLinkTarget) {
+                var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
+                tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
+                tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
+                tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
+                
+                if (tabsLinkTarget === tabsLinkActive) {
+                    return;
                 }
-                _showTab(tabsLinks[tabsLinkIndex - 1]);
+                
+                if (tabsLinkActive !== null) {
+                    tabsLinkActive.classList.remove('tabs__link_active');
+                }
+
+                if (tabsPaneShow !== null) {
+                    tabsPaneShow.classList.remove('tabs__pane_show');
+                }
+                
+                
+                tabsLinkTarget.classList.add('tabs__link_active');
+                tabsPaneTarget.classList.add('tabs__pane_show');
+                document.dispatchEvent(_eventTabsShow);
+            },
+            _switchTabTo = function (tabsLinkIndex) {
+                var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
+                if (tabsLinks.length > 0) {
+                    if (tabsLinkIndex > tabsLinks.length) {
+                    tabsLinkIndex = tabsLinks.length;
+                    } else if (tabsLinkIndex < 1) {
+                    tabsLinkIndex = 1;
+                    }
+                    _showTab(tabsLinks[tabsLinkIndex - 1]);
+                }
+            };
+
+            _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
+
+            _elemTabs.addEventListener('click', function(e) {
+                var target = e.target.closest('.tabs__link');
+                // завершаем выполнение функции, если кликнули не по ссылке
+                if (!target) {
+                return;
+                }
+                // отменяем стандартное действие
+                e.preventDefault();
+                _showTab(target);
+        });
+
+        return {
+            showTab: function (target) {
+            _showTab(target);
+            },
+            switchTabTo: function (index) {
+            _switchTabTo(index);
             }
+        }
+
         };
 
-        _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
+        {% if entry.id == 'thermage' %}
+            $tabs('.components');
+            $tabs('.themes');
+            $tabs('.frameworks');
+        {% endif %}
 
-        _elemTabs.addEventListener('click', function(e) {
-            var target = e.target.closest('.tabs__link');
-            // завершаем выполнение функции, если кликнули не по ссылке
-            if (!target) {
-            return;
-            }
-            // отменяем стандартное действие
-            e.preventDefault();
-            _showTab(target);
-    });
+        var formatter = new Intl.NumberFormat('en-US');
+        fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
+        .then(response => response.json())
+        .then(function(data) {
+            var ghCommits = document.querySelector(".github-commits");
+            var ghLinesAdded = document.querySelector(".github-lines-added");
+            var ghDeleted = document.querySelector(".github-lines-deleted");
+            var ghContibuteTo = document.querySelector(".github-repositories-contributed-to");
 
-    return {
-        showTab: function (target) {
-        _showTab(target);
-        },
-        switchTabTo: function (index) {
-        _switchTabTo(index);
-        }
-    }
+            if (ghCommits != null) ghCommits.innerHTML = formatter.format(data.computed.commits);
+            if (ghLinesAdded != null) ghLinesAdded.innerHTML = formatter.format(data.plugins.lines.added);
+            if (ghDeleted != null) ghDeleted.innerHTML = formatter.format(data.plugins.lines.deleted);
+            if (ghContibuteTo != null) ghContibuteTo.innerHTML = formatter.format(data.user.repositoriesContributedTo.totalCount);
+        });
 
-    };
-
-    {% if entry.id == 'thermage' %}
-        $tabs('.components');
-        $tabs('.themes');
-        $tabs('.frameworks');
-    {% endif %}
-
-            var formatter = new Intl.NumberFormat('en-US');
-            fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
-            .then(response => response.json())
-            .then(function(data) {
-                
-                /*
-                let i = 0;
-                for (activity in data.plugins.activity.events) {
-                    if (data.plugins.activity.events[i].type == 'push') {
-                        var type = 'Pushed';
-                    }
-                    document.querySelector(".github-activity-" + i + "-url").href = 'https://github.com/' + data.plugins.activity.events[i].repo + "/commits/" + data.plugins.activity.events[i].branch;
-                    document.querySelector(".github-activity-" + i + "-type").innerHTML = type;
-                    document.querySelector(".github-activity-" + i + "-size").innerHTML = data.plugins.activity.events[i].size;
-                    document.querySelector(".github-activity-" + i + "-branch").innerHTML = data.plugins.activity.events[i].branch;
-                    document.querySelector(".github-activity-" + i + "-repo").innerHTML = data.plugins.activity.events[i].repo;
-                    i++;
-                }
-                */
-
-                var ghCommits = document.querySelector(".github-commits");
-                var ghLinesAdded = document.querySelector(".github-lines-added");
-                var ghDeleted = document.querySelector(".github-lines-deleted");
-                var ghContibuteTo = document.querySelector(".github-repositories-contributed-to");
-
-                if (ghCommits != null) ghCommits.innerHTML = formatter.format(data.computed.commits);
-                if (ghLinesAdded != null) ghLinesAdded.innerHTML = formatter.format(data.plugins.lines.added);
-                if (ghDeleted != null) ghDeleted.innerHTML = formatter.format(data.plugins.lines.deleted);
-                if (ghContibuteTo != null) ghContibuteTo.innerHTML = formatter.format(data.user.repositoriesContributedTo.totalCount);
-
-                //document.querySelector(".github-repositories").innerHTML = formatter.format(data.user.repositories.totalCount);
-                //document.querySelector(".github-favorite-license").innerHTML = data.computed.licenses.favorite[0];
-                //document.querySelector(".github-languages-used").innerHTML = Object.keys(data.plugins.languages.stats);
-                //document.querySelector(".github-languages-used").innerHTML = document.querySelector(".github-languages-used").innerHTML.replaceAll(',', ', ').replaceAll(', Hack', '');
-            });
-    
     </script>
     {% do flextype.emitter.emit('onThemeTail') %}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(87767318, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87767318" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     </body>
 </html>

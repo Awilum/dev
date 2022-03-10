@@ -1,6 +1,6 @@
 ---
 title: setTheme
-template: thermage/documentation/element
+template: thermage/documentation/shortcodes
 description: Set Shortcodes theme.
 seo:
   title: Set Shortcodes theme. | getTheme

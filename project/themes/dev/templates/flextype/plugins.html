@@ -13,74 +13,27 @@
         <div>
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">Downloads</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend">Extends</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend">Extend</a></span>
         </div>
     </div>
     <div class="flex content-center flex-wrap">
         <div class="w-full lg:w-9/12 text-center">
 
-            {# pagination #}
+            {% set pluginsCacheID = strings('pluginsCacheID').hash().toString() %}
+            {% if flextype.cache.has(pluginsCacheID) %}
+                {% set plugins = flextype.cache.get(pluginsCacheID) %}
+            {% else %}
+                {% set plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true}) %}
+                {% do flextype.cache.set(pluginsCacheID, plugins) %}
+            {% endif %}
 
-              {% set page = request.getQueryParams().page %}
-              {% set category = request.getQueryParams().category %}
-              {% set plugins_items_limit = 10 %}
-
-              {% set pluginsCacheID = strings('pluginsCacheID' ~ locale).hash().toString() %}
-              {% if flextype.cache.has(pluginsCacheID) %}
-                  {% set plugins = flextype.cache.get(pluginsCacheID) %}
-              {% else %}
-                  {% set plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true}) %}
-                  {% do flextype.cache.set(pluginsCacheID, plugins) %}
-              {% endif %}
-
-              {% if category %}
-
-                  {% set plugins_items_length = plugins.copy()
-                                                       .where('category', 'contains', category)
-                                                       .where('visibility', 'nin', ['draft', 'hidden'])
-                                                       .count() %}
-
-                  {% set plugins_items_pages = (plugins_items_length/plugins_items_limit)|round(0, 'ceil') %}
-                  {% if page < 1 %}
-                      {% set page = 1 %}
-                  {% elseif page > plugins_items_pages %}
-                      {% set page = plugins_items_pages %}
-                  {% endif %}
-                  {% set plugins_items_offset = (page-1)*plugins_items_limit %}
-                  {% if plugins_items_offset < 0 %}{% set plugins_items_offset = 0 %}{% endif %}
-
-                  {% set plugins_items = plugins.copy()
-                                                .where('category', 'contains', category)
-                                                .where('visibility', 'nin', ['draft', 'hidden'])
-                                                .sortBy('published_at', 'DESC')
-                                                .slice(plugins_items_offset, plugins_items_limit) %}
-              {% else %}
-
-                  {# @todo get count from cache! #}
-                  {% set plugins_items_length = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true})
-                                                       .where('visibility', 'nin', ['draft', 'hidden'])
-                                                       .count() %}
-
-                  {% set plugins_items_pages = (plugins_items_length/plugins_items_limit)|round(0, 'ceil') %}
-
-                  {% if page < 1 %}
-                      {% set page = 1 %}
-                  {% elseif page > plugins_items_pages %}
-                      {% set page = plugins_items_pages %}
-                  {% endif %}
-
-                  {% set plugins_items_offset = (page-1)*plugins_items_limit %}
-                  {% if plugins_items_offset < 0 %}{% set plugins_items_offset = 0 %}{% endif %}
-
-                  {% set plugins_items = plugins.copy()
-                                                .where('visibility', 'nin', ['draft', 'hidden'])
-                                                .sortBy('published_at', 'DESC')
-                                                .slice(plugins_items_offset, plugins_items_limit) %}
-              {% endif %}
-
-              {# /pagination #}
-
-             {% for item in plugins_items %}
+            {% set plugins_items = plugins.copy()
+                                        .where('visibility', 'nin', ['draft', 'hidden'])
+                                        .where('template', 'ncontains', 'flextype/plugins-categories')
+                                        .where('template', 'ncontains', 'flextype/plugins-category')
+                                        .sortBy('published_at', 'DESC') %}
+    
+            {% for item in plugins_items %}
              <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center plate-shadow">
                  <span class="icon-svg-medium mr-5">{{ icon(item.icon.name, item.icon.set) }}</span>
                  <div class="text-left">
@@ -93,28 +46,14 @@
                      </div>
                  </div>
              </a>
-             {% endfor %}
-
-           {# pagination navigation #}
-           <div class="text-left mt-10">
-               {% if (page - 1) > 0 %}
-                   <a href="?page={{ page - 1 }}{% if category %}&category={{ category }}{% endif %}">&larr;</a>
-               {% endif %}
-               {% if plugins_items_pages is not null and plugins_items_pages > 1 %}
-                   {{ page }} / {{ plugins_items_pages }}
-               {% endif %}
-               {% if (page) < plugins_items_pages %}
-                   <a href="?page={{ page + 1 }}{% if author %}&author={{ author }}{% endif %}{% if category %}&category={{ category }}{% endif %}">&rarr;</a>
-               {% endif %}
-           </div>
-           {# /pagination navigation #}
+            {% endfor %}
 
         </div>
         <div class="w-full lg:w-3/12 pl-5">
             <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
             
                 {# CATEGORY CLOUD #}
-                {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID' ~ locale).hash().toString() %}
+                {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID').hash().toString() %}
                 {% if flextype.cache.has(categoryPluginsCloudCacheID) %}
                     {% set category_cloud = flextype.cache.get(categoryPluginsCloudCacheID) %}
                 {% else %}
@@ -139,7 +78,7 @@
                     <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
                             {% if category != '' %}
-                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/plugins?category={{ category|trim }}">
+                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/plugins/categories/{{ category|trim }}">
                                 {% if category == 'accounts' %}
                                 <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('users', 'fontawesome|solid') }}</span>
                                 {% elseif category == 'emails' %}

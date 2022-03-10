@@ -1,6 +1,7 @@
 {% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
 
 {% block content %}
+<h1 class="text-6xl p-0 mt-10 mb-10 font-bold text-center uppercase">{{ entry.title }}</h1>
 <div class="lg:flex mt-4">
     <div class="w-full lg:w-8/12">
         {#
@@ -53,7 +54,7 @@
         </div>
         <div class="p-6 mb-4 bg-white dark:bg-slate-800 lg:mr-2 border border-slate-900 plate-shadow">
             <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 flex items-center">
-                Previous supporters
+                Previous monthly supporters
             </h3>
             <div>
                 <ul class="m-0 p-0">
@@ -90,6 +91,9 @@
                         Sberbank <span class="text-sm">(5469 1300 1053 3949)</span>
                     </li>
                 </ul>
+                <div class="text-xs italic pt-4 mt-4 p-0 border-t border-slate-900">
+                    Add a message with a link to your website in the payment comment.
+                </div>
             </div>
         </div>
         {#
