@@ -3,7 +3,7 @@
 {% block content %}
 <div class="blog-post px-6 lg:px-28">
     <h2 class="text-5xl mt-10 mb-10 font-bold">{{ entry.title }}</h2>
-    {{ entry.content|shortcode|markdown|raw}}
+    {{ entry.content|shortcode|markdown|raw }}
     <div class="pt-6 mt-6 border-t-2 border-slate-800">
         <strong>Date:</strong> {{ entry.published_at|date(flextype.registry.get('flextype.date_display_format')) }}
         <strong class="ml-2">Tags:</strong>

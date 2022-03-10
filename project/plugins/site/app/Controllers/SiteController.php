@@ -82,7 +82,7 @@ class SiteController
             return $response->write("Template {$entry['template']} not found");
         }
 
-        /*        
+             
         $files = filesystem()->find()->files()->in(PATH['project'] . '/entries/');
 
         $staticSitePath = '../awilum.github.io/';
@@ -110,7 +110,7 @@ class SiteController
         filesystem()->file($staticSitePath . '/project/index.html')->put('');
 
         die('end :)');
-        */
+        
         $data = ['entry'   => $entry,
                  'args'    => $args,
                  'request' => $request];

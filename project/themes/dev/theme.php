@@ -87,12 +87,6 @@ function pageViewCounterStats(string $entryID): int
 // Shortcode: [pageViewCounter]
 flextype('parsers')->shortcode()->addHandler('pageViewCounter', fn () => pageViewCounter());
 
-// Twig: {{ pageViewCounter() }}
-flextype('twig')->addFunction(new TwigFunction('pageViewCounter', fn () => pageViewCounter()));
-
-// Twig: {{ pageViewCounterStats() }}
-flextype('twig')->addFunction(new TwigFunction('pageViewCounterStats', fn ($entryID) => pageViewCounterStats($entryID)));
-
 flextype('twig')->addFunction(new TwigFunction('currentUriContains', function($uri) {
     return false;
     // return strpos($_SERVER['REQUEST_URI'], $uri) !== false;
