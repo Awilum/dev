@@ -24,15 +24,12 @@
     <div class="flex">
         <div class="w-full lg:w-9/12">
             {# blog-posts #}
-            <div class="flex content-center flex-wrap">
-            {% for post in blogPosts %} 
-                <div class="w-6/12 px-4 py-0 bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center plate-shadow">
-                    <h3 class="w-10/12 py-2 text-base font-bold m-0  border-slate-900">
+            <div class="flex content-center flex-wrap ">
+            {% for post in blogPosts %}
+                <div class="w-full px-4 py-0 flex mb-2">
+                    <h3 class="w-10/12 text-base font-bold m-0 p-0">
                         <a href="{{ url() }}/{{ post.id }}" style="text-decoration: none;">
-                            {{ post.title }}<br>
-                            <span class="text-xs opacity-50">
-                                {{ post.published_at|date("M d Y") }}
-                            </span>
+                            <span class="text-center border-r border-slate-900 dark:border-slate-800 inline-block mr-2 opacity-70" style="width: 130px;">{{ post.published_at|date("M d Y") }}</span> {{ post.title }}
                         </a>
                     </h3>
                 </div>
