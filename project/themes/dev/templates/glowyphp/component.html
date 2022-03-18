@@ -155,11 +155,13 @@
                     <h5 class="mb-2 font-bold">File</h5>
                     <ul>
                         {% for item in methods['file'] %}
-                        <li class="mb-2">
-                            <a href="{{ url() }}/{{ item.id }}">{{ item.title }}</a>
-                            <small class="opacity-75 block">
-                                {{ item.description }}
-                            </small>
+                        <li class="mb-2 list-none ml-0">
+                            <a href="{{ url() }}/{{ item.id }}" class="block">
+                                {{ item.title }}
+                                <small class="opacity-75 block base-color">
+                                    {{ item.description }}
+                                </small>
+                            </a>
                         </li>
                         {% endfor %}
                     </ul>
