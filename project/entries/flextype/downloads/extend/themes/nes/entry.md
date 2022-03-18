@@ -9,7 +9,7 @@ author:
   email: sergey.romanenko@flextype.org
 template: flextype/theme
 seo:
-  title: Get Nes Theme for Open Source Hybrid Content Management System
+  title: Get Nes Theme for Open Source Hybrid Content Management System | Flextype
   description: Nes Theme for Open Source Hybrid Content Management System
   keywords: Flextype Nes Theme, Flextype CMS Nes Theme, Headless CMS Nes Theme, Download Flat File CMS Nes Theme, Download Flat File Content Management System Nes Theme, Download PHP CMS Nes Theme, Nes, Theme, Content, Management, System, PHP, CMS
 ---

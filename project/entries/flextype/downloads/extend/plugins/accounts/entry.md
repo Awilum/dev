@@ -12,7 +12,7 @@ author:
   email: sergey.romanenko@flextype.org
 template: flextype/plugin
 seo:
-  title: Get Accounts Plugin for Open Source Hybrid Content Management System
+  title: Get Accounts Plugin for Open Source Hybrid Content Management System | Flextype
   description: Accounts Plugin for Open Source Hybrid Content Management System
   keywords: Flextype Accounts Plugin, Flextype CMS Accounts Plugin, Headless CMS Accounts Plugin, Download Flat File CMS Accounts Plugin, Download Flat File Content Management System Accounts Plugin, Download PHP CMS Accounts Plugin, Accounts Plugin, Plugin, Accounts, Content, Management, System, PHP, CMS
 ---

@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/icon
 documentation: https://github.com/flextype-plugins/icon
 template: flextype/plugin
 seo:
-  title: Get Icon Plugin for Open Source Hybrid Content Management System
+  title: Get Icon Plugin for Open Source Hybrid Content Management System | Flextype
   description: Icon Plugin to present most popular icons sets in SVG format Open Source Hybrid Content Management System
   keywords: Flextype Icon Plugin, Flextype CMS Icon Plugin, Headless CMS Icon Plugin, Download Flat File CMS Icon Plugin, Download Flat File Content Management System Icon Plugin, Download PHP CMS Icon Plugin, Icon Plugin, Plugin, Icon, Content, Management, System, PHP, CMS
 ---

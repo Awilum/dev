@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/form
 documentation: https://github.com/flextype-plugins/form
 template: flextype/plugin
 seo:
-  title: Get Form Plugin for Open Source Hybrid Content Management System
+  title: Get Form Plugin for Open Source Hybrid Content Management System | Flextype
   description: Form Plugin to render user forms for Open Source Hybrid Content Management System
   keywords: Flextype Form Plugin, Flextype CMS Form Plugin, Headless CMS Form Plugin, Download Flat File CMS Form Plugin, Download Flat File Content Management System Form Plugin, Download PHP CMS Form Plugin, Form Plugin, Plugin, Form, Content, Management, System, PHP, CMS
 ---

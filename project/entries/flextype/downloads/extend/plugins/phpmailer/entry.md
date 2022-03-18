@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/phpmailer
 documentation: https://github.com/flextype-plugins/phpmailer
 template: flextype/plugin
 seo:
-  title: Get PHP Mailer Plugin for Open Source Hybrid Content Management System
+  title: Get PHP Mailer Plugin for Open Source Hybrid Content Management System | Flextype
   description: PHP Mailer Plugin to provides a basic way to work with PHP Mailer for Open Source Hybrid Content Management System
   keywords: Flextype PHP Mailer Plugin, Flextype CMS PHP Mailer Plugin, Headless CMS PHP Mailer Plugin, Download Flat File CMS PHP Mailer Plugin, Download Flat File Content Management System PHP Mailer Plugin, Download PHP CMS PHP Mailer Plugin, PHP Mailer Plugin, Plugin, PHP Mailer, Content, Management, System, PHP, CMS
 ---

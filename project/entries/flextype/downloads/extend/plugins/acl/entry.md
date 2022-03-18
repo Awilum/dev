@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/acl
 documentation: https://github.com/flextype-plugins/acl
 template: flextype/plugin
 seo:
-  title: Get Access Control List Plugin for Open Source Hybrid Content Management System
+  title: Get Access Control List Plugin for Open Source Hybrid Content Management System | Flextype
   description: Access Control List Plugin for Open Source Hybrid Content Management System
   keywords: Flextype ACL Plugin, Flextype CMS ACL Plugin, Headless CMS ACL Plugin, Download Flat File CMS ACL Plugin, Download Flat File Content Management System ACL Plugin, Download PHP CMS ACL Plugin, ACL Plugin, Plugin, ACL, Content, Management, System, PHP, CMS
 ---

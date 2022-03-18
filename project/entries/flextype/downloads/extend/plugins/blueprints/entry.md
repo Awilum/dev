@@ -11,6 +11,7 @@ author:
 github: https://github.com/flextype-plugins/blueprints
 documentation: https://github.com/flextype-plugins/blueprints
 template: flextype/plugin
+visibility: hidden
 ---
 
 * [Introduction](#introduction)

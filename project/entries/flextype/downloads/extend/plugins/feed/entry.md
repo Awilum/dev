@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/feed
 documentation: https://github.com/flextype-plugins/feed
 template: flextype/plugin
 seo:
-  title: Get Feed Plugin for Open Source Hybrid Content Management System
+  title: Get Feed Plugin for Open Source Hybrid Content Management System | Flextype
   description: Feed Plugin for Open Source Hybrid Content Management System supports Atom 1.0, RSS and JSON feed types and allows you to generate feeds
   keywords: Flextype Feed Plugin, Flextype CMS Feed Plugin, Headless CMS Feed Plugin, Download Flat File CMS Feed Plugin, Download Flat File Content Management System Feed Plugin, Download PHP CMS Feed Plugin, Feed Plugin, Plugin, Feed, Content, Management, System, PHP, CMS
 ---

@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/data-guard
 documentation: https://github.com/flextype-plugins/data-guard
 template: flextype/plugin
 seo:
-  title: Get Data Guard Plugin for Open Source Hybrid Content Management System
+  title: Get Data Guard Plugin for Open Source Hybrid Content Management System | Flextype
   description: Data Guard Plugin to protect your website from the content copying in Open Source Hybrid Content Management System
   keywords: Flextype Data Guard Plugin, Flextype CMS Data Guard Plugin, Headless CMS Data Guard Plugin, Download Flat File CMS Data Guard Plugin, Download Flat File Content Management System Data Guard Plugin, Download PHP CMS Data Guard Plugin, Data Guard Plugin, Plugin, Data Guard, Content, Management, System, PHP, CMS
 ---

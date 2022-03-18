@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/redirect
 documentation: https://github.com/flextype-plugins/redirect
 template: flextype/plugin
 seo:
-  title: Get Redirect Plugin for Open Source Hybrid Content Management System
+  title: Get Redirect Plugin for Open Source Hybrid Content Management System | Flextype
   description: Redirect Plugin to simple redirects for Open Source Hybrid Content Management System
   keywords: Flextype Redirect Plugin, Flextype CMS Redirect Plugin, Headless CMS Redirect Plugin, Download Flat File CMS Redirect Plugin, Download Flat File Content Management System Redirect Plugin, Download PHP CMS Redirect Plugin, Redirect Plugin, Plugin, Redirect, Content, Management, System, PHP, CMS
 ---

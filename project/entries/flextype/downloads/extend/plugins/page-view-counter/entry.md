@@ -12,7 +12,7 @@ github: https://github.com/flextype-plugins/page-view-counter
 documentation: https://github.com/flextype-plugins/page-view-counter
 template: flextype/plugin
 seo:
-  title: Get Page View Counter Plugin for Open Source Hybrid Content Management System
+  title: Get Page View Counter Plugin for Open Source Hybrid Content Management System | Flextype
   description: Page View Counter Plugin to know how many readers of every page on your website for Open Source Hybrid Content Management System
   keywords: Flextype Page View Counter Plugin, Flextype CMS Page View Counter Plugin, Headless CMS Page View Counter Plugin, Download Flat File CMS Page View Counter Plugin, Download Flat File Content Management System Page View Counter Plugin, Download PHP CMS Page View Counter Plugin, Page View Counter Plugin, Plugin, Page View Counter, Content, Management, System, PHP, CMS
 ---

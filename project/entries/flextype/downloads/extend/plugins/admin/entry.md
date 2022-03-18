@@ -13,7 +13,7 @@ documentation: https://github.com/flextype-plugins/admin
 preview: https://github.com/flextype-plugins/admin/raw/dev/preview.png
 template: flextype/plugin
 seo:
-  title: Get Admin Plugin for Open Source Hybrid Content Management System
+  title: Get Admin Plugin for Open Source Hybrid Content Management System | Flextype
   description: Admin Plugin for Open Source Hybrid Content Management System
   keywords: Flextype Admin Plugin, Flextype CMS Admin Plugin, Headless CMS Admin Plugin, Download Flat File CMS Admin Plugin, Download Flat File Content Management System Admin Plugin, Download PHP CMS Admin Plugin, Admin Plugin, Plugin, Admin, Content, Management, System, PHP, CMS
 ---

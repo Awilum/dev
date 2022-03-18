@@ -10,7 +10,7 @@ menu_item_url: flextype
 menu_item_target: _self
 menu_item_order: 4
 seo:
-  title: Open Source Hybrid Content Management System
+  title: Open Source Hybrid Content Management System | Flextype
   description: The Open Source Hybrid Content Management System with the freedom of a headless CMS and with the full functionality of a traditional CMS
   keywords: Flextype, Flextype CMS, Headless CMS, Flat File CMS, Flat File Content Management System, PHP CMS, Content, Management, System, PHP, CMS
 ---

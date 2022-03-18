@@ -2,7 +2,7 @@
 title: Documentation
 template: flextype/docs-index
 seo:
-  title: Documentation for Open Source Hybrid Content Management System
+  title: Documentation for Open Source Hybrid Content Management System | Flextype
   description: Documentation for Open Source Hybrid Content Management System
   keywords: Documentation Flextype, Documentation Flextype CMS, Documentation Headless CMS, Documentation Flat File CMS, Documentation Flat File Content Management System, Documentation PHP CMS, Content, Management, System, PHP, CMS
 breadcrumbs:

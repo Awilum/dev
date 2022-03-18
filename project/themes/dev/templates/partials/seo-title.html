@@ -2,9 +2,8 @@
     Developer | Sergey Romanenko
 {% else %}
     {% if entry.seo.title %}
-        {{ entry.seo.title|e('html') }} |
+        {{ entry.seo.title|e('html') }}
     {% else %}
-        {{ entry.title|e('html') }} |
+        {{ entry.title|e('html') }} | {{ flextype.registry.get('plugins.site.settings.title')|e('html') }}
     {% endif %}
-{{ flextype.registry.get('plugins.site.settings.title')|e('html') }}
 {% endif %}

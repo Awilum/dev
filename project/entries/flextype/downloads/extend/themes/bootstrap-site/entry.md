@@ -9,7 +9,7 @@ author:
   email: sergey.romanenko@flextype.org
 template: flextype/theme
 seo:
-  title: Get Bootstrap Site Theme for Open Source Hybrid Content Management System
+  title: Get Bootstrap Site Theme for Open Source Hybrid Content Management System | Flextype
   description: Bootstrap Site Theme for Open Source Hybrid Content Management System
   keywords: Flextype Bootstrap Site Theme, Flextype CMS Bootstrap Site Theme, Headless CMS Bootstrap Site Theme, Download Flat File CMS Bootstrap Site Theme, Download Flat File Content Management System Bootstrap Site Theme, Download PHP CMS Bootstrap Site Theme, Bootstrap Site, Theme, Content, Management, System, PHP, CMS
 ---
