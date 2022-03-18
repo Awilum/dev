@@ -24,21 +24,3 @@ GET YOUR_APP_URL/api/images/entries/image.jpg?or=90&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?or=180&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/images/entries/image.jpg?or=270&token=YOUR_IMAGES_TOKEN
 ```
-
-##### Example
-
-<div class="file-header">Request</div>
-
-```
-GET [url]/api/images/entries/image.jpg?or=0&token=3b29b31ae05c89c2009f6e3f96e3d703
-GET [url]/api/images/entries/image.jpg?or=90&token=3b29b31ae05c89c2009f6e3f96e3d703
-GET [url]/api/images/entries/image.jpg?or=180&token=3b29b31ae05c89c2009f6e3f96e3d703
-GET [url]/api/images/entries/image.jpg?or=270&token=3b29b31ae05c89c2009f6e3f96e3d703
-```
-
-##### Result
-
-<img width="200" class="inline" src="[url]/api/images/entries/image.jpg?or=0&token=3b29b31ae05c89c2009f6e3f96e3d703">
-<img width="200" class="inline" src="[url]/api/images/entries/image.jpg?or=90&token=3b29b31ae05c89c2009f6e3f96e3d703">
-<img width="200" class="inline" src="[url]/api/images/entries/image.jpg?or=180&token=3b29b31ae05c89c2009f6e3f96e3d703">
-<img width="200" class="inline" src="[url]/api/images/entries/image.jpg?or=270&token=3b29b31ae05c89c2009f6e3f96e3d703">

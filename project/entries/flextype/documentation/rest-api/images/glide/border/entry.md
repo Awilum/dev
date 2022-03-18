@@ -38,17 +38,3 @@ Sets how the border will be displayed. Available options:
 GET YOUR_APP_URL/api/entries/images/image.jpg?border=10,5000,overlay&token=YOUR_IMAGES_TOKEN
 GET YOUR_APP_URL/api/entries/images/image.jpg?border=10,FFCC33,expand&token=YOUR_IMAGES_TOKEN
 ```
-
-##### Example
-
-<div class="file-header">Request</div>
-
-```
-GET [url]/api/entries/images/image.jpg?border=30,5000,overlay&token=3b29b31ae05c89c2009f6e3f96e3d703
-GET [url]/api/entries/images/image.jpg?border=30,FFCC33,expand&token=3b29b31ae05c89c2009f6e3f96e3d703
-```
-
-##### Result
-
-<img width="200" class="inline" src="[url]/documentation/api/images/entries/image.jpg?border=30,5000,overlay&token=4864fb8e1ebe080e6e4ad5c4363083a6">
-<img width="200" class="inline" src="[url]/documentation/api/images/entries/image.jpg?border=30,FFCC33,expand&token=4864fb8e1ebe080e6e4ad5c4363083a6">
