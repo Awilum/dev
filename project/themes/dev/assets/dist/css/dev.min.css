@@ -1731,6 +1731,10 @@ a.brand-logo:hover > svg {
   margin: 0px;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1945,6 +1949,14 @@ a.brand-logo:hover > svg {
   width: 12rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
 .max-w-\[1200px\] {
   max-width: 1200px;
 }
@@ -1971,6 +1983,10 @@ a.brand-logo:hover > svg {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col-reverse {
@@ -2100,6 +2116,16 @@ a.brand-logo:hover > svg {
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .stroke-slate-300 {
@@ -2421,6 +2447,10 @@ a.brand-logo:hover > svg {
 
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .shadow-md {
