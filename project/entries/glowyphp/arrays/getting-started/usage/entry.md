@@ -2,8 +2,8 @@
 title: Usage
 template: glowyphp/component
 seo:
-  title: Usage of Arrays Component for Advanced Arrays Manipulations
-  description: Usage Enterprise-ready Arrays Component for working with arrays, allowing you to chain multiple arrays operations together using a more readable syntax compared to traditional PHP arrays functions
+  title: Usage of Arrays Package for Advanced Arrays Manipulations
+  description: Usage Enterprise-ready Arrays Package for working with arrays, allowing you to chain multiple arrays operations together using a more readable syntax compared to traditional PHP arrays functions
 ---
 
 ```php

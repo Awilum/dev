@@ -1,11 +1,11 @@
 ---
 title: Session
 template: glowyphp/component
-description: Session Component provide a fluent, object-oriented interface for working with Session.
+description: Session Package provide a fluent, object-oriented interface for working with Session.
 ---
 
 <h2 class="font-normal text-lg">
-Session Component provide a fluent, object-oriented interface for working with Session.
+Session Package provide a fluent, object-oriented interface for working with Session.
 </h2>
 
 ### Installation

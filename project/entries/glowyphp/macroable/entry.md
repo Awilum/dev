@@ -1,11 +1,11 @@
 ---
 title: Macroable
 template: glowyphp/component
-description: Macroable Component is a trait that, gives you the ability in effect to add new methods to a class at runtime.
+description: Macroable Package is a trait that, gives you the ability in effect to add new methods to a class at runtime.
 ---
 
 <h2 class="font-normal text-lg">
-Macroable Component is a trait that, gives you the ability in effect to add new methods to a class at runtime.
+Macroable Package is a trait that, gives you the ability in effect to add new methods to a class at runtime.
 </h2>
 
 ### Installation

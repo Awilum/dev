@@ -2,8 +2,8 @@
 title: Usage
 template: glowyphp/component
 seo:
-  title: Usage of Registry Component for storing data globally in a well managed fashion, helping to prevent global meltdown
-  description: Usage Enterprise-ready Registry Component for storing data globally in a well managed fashion, helping to prevent global meltdown
+  title: Usage of Registry Package for storing data globally in a well managed fashion, helping to prevent global meltdown
+  description: Usage Enterprise-ready Registry Package for storing data globally in a well managed fashion, helping to prevent global meltdown
 ---
 
 ```php
@@ -39,7 +39,7 @@ echo Registry::getInstance()->customMethod();
 1
 ```
 
-Registry Component is extending [Arrays Component](https://glowy.com/components/arrays). All methods of Arrays Component are available when using Registry Component in your projects for manipulations with Registry.<br><br>
+Registry Package is extending [Arrays Package](https://glowy.com/components/arrays). All methods of Arrays Package are available when using Registry Package in your projects for manipulations with Registry.<br><br>
 
 #### Examples
 

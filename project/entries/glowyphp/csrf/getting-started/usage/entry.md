@@ -2,8 +2,8 @@
 title: Usage
 template: glowyphp/component
 seo:
-  title: Usage of Csrf Component for Cross Site Request Forgery protection
-  description: Usage Enterprise-ready Csrf Component for Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
+  title: Usage of Csrf Package for Cross Site Request Forgery protection
+  description: Usage Enterprise-ready Csrf Package for Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
 ---
 
 

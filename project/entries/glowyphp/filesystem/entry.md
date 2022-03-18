@@ -1,11 +1,11 @@
 ---
 title: Filesystem
 template: glowyphp/component
-description: Filesystem Component provide a fluent, object-oriented interface for working with filesystem
+description: Filesystem Package provide a fluent, object-oriented interface for working with filesystem
 ---
 
 <h2 class="font-normal text-lg">
-Filesystem Component provide a fluent, object-oriented interface for working with filesystem.
+Filesystem Package provide a fluent, object-oriented interface for working with filesystem.
 </h2>
 
 ### Installation

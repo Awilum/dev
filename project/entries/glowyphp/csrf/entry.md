@@ -1,14 +1,14 @@
 ---
 title: Csrf
 template: glowyphp/component
-description: Csrf Component provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
+description: Csrf Package provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
 seo:
-  title: Get Csrf Component for Cross Site Request Forgery protection
-  description: Enterprise-ready Csrf Component for Cross Site Request Forgery protection
+  title: Get Csrf Package for Cross Site Request Forgery protection
+  description: Enterprise-ready Csrf Package for Cross Site Request Forgery protection
 ---
 
 <h2 class="font-normal text-lg">
-Csrf Component provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
+Csrf Package provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.
 </h2>
 
 ### Installation
