@@ -2,6 +2,8 @@
 title: SHORTCODE
 description: Shortcode is a small piece of code, indicated by brackets like `[this]`, that performs a dedicated function on your site.
 template: flextype/docs
+seo:
+  title: Shortcode | Flextype
 breadcrumbs:
   -
     title: "Core Concepts"

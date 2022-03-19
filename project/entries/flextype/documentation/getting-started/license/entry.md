@@ -2,6 +2,8 @@
 title: License
 order: 8
 template: flextype/docs
+seo:
+  title: License | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

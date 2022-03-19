@@ -2,6 +2,8 @@
 title: Media
 template: flextype/docs
 order: 3
+seo:
+  title: Media | Flextype
 breadcrumbs:
   -
     title: "Core Concepts"

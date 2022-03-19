@@ -1,6 +1,8 @@
 ---
 title: Border
 template: flextype/docs
+seo:
+  title: Images Rest API Glide Border | Flextype
 breadcrumbs:
   1:
     title: "Rest API"

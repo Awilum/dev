@@ -2,6 +2,8 @@
 title: Requirements
 description: System and Browser requirements for Flextype
 template: flextype/docs  
+seo:
+  title: Requirements | Flextype
 order: 2
 breadcrumbs:
   1:

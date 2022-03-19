@@ -3,6 +3,8 @@ title: Installation
 description: Flextype is incredibly easy to set up and get running.
 order: 3
 template: flextype/docs
+seo:
+  title: Installation | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

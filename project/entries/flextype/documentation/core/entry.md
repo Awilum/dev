@@ -1,5 +1,7 @@
 ---
 title: Core Concepts
+seo:
+  title: Core Concepts | Flextype
 order: 2
 template: flextype/docs 
 ---

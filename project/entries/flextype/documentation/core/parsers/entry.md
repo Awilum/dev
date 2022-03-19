@@ -2,6 +2,8 @@
 title: Parsers
 template: flextype/docs
 order: 6
+seo:
+  title: Parsers | Flextype
 breadcrumbs:
   1:
     title: "Core Concepts"

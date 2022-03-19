@@ -1,6 +1,8 @@
 ---
 title: Brightness
 template: flextype/docs
+seo:
+  title: Images Rest API Glide Brightness | Flextype
 breadcrumbs:
   1:
     title: "Rest API"

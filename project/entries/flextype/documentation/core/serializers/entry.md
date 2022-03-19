@@ -2,6 +2,8 @@
 title: Serializers
 template: flextype/docs
 order: 7
+seo:
+  title: Serializers | Flextype
 breadcrumbs:
   1:
     title: "Core Concepts"

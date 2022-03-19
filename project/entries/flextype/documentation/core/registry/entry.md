@@ -2,6 +2,8 @@
 title: Registry
 template: flextype/docs
 order: 5
+seo:
+  title: Registry | Flextype
 breadcrumbs:
   -
     title: "Core Concepts"

@@ -3,6 +3,8 @@ title: Getting Help
 description: There are several channels to reach the developers and the Flextype community to get direct assistance.
 order: 7
 template: flextype/docs
+seo:
+  title: Getting Help | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

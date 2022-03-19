@@ -3,6 +3,8 @@ title: Folder structure
 description: Flextype folder structure
 order: 5
 template: flextype/docs
+seo:
+  title: Folder structure | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

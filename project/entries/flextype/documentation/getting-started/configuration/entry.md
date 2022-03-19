@@ -3,6 +3,8 @@ title: Configuration
 description: Flextype allows you to configure your site in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that make this possible.
 order: 4
 template: flextype/docs
+seo:
+  title: Configuration | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

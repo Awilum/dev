@@ -2,6 +2,8 @@
 title: Images
 description: The Flextype Images allows the retrieval and manipulation of image files referenced from media.
 template: flextype/docs
+seo:
+  title: Images Rest API | Flextype
 order: 3
 breadcrumbs:
   1:

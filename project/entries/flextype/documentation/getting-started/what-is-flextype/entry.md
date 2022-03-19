@@ -2,6 +2,8 @@
 title: What is Flextype?
 template: flextype/docs   
 order: 1
+seo:
+  title: What is Flextype? | Flextype
 breadcrumbs:
   1:
     title: "Getting Started"

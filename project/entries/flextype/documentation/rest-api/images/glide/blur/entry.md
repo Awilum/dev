@@ -1,6 +1,8 @@
 ---
 title: Blur
 template: flextype/docs
+seo:
+  title: Images Rest API Glide Blur | Flextype
 breadcrumbs:
   1:
     title: "Rest API"

@@ -2,6 +2,8 @@
 title: Entries
 template: flextype/docs
 order: 2
+seo:
+  title: Requirements | Flextype
 breadcrumbs:
   -
     title: "Rest API"
