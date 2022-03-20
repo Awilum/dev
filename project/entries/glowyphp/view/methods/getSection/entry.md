@@ -16,8 +16,8 @@ description: Get section.
 public function getSection(string $section, $default = null)
 ```
 
-#### Exampless
+#### Examples
 
 ```php
-$section = $view->getSection('foo', 'bar');
+echo $view->getSection('foo', 'bar');
 ```

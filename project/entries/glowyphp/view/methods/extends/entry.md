@@ -16,7 +16,7 @@ description: Extend parent view.
 public function extends(string $view, array $data = []): void
 ```
 
-#### Exampless
+#### Examples
 
 ```php
 $view->extends('welcome', ['name' => 'Eleven']);

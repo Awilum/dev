@@ -15,8 +15,10 @@ description: Determine if section exists.
 public function hasSection(string $section): bool
 ```
 
-#### Exampless
+#### Examples
 
 ```php
-$view->hasSection('foo');
+if ($view->hasSection('foo')) {
+    // do something...
+}
 ```
