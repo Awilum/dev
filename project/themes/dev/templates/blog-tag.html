@@ -20,7 +20,7 @@
                             .where('tags', 'contains', entry.id|split('/')[2])
                             .sortBy('published_at', 'DESC')%}
 
-    <h1 class="text-6xl p-0 mt-10 mb-10 font-bold text-center uppercase">Tag - {{ entry.title }}</h1>
+    <h1 class="text-6xl p-0 mt-16 mb-16 font-bold text-center uppercase">Tag - {{ entry.title }}</h1>
     <div class="flex">
         <div class="w-full lg:w-9/12">
             {# blog-posts #}
