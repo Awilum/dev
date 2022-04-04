@@ -57,7 +57,7 @@
         {% endif %}
     </div>
 </div>
-<div class="flex flex-wrap">
+<div class="flex flex-wrap px-4 lg:px-0">
     <div class="w-full lg:w-9/12">
         {{ entry.content|shortcode|markdown|raw }}
         {% if (uri3 == '' and uri2 == 'methods') or (uri1 and uri2 == '' and uri3 == '')%}

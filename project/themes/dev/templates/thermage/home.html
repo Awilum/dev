@@ -4,8 +4,8 @@
     {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
 
     <!-- introducing section -->
-    <div class="pt-0 pb-0 lg:flex lg:py-32">
-        <div class="w-full px-20">
+    <div class="pt-20 pb-0 lg:flex lg:py-32">
+        <div class="w-full px-4 lg:px-20">
             <h1 class="uppercase text-center text-2xl lg:text-6xl lg:m-0" style="letter-spacing: 4px;">Totally RAD Terminal styling for PHP!</h1>
             <h2 class="mt-8 text-center text-xl font-normal lg:text-3xl lg:m-0 lg:mt-6 lg:px-10">Fluent and incredible powerful, object-oriented interface for customizing CLI output text color, background, formatting, theming and more.</h2>
             <div class="mt-20 lg:flex lg:justify-center">
@@ -30,7 +30,7 @@
   </div>
   <!-- /introducing section -->
 
-  <div class="mb-36 mt-36">
+  <div class="mb-36 mt-36 px-4 lg:px-0">
     <h3 class="uppercase text-2xl lg:text-6xl lg:m-0 text-center h-shadowed font-bold" style="letter-spacing: 4px; letter-spacing: 5px;">Features</h3>
     <div class="mt-36">
       <h4 class="text-lg lg:text-2xl flex items-center uppercase border-black border-b-2 dark:border-slate-300" style="padding-bottom: 20px; margin-bottom: 40px; letter-spacing: 5px;">Consistent Colors</h4>
@@ -155,7 +155,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full lg:w-6/12 text-xl pl-12">
+        <div class="w-full lg:w-6/12 text-xl lg:pl-12">
           Thermage uses the <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#3/4_bit">ANSI color scheme</a> which is widely used by terminals to ensure consistent colors in different terminal themes. If that’s not enough, Thermage can be used to access the full RGB color scheme (16+ million colors) in terminals that support TrueColor.
         </div>
       </div>
@@ -252,7 +252,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full lg:w-6/12 text-xl pl-12">
+        <div class="w-full lg:w-6/12 text-xl lg:pl-12">
           Thermage consists of built-in components, called <a href="{{ url() }}/documentation/elements">Elements</a>, which can be used individually or together to generate pretty console output.
         </div>
       </div>
@@ -305,7 +305,7 @@ Thermage::setTheme(new RadTheme());</code></pre>
             </div>
           </div>        
         </div>
-        <div class="w-full lg:w-6/12 text-xl pl-12">
+        <div class="w-full lg:w-6/12 text-xl lg:pl-12">
           Thermage provides ability to create and use custom themes to change the style of command line output with preconfigured themes variables.
         </div>
       </div>
@@ -327,7 +327,7 @@ Thermage::setTheme(new RadTheme());</code></pre>
 
 and more :)</code></pre>
         </div>
-        <div class="w-full lg:w-5/12 text-xl pl-12">
+        <div class="w-full lg:w-5/12 text-xl lg:pl-12">
           Thermage provides incredible simple and powerful <a href="{{ url() }}/documentation/parsers/shortcodes">Shortcodes API</a> to create and use shortcodes markup for customizing CLI output text color, background, formatting.
         </div>
       </div>
@@ -483,7 +483,7 @@ public function run(array $params)
           </div>
   
         </div>
-        <div class="w-full lg:w-6/12 text-xl pl-12">
+        <div class="w-full lg:w-6/12 text-xl lg:pl-12">
           Thermage can be used with any Modern PHP Framework: Symfony, Laravel, Yii, CakePHP, CodeIgniter, Phalcon and others.
         </div>
       </div>

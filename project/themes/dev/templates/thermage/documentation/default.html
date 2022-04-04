@@ -2,7 +2,7 @@
 
 {% block content %}
 {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
-<div class="uppercase text-center pt-24 pb-24 m-0">
+<div class="uppercase text-center pt-24 pb-24 m-0 px-4 lg:px-0">
     <div>
         <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h1>
         <div class="text-sm lg:text-lg">
@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-<div>
+<div class="px-4 lg:px-0">
     {{ entry.content|shortcode|markdown|raw }}
 </div>
 {% endblock %}

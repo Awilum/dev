@@ -23,7 +23,7 @@
     {% do flextype.cache.set(methodsCacheID, methods) %}
 {% endif %}
 
-<div class="text-center pt-24 pb-24 m-0">
+<div class="text-center pt-24 pb-24 m-0 px-4 lg:px-0">
     <h2 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h2>
     <div class="text-sm lg:text-lg">
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation">DOCUMENTATION</a></span>
@@ -43,7 +43,7 @@
         {% endif %}
     </div>
 </div>
-<div class="flex flex-wrap">
+<div class="flex flex-wrap px-4 lg:px-0">
     <div class="w-full lg:w-9/12">
         {{ entry.content|shortcode|markdown|raw }}
         {% if (uri3 == '' and uri2 == 'methods') or (uri1 and uri2 == '' and uri3 == '')%}
