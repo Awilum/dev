@@ -21,7 +21,7 @@ You can update and create project configuration by editing file `project/config/
 ```yaml
 # Set the timezone to be used on the project.
 # For a list of valid timezone settings, see:
-# https://php.net/manual/timezones.php
+# http://php.net/manual/en/timezones.php
 timezone: UTC
 
 # Charset
@@ -29,33 +29,42 @@ timezone: UTC
 # Set internal character encoding.
 #
 # Currently the following names are supported:
-# https://php.net/manual/function.mb-regex-encoding.php#121645
+# http://php.net/manual/en/function.mb-regex-encoding.php#121645
 charset: UTF-8
 
 # The locale that'll be used by the Flextype.
 #
-# Available locales to use: flextype/config/locales.yaml
+# Available locales to use: src/flextype/locales.yaml
 locale: en_US
 
-# Application URL
+# Application Base url
 #
-# Define custom application url
-url: ''
+# Define application base url
+base_url: ''
+
+# Application Base Path
+#
+# Define application base path if application located in subdirectory
+base_path: '/'
 
 # Valid date format
 #
-# - date_format: Valid date format
-#
-# - date_display_format: Valid date format to display
-#
 # Date format variants:
 #
-# d-m-Y H:i" - 02-02-2020 09:41
-# Y-m-d H:i" - 2020-02-02 09:41
-# m/d/Y h:i a - 02/02/2020 09:41 pm
-# H:i d-m-Y - 09:41 02-02-2020
-# h:i a m/d/Y - 09:41 pm 02/02/2020
+#   d-m-Y H:i" - 02-02-2020 09:41
+#   Y-m-d H:i" - 2020-02-02 09:41
+#   m/d/Y h:i a - 02/02/2020 09:41 pm
+#   H:i d-m-Y - 09:41 02-02-2020
+#   h:i a m/d/Y - 09:41 pm 02/02/2020
 date_format: 'd-m-Y H:i'
+
+# Valid date format to display
+#
+#   d-m-Y H:i" - 02-02-2020 09:41
+#   Y-m-d H:i" - 2020-02-02 09:41
+#   m/d/Y h:i a - 02/02/2020 09:41 pm
+#   H:i d-m-Y - 09:41 02-02-2020
+#   h:i a m/d/Y - 09:41 pm 02/02/2020
 date_display_format: 'd-m-Y H:i'
 
 # Display errors
@@ -69,55 +78,124 @@ date_display_format: 'd-m-Y H:i'
 # - Detailed error messages for login failures could leak information to attackers
 #
 # In a production environment, always log errors to your PHP error logs.
-#
-# - display: Display errors or not.
 errors:
-  display: false
+
+  # Set true to display errors.
+  display: true
+
+  # Editor (emacs, idea, macvim, phpstorm, sublime, textmate, xdebug, vscode, atom, espresso)
+  editor: atom
+
+  # Error page title
+  page_title: Error!
+
+  # Handler (pretty, plain, json, xml)
+  handler: pretty
 
 # Entries
-#
-# - extension: Set entries file extension
 entries:
-  extension: md
-  fields:
-    media:
-      files:
-        fetch:
+  directory: '/entries'
+  collections:
+    default:
+      filename: entry
+      extension: md
+      serializer: frontmatter
+      fields:
+        registry:
           enabled: true
-          result: toObject
-      folders:
-        fetch:
+          dump: false
+          path: "/src/flextype/core/Entries/Fields/Default/RegistryField.php"
+        entries:
           enabled: true
-          result: toObject
-    registry:
-      get:
-        enabled: true
-    entries:
-      fetch:
-        enabled: true
-        result: toObject
-    slug:
-      enabled: true
-    published_at:
-      enabled: true
-    published_by:
-      enabled: true
-    modified_at:
-      enabled: true
-    created_at:
-      enabled: true
-    created_by:
-      enabled: true
-    routable:
-      enabled: true
-    parsers:
-      enabled: true
-    visibility:
-      enabled: true
-    uuid:
-      enabled: true
-    id:
-      enabled: true
+          dump: false
+          path: "/src/flextype/core/Entries/Fields/Default/EntriesField.php"
+          fetch:
+            result: toObject
+        slug:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/SlugField.php"
+        published_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/PublishedAtField.php"
+        published_by:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/PublishedByField.php"
+        modified_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+        created_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+        created_by:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+        routable:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/RoutableField.php"
+        parsers:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/ParsersField.php"
+        visibility:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/VisibilityField.php"
+        uuid:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+        id:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+    tokens:
+      pattern: tokens
+      filename: token
+      extension: yaml
+      serializer: yaml
+      fields: 
+        modified_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+        created_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+        created_by:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+        uuid:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+        id:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+    tokens_item:
+      pattern: tokens/([a-zA-Z0-9_-]+)
+      filename: token
+      extension: yaml
+      serializer: yaml
+      fields: 
+        modified_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+        created_at:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+        created_by:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+        uuid:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+        id:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+        calls:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Tokens/Items/CallsField.php"
+        limit_calls:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Tokens/Items/LimitCallsField.php"
+        state:
+          enabled: true
+          path: "/src/flextype/core/Entries/Fields/Tokens/Items/StateField.php"
+
 
 # Cache
 #
@@ -160,9 +238,8 @@ entries:
 # - drivers.files.prevent_cache_slams: This option will allow you to prevent cache slams when making use of heavy cache items.
 #
 # - drivers.files.cache_slams_timeout: This option defines the cache slams timeout in seconds.
-
 cache:
-  enabled: true
+  enabled: false
   driver: auto
   drivers:
     apcu: {}
@@ -200,6 +277,12 @@ cache:
     devnull: {}
     devfalse: {}
     devtrue: {}
+    phparray:
+      path: '/data'
+      security_key: 'auto'
+      htaccess: true
+      secure_file_manipulation: false
+      default_ttl: 900
     files:
       path: '/data'
       security_key: 'auto'
@@ -277,191 +360,320 @@ cache:
     zenddisk: {}
     zendshm: {}
 
-# Whoops
-#
-# Error handler framework for PHP.
-#
-# - editor: emacs, idea, macvim, phpstorm, sublime, textmate, xdebug, vscode, atom, espresso
-#
-# - page_title: page title
-whoops:
-  editor: atom
-  page_title: Error!
-
-# Slim
-#
-# - display_error_details: When true, additional information about exceptions are
-#                          displayed by the default error handler.
-#
-# - add_content_length_header: When true, Slim will add a Content-Length header to
-#                              the response. If you are using a runtime analytics tool,
-#                              such as New Relic, then this should be disabled.
-#
-# - router_cache_file: Filename for caching the FastRoute routes. Must be set to
-#                      a valid filename within a writeable directory. If the file
-#                      does not exist, then it is created with the correct cache
-#                      information on first run. Set to false to disable the FastRoute
-#                      cache system.
-#
-# - determine_route_before_app_middleware: When true, the route is calculated before
-#                                          any middleware is executed. This means that you
-#                                          can inspect route parameters in middleware if you need to.
-#
-# - output_buffering: If false, then no output buffering is enabled.
-#                     If 'append' or 'prepend', then any echo or print statements
-#                     are captured and are either appended or prepended to the Response
-#                     returned from the route callable.
-#
-# - response_chunk_size: Size of each chunk read from the Response body when sending to the browser.
-#
-# - http_version: The protocol version used by the Response object.
-display_error_details: false
+# When true, Flextype will add a Content-Length header to
+# the response. If you are using a runtime analytics tool,
+# such as New Relic, then this should be disabled.
 add_content_length_header: true
-router_cache_file: false
-determine_route_before_app_middleware: false
+
+# If false, then no output buffering is enabled.
+# If 'append' or 'prepend', then any echo or print statements
+# are captured and are either appended or prepended to the Response
+# returned from the route callable.
 output_buffering: append
-response_chunk_size: 4096
-http_version: '1.1'
+
+# Router
+router:
+
+  # Caching the FastRoute routes for better perfomance. 
+  # Set to true to enable the FastRoute cache system.
+  cache: true
+  
+# Set to true to enable the Flextype CLI Application
+cli: true
+
+# Set to true to enable the Flextype Application
+app: true
 
 # Slugify
-#
-# - separator: By default Slugify will use dashes as separators.
-#              If you want to use a different default separator,
-#              you can set the separator option.
-#
-# - lowercase: By default Slugify will convert the slug to lowercase.
-#              If you want to preserve the case of the string you can set the
-#              lowercase option to false.
-#
-# - trim:      By default Slugify will remove leading and trailing separators before
-#              returning the slug. If you do not want the slug to be trimmed you can
-#              set the trim option to false.
-#
-# - regexp:    You can also change the regular expression that is used to replace
-#              characters with the separator.
-#
-# - lowercase_after_regexp: Lowercasing is done before using the regular expression.
-#                           If you want to keep the lowercasing behavior but your
-#                           regular expression needs to match uppercase letters,
-#                           you can set the lowercase_after_regexp option to true.
-#
-# - strip_tags: Adds in an option to go through strip_tags() in case the string contains HTML etc.
 slugify:
+
+  # Set true to enable slugify.
+  enabled: true
+
+  # By default Slugify will use dashes as separators.
+  # If you want to use a different default separator,
+  # you can set the separator option.
   separator: "-"
+
+  # By default Slugify will convert the slug to lowercase.
+  # If you want to preserve the case of the string you can set the
+  # lowercase option to false.
   lowercase: true
+
+  # By default Slugify will remove leading and trailing separators before
+  # returning the slug. If you do not want the slug to be trimmed you can
+  # set the trim option to false.
   trim: true
+
+  # You can also change the regular expression that is used to replace
+  # characters with the separator.
   regexp: "/[^A-Za-z0-9]+/"
+
+  # Lowercasing is done before using the regular expression.
+  # If you want to keep the lowercasing behavior but your
+  # regular expression needs to match uppercase letters,
+  # you can set the lowercase_after_regexp option to true.
   lowercase_after_regexp: false
+
+  # Adds in an option to go through strip_tags() in case the string contains HTML etc.
   strip_tags: false
 
-# Image
+# Serializers
 #
-# - driver: gd or imagick
-image:
-  driver: gd
+# json.decode.cache: Cache result data or no. Default is true.
+# json.decode.assoc: Decode assoc. When TRUE, returned objects will be converted into associative arrays.
+# json.decode.depth: Decode Depth. Set the maximum depth. Must be greater than zero.
+# json.decode.flags: Bitmask consisting of decode options.
+# json.encode.options: Bitmask consisting of encode options
+# json.encode.depth: Encode Depth. Set the maximum depth. Must be greater than zero.
+#
+# yaml.decode.cache: Cache result data or no. Default is true.
+# yaml.decode.native: Use native php pecl parser or symfony parser.
+# yaml.decode.flags: A bit field of DUMP_* constants to customize the dumped YAML string.
+# yaml.encode.inline: The level where you switch to inline YAML.
+# yaml.encode.indent: The amount of spaces to use for indentation of nested nodes.
+# yaml.encode.flags: A bit field of DUMP_* constants to customize the dumped YAML string.
+#
+# frontmatter.decode.cache: Cache result data or no. Default is true.
+# frontmatter.decode.header_serializer: Header serializer.
+# frontmatter.encode.header_serializer: Header serializer.
+#
+# neon.decode.cache: Cache result data or no. Default is true.
+# neon.encode.flags: The flag can be 1, which will create multiline output.
+#
+# phparray.decode.cache: Cache result data or no. Default is true.
+#
+# phpcode.decode.cache: Cache result data or no. Default is true.
+serializers:
+  json: 
+    decode:
+      cache: true
+      assoc: true
+      depth: 512
+      flags: 0
+    encode: 
+      options: 0
+      depth: 512
+  yaml:
+    decode:
+      cache: true
+      native: true
+      flags: 0
+    encode:    
+      inline: 10
+      indent: 2
+      flags: 0
+  frontmatter:
+    decode:
+      cache: true
+      header:
+        serializer: yaml
+        allowed: ['yaml', 'json', 'neon']
+    encode:    
+      header:
+        serializer: yaml
+        allowed: ['yaml', 'json', 'neon']
+  neon:
+    decode:
+      cache: true
+    encode:
+      blockMode: false
+      indentation: "\t"
+  phparray:
+    decode:
+      cache: true
+    encode:
+      wrap: true
 
-# Markdown
+# Parsers
 #
-# - markdown.auto_line_breaks: Enable automatic line breaks
-# - markdown.auto_url_links:   Enable automatic HTML links
-# - markdown.escape_markup:    Escape markup tags into entities
+# - markdown.cache:                                 Cache result data or no. Default is true.
 #
-# Shortcode
+# - markdown.commonmark.renderer.block_separator:   String to use for separating renderer block elements.
 #
-# - shortcodes: Flextype Shortcodes to load.
+# - markdown.commonmark.renderer.inner_separator:   String to use for separating inner block contents.
+#
+# - markdown.commonmark.renderer.soft_break:        String to use for rendering soft breaks.
+#
+# - markdown.commonmark.commonmark.enable_em:       Disable <em> parsing by setting to false; enable with true (default: true)
+#
+# - markdown.commonmark.commonmark.enable_strong:   Disable <strong> parsing by setting to false; enable with true (default: true)
+#
+# - markdown.commonmark.commonmark.use_asterisk:    Disable parsing of * for emphasis by setting to false; enable with true (default: true)
+#
+# - markdown.commonmark.commonmark.use_underscore:  Disable parsing of _ for emphasis by setting to false; enable with true (default: true)
+#
+# - markdown.commonmark.commonmark.unordered_list_markers: Array of characters that can be used to indicate a bulleted list.
+#
+# - markdown.commonmark.html_input:                `strip` all HTML (equivalent to 'safe' => true). `allow` all HTML input as-is (default value; equivalent to `‘safe’ => false) `escape` Escape all HTML.
+#
+# - markdown.commonmark.allow_unsafe_links:         Remove risky link and image URLs by setting this to false (default: true).
+#
+# - markdown.commonmark.max_nesting_level:          The maximum nesting level for blocks (default: PHP_INT_MAX). Setting this to a positive integer can help protect against long parse times and/or segfaults if blocks are too deeply-nested.
+#
+# - markdown.commonmark.slug_normalizer.max_length: Limits the size of generated slugs (defaults to 255 characters)
 parsers:
   markdown:
-    auto_line_breaks: false
-    auto_url_links: false
-    escape_markup: false
-  shortcode:
+    cache: true
+    commonmark:
+      renderer:
+        block_separator: "\n"
+        inner_separator: "\n"
+        soft_break: "\n"
+      commonmark:
+        enable_em: true
+        enable_strong: true
+        use_asterisk: true
+        use_underscore: true
+        unordered_list_markers: ['-', '*', '+']
+      html_input: 'allow'
+      allow_unsafe_links: false
+      max_nesting_level: 9223372036854775807
+      slug_normalizer:
+        max_length: 255
+  shortcodes:
+    cache: true
     shortcodes:
       entries:
         enabled: true
+        path: "/src/flextype/core/Parsers/Shortcodes/EntriesShortcode.php"
       raw:
         enabled: true
+        path: "/src/flextype/core/Parsers/Shortcodes/RawShortcode.php"
       registry:
         enabled: true
+        path: "/src/flextype/core/Parsers/Shortcodes/RegistryShortcode.php"
       url:
         enabled: true
+        path: "/src/flextype/core/Parsers/Shortcodes/UrlShortcode.php"
 
 # CORS
 #
 # CORS (Cross-origin resource sharing) allows JavaScript web apps to make HTTP requests to other domains.
 # This is important for third party web apps using Flextype, as without CORS, a JavaScript app hosted on example.com
 # couldn't access our APIs because they're hosted on another.com which is a different domain.
-#
-# - enabled: Set to true to enable cors
-#
-# - origin:   The Access-Control-Allow-Origin response header indicates whether
-#             the response can be shared with requesting code from the given origin.
-#             read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
-#
-# - headers:  The Access-Control-Allow-Headers response header is used in response
-#             to a preflight request which includes the Access-Control-Request-Headers
-#             to indicate which HTTP headers can be used during the actual request.
-#             read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
-#
-# - methods: The Access-Control-Allow-Methods response header specifies the method
-#            or methods allowed when accessing the resource in response to a preflight request.
-#            read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods
-#
-# - expose:  The Access-Control-Expose-Headers response header indicates which headers
-#            can be exposed as part of the response by listing their names.
-#            read more: https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Expose-Headers
-#
-# - credentials: The Access-Control-Allow-Credentials response header tells browsers whether
-#                to expose the response to frontend JavaScript code when the request's credentials
-#                mode (Request.credentials) is include.
-#                read more: https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
 cors:
+
+  # Set to true to enable cors
   enabled: true
+
+  # The Access-Control-Allow-Origin response header indicates whether
+  # the response can be shared with requesting code from the given origin.
+  #
+  # read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
   origin: "*"
+
+  # The Access-Control-Allow-Headers response header is used in response
+  # to a preflight request which includes the Access-Control-Request-Headers
+  # to indicate which HTTP headers can be used during the actual request.
+  #
+  # read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
   headers: ["X-Requested-With", "Content-Type", "Accept", "Origin", "Authorization"]
+  
+  # The Access-Control-Allow-Methods response header specifies the method
+  # or methods allowed when accessing the resource in response to a preflight request.
+  #
+  # read more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods
   methods: [GET, POST, PUT, DELETE, PATCH, OPTIONS]
+  
+  # The Access-Control-Expose-Headers response header indicates which headers
+  # can be exposed as part of the response by listing their names.
+  #
+  # read more: https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Expose-Headers
   expose: []
+
+  # The Access-Control-Allow-Credentials response header tells browsers whether
+  # to expose the response to frontend JavaScript code when the request's credentials
+  # mode (Request.credentials) is include.
+  #
+  # read more: https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
   credentials: false
 
-# Media
-#
-# - max_file_size: Set the maximum upload size. Note, this can never exceed the settings for
-#                  `post_max_size` and `upload_max_filesize` in `php.ini`.
-media:
-  accept_file_types: 'gif, jpg, jpeg, png, ico, zip, tgz, txt, md, doc, docx, pdf, epub, xls, xlsx, ppt, pptx, mp3, ogg, wav, m4a, mp4, m4v, ogv, wmv, avi, webm, svg'
-  max_file_size: 8000000
-  safe_names: true
-  image_width: 1600
-  image_height: 0
-  image_quality: 70
-  max_image_width: null
-  max_image_height: null
+# Upload
+upload:
 
+  # Uploads directory
+  directory: '/uploads'
+
+  # Overwrite existing files.
+  overwrite: true
+
+  # Auto-confirm uploads.
+  autoconfirm: false
+
+  # Prefixing uploads.
+  prefix: ''
+
+  # Validation options
+  validation:
+
+    # Allowed file extensions.
+    allowed_file_extensions: ['gif', 'jpg', 'jpeg', 'png', 'ico', 'webm', 'svg']
+
+    # Maximum file size.
+    max_file_size: '24M'
+
+    # Image validation options
+    image:
+    
+      # Image maxiumum and minimum width
+      width:
+        max: 4920
+        min: 100
+
+      # Image maxiumum and minimum height
+      height: 
+        max: 3264
+        min: 100
+    
+      # Image ratio
+      #ratio:
+      #  The option can be a number (eg: 1.3) or a ratio-like string (eg: 4:3, 16:9).
+      #  size: 1.3
+
+      #  The option error_margin specifies how much the image is allowed to 
+      #  deviate from the target ratio. Default value is 0.
+      #  error_margin: 0
+
+  # Process uploaded files
+  process:
+
+    # Images process settings
+    image:
+
+      # Image quality
+      quality: 70
+    
 # Session
 #
 # Set session options before you start the session
 # Standard PHP session configuration options
-# https://secure.php.net/manual/session.configuration.php
+# https://secure.php.net/manual/en/session.configuration.php
 session:
+
+  # Session name
   name: Flextype
 
 # Flextype Rest APIs
 api:
+
+  # Entries API
   entries:
+
+    # Set to true to enable Entries API
     enabled: true
-    default_token:
+
+  # Registry API
   registry:
+
+    # Set to true to enable Registry API
     enabled: true
-    default_token:
-  media:
-    files:
-      enabled: true
-      default_token:
-    folders:
-      enabled: true
-      default_token:
-  images:
+
+  # Utils API
+  utils:
+
+    # Set to true to enable Utils API
     enabled: true
-    default_token:
 ```
 
 ### PHP constants
@@ -476,10 +688,6 @@ Your `index.php` file can define certain PHP constants, which Flextype bootstrap
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>FLEXTYPE_MINIMUM_PHP</td>
-            <td>Define the application minimum supported PHP version.</td>
-        </tr>
         <tr>
             <td>ROOT_DIR</td>
             <td>Define the path to the root directory (without trailing slash).</td>

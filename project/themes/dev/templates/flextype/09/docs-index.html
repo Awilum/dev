@@ -1,0 +1,30 @@
+{% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
+
+{% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/flextype/09/partials/nav.html' %}
+
+{% set txt = flextype.entries.fetch('flextype/09/documentation') %}
+<div class="container mx-auto pb-24 px-4 lg:px-0">
+    <h1 class="uppercase text-center text-3xl lg:text-6xl mt-24 mb-24">
+        DOCUMENTATION
+    </h1>
+    <div class="flex flex-col-reverse lg:flex-row relative">
+        {% set docsCategories = flextype.entries.fetch('flextype/09/documentation', {'collection': true})
+                                                .sortByAsc('order')
+                                                .onlyFromCollection(['title', 'id']) %}
+        {% for category in docsCategories %}
+            <div class="lg:w-4/12">
+                <h3 class="mt-10 lg:mt-0">{{ category.title }}</h3>
+                {% set pages = flextype.entries.fetch(category.id, {'collection': true})
+                                               .sortByAsc('order')
+                                               .onlyFromCollection(['title', 'id'])%}
+                <ul class="list-none m-0">
+                {% for page in pages %}                
+                    <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}">{{ page.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

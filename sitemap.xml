@@ -4472,12 +4472,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://awilum.github.io/flextype/documentation/rest-api/entries</loc>
-    <lastmod>2022-03-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://awilum.github.io/flextype/documentation/rest-api/images</loc>
     <lastmod>2022-03-18</lastmod>
     <changefreq>daily</changefreq>
@@ -4665,19 +4659,37 @@
   </url>
   <url>
     <loc>https://awilum.github.io/glowyphp/view/methods/extends</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://awilum.github.io/glowyphp/view/methods/hasSection</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://awilum.github.io/glowyphp/view/methods/getSection</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-03-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/glowyphp/view/methods/prependSection</loc>
+    <lastmod>2022-03-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/glowyphp/view/methods/appendSection</loc>
+    <lastmod>2022-03-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/rest-api/entries</loc>
+    <lastmod>2022-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

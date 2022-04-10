@@ -1,0 +1,165 @@
+{% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
+
+{% block content %}
+    <div class="container mx-auto bg-white text-black pb-24">
+        <h1 class="uppercase text-center text-3xl lg:text-6xl mt-24 mb-24">
+            {{ entry.title|raw }}
+        </h1>
+        <div class="w-full p-2 text-center">
+            <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                <h3 class="m-0">Refresh this page to generate a new unique set of API Tokens.</h3>
+            </div>
+        </div>
+        <div>
+            <div class="flex content-center flex-wrap">
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('database', 'fontawesome|solid') }}</div>
+                        <h4 class="text-xl">Entries Rest API</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().flextype.entries.fetch.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Entries token folder <code>{{ tokens().flextype.entries.fetch.uuid }}</code> in <code>project/tokens/entries/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'fas fa-database'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('archive', 'fontawesome|solid') }}</div>
+                        <h4 class="text-xl">Registry Rest API</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().flextype.registry.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Registry token folder <code>{{ tokens().flextype.registry.uuid }}</code> in <code>project/tokens/registry/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'fas fa-archive'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('file', 'fontawesome|solid') }}</div>
+                        <h4 class="text-xl">Files Rest API</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().files.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Files token folder <code>{{ tokens().files.uuid }}</code> in <code>project/tokens/files/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'fas fa-file'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('folder', 'fontawesome|solid') }}</div>
+                        <h4 class="text-xl">Folders Rest API</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().folders.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Folders token folder <code>{{ tokens().folders.uuid }}</code> in <code>project/tokens/folders/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'fas fa-folder'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('images', 'fontawesome|regular') }}</div>
+                        <h4 class="text-2xl">Images Rest API</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().images.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Images token folder <code>{{ tokens().images.uuid }}</code> in <code>/project/tokens/images/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'far fa-images'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-2 text-center">
+                    <div class="p-12 h-full text-black rounded-lg" style="background-color: #f8f9fb;">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('user-shield', 'fontawesome|regular') }}</div>
+                        <h4 class="text-xl">Access</h4>
+                        <div class="mb-10">
+                            Token: {{ tokens().access.uuid }} <br><br>
+                            <div class="text-left">
+                                1. Create Content Management API Token folder <code>{{ tokens().access.uuid }}</code> in <code>/project/tokens/access/</code>
+
+                                <br><br>
+
+                                2. And add <code>token.yaml</code> file with content:<br><br>
+
+                                <div class="bg-white text-black rounded-lg p-4">
+                                    title: Default<br>
+                                    icon: 'fas fa-user-shield'<br>
+                                    limit_calls: 0<br>
+                                    calls: 0<br>
+                                    state: enabled
+                                </div>
+
+                                <br>
+                                <div class="bg-red-700 rounded-lg p-4 text-white"><b>Note:</b> This your secret access token and it is should not be shared!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

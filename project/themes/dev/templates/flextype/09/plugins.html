@@ -1,0 +1,111 @@
+{% extends "themes/" ~ flextype.registry.get('plugins.site.settings.theme') ~ "/templates/partials/base.html" %}
+
+{% block content %}
+{% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/flextype/09/partials/nav.html' %}
+
+{% set name = uri|split('/')|last %}
+
+<div class="container mx-auto pb-24">
+    <div class="uppercase text-center mt-24 mb-24">
+        <div>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/09/downloads/extend/{{ name }}">{{ entry.title }}</a></h1>
+        </div>
+        <div>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/09/downloads">Downloads</a></span>
+            <span class="opacity-50">/</span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/09/downloads/extend">Extend</a></span>
+        </div>
+    </div>
+    <div class="flex content-center flex-wrap">
+        <div class="w-full lg:w-9/12 text-center">
+
+            {% set pluginsCacheID = strings('pluginsCacheID').hash().toString() %}
+            {% if flextype.cache.has(pluginsCacheID) %}
+                {% set plugins = flextype.cache.get(pluginsCacheID) %}
+            {% else %}
+                {% set plugins = flextype.entries.fetch('flextype/09/downloads/extend/plugins', {'collection': true}) %}
+                {% do flextype.cache.set(pluginsCacheID, plugins) %}
+            {% endif %}
+
+            {% set plugins_items = plugins.copy()
+                                        .where('visibility', 'nin', ['draft', 'hidden'])
+                                        .where('template', 'ncontains', 'flextype/plugins-categories')
+                                        .where('template', 'ncontains', 'flextype/plugins-category')
+                                        .sortBy('published_at', 'DESC') %}
+    
+            {% for item in plugins_items %}
+             <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border border-slate-900 flex items-center plate-shadow">
+                 <span class="icon-svg-medium mr-5">{{ icon(item.icon.name, item.icon.set) }}</span>
+                 <div class="text-left">
+                     <h4 class="w-full text-xl p-0 m-0">{{ item.title }}</h4>
+                     <p class="m-0">
+                         {{ item.description }}
+                     </p>
+                     <div class="text-xs opacity-50">
+                          {{ entry.txt_by }} <b>{{ item.author.name }}</b>
+                     </div>
+                 </div>
+             </a>
+            {% endfor %}
+
+        </div>
+        <div class="w-full lg:w-3/12 lg:pl-5">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            
+                {# CATEGORY CLOUD #}
+                {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID').hash().toString() %}
+                {% if flextype.cache.has(categoryPluginsCloudCacheID) %}
+                    {% set category_cloud = flextype.cache.get(categoryPluginsCloudCacheID) %}
+                {% else %}
+                    {% set category_cloud = [] %}
+                    {% for item in plugins.copy()
+                                       .where('visibility', 'nin', ['draft', 'hidden'])
+                                       .sortBy('published_at', 'DESC') %}
+                        {% set category = item.category|replace({' ': ''}) %}
+                        {% set category_cloud = category_cloud|merge(category|split(',')) %}
+                    {% endfor %}
+                    {% do flextype.cache.set(categoryPluginsCloudCacheID, category_cloud) %}
+                {% endif %}
+
+                {% set category_cloud = [] %}
+                {% for item in plugins.copy() %}
+                    {% set category = item.category|replace({' ': ''}) %}
+                    {% set category_cloud = category_cloud|merge(category|split(',')) %}
+                {% endfor %}
+
+                {% if category_cloud|length > 0 %}
+                    <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Categories</h3>
+                    <div class="mr-12 mt-5">
+                        {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
+                            {% if category != '' %}
+                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/09/downloads/extend/plugins/categories/{{ category|trim }}">
+                                {% if category == 'accounts' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('users', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'emails' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('envelope', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'content' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('file-alt', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'admin' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('fort-awesome', 'fontawesome|brands') }}</span>
+                                {% elseif category == 'forms' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('list-alt', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'seo' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('globe', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'security' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('shield-alt', 'fontawesome|solid') }}</span>
+                                {% elseif category == 'icons' %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('flag', 'fontawesome|solid') }}</span>
+                                {% else %}
+                                <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('palette', 'fontawesome|solid') }}</span>
+                                {% endif %}
+                                {{ category|trim }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {# /TAGS CLOUD #}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

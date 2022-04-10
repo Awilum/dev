@@ -3,7 +3,7 @@ title: Entries
 template: flextype/docs
 order: 2
 seo:
-  title: Requirements | Flextype
+  title: Entries Rest API | Flextype
 breadcrumbs:
   -
     title: "Rest API"

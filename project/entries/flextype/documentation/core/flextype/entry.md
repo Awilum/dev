@@ -32,7 +32,7 @@ Common part of Flextype is a Flextype Core Class that extends [Slim Framework](/
 
 **Slim Framework Resources**
 * **Website:** [slimframework.com](//slimframework.com)
-* **Documentation:** [slimframework.com/docs/v3/](//slimframework.com/docs/v3/)
+* **Documentation:** [slimframework.com/docs/v3/](//slimframework.com/docs/v4/)
 * **Repository:** [github.com/slimphp/Slim](//github.com/slimphp/Slim)
 
 Getting back to Flextype Core.

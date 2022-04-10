@@ -7,13 +7,16 @@ template: glowyphp/component
 use Glowy\View\View;
 
 // Create View instance using public method __construct()
-$strings = new View();
+$view = new View('welcome');
 
 // Create View instance using global helper function view()
-$strings = view();
+$view = view('welcome');
+
+// Display View.
+$view->display();
 ```
 
-### Extending
+### Extending <a name="extend"></a>
 
 View are "macroable", which allows you to add additional methods to the View class at run time. For example, the following code adds a customMethod method to the View class:
 <br><br>
@@ -36,4 +39,12 @@ echo $view->customMethod(2, 2);
 ```text
 2
 4
+```
+
+### Escaping helpers <a name="escaping-helpers"></a>
+
+```php
+echo e("<a href='test'>Test</a>");
+
+// &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
 ```

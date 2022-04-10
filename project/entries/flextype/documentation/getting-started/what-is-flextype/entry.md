@@ -57,33 +57,9 @@ Building this Content Management System, we focused on simplicity. To achieve th
 The underlying architecture of Flextype is built using well established and best-in-class technologies. This is to ensure that Flextype is simple to use and easy to extend. Some of these key technologies include:
 
 * [Slim PHP](//slimframework.com): Framework for powerful web applications and APIs.
-* [Atomastic](https://atomastic.com): A set of decoupled and reusable PHP building blocks for kickass Web Applications.
+* [Glowy PHP](https://awilum.github.io/glowyphp/): A set of decoupled and reusable PHP building blocks for kickass Web Applications.
 * [The PHP League](https://thephpleague.com): The League of Extraordinary PHP Packages well tested and using modern coding standards.
 * [Respect Validation](https://respect-validation.readthedocs.io/): The most awesome validation engine ever created for PHP.
 * [Thunderer Shortcode](https://github.com/thunderer/Shortcode): Advanced shortcode (BBCode) parser and engine for PHP.
 * [Markdown & Parsedown](https://github.com/erusev/parsedown): Easy content creation using Markdown Syntax.
 * [YAML](https://yaml.org): Human friendly data serialization format for simple configuration.
-
-
-### Supporting Flextype
-
-Flextype is an open source project and community contributions are essential to its growing and success. Contributing to the Flextype is easy and you can give as little or as much time as you want.
-
-##### Financial support FINANCIAL SUPPORT
-
-Flextype is an MIT-licensed open source project and completely free to use.
-However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. <br><br> You can support it's ongoing development by being a project backer or a sponsor:<br>
-<a href="//patreon.com/awilum">Become a backer or sponsor on Patreon</a>,
-<a href="//flextype.org/one-time-donation">One-time donation via PayPal, QIWI, Sberbank, Yandex</a>,
-<a href="//flextype.org/sponsors">Visit our Sponsors & Backers page</a>
-
-##### International translator team
-
-We are on a mission to build high quality platform to develop fast, flexible, easier to manage websites with Flextype!<br><br>
-If you wish to participate in the translation of Flextype, please Join Flextype International Translator Team and start translating!<br><br>
-Our crowdin projects:<br>
-<a href="https://crowdin.com/project/flextype-plugin-admin">Flextype Admin Panel Plugin</a>, <a href="https://crowdin.com/project/flextype-plugin-form-admin">Flextype Form Admin Plugin</a>, <a href="https://crowdin.com/project/flextype-plugin-themes-admin">Flextype Themes Admin Plugin</a>, <a href="https://crowdin.com/project/flextype-plugin-accounts-admin">Flextype Accounts Plugin</a>, <a href="https://crowdin.com/project/flextype-plugin-accounts">Flextype Accounts Admin Plugin</a>
-
-### Flextype Press kit
-
-You can find a summary about Flextype, including Flextype logos and press information, on our [press kit page.](//flextype.org/press-kit)

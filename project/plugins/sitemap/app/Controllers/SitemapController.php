@@ -35,7 +35,7 @@ class SitemapController
                             ->fetch('', ['collection' => true, 'find' => ['depth' => '> 0']])
                             ->sortBy('modified_at', 'asc')
                             ->all();
-
+    
             foreach ($entries as $entry) {
 
                 // Check entry visibility field
@@ -96,6 +96,8 @@ class SitemapController
 
         // Run event onSitemapAfterInitialized
         flextype('emitter')->emit('onSitemapAfterInitialized');
+
+        filesystem()->file(ROOT_DIR . '/sitemap.xml')->put(flextype('twig')->fetch('plugins/sitemap/templates/index.html', ['sitemap' => self::$sitemap]));
 
         // Set response header
         $response = $response->withHeader('Content-Type', 'application/xml');

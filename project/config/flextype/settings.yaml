@@ -1,9 +1,9 @@
 timezone: UTC
 charset: UTF-8
 locale: en_US
-url: 'https://awilum.github.io'
+#url: 'https://awilum.github.io'
 #url: 'http://localhost:8888/projects/awilum.github.io'
-#url: ''
+url: ''
 date_format: 'd-m-Y H:i'
 date_display_format: 'd-m-Y H:i'
 errors:
