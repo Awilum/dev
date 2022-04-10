@@ -7,7 +7,7 @@ seo:
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/documentation/core/"
 on_this_page:
   -
     title: "Methods"

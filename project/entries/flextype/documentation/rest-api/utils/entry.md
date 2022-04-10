@@ -1,5 +1,5 @@
 ---
-title: Registry
+title: Utils
 template: flextype/docs
 order: 5
 breadcrumbs:

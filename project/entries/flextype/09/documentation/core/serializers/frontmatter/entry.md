@@ -5,10 +5,10 @@ template: flextype/09/docs
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/documentation/core/"
   -
     title: "Serializers"
-    link: "[url]/documentation/core/serializers/"
+    link: "[url]/flextype/09/documentation/core/serializers/"
 on_this_page:
   -
     title: "Methods"

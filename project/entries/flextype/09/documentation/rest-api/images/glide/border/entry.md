@@ -6,10 +6,10 @@ seo:
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/09/documentation/rest-api/"
   2:
     title: "Images"
-    link: "[url]/documentation/rest-api/images/"
+    link: "[url]/flextype/09/documentation/rest-api/images/"
 ---
 
 `border`

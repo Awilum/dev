@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/documentation/getting-started/"
+    link: "[url]/flextype/documentation/getting-started/"
 txt:
   common:
     edit_this_page: Improve this page

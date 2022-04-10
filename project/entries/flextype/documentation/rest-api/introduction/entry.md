@@ -5,7 +5,7 @@ order: 1
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/documentation/rest-api/"
 on_this_page:
   0:
     title: "Rest API's"
@@ -29,25 +29,25 @@ Flextype provides APIs organized around <b>Re</b>presentational <b>S</b>tate <b>
 
 The Flextype Entries API organized around Representational State Transfer (REST) for delivering entries from Flextype to apps, websites and other. Entries is delivered as JSON data.
 
-For more details <a href="[url]/documentation/rest-api/entries">read the reference guide for the Entries API</a>.
+For more details <a href="[url]/flextype/documentation/rest-api/entries">read the reference guide for the Entries API</a>.
 
 #### Registry
 
 The Flextype Registry API organized around Representational State Transfer (REST) for delivering registry from Flextype to apps, websites and other. Entries is delivered as JSON data.
 
-For more details <a href="[url]/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
+For more details <a href="[url]/flextype/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
 
 #### Media
 
 The Flextype Media Files API and Media Folders API organized around Representational State Transfer (REST) for delivering Files and Folders from Flextype to apps, websites and other. Files is delivered as JSON data.
 
-For more details <a href="[url]/documentation/rest-api/media">read the reference guide for the Media API</a>.
+For more details <a href="[url]/flextype/documentation/rest-api/media">read the reference guide for the Media API</a>.
 
 #### Images
 
 The Flextype Images allows the retrieval and manipulation of image files referenced from Flextype site uploads directory to apps, websites and other media. Images are delivered as files.
 
-For more details <a href="[url]/documentation/rest-api/images">read the reference guide for the Images</a>.
+For more details <a href="[url]/flextype/documentation/rest-api/images">read the reference guide for the Images</a>.
 
 
 ### <a name="authentication"></a> Authentication

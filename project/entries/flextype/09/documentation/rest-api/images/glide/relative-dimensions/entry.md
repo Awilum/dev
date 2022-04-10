@@ -4,10 +4,10 @@ template: flextype/09/docs
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/09/documentation/rest-api/"
   2:
     title: "Images"
-    link: "[url]/documentation/rest-api/images/"
+    link: "[url]/flextype/09/documentation/rest-api/images/"
 ---
 
 Relative dimensions allow you to specify a width or height value as a percentage of the main image. This is helpful for features like watermarks and borders.

@@ -6,7 +6,7 @@ template: flextype/09/docs
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/documentation/getting-started/"
+    link: "[url]/flextype/09/documentation/getting-started/"
 ---
 
 Like the technical community as a whole, the Flextype team and community is made up of a mixture of professionals and volunteers from all over the world, working on every aspect of the mission - including mentorship, teaching, and connecting people.

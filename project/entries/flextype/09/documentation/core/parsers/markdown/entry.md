@@ -7,10 +7,10 @@ seo:
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/documentation/core/"
   -
     title: "Parsers"
-    link: "[url]/documentation/core/parsers/"
+    link: "[url]/flextype/09/documentation/core/parsers/"
 ---
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.

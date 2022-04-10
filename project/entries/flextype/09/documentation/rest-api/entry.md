@@ -6,8 +6,8 @@ template: flextype/09/docs
 
 ### Topics
 
-* [Introduction]([url]/documentation/rest-api/introduction)
-* [Entries]([url]/documentation/rest-api/entries)
-* [Registry]([url]/documentation/rest-api/registry)
-* [Media]([url]/documentation/rest-api/media)
-* [Images]([url]/documentation/rest-api/images)
+* [Introduction]([url]/flextype/09/documentation/rest-api/introduction)
+* [Entries]([url]/flextype/09/documentation/rest-api/entries)
+* [Registry]([url]/flextype/09/documentation/rest-api/registry)
+* [Media]([url]/flextype/09/documentation/rest-api/media)
+* [Images]([url]/flextype/09/documentation/rest-api/images)

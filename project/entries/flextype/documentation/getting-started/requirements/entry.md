@@ -8,7 +8,7 @@ order: 2
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/documentation/getting-started/"
+    link: "[url]/flextype/documentation/getting-started/"
 on_this_page:
   0:
     title: "Web Server Requirements"

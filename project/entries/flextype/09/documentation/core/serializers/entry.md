@@ -7,7 +7,7 @@ seo:
 breadcrumbs:
   1:
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/documentation/core/"
 ---
 
 ### YAML
@@ -18,7 +18,7 @@ Flextype uses YAML because it's as close to plain English as data serialization 
 
 YAML is used extensively in Flextype for its configuration files, fieldsets, and also in entries settings.
 
-For more details <a href="[url]/documentation/core/serializers/yaml">read the guide for the YAML</a>.
+For more details <a href="[url]/flextype/09/documentation/core/serializers/yaml">read the guide for the YAML</a>.
 
 ### JSON
 
@@ -28,10 +28,10 @@ The good thing is that JSON is a human and machine readable format. So while app
 
 A JSON document may contains text, curly braces, square brackets, colons, commas, double quotes, and maybe a few other characters.
 
-For more details <a href="[url]/documentation/core/serializers/json">read the guide for the JSON</a>.
+For more details <a href="[url]/flextype/09/documentation/core/serializers/json">read the guide for the JSON</a>.
 
 ### FRONTMATTER
 
 Any file that contains a YAML front matter block will be processed by Flextype as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Between these triple-dashed lines, you can set predefined variables or even create custom ones of your own.
 
-For more details <a href="[url]/documentation/core/serializers/frontmatter">read the guide for the FRONTMATTER</a>.
+For more details <a href="[url]/flextype/09/documentation/core/serializers/frontmatter">read the guide for the FRONTMATTER</a>.

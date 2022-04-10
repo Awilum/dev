@@ -4,10 +4,10 @@ template: flextype/09/docs
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/09/documentation/rest-api/"
   2:
     title: "Images"
-    link: "[url]/documentation/rest-api/images/"
+    link: "[url]/flextype/09/documentation/rest-api/images/"
 ---
 
 Glide supports a variety of color formats. In addition to the 140 color names supported by all modern browsers (listed below), Glide accepts hexadecimal RGB and RBG alpha formats.

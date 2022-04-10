@@ -7,7 +7,7 @@ seo:
 breadcrumbs:
   -
     title: "Rest API"
-    link: "[url]/flextype/09/documentation/rest-api/"
+    link: "[url]/flextype/09/flextype/09/documentation/rest-api/"
 on_this_page:
   -
     title: "Endpoints"

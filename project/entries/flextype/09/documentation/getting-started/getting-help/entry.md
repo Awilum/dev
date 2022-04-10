@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/documentation/getting-started/"
+    link: "[url]/flextype/09/documentation/getting-started/"
 ---
 There are several channels to reach the developers and the Flextype community to get direct assistance.
 

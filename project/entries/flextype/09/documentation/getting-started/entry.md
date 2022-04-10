@@ -9,11 +9,11 @@ order: 1
 
 ### Topics
 
-* [What is Flextype?]([url]/documentation/getting-started/what-is-flextype)
-* [Requirements]([url]/documentation/getting-started/requirements)
-* [Installation]([url]/documentation/getting-started/installation)
-* [Configuration]([url]/documentation/getting-started/configuration)
-* [Folder Structure]([url]/documentation/getting-started/folder-structure)
-* [Code of Conduct]([url]/documentation/getting-started/coc)
-* [Getting Help]([url]/documentation/getting-started/getting-help)
-* [License]([url]/documentation/getting-started/license)
+* [What is Flextype?]([url]/flextype/09/documentation/getting-started/what-is-flextype)
+* [Requirements]([url]/flextype/09/documentation/getting-started/requirements)
+* [Installation]([url]/flextype/09/documentation/getting-started/installation)
+* [Configuration]([url]/flextype/09/documentation/getting-started/configuration)
+* [Folder Structure]([url]/flextype/09/documentation/getting-started/folder-structure)
+* [Code of Conduct]([url]/flextype/09/documentation/getting-started/coc)
+* [Getting Help]([url]/flextype/09/documentation/getting-started/getting-help)
+* [License]([url]/flextype/09/documentation/getting-started/license)

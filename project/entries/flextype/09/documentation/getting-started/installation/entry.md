@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/documentation/getting-started/"
+    link: "[url]/flextype/09/documentation/getting-started/"
 on_this_page:
   -
     title: "Download and installation"

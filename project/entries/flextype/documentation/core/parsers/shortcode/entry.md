@@ -7,10 +7,10 @@ seo:
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/documentation/core/"
   -
     title: "Parsers"
-    link: "[url]/documentation/core/parsers/"
+    link: "[url]/flextype/documentation/core/parsers/"
 on_this_page:
   -
     title: "Shortcodes"

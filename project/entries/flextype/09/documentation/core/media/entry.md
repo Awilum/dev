@@ -1,13 +1,13 @@
 ---
 title: Media
-template: flextype/09/docs
+template: flextype/docs
 order: 3
 seo:
   title: Media | Flextype
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/documentation/core/"
 on_this_page:
   -
     title: "Files Methods"
@@ -191,7 +191,7 @@ $cover = flextype('media')
                   ->fetch('entries/movies/sg-1/season-5/episode-21/cover.jpg', $options);
 ```
 
-`$options` is an array of valid values for [filter()](https://github.com/flextype/09/flextype/blob/dev/src/flextype/09/Support/Helpers/FilterHelper.php) and [find()](https://github.com/flextype/09/flextype/blob/dev/src/flextype/09/Support/Helpers/FindHelper.php) helpers.
+`$options` is an array of valid values for [filter()](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php) and [find()](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php) helpers.
 
 ##### Fetch files collection
 
@@ -211,7 +211,7 @@ $cover = flextype('media')
 
 ```
 
-`$options` is an array of valid values for <code>[filter](https://github.com/flextype/09/flextype/blob/dev/src/flextype/09/Support/Helpers/FilterHelper.php)</code> and <code>[find](https://github.com/flextype/09/flextype/blob/dev/src/flextype/09/Support/Helpers/FindHelper.php)</code> helpers.
+`$options` is an array of valid values for <code>[filter](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php)</code> and <code>[find](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php)</code> helpers.
 
 ##### <a name="methods-files-move"></a> `move`
 

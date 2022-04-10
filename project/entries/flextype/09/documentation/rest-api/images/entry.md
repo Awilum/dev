@@ -8,7 +8,7 @@ order: 3
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/09/documentation/rest-api/"
 on_this_page:
   0:
     title: "Endpoints"
@@ -112,22 +112,22 @@ GET /api/images/entries/movies/venom-2/venom-2.jpg?w=100&q=70&token=c1fda5a94603
 ```
 
 ### <a name="displaying-images-in-the-template-glide-options"></a> A complete list of available options for Glide/Intervention
-* [Orientation]([url]/flextype/09/documentation/rest-api/images/glide/orientation)
-* [Flip]([url]/flextype/09/documentation/rest-api/images/glide/flip)
-* [Crop]([url]/flextype/09/documentation/rest-api/images/glide/crop)
-* [Width]([url]/flextype/09/documentation/rest-api/images/glide/width)
-* [Height]([url]/flextype/09/documentation/rest-api/images/glide/height)
-* [Fit]([url]/flextype/09/documentation/rest-api/images/glide/fit)
-* [Device pixel ratio]([url]/flextype/09/documentation/rest-api/images/glide/device-pixel-ratio)
-* [Brightness]([url]/flextype/09/documentation/rest-api/images/glide/brightness)
-* [Contrast]([url]/flextype/09/documentation/rest-api/images/glide/contrast)
-* [Gamma]([url]/flextype/09/documentation/rest-api/images/glide/gamma)
-* [Sharpen]([url]/flextype/09/documentation/rest-api/images/glide/sharpen)
-* [Blur]([url]/flextype/09/documentation/rest-api/images/glide/blur)
-* [Pixelate]([url]/flextype/09/documentation/rest-api/images/glide/pixelate)
-* [Filter]([url]/flextype/09/documentation/rest-api/images/glide/filter)
-* [Border]([url]/flextype/09/documentation/rest-api/images/glide/border)
-* [Quality]([url]/flextype/09/documentation/rest-api/images/glide/quality)
-* [Format]([url]/flextype/09/documentation/rest-api/images/glide/format)
-* [Relative dimensions]([url]/flextype/09/documentation/rest-api/images/glide/relative-dimensions)
-* [Colors]([url]/flextype/09/documentation/rest-api/images/glide/colors)
+* [Orientation]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/orientation)
+* [Flip]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/flip)
+* [Crop]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/crop)
+* [Width]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/width)
+* [Height]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/height)
+* [Fit]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/fit)
+* [Device pixel ratio]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/device-pixel-ratio)
+* [Brightness]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/brightness)
+* [Contrast]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/contrast)
+* [Gamma]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/gamma)
+* [Sharpen]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/sharpen)
+* [Blur]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/blur)
+* [Pixelate]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/pixelate)
+* [Filter]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/filter)
+* [Border]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/border)
+* [Quality]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/quality)
+* [Format]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/format)
+* [Relative dimensions]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/relative-dimensions)
+* [Colors]([url]/flextype/09/flextype/09/documentation/rest-api/images/glide/colors)

@@ -8,7 +8,7 @@ order: 1
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/documentation/core/"
 on_this_page:
   -
     title: "Methods"
@@ -212,11 +212,11 @@ List of available registered services in Flextype Dependency Injection Container
         </tr>
         <tr>
             <td>parsers</td>
-            <td><a href="[url]/documentation/core/parsers">documentation</a></td>
+            <td><a href="[url]/flextype/09/documentation/core/parsers">documentation</a></td>
         </tr>
         <tr>
             <td>serializers</td>
-            <td><a href="[url]/documentation/core/serializers">documentation</a></td>
+            <td><a href="[url]/flextype/09/documentation/core/serializers">documentation</a></td>
         </tr>
         <tr>
             <td>images</td>
@@ -224,15 +224,15 @@ List of available registered services in Flextype Dependency Injection Container
         </tr>
         <tr>
             <td>entries</td>
-            <td><a href="[url]/documentation/core/entries">documentation</a></td>
+            <td><a href="[url]/flextype/09/documentation/core/entries">documentation</a></td>
         </tr>
         <tr>
             <td>media</td>
-            <td><a href="[url]/documentation/core/media">documentation</a></td>
+            <td><a href="[url]/flextype/09/documentation/core/media">documentation</a></td>
         </tr>
         <tr>
             <td>plugins</td>
-            <td><a href="[url]/documentation/core/plugins">documentation</a></td>
+            <td><a href="[url]/flextype/09/documentation/core/plugins">documentation</a></td>
         </tr>
         <tr>
             <td>cors</td>

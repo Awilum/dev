@@ -5,7 +5,7 @@ order: 5
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/documentation/rest-api/"
+    link: "[url]/flextype/09/documentation/rest-api/"
 on_this_page:
   0:
     title: "Endpoints"

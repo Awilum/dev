@@ -9,11 +9,11 @@
 
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/downloads/extend/{{ name }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h1>
         </div>
         {% if entry.breadcrumbs %}
         <div class="opacity-50">
-            <a class="no-underline" href="{{ url() }}/documentation">Documentation</a> <span>/</span>
+            <a class="no-underline" href="{{ url() }}/flextype/09/documentation">Documentation</a> <span>/</span>
             {% for item in entry.breadcrumbs %}
                 <a class="no-underline" href="{{ item.link|shortcode }}">{{ item.title }}</a> {% if loop.last == false %}<span>/</span>{% endif %}
             {% endfor %}

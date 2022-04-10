@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   1:
     title: "Core Concepts"
-    link: "[url]/documentation/core/"
+    link: "[url]/flextype/09/flextype/09/documentation/core/"
 on_this_page:
   -
     title: "Entries and Urls structure"
