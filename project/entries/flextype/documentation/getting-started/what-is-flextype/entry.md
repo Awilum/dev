@@ -52,14 +52,17 @@ Flextype is an open-source **Hybrid Content Management System** with the freedom
 
 With Flextype, you are in complete control. Design your data structure the way you want. Update and share your data with others and teams using version control. Flextype does not require any relational database management system, because all the data are collected in a simple flat files. Perfect portability when changing your hosting provider. Just copy all the files from one server to another.
 
-Building this Content Management System, we focused on simplicity. To achieve this, we implemented a simple but Powerful API's.
+Building this Content Management System, we focused on simplicity and extendability. To achieve this, we implemented simple but Powerful APIs.
 
 The underlying architecture of Flextype is built using well established and best-in-class technologies. This is to ensure that Flextype is simple to use and easy to extend. Some of these key technologies include:
 
 * [Slim PHP](//slimframework.com): Framework for powerful web applications and APIs.
 * [Glowy PHP](https://awilum.github.io/glowyphp/): A set of decoupled and reusable PHP building blocks for kickass Web Applications.
 * [The PHP League](https://thephpleague.com): The League of Extraordinary PHP Packages well tested and using modern coding standards.
+* [Symfony Console](https://symfony.com/doc/current/components/console.html): Symfony Console component eases the creation of beautiful and testable command line interfaces.
+* [Thermage](https://awilum.github.io/thermage/): Fluent and incredible powerful, object-oriented interface for customizing CLI output text color, background, formatting, theming and more.
 * [Respect Validation](https://respect-validation.readthedocs.io/): The most awesome validation engine ever created for PHP.
 * [Thunderer Shortcode](https://github.com/thunderer/Shortcode): Advanced shortcode (BBCode) parser and engine for PHP.
-* [Markdown & Parsedown](https://github.com/erusev/parsedown): Easy content creation using Markdown Syntax.
+* [Commonmark](https://commonmark.thephpleague.com/): Highly-extensible PHP Markdown parser which fully supports the CommonMark and GFM specs.
 * [YAML](https://yaml.org): Human friendly data serialization format for simple configuration.
+* [NEON](https://github.com/nette/neon): Human readable structured data format. 
