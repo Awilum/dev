@@ -2,7 +2,7 @@
 title: Entries
 template: flextype/docs
 order: 2
-description: Entries are the fundamental building-blocks of your site. Each entry in Flextype should contains Entry Front Matter block in YAML format at the top of the file and Entry Content marked up using HTML + Markdown + Shortcodes at the bottom of the file.
+description: Entries are the fundamental building-blocks of your project. 
 seo:
   title: Entries | Flextype
 breadcrumbs:
@@ -98,22 +98,68 @@ on_this_page:
     link: "extending"
 ---
 
-Entries are the fundamental building-blocks of your project. We are using jekyll like entries format. It means that each entry in the Flextype should contains **Entry Front Matter** block in valid YAML format at the top of the file and **Entry Content** marked up using HTML + Markdown + Shortcodes and etc... at the bottom of the file.
+Entries are the fundamental building blocks of your Flextype powered project. Entries are a local **flat files** or an **external resources** that can be represented as a PHP array that can be used in the controllers, templates or etc...
 
-Here is a simple entry example:
+By default, Flextype support such **flat files** formats for entries:
+
+#### Frontmatter _Jekyll_ (.md)
 
 <div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.md</div>
 
-    ---
-    title: Meridian
-    description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
-    director: William Waring
-    writers: Brad Wright, Jonathan Glassner
-    stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
-    ---
-    SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```text
+&minus;&minus;&minus;
+title: Meridian
+description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
+director: William Waring
+writers: Brad Wright, Jonathan Glassner
+stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
+&minus;&minus;&minus;
+SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
 
-Between triple-dashed lines, you can set [predefined variables](#default-variables) or even create custom ones of your own.
+#### YAML (.yaml)
+
+<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.yaml</div>
+
+```yaml
+title: Meridian
+description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
+director: William Waring
+writers: Brad Wright, Jonathan Glassner
+stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
+content: |
+    SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
+
+#### NEON (.neon)
+
+<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.neon</div>
+
+```text
+title: "Meridian"
+description: "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions."
+director: William Waring
+writers: "Brad Wright, Jonathan Glassner"
+stars: "Richard Dean Anderson, Michael Shanks, Amanda Tapping"
+content: '''
+    SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+'''
+```
+
+#### JSON (.json)
+
+<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.json</div>
+
+```text
+{
+  "title": "Meridian",
+  "description": "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.",
+  "director": "William Waring",
+  "writers": "Brad Wright, Jonathan Glassner",
+  "stars": "Richard Dean Anderson, Michael Shanks, Amanda Tapping",
+  "content": "SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world."
+}
+```
 
 ### <a name="entries-and-urls-structure"></a> Entries and Urls structure in Flextype
 

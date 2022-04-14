@@ -34,7 +34,7 @@ This folder is similar to the flextype folder and its contents should not be edi
     <li>[icon name="folder" set="bootstrap"] vendor</li>
 </ul>
 
-The `project/` folder should contains entries, uploads, tokens, plugins, themes and all that is necessary for the work of the project.
+The `project/` folder should contains entries, uploads, tokens, plugins, routes, templates and all that is necessary for the work of the project.
 
 <ul class="file-list">
     <li>[icon name="folder" set="bootstrap"] project</li>

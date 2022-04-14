@@ -20,7 +20,7 @@ on_this_page:
 
 You can easily run Flextype on your local computer and on any Web hosting providers. Make sure that your server meets the following requirements:
 
-* Web Server Apache.
+* Web Server (Apache, Nginx, LiteSpeed, Lightly, IIS, etc.)
 * PHP 7.4.0 or higher.
 
 ### <a name="web-server-requirements"></a> Web Server Requirements
@@ -46,8 +46,8 @@ Flextype needs PHP 7.4.0 or higher and the following PHP extensions to be enable
 - [mbstring](https://php.net/manual/book.mbstring.php) module for full UTF-8 support.
 - [gd](https://php.net/manual/book.image.php) or [ImageMagick](https://php.net/manual/book.imagick.php) module for image processing.
 - [json](https://php.net/manual/book.json.php) module for JSON manipulation.
-- [Fileinfo](https://www.php.net/manual/book.fileinfo.php)
-- [SPL](https://www.php.net/manual/book.spl.php)
-- [DOM](https://www.php.net/manual/ru/class.domdocument.php)
+- [Fileinfo](https://www.php.net/manual/book.fileinfo.php) for the creation, copying, deletion, moving, and opening of files
+- [SPL](https://www.php.net/manual/book.spl.php) standard PHP Library.
+- [DOM](https://www.php.net/manual/ru/class.domdocument.php) allows you to operate on XML documents through the DOM API with PHP
 
-Although it is optional, we strongly recommend enabling the following PHP extensions: APC, APCu, XCache, Memcached, or Redis for better performance.
+Although it is optional, we strongly recommend enabling the following PHP extensions: APC, APCu, XCache, Memcached, or Redis for better performance. Also, with the help of YAML PECL (native YAML processing), you can dramatically increase performance.

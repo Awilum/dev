@@ -37,19 +37,6 @@ The Flextype Registry API organized around Representational State Transfer (REST
 
 For more details <a href="[url]/flextype/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
 
-#### Media
-
-The Flextype Media Files API and Media Folders API organized around Representational State Transfer (REST) for delivering Files and Folders from Flextype to apps, websites and other. Files is delivered as JSON data.
-
-For more details <a href="[url]/flextype/documentation/rest-api/media">read the reference guide for the Media API</a>.
-
-#### Images
-
-The Flextype Images allows the retrieval and manipulation of image files referenced from Flextype site uploads directory to apps, websites and other media. Images are delivered as files.
-
-For more details <a href="[url]/flextype/documentation/rest-api/images">read the reference guide for the Images</a>.
-
-
 ### <a name="authentication"></a> Authentication
 
 To retrieve or store content with Flextype, you first need to authenticate your app with an token. Flextype offers three APIs, and each requires separate authentication.
@@ -80,20 +67,25 @@ When something goes wrong with an API request, our server generates an error. Th
     <thead>
         <tr>
             <th>HTTP status code</th>
-            <th>Error code</th>
-            <th>Description</th>
+            <th>Title</th>
+            <th>Message</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>401 Unauthorized</td>
-            <td>AccessTokenInvalid</td>
-            <td>Incorrect authentication credentials.</td>
+            <td>400</td>
+            <td>Bad Request</td>
+            <td>Validation for this particular item failed</td>
         </tr>
         <tr>
-            <td>404 Not Found</td>
-            <td>NotFound</td>
-            <td>The requested resource or endpoint could not be found.</td>
+            <td>401</td>
+            <td>Unauthorized</td>
+            <td>Token is wrong</td>
+        </tr>
+        <tr>
+            <td>404</td>
+            <td>Not Found</td>
+            <td>The requested resource or endpoint could not be found</td>
         </tr>
     </tbody>
 </table>

@@ -23,21 +23,72 @@ on_this_page:
       -
         title: "container"
         link: "methods-container"
+      -
+        title: "app"
+        link: "methods-app"
   -
-    title: "Services"
-    link: "services"
+    title: "Helpers"
+    link: "helpers"
+    level2:
+        -
+            title: "flextype"
+            link: "helpers-flextype"
+        -
+            title: "app"
+            link: "helpers-app"
+        -
+            title: "container"
+            link: "helpers-container"
+        -
+            title: "console"
+            link: "helpers-console"
+        -
+            title: "emitter"
+            link: "helpers-emitter"
+        -
+            title: "cache"
+            link: "helpers-cache"
+        -
+            title: "entries"
+            link: "helpers-entries"
+        -
+            title: "parsers"
+            link: "helpers-parsers"
+        -
+            title: "serializers"
+            link: "helpers-serializers"
+        -
+            title: "logger"
+            link: "helpers-logger"
+        -
+            title: "session"
+            link: "helpers-session"
+        -
+            title: "registry"
+            link: "helpers-registry"
+        -
+            title: "actions"
+            link: "helpers-actions"
+        -
+            title: "csrf"
+            link: "helpers-csrf"
+        -
+            title: "plugins"
+            link: "helpers-plugins"
+        -
+            title: "slugify"
+            link: "helpers-slugify"
 ---
 
-Common part of Flextype is a Flextype Core Class that extends [Slim Framework](//slimframework.com) that we are using under the hood. Slim is amazing PHP micro framework that helps quickly write simple yet powerful web applications and APIs.
+A common part of Flextype is a Flextype Core Class that extends [Slim Framework](//slimframework.com) that we are using under the hood. Slim is an amazing PHP micro-framework that helps quickly write simple yet powerful web applications and APIs.
 
 **Slim Framework Resources**
 * **Website:** [slimframework.com](//slimframework.com)
-* **Documentation:** [slimframework.com/docs/v3/](//slimframework.com/docs/v4/)
+* **Documentation:** [slimframework.com/docs/v4/](//slimframework.com/docs/v4/)
 * **Repository:** [github.com/slimphp/Slim](//github.com/slimphp/Slim)
 
-Getting back to Flextype Core.
 
-With help of Flextype Core Class we are able to access all features and develop a new amazing features for Flextype powered project.
+With the help of Flextype Core Class, you can access all built-in features and develop new amazing features for Flextype powered projects.
 
 ### <a name="methods"></a> Methods
 
@@ -59,7 +110,11 @@ With help of Flextype Core Class we are able to access all features and develop 
         </tr>
         <tr>
             <td><a href="#methods-container">container</a></td>
-            <td>Get and Set Dependency Injection Container.</td>
+            <td>Get Flextype Application Container.</td>
+        </tr>
+        <tr>
+            <td><a href="#methods-app">app</a></td>
+            <td>Get Flextype Application.</td>
         </tr>
     </tbody>
 </table>
@@ -72,11 +127,15 @@ Get the available Flextype Application instance.
 
 ```php
 /**
- * Returns Flextype Instance
+ * Returns Flextype Instance.
  *
- * @param ContainerInterface|array $container Container.
+ * Gets the instance via lazy initialization (created on first usage)
+ *
+ * @return Flextype Returns the current Flextype Instance.
+ *
+ * @access public
  */
-public static function getInstance($container = []): Flextype
+public static function getInstance(?ContainerInterface $container = null): Flextype
 ```
 
 **Examples**
@@ -91,7 +150,11 @@ Get current Flextype version.
 
 ```php
 /**
- * Returns the current Flextype version
+ * Get the current Flextype version.
+ *
+ * @return string Returns the current Flextype version.
+ *
+ * @access public
  */
 public function getVersion(): string
 ```
@@ -104,75 +167,24 @@ $version = Flextype::getInstance()->getVersion();
 
 ##### <a name="methods-container"></a> `container`
 
-Get and Set Dependency Injection Container.
+Get Flextype Application Container.
 
 ```php
 /**
- * Get/Set Dependency Injection Container.
+ * Get Flextype Application Container.
  *
- * @param string|null $name DI Container name.
+ * @return Container Returns Flextype Application Container.
+ *
+ * @access public
  */
-public function container(?string $name = null)
+public function container(): Container
 ```
 
 **Examples**
 
 ```php
-// Get container object.
 $container = Flextype::getInstance()->container();
-
-// Set new container.
-Flextype::getInstance()->container()['name'] = function () {
-    return new ServiceName();
-};
-
-// Get specific container object by name.
-$entries = Flextype::getInstance()->container('entries');
 ```
-
-We recommend to use our `flextype` helper function to access all Flexype Application methods, set and get containers.
-
-**Examples**
-
-```php
-// Get the available Flextype Application instance.
-$instance = flextype();
-
-// Get current Flextype version.
-$version = flextype()->getVersion();
-
-// Get container object.
-$container = flextype()->container();
-
-// Set new container.
-flextype()->container()['name'] = function () {
-    return new ServiceName();
-};
-
-// Get specific container object by name
-$entries = flextype()->container('entries');
-
-// ... or even better :)
-$entries = flextype('entries');
-```
-
-With `flextype` helper function you can access Flexype Application and all available Slim Framework methods.
-
-**Examples**
-
-```php
-// Add new GET route.
-flextype()
-  ->get('/dashboard', 'DashboardController:index')
-  ->setName('admin.dashboard.index');
-
-// Add new POST route.
-flextype()
-  ->get('/save-form', 'CustomServiceController:saveForm')
-  ->setName('service.form.index');
-```
-
-Check all available methods: [slimframework.com/docs/v3/](//slimframework.com/docs/v3/)
 
 ### Services <a name="services"></a>
 
@@ -188,11 +200,11 @@ List of available registered services in Flextype Dependency Injection Container
     <tbody>
         <tr>
             <td>session</td>
-            <td><a href="https://github.com/atomastic/session">documentation</a></td>
+            <td><a href="https://awilum.github.io/glowyphp/session/">documentation</a></td>
         </tr>
         <tr>
             <td>registry</td>
-            <td><a href="https://github.com/atomastic/registry">documentation</a></td>
+            <td><a href="https://awilum.github.io/glowyphp/registry/">documentation</a></td>
         </tr>
         <tr>
             <td>logger</td>
@@ -219,20 +231,16 @@ List of available registered services in Flextype Dependency Injection Container
             <td><a href="[url]/flextype/documentation/core/serializers">documentation</a></td>
         </tr>
         <tr>
-            <td>images</td>
-            <td><a href="https://glide.thephpleague.com">documentation</a></td>
-        </tr>
-        <tr>
             <td>entries</td>
             <td><a href="[url]/flextype/documentation/core/entries">documentation</a></td>
         </tr>
         <tr>
-            <td>media</td>
-            <td><a href="[url]/flextype/documentation/core/media">documentation</a></td>
+            <td>plugins</td>
+            <td><a href="[url]/flextype/documentation/core/plugins">documentation</a></td>
         </tr>
         <tr>
             <td>plugins</td>
-            <td><a href="[url]/flextype/documentation/core/plugins">documentation</a></td>
+            <td><a href="[url]/flextype/documentation/core/console">console</a></td>
         </tr>
         <tr>
             <td>cors</td>

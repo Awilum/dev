@@ -47,32 +47,32 @@ The Flextype Entries API organized around Representational State Transfer (REST)
     <tbody>
         <tr>
             <td>GET</td>
-            <td>/api/entries</td>
+            <td>/api/v0/entries</td>
             <td>Fetch entry or entries collection.</td>
         </tr>
         <tr>
             <td>POST</td>
-            <td>/api/entries</td>
+            <td>/api/v0/entries</td>
             <td>Create entry.</td>
         </tr>
         <tr>
             <td>PATCH</td>
-            <td>/api/entries</td>
+            <td>/api/v0/entries</td>
             <td>Update entry.</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td>/api/entries</td>
+            <td>/api/v0/entries</td>
             <td>Move entry.</td>
         </tr>
         <tr>
             <td>PUT</td>
-            <td>/api/entries/copy</td>
+            <td>/api/v0/entries/copy</td>
             <td>Copy entry or entries collection.</td>
         </tr>
         <tr>
             <td>DELETE</td>
-            <td>/api/entries</td>
+            <td>/api/v0/entries</td>
             <td>Delete entry.</td>
         </tr>
     </tbody>
@@ -85,7 +85,7 @@ The Flextype Entries API organized around Representational State Transfer (REST)
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
+GET /api/v0/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -128,7 +128,7 @@ Fetch Movies Entry
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ##### Fetch entries collection
@@ -136,7 +136,7 @@ GET /api/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
+GET /api/v0/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -180,7 +180,7 @@ Fetch Movies Collection
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan**
@@ -188,7 +188,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan**
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan** and where year is equal to **2020** and where genre is contains **action**
@@ -196,7 +196,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan** and where y
 <div class="file-header">Request</div>
 
 ```
-GET /api/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ##### Options
@@ -212,7 +212,7 @@ We can you use any custom macroabe function assigned to Entries API in the fetch
 ##### Examples
 
 ```
-GET /api/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ### <a name="create-entry"></a> Create entry
@@ -220,7 +220,7 @@ GET /api/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd18940
 <div class="file-header">Request</div>
 
 ```
-POST /api/entries
+POST /api/v0/entries
 ```
 
 ##### Body
@@ -267,7 +267,7 @@ Create new entry **platform**
 <div class="file-header">Request</div>
 
 ```
-POST /api/entries
+POST /api/v0/entries
 ```
 
 <div class="file-header">Body</div>
@@ -309,7 +309,7 @@ POST /api/entries
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/entries
+PATCH /api/v0/entries
 ```
 
 ##### Body
@@ -356,7 +356,7 @@ Update content for entry **platform**
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/entries
+PATCH /api/v0/entries
 ```
 
 <div class="file-header">Body</div>
@@ -397,7 +397,7 @@ PATCH /api/entries
 <div class="file-header">Request</div>
 
 ```
-PUT /api/entries
+PUT /api/v0/entries
 ```
 
 ##### Body
@@ -444,7 +444,7 @@ Move entry **platform** to the **the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/entries
+PUT /api/v0/entries
 ```
 
 <div class="file-header">Body</div>
@@ -483,7 +483,7 @@ Move entry **movies/the-platform** to the **movies/2019/the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/entries
+PUT /api/v0/entries
 ```
 
 <div class="file-header">Body</div>
@@ -522,7 +522,7 @@ PUT /api/entries
 <div class="file-header">Request</div>
 
 ```
-PUT /api/entries/copy
+PUT /api/v0/entries/copy
 ```
 
 ##### Body
@@ -569,7 +569,7 @@ Copy for entry **movies/2019/the-platform** to **movies/horror/the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/entries/copy
+PUT /api/v0/entries/copy
 ```
 
 <div class="file-header">Body</div>
@@ -608,7 +608,7 @@ PUT /api/entries/copy
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/entries
+DELETE /api/v0/entries
 ```
 
 ##### Body
@@ -650,7 +650,7 @@ Delete entry **movies/horror/the-platform**
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/entries
+DELETE /api/v0/entries
 ```
 
 <div class="file-header">Body</div>
