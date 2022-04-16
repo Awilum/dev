@@ -15,6 +15,28 @@ on_this_page:
   -
     title: "Shortcodes"
     link: "shortcodes"
+    level2:
+      -
+        title: "entries-fetch"
+        link: "shortcodes-entries-fetch"
+      -
+        title: "registry-get"
+        link: "shortcodes-registry-get"
+      -
+        title: "getBaseUrl"
+        link: "shortcodes-getBaseUrl"
+      -
+        title: "getBasePath"
+        link: "shortcodes-getBasePath"
+      -
+        title: "getAbsoluteUrl"
+        link: "shortcodes-getAbsoluteUrl"
+      -
+        title: "getUriString"
+        link: "shortcodes-getUriString"
+      -
+        title: "urlFor"
+        link: "shortcodes-urlFor"
   -
     title: "Methods"
     link: "methods"
@@ -36,19 +58,39 @@ There are a number of default shortcodes available.
     </thead>
     <tbody>
         <tr>
-            <td><a href="#shortcodes-entries_fetch">[raw][entries_fetch][/raw]</a></td>
-            <td>id, field</td>
+            <td><a href="#shortcodes-entries-fetch">[raw][entries-fetch][/raw]</a></td>
+            <td>id, field, default</td>
             <td>Fetch specific entry field.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-registry">[raw][registry][/raw]</a></td>
+            <td><a href="#shortcodes-registry-get">[raw][registry-get][/raw]</a></td>
             <td>name, default</td>
             <td>Fetch specific item from registry.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-raw">[raw][url][/raw]</a></td>
+            <td><a href="#shortcodes-getBaseUrl">[raw][getBaseUrl][/raw]</a></td>
             <td></td>
-            <td>Display application url.</td>
+            <td>Get the application base url.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcodes-getBasePath">[raw][getBasePath][/raw]</a></td>
+            <td></td>
+            <td>Get the application base path.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcodes-getAbsoluteUrl">[raw][getAbsoluteUrl][/raw]</a></td>
+            <td></td>
+            <td>Get the application absolute path.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcodes-getUriString">[raw][getUriString][/raw]</a></td>
+            <td></td>
+            <td>Get the uri string.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcodes-urlFor">[raw][urlFor][/raw]</a></td>
+            <td>routeName, data, queryParams</td>
+            <td>Get the url for a named route.</td>
         </tr>
         <tr>
             <td colspan="3">
@@ -60,34 +102,74 @@ There are a number of default shortcodes available.
 
 ### Shortocodes Details
 
-##### <a name="shortcodes-entries_fetch"></a> `[raw][entries_fetch][/raw]`
+##### <a name="shortcodes-entries-fetch"></a> `[raw][entries-fetch][/raw]`
 
 Fetch specific entry field.
 
 **Examples**
 
 ```
-[raw][entries_fetch id="entry-id" field="field-name" default="default-value"][/raw]
+[raw][entries-fetch id="entry-id" field="field-name" default="default-value"][/raw]
 ```
 
-##### <a name="shortcodes-registry"></a> `[raw][registry][/raw]`
+##### <a name="shortcodes-registry-get"></a> `[raw][registry-get][/raw]`
 
 Fetch specific item from registry.
 
 **Examples**
 
 ```
-[raw][registry_get name="item-name" default="default-value"][/raw]
+[raw][registry-get name="item-name" default="default-value"][/raw]
 ```
 
-##### <a name="shortcodes-url"></a> `[raw][url][/raw]`
+##### <a name="shortcodes-getBasePath"></a> `[raw][getBasePath][/raw]`
 
-Display application url.
+Get the application base path.
 
 **Examples**
 
 ```
-[raw][url][/raw]
+[raw][getBaseUrl][/raw]
+```
+
+##### <a name="shortcodes-getBasePath"></a> `[raw][getBasePath][/raw]`
+
+Get the application base path.
+
+**Examples**
+
+```
+[raw][getBaseUrl][/raw]
+```
+
+##### <a name="shortcodes-getAbsoluteUrl"></a> `[raw][getAbsoluteUrl][/raw]`
+
+Get the application absolute url.
+
+**Examples**
+
+```
+[raw][getAbsoluteUrl][/raw]
+```
+
+##### <a name="shortcodes-getUriString"></a> `[raw][getUriString][/raw]`
+
+Get uri string.
+
+**Examples**
+
+```
+[raw][getAbsoluteUrl][/raw]
+```
+
+##### <a name="shortcodes-urlFor"></a> `[raw][urlFor][/raw]`
+
+Get the url for a named route.
+
+**Examples**
+
+```
+[raw][urlFor routeName="route-name" data='{"foo": "Foo"}' queryParams='{"foo": "Foo"}'][/raw]
 ```
 
 ### <a name="methods"></a> Methods
