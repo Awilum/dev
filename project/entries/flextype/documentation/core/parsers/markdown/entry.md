@@ -1165,7 +1165,7 @@ public function parse(string $input, bool $cache = true): string
 ```php
 $markdown = '**this text is bold**';
 
-$html = flextype('parsers')->markdown()->parse($markdown);
+$html = parsers()->markdown()->parse($markdown);
 ```
 
 ##### <a name="methods-getCacheID"></a> `getCacheID()`
@@ -1190,5 +1190,5 @@ public function getCacheID(string $input): string
 ```php
 $markdown = 'text with [message]';
 
-$cache_id = flextype('parsers')->markdown()->getCacheID($markdown);
+$cache_id = parsers()->markdown()->getCacheID($markdown);
 ```

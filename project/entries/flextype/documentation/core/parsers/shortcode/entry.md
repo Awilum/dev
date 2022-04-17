@@ -40,13 +40,29 @@ on_this_page:
   -
     title: "Methods"
     link: "methods"
+    level2:
+      -
+        title: "addHandler"
+        link: "methods-addHandler"
+      -
+        title: "addEventHandler"
+        link: "methods-addEventHandler"
+      -
+        title: "parse"
+        link: "methods-parse"
+      -
+        title: "process"
+        link: "methods-process"
+      -
+        title: "getCacheID"
+        link: "methods-getCacheID"
 ---
 
 Shortcode is a small piece of code, indicated by brackets like `[raw][this][/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 ### <a name="shortcodes"></a> Shortcodes
 
-There are a number of default shortcodes available.
+There are several default shortcodes available.
 
 <table>
     <thead>
@@ -226,7 +242,7 @@ public function addHandler(string $name, callable $handler)
 **Examples**
 
 ```php
-flextype('parsers')->shortcode()->addHandler('message', function () {
+parsers()->shortcode()->addHandler('message', function () {
     return "Indeed. – Teal'c";
 });
 ```
@@ -250,11 +266,11 @@ public function addEventHandler(string $name, callable $handler)
 **Examples**
 
 ```php
-flextype('parsers')->shortcode()->addHandler('raw', static function (ShortcodeInterface $s) {
+parsers()->shortcode()->addHandler('raw', static function (ShortcodeInterface $s) {
     return $s->getContent();
 });
 
-flextype('parsers')
+parsers()
     ->shortcode()
     ->addEventHandler(Events::FILTER_SHORTCODES,
                       new FilterRawEventHandler(['raw']));
@@ -284,7 +300,7 @@ public function process(string $input, bool $cache = true)
 ```php
 $shortcode = 'text with [message]';
 
-$html = flextype('parsers')->shortcode()->process($shortcode);
+$html = parsers()->shortcode()->process($shortcode);
 ```
 
 ##### <a name="methods-parse"></a> `parse`
@@ -307,7 +323,7 @@ public function parse(string $input)
 ```php
 $shortcode = 'text with [message]';
 
-$text = flextype('parsers')->shortcode()->parse($shortcode);
+$text = parsers()->shortcode()->parse($shortcode);
 ```
 
 ##### <a name="methods-getCacheID"></a> `getCacheID`
@@ -332,5 +348,5 @@ public function getCacheID(string $input): string
 ```php
 $shortcode = 'text with [message]';
 
-$cache_id = flextype('parsers')->shortcode()->getCacheID($shortcode);
+$cache_id = parsers()->shortcode()->getCacheID($shortcode);
 ```
