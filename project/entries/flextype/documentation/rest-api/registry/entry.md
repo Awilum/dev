@@ -24,6 +24,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
         <tr>
             <th>Method</th>
             <th>Endpoint</th>
+            <th>Route name</th>
             <th>Description</th>
         </tr>
     </thead>
@@ -31,6 +32,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
         <tr>
             <td>GET</td>
             <td>/api/v0/registry</td>
+            <td>registry.get</td>
             <td>Fetch registry item</td>
         </tr>
     </tbody>

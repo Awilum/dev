@@ -1,5 +1,5 @@
 ---
-title: Utils
+title: Utilities
 template: flextype/docs
 order: 5
 breadcrumbs:
@@ -11,11 +11,11 @@ on_this_page:
     title: "Endpoints"
     link: "endpoints"
   1:
-    title: "Fetch registry item"
-    link: "fetch-registry-item"
+    title: "Clear cache"
+    link: "cache-clear"
 ---
 
-The Flextype Registry API organized around Representational State Transfer (REST) for delivering data from Flextype registry to apps, websites and other. Registry is delivered as JSON data.
+The Flextype Utilities API is organized around Representational State Transfer (REST) with the various helper endpoints to deliver data to apps, websites and others. Utility helper's data is delivered as JSON data.
 
 #### <a name="endpoints"></a> Endpoints
 
@@ -24,71 +24,69 @@ The Flextype Registry API organized around Representational State Transfer (REST
         <tr>
             <th>Method</th>
             <th>Endpoint</th>
+            <th>Route name</th>
             <th>Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>GET</td>
-            <td>/api/registry</td>
-            <td>Fetch registry item</td>
+            <td>POST</td>
+            <td>/api/v0/utils/cache/clear</td>
+            <td>cache.clear</td>
+            <td>Clear cache</td>
         </tr>
     </tbody>
 </table>
 
-### <a name="fetch-registry-item"></a> Fetch registry item
+### <a name="utils-cache-clear"></a> Clear cache
 
 <div class="file-header">Request</div>
 
 ```
-GET /api/registry?id=YOUR_REGISTRY_ITEM_ID&token=YOUR_REGISTRY_TOKEN
+POST /api/v0/utils/cache/clear?token=YOUR_UTILS_TOKEN&access_token=YOUR_ACCESS_TOKEN
 ```
 
-##### Query
+##### Body
 
 <table>
     <thead>
         <tr>
-            <th>name</th>
+            <th>Name</th>
             <th></th>
             <th>Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>id</td>
-            <td>REQUIRED</td>
-            <td>Valid Entry ID</td>
-        </tr>
-        <tr>
             <td>token</td>
             <td>REQUIRED</td>
-            <td>Valid Registry Token.</td>
+            <td>Valid Entries token.</td>
+        </tr>
+        <tr>
+            <td>access_token</td>
+            <td>REQUIRED</td>
+            <td>Valid Access token.</td>
         </tr>
     </tbody>
 </table>
 
 ##### Result
 
-An array of registry item objects.
+Empty body.
 
 ##### Examples
 
-Fetch Flextype Version from Flextype Registry
+Clear cache.
 
 <div class="file-header">Request</div>
 
 ```
-GET /api/registry?id=flextype.manifest.version&token=efe1e36e4d60fcd547e22eb9f795dff9
+GET /api/v0/utils/cache/clear?token=efe1e36e4d60fcd547e22eb9f795dff9&access_token=efe1e36e4d60fcd547e22eb9f795dff9
+```
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>
 
 ```json
-{
-    "data": {
-        "key": "flextype.manifest.version",
-        "value": "0.9.16"
-    }
-}
+{}
 ```

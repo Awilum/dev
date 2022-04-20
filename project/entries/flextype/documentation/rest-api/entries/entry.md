@@ -41,6 +41,7 @@ The Flextype Entries API organized around Representational State Transfer (REST)
         <tr>
             <th>Method</th>
             <th>Endpoint</th>
+            <th>Route name</th>
             <th>Description</th>
         </tr>
     </thead>
@@ -48,31 +49,37 @@ The Flextype Entries API organized around Representational State Transfer (REST)
         <tr>
             <td>GET</td>
             <td>/api/v0/entries</td>
+            <td>entries.fetch</td>
             <td>Fetch entry or entries collection.</td>
         </tr>
         <tr>
             <td>POST</td>
             <td>/api/v0/entries</td>
+            <td>entries.create</td>
             <td>Create entry.</td>
         </tr>
         <tr>
             <td>PATCH</td>
             <td>/api/v0/entries</td>
+            <td>entries.update</td>
             <td>Update entry.</td>
         </tr>
         <tr>
             <td>PUT</td>
             <td>/api/v0/entries</td>
+            <td>entries.move</td>
             <td>Move entry.</td>
         </tr>
         <tr>
             <td>PUT</td>
             <td>/api/v0/entries/copy</td>
+            <td>entries.copy</td>
             <td>Copy entry or entries collection.</td>
         </tr>
         <tr>
             <td>DELETE</td>
             <td>/api/v0/entries</td>
+            <td>entries.delete</td>
             <td>Delete entry.</td>
         </tr>
     </tbody>
