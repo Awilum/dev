@@ -1,5 +1,5 @@
 ---
-title: Rest API
+title: Console
 order: 3
 template: flextype/docs
 ---
