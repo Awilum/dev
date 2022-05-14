@@ -11,57 +11,48 @@ breadcrumbs:
     link: "[url]/flextype/documentation/core/"
 on_this_page:
   -
+    title: "Entries Formats"
+    link: "entries-formats"
+  -
     title: "Entries and Urls structure"
     link: "entries-and-urls-structure"
   -
-    title: "Default Variables"
-    link: "default-variables"
+    title: "Fields"
+    link: "fields"
     level2:
       -
         title: "visibility"
-        link: "default-variables-visibility"
+        link: "field-visibility"
       -
         title: "routable"
-        link: "default-variables-routable"
+        link: "field-routable"
       -
         title: "published_at"
-        link: "default-variables-published-at"
+        link: "field-published-at"
       -
         title: "published_by"
-        link: "default-variables-published-by"
+        link: "field-published-by"
       -
         title: "created_at"
-        link: "default-variables-created-at"
+        link: "field-created-at"
       -
         title: "created_by"
-        link: "default-variables-created-by"
+        link: "field-created-by"
       -
         title: "modified_at"
-        link: "default-variables-modified-at"
-      -
-        title: "parsers"
-        link: "default-variables-parsers"
+        link: "field-modified-at"
       -
         title: "cache"
-        link: "default-variables-cache"
+        link: "field-cache"
       -
         title: "slug"
-        link: "default-variables-slug"
+        link: "field-slug"
       -
         title: "id"
-        link: "default-variables-id"
-      -
-        title: "entries"
-        link: "default-variables-entries"
-      -
-        title: "media"
-        link: "default-variables-media"
-      -
-        title: "registry"
-        link: "default-variables-registry"
+        link: "field-id"
   -
-    title: "Custom Variables"
-    link: "custom-variables"
+    title: "Custom Fields"
+    link: "custom-fields"
   -
     title: "Methods"
     link: "methods"
@@ -98,21 +89,39 @@ on_this_page:
     link: "extending"
 ---
 
-Entries are the fundamental building blocks of your Flextype powered project. Entries are a local **flat files** or an **external resources** that can be represented as a PHP array that can be used in the controllers, templates or etc...
+Entries are the fundamental building blocks of your Flextype powered project. Entries are local **flat files** or **external resources** that can be represented as a PHP array inside the controllers, templates, etc...
 
-By default, Flextype support such **flat files** formats for entries:
+### Entries formats
+
+Flextype support several **flat files** formats for entries out of the box.
 
 #### Frontmatter _Jekyll_ (.md)
 
 <div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.md</div>
 
-```text
+```yaml
 &minus;&minus;&minus;
 title: Meridian
 description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
 director: William Waring
 writers: Brad Wright, Jonathan Glassner
 stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
+&minus;&minus;&minus;
+SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
+
+
+For **Frontmatter _Jekyll_** you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. For example:
+
+```yaml
+&minus;&minus;&minus;json
+{
+  "title": "Meridian",
+  "description": "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.",
+  "director": "William Waring",
+  "writers": "Brad Wright, Jonathan Glassner",
+  "stars": "Richard Dean Anderson, Michael Shanks, Amanda Tapping"
+}
 &minus;&minus;&minus;
 SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
 ```
@@ -161,13 +170,28 @@ content: '''
 }
 ```
 
-### <a name="entries-and-urls-structure"></a> Entries and Urls structure in Flextype
+#### JSON5 (.json5)
 
-All content entries are located in the `project/entries/` folder.
+<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.json5</div>
 
-Each entry file `entry.md` should be placed in its own folder.
+```text
+{
+  title: "Meridian",
+  description: "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.",
+  director: "William Waring",
+  writers: "Brad Wright, Jonathan Glassner",
+  stars: "Richard Dean Anderson, Michael Shanks, Amanda Tapping",
+  content: "SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world."
+}
+```
 
-Folder names should also be valid **slugs**. Slugs are entirely lowercase, with accented characters replaced by letters from the Latin alphabet and whitespace characters replaced by a dash or an underscore, to avoid being encoded.
+### <a name="entries-and-urls-structure"></a> Entries and Urls structure
+
+All project entries are located in the `project/entries/` folder.
+
+Each entry file should be placed in its folder.
+
+Folder names should also be valid **slugs**. Slugs are entirely lowercase, with accented characters replaced by letters from the Latin alphabet and whitespace characters replaced by a dash or an underscore to avoid being encoded.
 
 ##### Examples
 
@@ -175,7 +199,7 @@ Folder names should also be valid **slugs**. Slugs are entirely lowercase, with 
 # Physical Location
 project/entries/movies/sg-1/entry.md
 
-# ID (URL)
+# ID
 movies/sg-1
 
 # Slug
@@ -186,7 +210,7 @@ sg-1
 # Physical Location
 project/entries/movies/sg-1/season-5/entry.md
 
-# ID (URL)
+# ID
 movies/sg-1/season-5
 
 # Slug
@@ -197,18 +221,20 @@ season-5
 # Physical Location
 project/entries/movies/sg-1/season-5/episode-21/entry.md
 
-# ID (URL)
+# ID
 movies/sg-1/season-5/episode-21
 
 # Slug
 episode-21
 ```
 
-### <a name="default-variables"></a> Default Variables
+### <a name="fields"></a> Fields
 
-There are a number of default entry variables available for each entry and defined in the Front Matter section.
+Several default entry fields are available for each entry.
 
-##### <a name="default-variables-visibility"></a> Visibility
+##### <a name="field-visibility"></a> `visibility`
+
+Entries visibility is about controlling who can see your entries. Flextype allows you to control the visibility of your entries on an individual basis. By default, all entries are visible.
 
 <table>
     <thead>
@@ -221,15 +247,13 @@ There are a number of default entry variables available for each entry and defin
     <tbody>
         <tr>
             <td>visibility</td>
-            <td>visible</td>
-            <td>visible or draft or hidden</td>
+            <td><code class="hljs">visible</code></td>
+            <td><code class="hljs">visible</code>, <code class="hljs">draft</code> or <code class="hljs">hidden</code></td>
         </tr>
     </tbody>
 </table>
 
-Content visibility is about controlling who can see your entries. Flextype allows you to control the visibility of your entries on an individual basis. By default, all entries are visible.
-
-**Examples**
+**Example**
 
     ---
     title: My Entry Title
@@ -237,7 +261,11 @@ Content visibility is about controlling who can see your entries. Flextype allow
     ---
     My entry content here.
 
-##### <a name="default-variables-routable"></a> Routable
+<br>
+
+##### <a name="field-routable"></a> `routable`
+
+By default, all entries are routable. This means that they can be reached by pointing your browser to the URL of the entry. However, you may need to create a specific entry to hold specific data, but it is meant to be called directly by a plugin, another entry.
 
 <table>
     <thead>
@@ -250,16 +278,13 @@ Content visibility is about controlling who can see your entries. Flextype allow
     <tbody>
         <tr>
             <td>routable</td>
-            <td>true</td>
-            <td>true or false</td>
+            <td><code class="hljs">true</code></td>
+            <td><code class="hljs">true</code> or <code class="hljs">false</code></td>
         </tr>
     </tbody>
 </table>
 
-
-By default, all entries are routable. This means that they can be reached by pointing your browser to the URL of the entry. However, you may need to create a specific entry to hold specific content, but it is meant to be called directly by a plugin, other content, or even a theme directly.
-
-**Examples**
+**Example**
 
     ---
     title: Commment42
@@ -267,7 +292,11 @@ By default, all entries are routable. This means that they can be reached by poi
     ---
     Content for Commment42
 
-##### <a name="default-variables-published-at"></a> Published at
+<br>
+
+##### <a name="field-published-at"></a> `published_at`
+
+Allows you to specifically set a `published_at` date associated with this entry.
 
 <table>
     <thead>
@@ -286,9 +315,6 @@ By default, all entries are routable. This means that they can be reached by poi
     </tbody>
 </table>
 
-
-This variable allows you to specifically set a published_at date associated with this entry.
-
 **Examples**
 
     ---
@@ -297,7 +323,11 @@ This variable allows you to specifically set a published_at date associated with
     ---
     My entry content here.
 
-##### <a name="default-variables-published-by"></a> Published by
+<br>
+
+##### <a name="field-published-by"></a> `published_by`
+
+Allows you to specifically set a `published_by` User UUID associated with this entry.
 
 <table>
     <thead>
@@ -316,9 +346,6 @@ This variable allows you to specifically set a published_at date associated with
     </tbody>
 </table>
 
-
-This variable allows you to specifically set a published_by User UUID associated with this entry.
-
 **Examples**
 
     ---
@@ -327,7 +354,11 @@ This variable allows you to specifically set a published_by User UUID associated
     ---
     My entry content here.
 
-##### <a name="default-variables-created-at"></a> Created at
+<br>
+
+##### <a name="field-created-at"></a> `created_at`
+
+Allows you to specifically set a created_at date associated with this entry.
 
 <table>
     <thead>
@@ -346,9 +377,11 @@ This variable allows you to specifically set a published_by User UUID associated
     </tbody>
 </table>
 
-This variable allows you to specifically set a created_at date associated with this entry.
+<br>
 
-##### <a name="default-variables-modified-at"></a> Modified at
+##### <a name="field-modified-at"></a> `modified_at`
+
+Allows you to specifically set a `modified_at` date associated with this entry.
 
 <table>
     <thead>
@@ -367,8 +400,6 @@ This variable allows you to specifically set a created_at date associated with t
     </tbody>
 </table>
 
-This variable allows you to specifically set a modified_at date associated with this entry.
-
 **Examples**
 
     ---
@@ -377,37 +408,12 @@ This variable allows you to specifically set a modified_at date associated with 
     ---
     My entry content here.
 
-##### <a name="default-variables-parsers"></a> Parsers
+<br>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Available values for option</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>parsers</td>
-            <td></td>
-            <td>A list of parsers with options</td>
-        </tr>
-    </tbody>
-</table>
+##### <a name="field-cache"></a> `cache`
 
-
-```yaml
-parsers:
-  markdown:
-    enabled: true
-    fields: ['content', 'title']
-  shortcodes:
-    enabled: true
-    fields: ['content', 'title', 'description']
-```
-
-##### <a name="default-variables-cache"></a> Cache
+By default, all entries are stored in the cache if flextype cache setting is `true`.
+But this can be changed by setting individual `cache` for each entry.
 
 <table>
     <thead>
@@ -421,16 +427,16 @@ parsers:
         <tr>
             <td>cache</td>
             <td></td>
-            <td>true or false</td>
+            <td><code class="hljs">true</code> or <code class="hljs">false</code></td>
         </tr>
     </tbody>
 </table>
 
+<br>
 
-By default, all entries are stored in the cache if flextype cache is true.
-But this rule can be changed by setting individual cache for each entry.
+##### <a name="field-slug"></a> `slug`
 
-##### <a name="default-variables-slug"></a> Slug
+The field should be in lowercase, with accented characters replaced by letters from the Latin alphabet and whitespace characters replaced by a dash or an underscore, to avoid being encoded.
 
 <table>
     <thead>
@@ -444,12 +450,14 @@ But this rule can be changed by setting individual cache for each entry.
         <tr>
             <td>slug</td>
             <td></td>
-            <td>Slug is entirely lowercase, with accented characters replaced by letters from the Latin alphabet and whitespace characters replaced by a dash or an underscore, to avoid being encoded.</td>
+            <td>Entry Slug</td>
         </tr>
     </tbody>
 </table>
 
-##### <a name="default-variables-id"></a> Id
+<br>
+
+##### <a name="field-id"></a> `id`
 
 <table>
     <thead>
@@ -468,131 +476,9 @@ But this rule can be changed by setting individual cache for each entry.
     </tbody>
 </table>
 
+<br>
 
-##### <a name="default-variables-entries"></a> Entries
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Available values for option</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>entries</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-```yaml
-entries:
-  fetch:
-    posts:
-      id: blog
-      options:
-        collection: true
-        find: []
-        filter: []
-    post:
-      id: blog/post-1
-      options:
-        filter: []
-    testimonials:
-      id: testimonials
-      options:
-        method: fetchTestimonials
-```
-
-##### <a name="default-variables-media"></a> Media
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Available values for option</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>media</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-```yaml
-media:
-  files:
-    fetch:
-      albums:
-        id: albums
-        options:
-          collection: true
-          filter: []
-      foo:
-        id: albums/album-1/foo.jpg
-        options:
-          filter: []
-      other:
-        id: other
-        options:
-          method: fetchFromOtherDB
-  folders:
-    fetch:
-      albums:
-        id: albums
-        options:
-          collection: true
-          filter: []
-      foo:
-        id: albums/album-1/foo.jpg
-        options:
-          filter: []
-      other:
-        id: other
-        options:
-          method: fetchFromOtherDB
-```
-
-##### <a name="default-variables-registry"></a> Registry
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Available values for option</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>registry</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-```yaml
-registry:
-  get:
-    flextype:
-      key: flextype.manifest.name
-    author.name:
-      key: flextype.manifest.author.name
-    license:
-      key: flextype.manifest.license
-```
-
-### <a name="custom-variables"></a> Custom Variables
-
-You can create your own custom entry variables using any valid YAML syntax. These would be entry-specific variable and be available for Rest API and any extension such as plugin, theme and etc...
+You can create custom entry fields using any valid YAML syntax. These would be entry-specific fields and be available for Rest API and any extension such as plugin, theme, etc...
 
 <div class="file-header"><i class="far fa-file-alt"></i> project/entries/home/entry.md</div>
 
@@ -606,21 +492,10 @@ You can create your own custom entry variables using any valid YAML syntax. Thes
 
 **Examples**
 
-Get variable `author.twitter` with PHP.
+Get field `author.twitter` in PHP.
 
 ```php
-echo flextype('entries')->fetch('home')['author.twitter'];
-```
-
-Get variable `author.twitter` with Rest API.
-```http
-GET /api/entries?id=home&token=YOUR_ENTRIES_TOKEN
-```
-
-Get variable `author.twitter` with [TWIG Plugin](https://github.com/flextype-plugins/twig).
-
-```twig
-{{ entries.fetch('home').author.twitter }}
+echo entries()->fetch('home')['author.twitter']; // @getflextype
 ```
 
 ### <a name="methods"></a> Methods
