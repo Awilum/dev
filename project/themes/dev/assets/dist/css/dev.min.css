@@ -1866,6 +1866,10 @@ a.brand-logo:hover > svg {
   margin-bottom: 2rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1942,12 +1946,28 @@ a.brand-logo:hover > svg {
   width: 12rem;
 }
 
+.w-4\/12 {
+  width: 33.333333%;
+}
+
 .max-w-\[1200px\] {
   max-width: 1200px;
 }
 
 .max-w-\[450px\] {
   max-width: 450px;
+}
+
+.max-w-\[1240px\] {
+  max-width: 1240px;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .cursor-pointer {
@@ -2165,6 +2185,11 @@ a.brand-logo:hover > svg {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .px-3 {
@@ -2592,6 +2617,10 @@ a.brand-logo:hover > svg {
 
   .lg\:w-5\/12 {
     width: 41.666667%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .lg\:max-w-\[780px\] {

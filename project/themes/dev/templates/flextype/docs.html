@@ -121,11 +121,11 @@
                 </li>
             </ul>
         </div>
-        <div class="{% if entry.on_this_page %}w-full lg:w-8/12{% else %}w-full lg:w-10/12{% endif %} px-2">
+        <div class="{% if entry.on_this_page %}w-full lg:w-7/12{% else %}w-full lg:w-10/12{% endif %} px-2">
             {{ entry.content|replace({'&minus;': '-'})|shortcode|markdown|raw }}
         </div>
         {% if entry.on_this_page %}
-        <div class="w-full lg:w-2/12 block relative">
+        <div class="w-full lg:w-3/12 block relative">
             <div class="lg:sticky lg:top-0 lg:overflow-y-auto lg:max-h-screen">
                 <div class="p-0 mb-10 lg:mb-0 lg:pl-10">
                     <h4 class="m-0 p-0 pb-1">On This Page</h4>
