@@ -137,7 +137,7 @@
                                 <ul class="list-none m-0 ml-3 p-0">
                                     {% for item in item.level2 %}
                                     <li class="mb-1">
-                                        &#8227; <a class="text-decoration-none text-sm" href="#{{ item.link }}">{{ item.title }}</a>
+                                        &#8227; {% if item.label %}{{ item.label|raw }}{% endif %} <a class="text-decoration-none text-sm" href="#{{ item.link }}">{{ item.title }}</a>
                                     </li>
                                     {% endfor %}
                                 </ul>
