@@ -10,9 +10,11 @@ on_this_page:
   0:
     title: "Endpoints"
     link: "endpoints"
-  1:
-    title: "Fetch registry item"
-    link: "fetch-registry-item"
+    level2:
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span>'
+            title: "/api/v0/registry"
+            link: "endpoint-fetch"
 ---
 
 The Flextype Registry API organized around Representational State Transfer (REST) for delivering data from Flextype registry to apps, websites and other. Registry is delivered as JSON data.
@@ -30,15 +32,19 @@ The Flextype Registry API organized around Representational State Transfer (REST
     </thead>
     <tbody>
         <tr>
-            <td>GET</td>
-            <td>/api/v0/registry</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
+            <td><a href="#endpoint-fetch">/api/v0/registry</a></td>
             <td>registry.get</td>
             <td>Fetch registry item</td>
         </tr>
     </tbody>
 </table>
 
-### <a name="fetch-registry-item"></a> Fetch registry item
+<br>
+
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/registry`
+
+Fetch registry item
 
 <div class="file-header">Request</div>
 
@@ -90,7 +96,7 @@ GET /api/v0/registry?id=flextype.manifest.version&token=efe1e36e4d60fcd547e22eb9
 {
     "data": {
         "key": "flextype.manifest.version",
-        "value": "0.9.16"
+        "value": "0.10.0"
     }
 }
 ```

@@ -11,14 +11,17 @@ breadcrumbs:
     link: "[url]/flextype/documentation/core/"
 on_this_page:
   -
-    title: "Entries Formats"
-    link: "entries-formats"
+    title: "Overview"
+    link: "overview"
   -
-    title: "Entries Configuration"
-    link: "entries-configuration"
+    title: "Formats"
+    link: "formats"
   -
-    title: "Entries and Urls structure"
-    link: "entries-and-urls-structure"
+    title: "Configuration"
+    link: "configuration"
+  -
+    title: "Structure"
+    link: "structure"
   -
     title: "Fields"
     link: "fields"

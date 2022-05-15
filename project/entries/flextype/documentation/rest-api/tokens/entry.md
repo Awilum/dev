@@ -1,42 +1,54 @@
 ---
-title: Entries
+title: Tokens
 template: flextype/docs
 order: 2
 seo:
-  title: Entries Rest API | Flextype
+  title: Tokens Rest API | Flextype
 breadcrumbs:
   -
     title: "Rest API"
     link: "[url]/flextype/flextype/documentation/rest-api/"
 on_this_page:
   -
-    title: "Overview"
-    link: "overview"
-  -
     title: "Endpoints"
     link: "endpoints"
     level2:
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v0/tokens'
             link: "endpoint-fetch"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> /api/v0/tokens'
             link: "endpoint-create"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> /api/v0/tokens'
+            link: "endpoint-generate"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span>'
+            title: "/api/v0/tokens-generate-hash"
+            link: "endpoint-generate-hash"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span>'
+            title: "/api/v0/tokens-verify-hash"
+            link: "endpoint-verify-hash"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span>'
+            title: "/api/v0/tokens"
             link: "endpoint-update"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v0/entries'
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span>'
+            title: "/api/v0/tokens"
             link: "endpoint-move"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v0/entries/copy'
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span>'
+            title: "/api/v0/tokens/copy"
             link: "endpoint-copy"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> /api/v0/entries'
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span>'
+            title: "/api/v0/tokens"
             link: "endpoint-delete"
 ---
 
-The Flextype Entries API organized around Representational State Transfer (REST) for delivering entries from Flextype to apps, websites and other. Entries is delivered as JSON data.
+The Flextype Tokens API organized around Representational State Transfer (REST) for delivering tokens from Flextype to apps, websites and other. Tokens is delivered as JSON data.
 
 ### <a name="endpoints"></a> Endpoints
 
@@ -52,55 +64,55 @@ The Flextype Entries API organized around Representational State Transfer (REST)
     <tbody>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
-            <td><a href="#endpoint-fetch">/api/v0/entries</a></td>
-            <td>entries.fetch</td>
-            <td>Fetch entry (entries collection).</td>
+            <td><a href="#endpoint-fetch">/api/v0/tokens</a></td>
+            <td>tokens.fetch</td>
+            <td>Fetch token (tokens collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
-            <td><a href="#endpoint-create">/api/v0/entries</a></td>
-            <td>entries.create</td>
-            <td>Create entry.</td>
+            <td><a href="#endpoint-create">/api/v0/tokens</a></td>
+            <td>tokens.create</td>
+            <td>Create token.</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span></td>
-            <td><a href="#endpoint-update">/api/v0/entries</td>
-            <td>entries.update</td>
-            <td>Update entry.</td>
+            <td><a href="#endpoint-update">/api/v0/tokens</td>
+            <td>tokens.update</td>
+            <td>Update token.</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
-            <td><a href="#endpoint-move">/api/v0/entries</a></td>
-            <td>entries.move</td>
-            <td>Move entry (entries collection).</td>
+            <td><a href="#endpoint-move">/api/v0/tokens</a></td>
+            <td>tokens.move</td>
+            <td>Move token (tokens collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
-            <td><a href="#endpoint-copy">/api/v0/entries/copy</a></td>
-            <td>entries.copy</td>
-            <td>Copy entry (entries collection).</td>
+            <td><a href="#endpoint-copy">/api/v0/tokens/copy</a></td>
+            <td>tokens.copy</td>
+            <td>Copy token (tokens collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span></td>
-            <td><a href="#endpoint-delete">/api/v0/entries</a></td>
-            <td>entries.delete</td>
-            <td>Delete entry (entries collection).</td>
+            <td><a href="#endpoint-delete">/api/v0/tokens</a></td>
+            <td>tokens.delete</td>
+            <td>Delete token (tokens collection).</td>
         </tr>
     </tbody>
 </table>
 
 <br>
 
-##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/entries`
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/tokens`
 
-Fetch entry or entries collection.
+Fetch token or tokens collection.
 
-##### Fetch single entry
+##### Fetch single token
 
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
+GET /api/v0/tokens?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -122,7 +134,7 @@ GET /api/v0/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
         <tr>
             <td>options</td>
             <td>OPTIONAL</td>
-            <td>A set of valid arguments to search and sort specific needed entries.</td>
+            <td>A set of valid arguments to search and sort specific needed tokens.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -143,15 +155,15 @@ Fetch Movies Entry
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/tokens?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
-##### Fetch entries collection
+##### Fetch tokens collection
 
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
+GET /api/v0/tokens?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -174,7 +186,7 @@ GET /api/v0/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES
         <tr>
             <td>options</td>
             <td>OPTIONAL</td>
-            <td>A set of valid arguments to search and sort specific needed entries.</td>
+            <td>A set of valid arguments to search and sort specific needed tokens.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -195,7 +207,7 @@ Fetch Movies Collection
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/tokens?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan**
@@ -203,7 +215,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan**
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/tokens?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan** and where year is equal to **2020** and where genre is contains **action**
@@ -211,7 +223,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan** and where y
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v0/tokens?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ##### Options
@@ -222,14 +234,14 @@ You can send options for the query to search items in a collection that matches 
 
 <br>
 
-##### <a name="endpoint-create"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/entries`
+##### <a name="endpoint-create"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/tokens`
 
-Create entry.
+Create token.
 
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/entries
+POST /api/v0/tokens
 ```
 
 ##### Body
@@ -246,7 +258,7 @@ POST /api/v0/entries
         <tr>
             <td>id</td>
             <td>REQUIRED</td>
-            <td>Unique identifier of the entry.</td>
+            <td>Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -261,22 +273,22 @@ POST /api/v0/entries
         <tr>
             <td>data</td>
             <td>REQUIRED</td>
-            <td>Data to store for the entry.</td>
+            <td>Data to store for the token.</td>
         </tr>
     </tbody>
 </table>
 
 ##### Result
-Returns the entry item object for the entry item that was just created.
+Returns the token item object for the token item that was just created.
 
 ##### Examples
 
-Create new entry **platform**
+Create new token **platform**
 
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/entries
+POST /api/v0/tokens
 ```
 
 <div class="file-header">Body</div>
@@ -315,14 +327,14 @@ POST /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-update"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> `/api/v0/entries`
+##### <a name="endpoint-update"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> `/api/v0/tokens`
 
-Update entry.
+Update token.
 
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/v0/entries
+PATCH /api/v0/tokens
 ```
 
 ##### Body
@@ -339,7 +351,7 @@ PATCH /api/v0/entries
         <tr>
             <td>id</td>
             <td>REQUIRED</td>
-            <td>Unique identifier of the entry.</td>
+            <td>Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -354,22 +366,22 @@ PATCH /api/v0/entries
         <tr>
             <td>data</td>
             <td>REQUIRED</td>
-            <td>Data to store for the entry.</td>
+            <td>Data to store for the token.</td>
         </tr>
     </tbody>
 </table>
 
 ##### Result
-Returns the entry item object for the entry item that was just updated.
+Returns the token item object for the token item that was just updated.
 
 ##### Examples
 
-Update content for entry **platform**
+Update content for token **platform**
 
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/v0/entries
+PATCH /api/v0/tokens
 ```
 
 <div class="file-header">Body</div>
@@ -407,14 +419,14 @@ PATCH /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-move"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries`
+##### <a name="endpoint-move"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/tokens`
 
-Move entry.
+Move token.
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v0/tokens
 ```
 
 ##### Body
@@ -431,12 +443,12 @@ PUT /api/v0/entries
         <tr>
             <td>id</td>
             <td>REQUIRED</td>
-            <td>Unique identifier of the entry.</td>
+            <td>Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>new_id</td>
             <td>REQUIRED</td>
-            <td>New Unique identifier of the entry.</td>
+            <td>New Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -452,16 +464,16 @@ PUT /api/v0/entries
 </table>
 
 ##### Result
-Returns the entry item object for the entry item that was just moved.
+Returns the token item object for the token item that was just moved.
 
 ##### Examples
 
-Move entry **platform** to the **the-platform**
+Move token **platform** to the **the-platform**
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v0/tokens
 ```
 
 <div class="file-header">Body</div>
@@ -495,12 +507,12 @@ PUT /api/v0/entries
 }
 ```
 
-Move entry **movies/the-platform** to the **movies/2019/the-platform**
+Move token **movies/the-platform** to the **movies/2019/the-platform**
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v0/tokens
 ```
 
 <div class="file-header">Body</div>
@@ -536,14 +548,14 @@ PUT /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-copy"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries/copy`
+##### <a name="endpoint-copy"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/tokens/copy`
 
-Copy entry (entries collection).
+Move token.
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries/copy
+PUT /api/v0/tokens/copy
 ```
 
 ##### Body
@@ -560,12 +572,12 @@ PUT /api/v0/entries/copy
         <tr>
             <td>id</td>
             <td>REQUIRED</td>
-            <td>Unique identifier of the entry.</td>
+            <td>Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>new_id</td>
             <td>REQUIRED</td>
-            <td>New Unique identifier of the entry.</td>
+            <td>New Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -581,16 +593,16 @@ PUT /api/v0/entries/copy
 </table>
 
 ##### Result
-Returns the entry item object for the entry item that was just copied.
+Returns the token item object for the token item that was just copied.
 
 ##### Examples
 
-Copy for entry **movies/2019/the-platform** to **movies/horror/the-platform**
+Copy for token **movies/2019/the-platform** to **movies/horror/the-platform**
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries/copy
+PUT /api/v0/tokens/copy
 ```
 
 <div class="file-header">Body</div>
@@ -626,14 +638,14 @@ PUT /api/v0/entries/copy
 
 <br>
 
-##### <a name="endpoint-delete"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> `/api/v0/entries`
+##### <a name="endpoint-delete"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> `/api/v0/tokens`
 
-Delete entry.
+Delete token.
 
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/v0/entries
+DELETE /api/v0/tokens
 ```
 
 ##### Body
@@ -650,7 +662,7 @@ DELETE /api/v0/entries
         <tr>
             <td>id</td>
             <td>REQUIRED</td>
-            <td>Unique identifier of the entry.</td>
+            <td>Unique identifier of the token.</td>
         </tr>
         <tr>
             <td>token</td>
@@ -670,12 +682,12 @@ Returns an empty body with  status 204
 
 ##### Examples
 
-Delete entry **movies/horror/the-platform**
+Delete token **movies/horror/the-platform**
 
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/v0/entries
+DELETE /api/v0/tokens
 ```
 
 <div class="file-header">Body</div>
