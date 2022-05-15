@@ -14,6 +14,9 @@ on_this_page:
     title: "Entries Formats"
     link: "entries-formats"
   -
+    title: "Entries Configuration"
+    link: "entries-configuration"
+  -
     title: "Entries and Urls structure"
     link: "entries-and-urls-structure"
   -
@@ -51,8 +54,22 @@ on_this_page:
         title: "id"
         link: "field-id"
   -
-    title: "Custom Fields"
-    link: "custom-fields"
+    title: "Vars"
+    link: "vars"
+    level2: []
+  -
+    title: "Macros"
+    link: "macros"
+    level2: 
+      -
+        title: "entries"
+        link: "macros-entries"
+      -
+        title: "registry"
+        link: "macros-registry"
+      -
+        title: "php"
+        link: "macros-php"
   -
     title: "Methods"
     link: "methods"
@@ -95,7 +112,7 @@ Entries are the fundamental building blocks of your Flextype powered project. En
 
 Flextype support several **flat files** formats for entries out of the box.
 
-#### Frontmatter _Jekyll_ (.md)
+#### Frontmatter (.md)
 
 <div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.md</div>
 
@@ -111,7 +128,7 @@ SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering 
 ```
 
 
-For **Frontmatter _Jekyll_** you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. For example:
+For **Frontmatter** you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. For example:
 
 ```yaml
 &minus;&minus;&minus;json
@@ -559,11 +576,11 @@ Fetch entry or entries collection.
  * @param string $id      Unique identifier of the entry.
  * @param array  $options Options array.
  *
- * @access public
+ * @return mixed Returns mixed results from APIs or default is an instance of The Collection class with founded items.
  *
- * @return self Returns instance of The Arrays class.
+ * @access public
  */
-public function fetch(string $id, array $options = []): Arrays
+public function fetch(string $id, array $options = [])
 ```
 
 ##### Fetch single entry
@@ -573,13 +590,13 @@ public function fetch(string $id, array $options = []): Arrays
 Fetch single entry `movies/sg-1/season-5/episode-21`
 
 ```php
-$data = flextype('entries')->fetch('movies/sg-1/season-5/episode-21');
+$data = entries()->fetch('movies/sg-1/season-5/episode-21');
 ```
 
 Fetch singe entry in `movies/sg-1/season-5/episode-21` and send `$options`.
 
 ```php
-$data = flextype('entries')->fetch('movies/sg-1/season-5', $options);
+$data = entries()->fetch('movies/sg-1/season-5', $options);
 ```
 
 `$options` is an array of valid values for <code>[filter](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php)</code> helper.
@@ -620,6 +637,12 @@ $options = [
             'direction' => 'ASC'
         ],
 
+        // Extract only items.
+        'only' => [],
+
+        // Extract except
+        'except' => [],
+
         // Extract a slice of the current array with specific offset.
         'offset' => 0,
 
@@ -636,13 +659,13 @@ $options = [
 Fetch collections of entries episodes in `movies/sg-1/season-5`
 
 ```php
-$data = flextype('entries')->fetch('movies/sg-1/season-5', $options);
+$data = entries()->fetch('movies/sg-1/season-5', $options);
 ```
 
 Fetch collections of entries in `movies/sg-1` and send `$options`.
 
 ```php
-$data = flextype('entries')->fetch('movies/sg-1/season-5', $options);
+$data = entries()->fetch('movies/sg-1/season-5', $options);
 ```
 
 `$options` is an array of valid values for <code>[find](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php)</code> and <code>[filter](https://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php)</code> helpers.
@@ -770,7 +793,7 @@ $data = [
         ];
 
 
-flextype('entries')->create('movies/sg-1/season-5/episode-22', $data);
+entries()->create('movies/sg-1/season-5/episode-22', $data);
 ```
 
 ##### <a name="methods-update"></a> `update`
@@ -799,7 +822,7 @@ Update entry `episode-22` in `movies/sg-1/season-5`
 $data = ['soundtracks' => 'Joel Goldsmith'];
 
 
-flextype('entries')->update('movies/sg-1/season-5/episode-22', $data);
+entries()->update('movies/sg-1/season-5/episode-22', $data);
 ```
 
 ##### <a name="methods-move"></a> `move`
@@ -825,7 +848,7 @@ public function move(string $id, string $newID): bool
 Move entry `episode-22` to `episode-23` in `movies/sg-1/season-5`
 
 ```php
-flextype('entries')->move('movies/sg-1/season-5/episode-22',
+entries()->move('movies/sg-1/season-5/episode-22',
                           'movies/sg-1/season-5/episode-23');
 ```
 
@@ -852,7 +875,7 @@ public function copy(string $id, string $newID): ?bool
 Copy entry `episode-23` to `episode-22` in `movies/sg-1/season-5`
 
 ```php
-flextype('entries')->rename('movies/sg-1/season-5/episode-23',
+entries()->rename('movies/sg-1/season-5/episode-23',
                                        'movies/sg-1/season-5/episode-22');
 ```
 
@@ -878,7 +901,7 @@ public function delete(string $id): bool
 Delete entry `episode-23` in `movies/sg-1/season-5`
 
 ```php
-flextype('entries')->delete('movies/sg-1/season-5/episode-23');
+entries()->delete('movies/sg-1/season-5/episode-23');
 ```
 
 ##### <a name="methods-has"></a> `has`
@@ -903,7 +926,7 @@ public function has(string $id): bool
 Check whether entry `episode-23` exists in `movies/sg-1/season-5`
 
 ```php
-if (flextype('entries')->has('movies/sg-1/season-5/episode-23')) {
+if (entries()->has('movies/sg-1/season-5/episode-23')) {
     // do something...
 }
 ```
@@ -931,7 +954,7 @@ public function getFileLocation(string $id): string
 Check whether entry `episode-23` exists in `movies/sg-1/season-5`
 
 ```php
-$data = flextype('entries')->getFileLocation('movies/sg-1/season-5/episode-23');
+$data = entries()->getFileLocation('movies/sg-1/season-5/episode-23');
 ```
 
 ##### <a name="methods-getDirectoryLocation"></a> `getDirectoryLocation`
@@ -956,7 +979,7 @@ public function getDirectoryLocation(string $id): string
 Get entry `episode-23` exists in `movies/sg-1/season-5`
 
 ```php
-$data = flextype('entries')->getDirectoryLocation('movies/sg-1/season-5/episode-23');
+$data = entries()->getDirectoryLocation('movies/sg-1/season-5/episode-23');
 ```
 
 ### <a name="extending"></a> Extending
@@ -969,15 +992,15 @@ For example, the following code adds a `fetchRecentPosts()` method to the Entrie
 
 ```php
 // Create new macros for fetch recent posts.
-flextype('entries')::macro('fetchRecentPosts', function($limit = 10) {
-    return flextype('entries')
+entries()::macro('fetchRecentPosts', function($limit = 10) {
+    return entries()
                 ->fetchCollection('blog')
                 ->sortBy('publised_at')
                 ->limit($limit);
 });
 
 // Display recent posts.
-foreach (flextype('entries')->fetchRecentPosts(5) as $post) {
+foreach (entries()->fetchRecentPosts(5) as $post) {
     echo $post['title'] . "\n";
 }
 ```
@@ -999,7 +1022,7 @@ For this approach, you should use a mixin static method on the macroable Entries
 class BlogMixin {
     public function fetchRecentPosts() {
         return function($limit = 10) {
-            return flextype('entries')
+            return entries()
                         ->fetchCollection('blog')
                         ->sortBy('publised_at')
                         ->limit($limit);
@@ -1008,10 +1031,10 @@ class BlogMixin {
 }
 
 // Create new mixin BlogMixin with it is macros.
-flextype('entries')::mixin(new BlogMixin());
+entries()::mixin(new BlogMixin());
 
 // Display recent posts.
-foreach (flextype('entries')->fetchRecentPosts(5) as $post) {
+foreach (entries()->fetchRecentPosts(5) as $post) {
     echo $post['title'] . "\n";
 }
 ```

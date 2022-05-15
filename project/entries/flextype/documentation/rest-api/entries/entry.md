@@ -12,24 +12,31 @@ on_this_page:
   -
     title: "Endpoints"
     link: "endpoints"
-  -
-    title: "Fetch entry"
-    link: "fetch-entry"
-  -
-    title: "Create entry"
-    link: "create-entry"
-  -
-    title: "Update entry"
-    link: "update-entry"
-  -
-    title: "Move entry"
-    link: "move-entry"
-  -
-    title: "Copy entry"
-    link: "copy-entry"
-  -
-    title: "Delete entry"
-    link: "delete-entry"
+    level2:
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span>'
+            title: "/api/v0/entries"
+            link: "endpoint-fetch"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span>'
+            title: "/api/v0/entries"
+            link: "endpoint-create"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span>'
+            title: "/api/v0/entries"
+            link: "endpoint-update"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span>'
+            title: "/api/v0/entries"
+            link: "endpoint-move"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span>'
+            title: "/api/v0/entries/copy"
+            link: "endpoint-copy"
+        -
+            label: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span>'
+            title: "/api/v0/entries"
+            link: "endpoint-delete"
 ---
 
 The Flextype Entries API organized around Representational State Transfer (REST) for delivering entries from Flextype to apps, websites and other. Entries is delivered as JSON data.
@@ -47,37 +54,37 @@ The Flextype Entries API organized around Representational State Transfer (REST)
     </thead>
     <tbody>
         <tr>
-            <td>GET</td>
-            <td>/api/v0/entries</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
+            <td><a href="#endpoint-fetch">/api/v0/entries</a></td>
             <td>entries.fetch</td>
             <td>Fetch entry or entries collection.</td>
         </tr>
         <tr>
-            <td>POST</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
             <td>/api/v0/entries</td>
             <td>entries.create</td>
             <td>Create entry.</td>
         </tr>
         <tr>
-            <td>PATCH</td>
-            <td>/api/v0/entries</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span></td>
+            <td><a href="#endpoint-create">/api/v0/entries</td>
             <td>entries.update</td>
             <td>Update entry.</td>
         </tr>
         <tr>
-            <td>PUT</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
             <td>/api/v0/entries</td>
             <td>entries.move</td>
             <td>Move entry.</td>
         </tr>
         <tr>
-            <td>PUT</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
             <td>/api/v0/entries/copy</td>
             <td>entries.copy</td>
             <td>Copy entry or entries collection.</td>
         </tr>
         <tr>
-            <td>DELETE</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span></td>
             <td>/api/v0/entries</td>
             <td>entries.delete</td>
             <td>Delete entry.</td>
@@ -85,7 +92,11 @@ The Flextype Entries API organized around Representational State Transfer (REST)
     </tbody>
 </table>
 
-### <a name="fetch-entry"></a> Fetch entry
+<br>
+
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/entries`
+
+Fetch entry or entries collection.
 
 ##### Fetch single entry
 
@@ -212,17 +223,11 @@ We can send options for the query to search items in a collection that matches t
 
 `options` is an array of valid values for [filter()](s://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FilterHelper.php) and [find()](s://github.com/flextype/flextype/blob/dev/src/flextype/Support/Helpers/FindHelper.php) helpers.
 
-##### Extending
+<br>
 
-We can you use any custom macroabe function assigned to Entries API in the fetch query with help off `&options[method]=`
+##### <a name="endpoint-create"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/entries`
 
-##### Examples
-
-```
-GET /api/v0/entries?id=movies&options[method]=fetchFromOtherDB&token=6f047babd1894064fbf7662080a9a2f0
-```
-
-### <a name="create-entry"></a> Create entry
+Create entry.
 
 <div class="file-header">Request</div>
 
@@ -311,7 +316,11 @@ POST /api/v0/entries
 }
 ```
 
-### <a name="update-entry"></a> Update entry
+<br>
+
+##### <a name="endpoint-update"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> `/api/v0/entries`
+
+Update entry.
 
 <div class="file-header">Request</div>
 
