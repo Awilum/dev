@@ -408,7 +408,11 @@ PATCH /api/v0/entries
 }
 ```
 
-### <a name="move-entry"></a> Move entry
+<br>
+
+##### <a name="endpoint-move"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries`
+
+Move entry.
 
 <div class="file-header">Request</div>
 
@@ -533,7 +537,11 @@ PUT /api/v0/entries
 }
 ```
 
-### <a name="copy-entry"></a> Copy entry
+<br>
+
+##### <a name="endpoint-copy"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries/copy`
+
+Move entry.
 
 <div class="file-header">Request</div>
 
@@ -619,7 +627,11 @@ PUT /api/v0/entries/copy
 }
 ```
 
-### <a name="delete-entry"></a> Delete entry
+<br>
+
+##### <a name="endpoint-delete"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> `/api/v0/entries`
+
+Delete entry.
 
 <div class="file-header">Request</div>
 
