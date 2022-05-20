@@ -12,8 +12,7 @@ on_this_page:
     link: "endpoints"
     level2:
         -
-            label: '<span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span>'
-            title: "/api/v0/registry"
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v0/registry'
             link: "endpoint-fetch"
 ---
 

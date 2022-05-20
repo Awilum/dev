@@ -8,5 +8,6 @@ template: flextype/docs
 
 * [Introduction]([url]/flextype/documentation/rest-api/introduction)
 * [Entries]([url]/flextype/documentation/rest-api/entries)
+* [Tokens]([url]/flextype/documentation/rest-api/tokens)
 * [Registry]([url]/flextype/documentation/rest-api/registry)
-* [Utilities]([url]/flextype/documentation/rest-api/utilities)
+* [Cache]([url]/flextype/documentation/rest-api/cache)

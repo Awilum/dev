@@ -27,13 +27,17 @@ Flextype provides APIs organized around <b>Re</b>presentational <b>S</b>tate <b>
 
 #### Entries
 
-The Flextype Entries API organized around Representational State Transfer (REST) for delivering entries from Flextype to apps, websites and other. Entries is delivered as JSON data.
-
 For more details <a href="[url]/flextype/documentation/rest-api/entries">read the reference guide for the Entries API</a>.
 
-#### Registry
+#### Tokens
 
-The Flextype Registry API organized around Representational State Transfer (REST) for delivering registry from Flextype to apps, websites and other. Entries is delivered as JSON data.
+For more details <a href="[url]/flextype/documentation/rest-api/tokens">read the reference guide for the Tokens API</a>.
+
+#### Cache
+
+For more details <a href="[url]/flextype/documentation/rest-api/cache">read the reference guide for the Cache API</a>.
+
+#### Registry
 
 For more details <a href="[url]/flextype/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
 
@@ -50,13 +54,7 @@ You should send the authentication token `token` to an API as a query parameter 
 Go to your console and run the following command:
 
 ```text
-token=$(php ./bin/flextype utils:generate-token); 
-access_token=$(php ./bin/flextype utils:generate-token); 
-hashed_access_token=$(php ./bin/flextype utils:generate-token-hash ${access_token}); 
-c1=$(php ./bin/flextype entries:create "tokens/${token}" "{\"hashed_access_token\": \"${hashed_access_token}\"}");
-c2=$(php ./vendor/bin/thermage div "Token: ${token}" "px-2 py-1 bg-primary");
-c3=$(php ./vendor/bin/thermage div "Access token: ${access_token}" "px-2 py-1 bg-primary");  
-echo $c1 . $c2 . $c3;
+php ./bin/flextype tokens:create
 ```
 
 This will craete a new token and an hashed access token.
