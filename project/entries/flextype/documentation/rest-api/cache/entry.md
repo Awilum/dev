@@ -1,5 +1,5 @@
 ---
-title: Utilities
+title: Cache
 template: flextype/docs
 order: 5
 breadcrumbs:
@@ -10,12 +10,13 @@ on_this_page:
   0:
     title: "Endpoints"
     link: "endpoints"
-  1:
-    title: "Clear cache"
-    link: "cache-clear"
+    level2:
+        -
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> Clear cache'
+            link: "endpoint-cache-clear"
 ---
 
-The Flextype Utilities API is organized around Representational State Transfer (REST) with the various helper endpoints to deliver data to apps, websites and others. Utility helper's data is delivered as JSON data.
+The Flextype Cache API is organized around Representational State Transfer (REST) with the various helper endpoints to deliver data to apps, websites and others. 
 
 #### <a name="endpoints"></a> Endpoints
 
@@ -30,20 +31,20 @@ The Flextype Utilities API is organized around Representational State Transfer (
     </thead>
     <tbody>
         <tr>
-            <td>POST</td>
-            <td>/api/v0/utils/cache/clear</td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
+            <td><a href="#endpoint-cache-clear">/api/v0/cache/clear</a></td>
             <td>cache.clear</td>
             <td>Clear cache</td>
         </tr>
     </tbody>
 </table>
 
-### <a name="utils-cache-clear"></a> Clear cache
+##### <a name="endpoint-cache-clear"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/cache/clear`
 
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/utils/cache/clear?token=YOUR_UTILS_TOKEN&access_token=YOUR_ACCESS_TOKEN
+POST /api/v0/cache/clear?token=YOUR_CACHE_TOKEN&access_token=YOUR_CACHE_TOKEN
 ```
 
 ##### Body
@@ -60,7 +61,7 @@ POST /api/v0/utils/cache/clear?token=YOUR_UTILS_TOKEN&access_token=YOUR_ACCESS_T
         <tr>
             <td>token</td>
             <td>REQUIRED</td>
-            <td>Valid Entries token.</td>
+            <td>Valid Cache token.</td>
         </tr>
         <tr>
             <td>access_token</td>
@@ -81,12 +82,13 @@ Clear cache.
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/utils/cache/clear?token=efe1e36e4d60fcd547e22eb9f795dff9&access_token=efe1e36e4d60fcd547e22eb9f795dff9
-```
+GET /api/v0/cache/clear?token=efe1e36e4d60fcd547e22eb9f795dff9&access_token=efe1e36e4d60fcd547e22eb9f795dff9
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>
 
-```json
-{}
+```
+{
+
+}
 ```

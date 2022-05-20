@@ -1,6 +1,6 @@
 ---
 title: Rest API
-order: 3
+order: 4
 template: flextype/docs
 ---
 
