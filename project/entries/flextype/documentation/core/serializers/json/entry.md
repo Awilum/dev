@@ -138,7 +138,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
 <pre><code class="hljs">{
   "color" : "Purple"
 }
-</pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
   "number_3": 21.05,
   "number_4": 1.0E+2
 }
-</pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
 <pre><code class="hljs">{
   "visibility": true
 }
-</pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
 <pre><code class="hljs">{
    "middlename": null
 }
-</pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -183,7 +183,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
   "age": 30,
   "city": "New York"
 }
-</pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -193,7 +193,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
 <pre><code class="hljs">{
   "employees": [ "John", "Anna", "Peter" ]
 }
-</pre>
+</code></pre>
         </td>
     </tr>
 </table>
@@ -209,11 +209,11 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
     </thead>
     <tbody>
         <tr>
-            <td><a href="#methods-encode">encode()</a></td>
+            <td><a href="#method-encode">encode</a></td>
             <td>Returns the JSON representation of a value.</td>
         </tr>
         <tr>
-            <td><a href="#methods-decode">decode()</a></td>
+            <td><a href="#method-decode">decode</a></td>
             <td>Takes a JSON encoded string and converts it into a PHP variable.</td>
         </tr>
     </tbody>
@@ -221,7 +221,7 @@ JSON consist of 6 data types. First four data types (string, number, boolean and
 
 ### Methods Details
 
-##### <a name="encode"></a> `encode()`
+##### <a name="method-encode"></a> `encode`
 
 Returns the JSON representation of a value
 
@@ -229,19 +229,18 @@ Returns the JSON representation of a value
 
 ```php
 $data = [
-                'title' => 'Revelations',
-                'description' => 'While still dealing with the loss of Daniel Jackson the SGC is contacted by the Asgard who require assistance dealing with Anubis, who seems to have new shield technology that can repel Asgard weapons.',
-                'director' => 'Martin Wood',
-                'writers' => 'Brad Wright, Jonathan Glassner',
-                'stars' => 'Richard Dean Anderson, Michael Shanks, Amanda Tapping',
-                'content' => 'Osiris engages in space combat with Thor over a violation of the protected planets treaty. Freyr arrives at the SGC bringing news of Thor\'s death and asking SG-1 to mount a rescue mission to retrieve an Asgard scientist from the planet in question. Upon their arrival Heimdall informs them that Thor still lives and has been taken captive by the Goa\'uld. O\'Neill and Teal\'c transport over to the mothership to rescue him from the clutches of Anubis.'
-        ];
+        'title' => 'Revelations',
+        'description' => 'While still dealing with the loss of Daniel Jackson the SGC is contacted by the Asgard who require assistance dealing with Anubis, who seems to have new shield technology that can repel Asgard weapons.',
+        'director' => 'Martin Wood',
+        'writers' => 'Brad Wright, Jonathan Glassner',
+        'stars' => 'Richard Dean Anderson, Michael Shanks, Amanda Tapping',
+        'content' => 'Osiris engages in space combat with Thor over a violation of the protected planets treaty. Freyr arrives at the SGC bringing news of Thor\'s death and asking SG-1 to mount a rescue mission to retrieve an Asgard scientist from the planet in question. Upon their arrival Heimdall informs them that Thor still lives and has been taken captive by the Goa\'uld. O\'Neill and Teal\'c transport over to the mothership to rescue him from the clutches of Anubis.'
+];
 
 $data = serializers()->json()->encode($data);
-
 ```
 
-##### <a name="decode"></a> `decode()`
+##### <a name="method-decode"></a> `decode`
 
 Takes a JSON encoded string and converts it into a PHP variable.
 
@@ -257,5 +256,4 @@ $json = '{
   "content": "SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa\'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world."}'
 
 $data = serializers()->json()->decode($json);
-
 ```

@@ -30,6 +30,21 @@ A JSON document may contains text, curly braces, square brackets, colons, commas
 
 For more details <a href="[url]/flextype/documentation/core/serializers/json">read the guide for the JSON</a>.
 
+
+### JSON5
+
+The JSON5 Data Interchange Format (JavaScript Object Notation) is a superset of JSON that aims to alleviate some of the limitations of JSON by expanding its syntax to include some productions from [ECMAScript 5.1](https://262.ecma-international.org/5.1/).
+
+For more details <a href="[url]/flextype/documentation/core/serializers/json5">read the guide for the JSON5</a>.
+
+### NEON
+
+NEON is a human-readable structured data format. In Nette, it is used for configuration files. It is also used for structured data such as settings, language translations, etc. 
+
+NEON stands for Nette Object Notation. It is less complex and ungainly than XML or JSON, but provides similar capabilities. It is very similar to YAML. The main advantage is that NEON has so-called entities, thanks to which the configuration of DI services is so sexy. And allows tabs for indentation.
+
+For more details <a href="[url]/flextype/documentation/core/serializers/neon">read the guide for the neon</a>.
+
 ### FRONTMATTER
 
 Any file that contains a YAML front matter block will be processed by Flextype as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Between these triple-dashed lines, you can set predefined variables or even create custom ones of your own.
