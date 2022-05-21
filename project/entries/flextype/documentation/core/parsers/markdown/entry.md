@@ -1132,11 +1132,11 @@ For example, `<p>italic and **bold**</p>` won't work.
     </thead>
     <tbody>
         <tr>
-            <td><a href="#methods-parse">parse()</a></td>
+            <td><a href="#methods-parse">parse</a></td>
             <td>Takes a MARKDOWN encoded string and converts it into a HTML.</td>
         </tr>
         <tr>
-            <td><a href="#methods-getCacheID">getCacheID()</a></td>
+            <td><a href="#methods-getCacheID">getCacheID</a></td>
             <td>Get Cache ID for MARKDOWN.</td>
         </tr>
     </tbody>
@@ -1144,7 +1144,7 @@ For example, `<p>italic and **bold**</p>` won't work.
 
 ### Methods Details
 
-##### <a name="methods-parse"></a> `parse()`
+##### <a name="methods-parse"></a> `parse`
 
 Takes a MARKDOWN encoded string and converts it into a HTML.
 
@@ -1168,7 +1168,7 @@ $markdown = '**this text is bold**';
 $html = parsers()->markdown()->parse($markdown);
 ```
 
-##### <a name="methods-getCacheID"></a> `getCacheID()`
+##### <a name="methods-getCacheID"></a> `getCacheID`
 
 Get Cache ID for markdown.
 

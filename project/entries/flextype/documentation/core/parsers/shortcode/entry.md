@@ -17,26 +17,56 @@ on_this_page:
     link: "shortcodes"
     level2:
       -
-        title: "entries-fetch"
-        link: "shortcodes-entries-fetch"
+        title: "entries"
+        link: "shortcode-entries"
       -
-        title: "registry-get"
-        link: "shortcodes-registry-get"
+        title: "registry"
+        link: "shortcode-registry"
+      -
+        title: "php"
+        link: "shortcode-php"
+      -
+        title: "strings"
+        link: "shortcode-strings"
+      -
+        title: "textile"
+        link: "shortcode-textile"
+      -
+        title: "markdown"
+        link: "shortcode-markdown"
+      -
+        title: "filesystem"
+        link: "shortcode-filesystem"
+      -
+        title: "tr"
+        link: "shortcode-tr"
+      -
+        title: "uuid1"
+        link: "shortcode-uuid1"
+      -
+        title: "uuid2"
+        link: "shortcode-uuid2"
+      -
+        title: "uuid3"
+        link: "shortcode-uuid3"
+      -
+        title: "uuid4"
+        link: "shortcode-uuid4"
       -
         title: "getBaseUrl"
-        link: "shortcodes-getBaseUrl"
+        link: "shortcode-getBaseUrl"
       -
         title: "getBasePath"
-        link: "shortcodes-getBasePath"
+        link: "shortcode-getBasePath"
       -
         title: "getAbsoluteUrl"
-        link: "shortcodes-getAbsoluteUrl"
+        link: "shortcode-getAbsoluteUrl"
       -
         title: "getUriString"
-        link: "shortcodes-getUriString"
+        link: "shortcode-getUriString"
       -
         title: "urlFor"
-        link: "shortcodes-urlFor"
+        link: "shortcode-urlFor"
   -
     title: "Methods"
     link: "methods"
@@ -68,43 +98,53 @@ There are several default shortcodes available.
     <thead>
         <tr>
             <th>Name</th>
-            <th>Parameters</th>
+            <th width="400">Parameters</th>
             <th>Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="#shortcodes-entries-fetch">[raw][entries-fetch][/raw]</a></td>
-            <td>id, field, default</td>
-            <td>Fetch specific entry field.</td>
+            <td><a href="#shortcode-entries">[raw][entries][/raw]</a></td>
+            <td>fetch, field</td>
+            <td>Fetch entry (or collection) or specific field.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-registry-get">[raw][registry-get][/raw]</a></td>
-            <td>name, default</td>
+            <td><a href="#shortcode-registry">[raw][registry][/raw]</a></td>
+            <td>get</td>
             <td>Fetch specific item from registry.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-getBaseUrl">[raw][getBaseUrl][/raw]</a></td>
+            <td><a href="#shortcode-php">[raw][php][/raw]</a></td>
+            <td></td>
+            <td>Execute php code.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-strings">[raw][strings][/raw]</a></td>
+            <td>append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, wordsLimit, at, base64Decode, base64Encode, between, camel, capitalize, chars, charsFrequency, contains, containsAll, containsAny, count, crc32, countSubString, endsWith, finish, firstSegment, format, getEncoding, setEncoding, hash, increment, indexOf, indexOfLast,insert, isAlpha, isAlphanumeric, isAscii, isBase64, isBlank, isBoolean, isDigit, isEmail, isEmpty, isEqual, isFalse, isTrue, isHexadecimal, isHTML, isIP, isJson, isUpper, isLower, isMAC, isNumeric, isPrintable, isPunctuation, isUrl, isSimilar, isSerialized, kebab, lastSegment, length, limit, lines, md5, move, normalizeNewLines, normalizeSpaces, offsetExists, offsetGet, padBoth, padLeft, padRight, quotesToEntities, random, reduceSlashes, repeat, replace, replaceDashes, replaceFirst, replaceLast, replaceNonAlpha, replaceNonAlphanumeric, replacePunctuations, reverse, segment, segments, sha1, sha256, shuffle, similarity, snake, start, startsWith, stripQuotes, stripSpaces, studly, substr, trim, trimLeft, trimRight, trimSlashes, ucfirst, wordsCount, words, wordsFrequency</td>
+            <td>Do strings modifications.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-getBaseUrl">[raw][getBaseUrl][/raw]</a></td>
             <td></td>
             <td>Get the application base url.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-getBasePath">[raw][getBasePath][/raw]</a></td>
+            <td><a href="#shortcode-getBasePath">[raw][getBasePath][/raw]</a></td>
             <td></td>
             <td>Get the application base path.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-getAbsoluteUrl">[raw][getAbsoluteUrl][/raw]</a></td>
+            <td><a href="#shortcode-getAbsoluteUrl">[raw][getAbsoluteUrl][/raw]</a></td>
             <td></td>
             <td>Get the application absolute path.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-getUriString">[raw][getUriString][/raw]</a></td>
+            <td><a href="#shortcode-getUriString">[raw][getUriString][/raw]</a></td>
             <td></td>
             <td>Get the uri string.</td>
         </tr>
         <tr>
-            <td><a href="#shortcodes-urlFor">[raw][urlFor][/raw]</a></td>
+            <td><a href="#shortcode-urlFor">[raw][urlFor][/raw]</a></td>
             <td>routeName, data, queryParams</td>
             <td>Get the url for a named route.</td>
         </tr>
@@ -118,7 +158,7 @@ There are several default shortcodes available.
 
 ### Shortocodes Details
 
-##### <a name="shortcodes-entries-fetch"></a> `[raw][entries-fetch][/raw]`
+##### <a name="shortcode-entries-fetch"></a> `[raw][entries-fetch][/raw]`
 
 Fetch specific entry field.
 
@@ -128,7 +168,7 @@ Fetch specific entry field.
 [raw][entries-fetch id="entry-id" field="field-name" default="default-value"][/raw]
 ```
 
-##### <a name="shortcodes-registry-get"></a> `[raw][registry-get][/raw]`
+##### <a name="shortcode-registry-get"></a> `[raw][registry-get][/raw]`
 
 Fetch specific item from registry.
 
@@ -138,7 +178,7 @@ Fetch specific item from registry.
 [raw][registry-get name="item-name" default="default-value"][/raw]
 ```
 
-##### <a name="shortcodes-getBasePath"></a> `[raw][getBasePath][/raw]`
+##### <a name="shortcode-getBasePath"></a> `[raw][getBasePath][/raw]`
 
 Get the application base path.
 
@@ -148,7 +188,7 @@ Get the application base path.
 [raw][getBaseUrl][/raw]
 ```
 
-##### <a name="shortcodes-getBasePath"></a> `[raw][getBasePath][/raw]`
+##### <a name="shortcode-getBasePath"></a> `[raw][getBasePath][/raw]`
 
 Get the application base path.
 
@@ -158,7 +198,7 @@ Get the application base path.
 [raw][getBaseUrl][/raw]
 ```
 
-##### <a name="shortcodes-getAbsoluteUrl"></a> `[raw][getAbsoluteUrl][/raw]`
+##### <a name="shortcode-getAbsoluteUrl"></a> `[raw][getAbsoluteUrl][/raw]`
 
 Get the application absolute url.
 
@@ -168,7 +208,7 @@ Get the application absolute url.
 [raw][getAbsoluteUrl][/raw]
 ```
 
-##### <a name="shortcodes-getUriString"></a> `[raw][getUriString][/raw]`
+##### <a name="shortcode-getUriString"></a> `[raw][getUriString][/raw]`
 
 Get uri string.
 
@@ -178,7 +218,7 @@ Get uri string.
 [raw][getAbsoluteUrl][/raw]
 ```
 
-##### <a name="shortcodes-urlFor"></a> `[raw][urlFor][/raw]`
+##### <a name="shortcode-urlFor"></a> `[raw][urlFor][/raw]`
 
 Get the url for a named route.
 

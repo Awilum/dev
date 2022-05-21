@@ -61,6 +61,37 @@ on_this_page:
     link: "vars"
     level2: []
   -
+    title: "Directives"
+    link: "directives"
+    level2: 
+        -
+            title: "shortcodes"
+            link: "directive-shortcodes"
+        -
+            title: "markdown"
+            link: "directive-markdown"
+        -
+            title: "textile"
+            link: "directive-markdown"
+        -
+            title: "calc"
+            link: "directive-calc"
+        -
+            title: "var"
+            link: "directive-var"
+        -
+            title: "const"
+            link: "directive-const"
+        -
+            title: "field"
+            link: "directive-field"
+        -
+            title: "type"
+            link: "directive-type"
+        -
+            title: "php"
+            link: "directive-php"
+  -
     title: "Macros"
     link: "macros"
     level2: 
