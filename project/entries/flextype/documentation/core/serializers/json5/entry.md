@@ -102,7 +102,7 @@ specification](https://json5.github.io/json5-spec/).
 
 ##### <a name="encode"></a> `encode()`
 
-Returns the JSON5 representation of a value
+Returns the NEON representation of a value
 
 **Examples**
 
@@ -121,7 +121,7 @@ $data = serializers()->json5()->encode($data);
 
 ##### <a name="method-decode"></a> `decode`
 
-Takes a JSON5 encoded string and converts it into a PHP variable.
+Takes a NEON encoded string and converts it into a PHP variable.
 
 **Examples**
 

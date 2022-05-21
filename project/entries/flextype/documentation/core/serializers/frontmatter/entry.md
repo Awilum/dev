@@ -22,7 +22,37 @@ on_this_page:
         link: "methods-decode"
 ---
 
-Any file that contains a YAML front matter block will be processed by Flextype as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Between these triple-dashed lines, you can set predefined variables or even create custom ones of your own.
+Frontmatter format is a way of representing data as frontmatter header and content.
+Between triple-dashed lines, you can set predefined variables or even create custom ones of your own. After closed triple-dashed lines, the rest of the file is considered as content.
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+title: Meridian
+description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
+director: William Waring
+writers: Brad Wright, Jonathan Glassner
+stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
+&minus;&minus;&minus;
+SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
+
+For **Frontmatter** header you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. For example:
+
+
+```yaml
+&minus;&minus;&minus;json
+{
+  "title": "Meridian",
+  "description": "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.",
+  "director": "William Waring",
+  "writers": "Brad Wright, Jonathan Glassner",
+  "stars": "Richard Dean Anderson, Michael Shanks, Amanda Tapping"
+}
+&minus;&minus;&minus;
+SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
 
 ### <a name="methods"></a> Methods
 
@@ -64,7 +94,6 @@ $data = [
         ];
 
 $data = serializers()->frontmatter()->encode($data);
-
 ```
 
 ##### <a name="methods-decode"></a> `decode`
@@ -85,5 +114,4 @@ $frontmatter = "
     SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world."
 
 $data = serializers()->frontmatter()->decode($frontmatter);
-
 ```
