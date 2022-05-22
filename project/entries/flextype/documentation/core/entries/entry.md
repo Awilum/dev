@@ -548,6 +548,198 @@ Get field `author.twitter` in PHP.
 echo entries()->fetch('home')['author.twitter']; // @getflextype
 ```
 
+### <a name="vars"></a> Vars
+
+You may define variables in your entries.
+
+```yaml
+&minus;&minus;&minus;
+vars:
+  title: Meridian
+  ratings:
+    stars: 5
+title: @var[title]
+description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
+director: William Waring
+writers: Brad Wright, Jonathan Glassner
+stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
+&minus;&minus;&minus;
+
+Title: @var[title] 
+
+Rating: @var[ratings.stars] stars.
+
+Content:
+SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+```
+
+### <a name="directives"></a> Directives
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Directive</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#directive-shotcodes">shortcodes</a></td>
+            <td>Parse shortcodes text inside current field.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-markdown">markdown</a></td>
+            <td>Parse markdown text inside current field.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-textile">textile</a></td>
+            <td>Parse textile text inside current field.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-php">php</a></td>
+            <td>Execute php code inside current field.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-calc">calc</a></td>
+            <td>Calculate value.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-var">var</a></td>
+            <td>Get defined var.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-const">const</a></td>
+            <td>Get defined constant.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-field">field</a></td>
+            <td>Get current entry field.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-type">type</a></td>
+            <td>Set current field type.</td>
+        </tr>
+    </tbody>
+</table>
+
+### Directives Details
+
+##### <a name="directive-update"></a> `shortcodes`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+discount: "@shortcodes (strings random)" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-markdown"></a> `markdown`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+text: "@markdown **bold text here**" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-textile"></a> `textile`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+text: "@textile **bold text here**" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-php"></a> `php`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+text: "@php echo 'Hello World';" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-calc"></a> `calc`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+result: "@calc[2+2-2]" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-var"></a> `var`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+vars: 
+    title: "GT Fury"
+    currency: "USD"
+    vat: '@type[int] (strings random: "2,1234567890)"'
+title: "@var[title]"
+price: "@calc[100+@var[vat]]"
+&minus;&minus;&minus;
+GT Fury content here...
+```
+
+##### <a name="directive-const"></a> `const`
+
+Available constants: `ROOT_DIR` and `PATH_PROJECT`.
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+root_dir: "@const[ROOT_DIR]" 
+&minus;&minus;&minus;
+```
+
+##### <a name="directive-field"></a> `field`
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+vars: 
+    title: "GT Fury"
+    currency: "USD"
+    vat: '(strings random: "2,1234567890)"'
+title: "@var[title]"
+price: "@calc[100+@var[vat]]"
+price_with_currency: "@field[price] @var[currency]"
+&minus;&minus;&minus;
+GT Fury content here...
+```
+
+
+##### <a name="directive-type"></a> `type`
+
+Available types: `int`, `integer`, `float`, `bool`, `boolean`, `array`, `json`, `collection`, `null` and `string`.
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+vars: 
+    title: "GT Fury"
+    currency: "USD"
+    vat: '@type[int] (strings random: "2,1234567890)"'
+title: "@var[title]"
+price: "@calc[100+@var[vat]]"
+price_with_currency: "@field[price] @var[currency]"
+&minus;&minus;&minus;
+GT Fury content here...
+```
+
 ### <a name="methods"></a> Methods
 
 <table>

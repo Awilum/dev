@@ -50,15 +50,19 @@
             </ul>
             <h4 class="pt-8">Core Concepts</h4>
             <ul class="m-0 p-0 list-none">
+                {#
                 <li class="{% if entry.id == "/core/flextype" %}active{% endif %}">
                     <a href="{{ url() }}/flextype/documentation/core/flextype" class="no-underline">Flextype</a>
                 </li>
+                #}
                 <li class="{% if entry.id == "/core/entries" %}active{% endif %}">
                     <a href="{{ url() }}/flextype/documentation/core/entries" class="no-underline">Entries</a>
                 </li>
+                {#
                 <li class="{% if entry.id == "/core/plugins" %}active{% endif %}">
                     <a href="{{ url() }}/flextype/documentation/core/plugins" class="no-underline">Plugins</a>
                 </li>
+                #}
                 <li class="{% if entry.id == "/core/parsers" %}active{% endif %}">
                     <a href="{{ url() }}/flextype/documentation/core/parsers" class="no-underline">Parsers</a>
                 </li>
