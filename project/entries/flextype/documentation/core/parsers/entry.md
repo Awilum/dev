@@ -20,6 +20,6 @@ For more details <a href="[url]/flextype/documentation/core/parsers/markdown">re
 
 ### SHORTCODE
 
-Shortcode is a small piece of code, indicated by brackets like `[this]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
+Shortcode is a small piece of code, indicated by brackets like `(this)`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 For more details <a href="[url]/flextype/documentation/core/parsers/shortcode">read the guide for the SHORTCODE</a>.

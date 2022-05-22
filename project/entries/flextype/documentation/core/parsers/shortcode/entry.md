@@ -41,6 +41,9 @@ on_this_page:
         title: "tr"
         link: "shortcode-tr"
       -
+        title: "if"
+        link: "shortcode-if"
+      -
         title: "uuid1"
         link: "shortcode-uuid1"
       -
@@ -104,47 +107,92 @@ There are several default shortcodes available.
     </thead>
     <tbody>
         <tr>
-            <td><a href="#shortcode-entries">[raw][entries][/raw]</a></td>
+            <td><a href="#shortcode-entries">entries</a></td>
             <td>fetch, field</td>
             <td>Fetch entry (or collection) or specific field.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-registry">[raw][registry][/raw]</a></td>
+            <td><a href="#shortcode-registry">registry</a></td>
             <td>get</td>
             <td>Fetch specific item from registry.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-php">[raw][php][/raw]</a></td>
+            <td><a href="#shortcode-php">php</a></td>
             <td></td>
             <td>Execute php code.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-strings">[raw][strings][/raw]</a></td>
+            <td><a href="#shortcode-strings">strings</a></td>
             <td>append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, wordsLimit, at, base64Decode, base64Encode, between, camel, capitalize, chars, charsFrequency, contains, containsAll, containsAny, count, crc32, countSubString, endsWith, finish, firstSegment, format, getEncoding, setEncoding, hash, increment, indexOf, indexOfLast,insert, isAlpha, isAlphanumeric, isAscii, isBase64, isBlank, isBoolean, isDigit, isEmail, isEmpty, isEqual, isFalse, isTrue, isHexadecimal, isHTML, isIP, isJson, isUpper, isLower, isMAC, isNumeric, isPrintable, isPunctuation, isUrl, isSimilar, isSerialized, kebab, lastSegment, length, limit, lines, md5, move, normalizeNewLines, normalizeSpaces, offsetExists, offsetGet, padBoth, padLeft, padRight, quotesToEntities, random, reduceSlashes, repeat, replace, replaceDashes, replaceFirst, replaceLast, replaceNonAlpha, replaceNonAlphanumeric, replacePunctuations, reverse, segment, segments, sha1, sha256, shuffle, similarity, snake, start, startsWith, stripQuotes, stripSpaces, studly, substr, trim, trimLeft, trimRight, trimSlashes, ucfirst, wordsCount, words, wordsFrequency</td>
             <td>Do strings modifications.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-getBaseUrl">[raw][getBaseUrl][/raw]</a></td>
+            <td><a href="#shortcode-textile">textile</a></td>
+            <td></td>
+            <td>Parse textile text.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-markdown">markdown</a></td>
+            <td></td>
+            <td>Parse markdown text.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-filesystem">filesystem</a></td>
+            <td></td>
+            <td>Do filesystem manipulation.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-tr">tr</a></td>
+            <td>find</td>
+            <td>Returns translation of a string. If no translation exists, the original string will be returned.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-if">if</a></td>
+            <td>val1, operator, val2</td>
+            <td>Adds ability to use logical if conditions.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-uuid1">uuid1</a></td>
+            <td></td>
+            <td>Generates UUID1.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-uuid2">uuid2</a></td>
+            <td></td>
+            <td>Generates UUID2.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-uuid3">uuid3</a></td>
+            <td></td>
+            <td>Generates UUID3.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-uuid4">uuid4</a></td>
+            <td></td>
+            <td>Generates UUID4.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-getBaseUrl">getBaseUrl</a></td>
             <td></td>
             <td>Get the application base url.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-getBasePath">[raw][getBasePath][/raw]</a></td>
+            <td><a href="#shortcode-getBasePath">getBasePath</a></td>
             <td></td>
             <td>Get the application base path.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-getAbsoluteUrl">[raw][getAbsoluteUrl][/raw]</a></td>
+            <td><a href="#shortcode-getAbsoluteUrl">getAbsoluteUrl</a></td>
             <td></td>
             <td>Get the application absolute path.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-getUriString">[raw][getUriString][/raw]</a></td>
+            <td><a href="#shortcode-getUriString">getUriString</a></td>
             <td></td>
             <td>Get the uri string.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-urlFor">[raw][urlFor][/raw]</a></td>
+            <td><a href="#shortcode-urlFor">urlFor</a></td>
             <td>routeName, data, queryParams</td>
             <td>Get the url for a named route.</td>
         </tr>
@@ -158,74 +206,237 @@ There are several default shortcodes available.
 
 ### Shortocodes Details
 
-##### <a name="shortcode-entries-fetch"></a> `[raw][entries-fetch][/raw]`
+##### <a name="shortcode-entries"></a> `entries`
 
-Fetch specific entry field.
-
-**Examples**
-
-```
-[raw][entries-fetch id="entry-id" field="field-name" default="default-value"][/raw]
-```
-
-##### <a name="shortcode-registry-get"></a> `[raw][registry-get][/raw]`
-
-Fetch specific item from registry.
+Fetch entry (or entries collection) or a specific field.
 
 **Examples**
 
-```
-[raw][registry-get name="item-name" default="default-value"][/raw]
+**Fetch single entry**
+
+```text
+(entries fetch:blog)
 ```
 
-##### <a name="shortcode-getBasePath"></a> `[raw][getBasePath][/raw]`
+**Fetch secific field from a single entry**
+
+```text
+(entries fetch:blog field:"title,Blog")
+```
+
+**Fetch entries collection**
+
+```text
+(entries fetch:"blog,collection=true")
+```
+
+**Fetch entries collection with filtering options**
+
+```text
+(entries fetch:"blog,collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC")
+```
+
+##### <a name="shortcode-registry"></a> `registry`
+
+Get specific item from registry.
+
+**Examples**
+
+```text
+(registry get:"flextype.manifest.name,Flextype")
+```
+
+##### <a name="shortcode-php"></a> `php`
+
+Execute php code.
+
+**Examples**
+
+```text
+(php)
+  echo "Hello World!";
+(/php)
+```
+
+##### <a name="shortcode-strings"></a> `strings`
+
+Do strings manipulation.
+
+You may use the following parameters:
+
+append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, wordsLimit, at, base64Decode, base64Encode, between, camel, capitalize, chars, charsFrequency, contains, containsAll, containsAny, count, crc32, countSubString, endsWith, finish, firstSegment, format, getEncoding, setEncoding, hash, increment, indexOf, indexOfLast,insert, isAlpha, isAlphanumeric, isAscii, isBase64, isBlank, isBoolean, isDigit, isEmail, isEmpty, isEqual, isFalse, isTrue, isHexadecimal, isHTML, isIP, isJson, isUpper, isLower, isMAC, isNumeric, isPrintable, isPunctuation, isUrl, isSimilar, isSerialized, kebab, lastSegment, length, limit, lines, md5, move, normalizeNewLines, normalizeSpaces, offsetExists, offsetGet, padBoth, padLeft, padRight, quotesToEntities, random, reduceSlashes, repeat, replace, replaceDashes, replaceFirst, replaceLast, replaceNonAlpha, replaceNonAlphanumeric, replacePunctuations, reverse, segment, segments, sha1, sha256, shuffle, similarity, snake, start, startsWith, stripQuotes, stripSpaces, studly, substr, trim, trimLeft, trimRight, trimSlashes, ucfirst, wordsCount, words, wordsFrequency.
+
+**Examples**
+
+```text
+// foo
+(strings lower)Foo(/strings)
+
+// FOO
+(strings upper)foo(/strings)
+
+// HELLO WORLD
+(strings preppend: "Hello " upper)World(/strings)
+
+// ...
+```
+
+##### <a name="shortcode-textile"></a> `textile`
+
+Parse textile text.
+
+**Examples**
+
+```text
+(textile)
+  h2. Textile
+  * is a _shorthand syntax_ used to generate valid HTML
+  * is *easy* to read and *easy* to write
+  * can generate complex pages, including: headings, quotes, lists, tables and figures
+(/textile)
+```
+
+##### <a name="shortcode-textile"></a> `markdown`
+
+Parse markdown text.
+
+**Examples**
+
+```text
+(markdown)
+  # Markdown
+  ** markdown text **
+(/markdown)
+```
+
+##### <a name="shortcode-filesystem"></a> `filesystem`
+
+Do filesystem manipulation.
+
+**Examples**
+
+```text
+(filesystem get: "file.txt")
+```
+
+##### <a name="shortcode-tr"></a> `tr`
+
+Returns translation of a string. If no translation exists, the original string will be returned.
+
+**Examples**
+
+```text
+(tr find: "translate_key")
+```
+
+##### <a name="shortcode-if"></a> `if`
+
+Adds ability to use logical if conditions.
+
+You may use the following operators:
+
+```text
+<, lt, >, gt, <=, le, >=, eq, =, !=, <>, neq, 
+gte, lte, contains, like, ncontains, nlike, regex,
+nregex, starts_with, ends_with, newer, older
+```
+
+**Examples**
+
+```text
+(if val1: "@field[price]" operator: ">" val2: "100") 
+  Display content here...
+(/if)
+```
+
+##### <a name="shortcode-uuid1"></a> `uuid1`
+
+Generates UUID1.
+
+**Examples**
+
+```text
+(uuid1)
+```
+
+##### <a name="shortcode-uuid2"></a> `uuid2`
+
+Generates UUID2.
+
+**Examples**
+
+```text
+(uuid2)
+```
+
+##### <a name="shortcode-uuid3"></a> `uuid3`
+
+Generates UUID3.
+
+**Examples**
+
+```text
+(uuid3)
+```
+
+##### <a name="shortcode-uuid4"></a> `uuid4`
+
+Generates UUID4.
+
+**Examples**
+
+```text
+(uuid4)
+```
+
+##### <a name="shortcode-getBasePath"></a> `getBasePath`
 
 Get the application base path.
 
 **Examples**
 
 ```
-[raw][getBaseUrl][/raw]
+(getBaseUrl)
 ```
 
-##### <a name="shortcode-getBasePath"></a> `[raw][getBasePath][/raw]`
+##### <a name="shortcode-getBasePath"></a> `getBasePath`
 
 Get the application base path.
 
 **Examples**
 
 ```
-[raw][getBaseUrl][/raw]
+(getBaseUrl])
 ```
 
-##### <a name="shortcode-getAbsoluteUrl"></a> `[raw][getAbsoluteUrl][/raw]`
+##### <a name="shortcode-getAbsoluteUrl"></a> `getAbsoluteUrl`
 
 Get the application absolute url.
 
 **Examples**
 
 ```
-[raw][getAbsoluteUrl][/raw]
+(getAbsoluteUrl)
 ```
 
-##### <a name="shortcode-getUriString"></a> `[raw][getUriString][/raw]`
+##### <a name="shortcode-getUriString"></a> `getUriString`
 
 Get uri string.
 
 **Examples**
 
 ```
-[raw][getAbsoluteUrl][/raw]
+(getAbsoluteUrl)
 ```
 
-##### <a name="shortcode-urlFor"></a> `[raw][urlFor][/raw]`
+##### <a name="shortcode-urlFor"></a> `urlFor`
 
 Get the url for a named route.
 
 **Examples**
 
 ```
-[raw][urlFor routeName="route-name" data='{"foo": "Foo"}' queryParams='{"foo": "Foo"}'][/raw]
+(urlFor routeName: "route-name" data: '{"foo": "Foo"}' queryParams: '{"foo": "Foo"}')
 ```
 
 ### <a name="methods"></a> Methods
