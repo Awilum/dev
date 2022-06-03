@@ -507,7 +507,7 @@ public function addHandler(string $name, callable $handler)
 **Examples**
 
 ```php
-parsers()->shortcode()->addHandler('message', function () {
+parsers()->shortcodes()->addHandler('message', function () {
     return "Indeed. – Teal'c";
 });
 ```
@@ -531,12 +531,12 @@ public function addEventHandler(string $name, callable $handler)
 **Examples**
 
 ```php
-parsers()->shortcode()->addHandler('raw', static function (ShortcodeInterface $s) {
+parsers()->shortcodes()->addHandler('raw', static function (ShortcodeInterface $s) {
     return $s->getContent();
 });
 
 parsers()
-    ->shortcode()
+    ->shortcodes()
     ->addEventHandler(Events::FILTER_SHORTCODES,
                       new FilterRawEventHandler(['raw']));
 ```
@@ -563,9 +563,9 @@ public function process(string $input, bool $cache = true)
 **Examples**
 
 ```php
-$shortcode = 'text with [message]';
+$shortcode = 'text with (message)';
 
-$html = parsers()->shortcode()->process($shortcode);
+$html = parsers()->shortcodes()->process($shortcode);
 ```
 
 ##### <a name="methods-parse"></a> `parse`
@@ -586,9 +586,9 @@ public function parse(string $input)
 **Examples**
 
 ```php
-$shortcode = 'text with [message]';
+$shortcode = 'text with (message)';
 
-$text = parsers()->shortcode()->parse($shortcode);
+$text = parsers()->shortcodes()->parse($shortcode);
 ```
 
 ##### <a name="methods-getCacheID"></a> `getCacheID`
@@ -611,7 +611,7 @@ public function getCacheID(string $input): string
 **Examples**
 
 ```php
-$shortcode = 'text with [message]';
+$shortcode = 'text with (message)';
 
-$cache_id = parsers()->shortcode()->getCacheID($shortcode);
+$cache_id = parsers()->shortcodes()->getCacheID($shortcode);
 ```
