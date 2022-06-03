@@ -26,6 +26,9 @@ on_this_page:
         title: "php"
         link: "shortcode-php"
       -
+        title: "eval"
+        link: "shortcode-eval"
+      -
         title: "strings"
         link: "shortcode-strings"
       -
@@ -44,17 +47,14 @@ on_this_page:
         title: "if"
         link: "shortcode-if"
       -
-        title: "uuid1"
-        link: "shortcode-uuid1"
+        title: "when"
+        link: "shortcode-when"
       -
-        title: "uuid2"
-        link: "shortcode-uuid2"
+        title: "unless"
+        link: "shortcode-when"
       -
-        title: "uuid3"
-        link: "shortcode-uuid3"
-      -
-        title: "uuid4"
-        link: "shortcode-uuid4"
+        title: "uuid"
+        link: "shortcode-uuid"
       -
         title: "getBaseUrl"
         link: "shortcode-getBaseUrl"
@@ -91,7 +91,7 @@ on_this_page:
         link: "methods-getCacheID"
 ---
 
-Shortcode is a small piece of code, indicated by brackets like `[raw][this][/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
+Shortcode is a small piece of code, indicated by brackets like `[raw](this)[/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 ### <a name="shortcodes"></a> Shortcodes
 

@@ -105,6 +105,10 @@ on_this_page:
         title: "php"
         link: "macros-php"
   -
+    title: "Expressions"
+    link: "expressions"
+    level2: []
+  -
     title: "Methods"
     link: "methods"
     level2:
@@ -237,7 +241,7 @@ content: '''
 
 ### <a name="entries-and-urls-structure"></a> Entries and Urls structure
 
-All project entries are located in the `project/entries/` folder.
+All project entries are located in the `project/entries` folder.
 
 Each entry file should be placed in its folder.
 
@@ -558,23 +562,22 @@ vars:
   title: Meridian
   ratings:
     stars: 5
-title: @var[title]
+title: "(var:title)"
 description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
 director: William Waring
 writers: Brad Wright, Jonathan Glassner
 stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
 &minus;&minus;&minus;
 
-Title: @var[title] 
+Title: (var:title)
 
-Rating: @var[ratings.stars] stars.
+Rating: (var:ratings.stars) stars.
 
 Content:
 SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
 ```
 
 ### <a name="directives"></a> Directives
-
 
 <table>
     <thead>
@@ -601,24 +604,12 @@ SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering 
             <td>Execute php code inside current field.</td>
         </tr>
         <tr>
-            <td><a href="#directive-calc">calc</a></td>
-            <td>Calculate value.</td>
-        </tr>
-        <tr>
-            <td><a href="#directive-var">var</a></td>
-            <td>Get defined var.</td>
-        </tr>
-        <tr>
-            <td><a href="#directive-const">const</a></td>
-            <td>Get defined constant.</td>
-        </tr>
-        <tr>
-            <td><a href="#directive-field">field</a></td>
-            <td>Get current entry field.</td>
-        </tr>
-        <tr>
             <td><a href="#directive-type">type</a></td>
             <td>Set current field type.</td>
+        </tr>
+        <tr>
+            <td><a href="#directive-expressions">[raw][[ ]][/raw]</a></td>
+            <td>Eval expression.</td>
         </tr>
     </tbody>
 </table>
@@ -665,62 +656,6 @@ text: "@php echo 'Hello World';"
 &minus;&minus;&minus;
 ```
 
-##### <a name="directive-calc"></a> `calc`
-
-**Examples**
-
-```yaml
-&minus;&minus;&minus;
-result: "@calc[2+2-2]" 
-&minus;&minus;&minus;
-```
-
-##### <a name="directive-var"></a> `var`
-
-**Examples**
-
-```yaml
-&minus;&minus;&minus;
-vars: 
-    title: "GT Fury"
-    currency: "USD"
-    vat: '@type[int] (strings random: "2,1234567890)"'
-title: "@var[title]"
-price: "@calc[100+@var[vat]]"
-&minus;&minus;&minus;
-GT Fury content here...
-```
-
-##### <a name="directive-const"></a> `const`
-
-Available constants: `ROOT_DIR` and `PATH_PROJECT`.
-
-**Examples**
-
-```yaml
-&minus;&minus;&minus;
-root_dir: "@const[ROOT_DIR]" 
-&minus;&minus;&minus;
-```
-
-##### <a name="directive-field"></a> `field`
-
-**Examples**
-
-```yaml
-&minus;&minus;&minus;
-vars: 
-    title: "GT Fury"
-    currency: "USD"
-    vat: '(strings random: "2,1234567890)"'
-title: "@var[title]"
-price: "@calc[100+@var[vat]]"
-price_with_currency: "@field[price] @var[currency]"
-&minus;&minus;&minus;
-GT Fury content here...
-```
-
-
 ##### <a name="directive-type"></a> `type`
 
 Available types: `int`, `integer`, `float`, `bool`, `boolean`, `array`, `json`, `collection`, `null` and `string`.
@@ -739,6 +674,167 @@ price_with_currency: "@field[price] @var[currency]"
 &minus;&minus;&minus;
 GT Fury content here...
 ```
+
+##### <a name="directive-expression"></a> `[[ ]]`
+
+Eval expression.
+
+```yaml
+price: "[[ 100 + var('vat') ]]"
+message: "[[ field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' ]]"
+```
+
+### <a name="macros"></a> Macros
+
+##### <a name="macros-entries"></a> `entries`
+
+**Examples**
+
+```yaml
+macros:
+  entries:
+    fetch:
+      posts:
+        id: blog
+        options:
+          collection: true
+          find: []
+          filter: []
+      post:
+        id: blog/post-1
+        options:
+          filter: []
+      testimonials:
+        id: testimonials
+```
+
+##### <a name="macros-registry"></a> `registry`
+
+**Examples**
+
+```yaml
+macros:
+  registry:
+    get:
+      flextype:
+        id: flextype.manifest.name
+      author.name:
+        id: flextype.manifest.author.name
+      license:
+        id: flextype.manifest.license
+```
+
+##### <a name="macros-php"></a> `php`
+
+**Examples**
+
+```yaml
+title: Blog
+macros:
+  php: |
+    $entry = entries()->registry()->get('methods.fetch');
+    $entry['result']['posts'] = entries()->fetch('blog', ['collection' => true, 'filter' => ['sort_by' => ['key' => 'date', 'direction' => 'ASC']]])->toArray();
+    entries()->registry()->set('methods.fetch', $entry); 
+```
+
+### <a name="expressions"></a> Expressions
+
+### <a name="functions"></a> Functions
+
+<table>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#expression-function-actions">actions</a></td>
+            <td>Get actions service.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-collection">collection</a></td>
+            <td>Create a new arrayable collection object from the given elements.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-collectionFromJson">collectionFromJson</a></td>
+            <td>Create a new arrayable collection object from the given JSON string.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-collectionFromString">collectionFromString</a></td>
+            <td>Create a new arrayable collection object from the given string.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-collectionWithRange">collectionWithRange</a></td>
+            <td>Create a new arrayable object with a range of elements.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-collectionFromQueryString">collectionFromQueryString</a></td>
+            <td>Create a new arrayable object from the given query string.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-filterCollection">filterCollection</a></td>
+            <td>Filter collection.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-const">const</a></td>
+            <td>Get php constant.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-var">var</a></td>
+            <td>Get entry var.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-field">field</a></td>
+            <td>Get entry field.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-csrf">csrf</a></td>
+            <td>Get csrf hidden input.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-filesystem">filesystem</a></td>
+            <td>Get filesystem instance.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-filesystem">filesystem</a></td>
+            <td>Get filesystem instance.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-tr">tr</a></td>
+            <td>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-__"></a></td>
+            <td>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-parsers">parsers</a></td>
+            <td>Get parsers service.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-serializers">serializers</a></td>
+            <td>Get serializers service.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-slugify">slugify</a></td>
+            <td>Get slugify service.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-strings">strings</a></td>
+            <td>Get strings instance.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-registry">registry</a></td>
+            <td>Get registry service.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-strings">strings</a></td>
+            <td>Get strings instance.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### <a name="methods"></a> Methods
 
