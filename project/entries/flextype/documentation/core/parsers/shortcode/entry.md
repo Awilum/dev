@@ -108,18 +108,28 @@ There are several default shortcodes available.
     <tbody>
         <tr>
             <td><a href="#shortcode-entries">entries</a></td>
-            <td>fetch, field</td>
+            <td>fetch, id, options, field, default</td>
             <td>Fetch entry (or collection) or specific field.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-registry">registry</a></td>
-            <td>get</td>
+            <td>get, id, default</td>
             <td>Fetch specific item from registry.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-php">php</a></td>
             <td></td>
             <td>Execute php code.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-eval">eval</a></td>
+            <td></td>
+            <td>Eval expression.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-calc">calc</a></td>
+            <td>expressions with values</td>
+            <td>Calculate values.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-strings">strings</a></td>
@@ -138,38 +148,33 @@ There are several default shortcodes available.
         </tr>
         <tr>
             <td><a href="#shortcode-filesystem">filesystem</a></td>
-            <td></td>
+            <td>get, file</td>
             <td>Do filesystem manipulation.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-tr">tr</a></td>
-            <td>find</td>
+            <td>values, locale</td>
             <td>Returns translation of a string. If no translation exists, the original string will be returned.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-if">if</a></td>
-            <td>val1, operator, val2</td>
+            <td>expression</td>
             <td>Adds ability to use logical if conditions.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-uuid1">uuid1</a></td>
-            <td></td>
-            <td>Generates UUID1.</td>
+            <td><a href="#shortcode-when">when</a></td>
+            <td>expression</td>
+            <td>Adds ability to use logical positive if conditions.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-uuid2">uuid2</a></td>
-            <td></td>
-            <td>Generates UUID2.</td>
+            <td><a href="#shortcode-unless">unless</a></td>
+            <td>expression</td>
+            <td>Adds ability to use logical negative if conditions.</td>
         </tr>
         <tr>
-            <td><a href="#shortcode-uuid3">uuid3</a></td>
+            <td><a href="#shortcode-uuid">uuid</a></td>
             <td></td>
-            <td>Generates UUID3.</td>
-        </tr>
-        <tr>
-            <td><a href="#shortcode-uuid4">uuid4</a></td>
-            <td></td>
-            <td>Generates UUID4.</td>
+            <td>Generates UUID.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-getBaseUrl">getBaseUrl</a></td>
@@ -215,25 +220,25 @@ Fetch entry (or entries collection) or a specific field.
 **Fetch single entry**
 
 ```text
-(entries fetch:blog)
+(entries fetch id:'blog')
 ```
 
 **Fetch secific field from a single entry**
 
 ```text
-(entries fetch:blog field:"title,Blog")
+(entries fetch id:'blog' field:'title' default:'Blog')
 ```
 
 **Fetch entries collection**
 
 ```text
-(entries fetch:"blog,collection=true")
+(entries fetch id:'blog' options:'collection=true')
 ```
 
 **Fetch entries collection with filtering options**
 
 ```text
-(entries fetch:"blog,collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC")
+(entries fetch id:'blog' options:'collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC')
 ```
 
 ##### <a name="shortcode-registry"></a> `registry`
@@ -243,7 +248,7 @@ Get specific item from registry.
 **Examples**
 
 ```text
-(registry get:"flextype.manifest.name,Flextype")
+(registry get id:'flextype.manifest.name' default:'Flextype')
 ```
 
 ##### <a name="shortcode-php"></a> `php`
@@ -256,6 +261,28 @@ Execute php code.
 (php)
   echo "Hello World!";
 (/php)
+```
+
+##### <a name="shortcode-eval"></a> `eval`
+
+Eval expression.
+
+**Examples**
+
+```text
+(eval)
+  1 + 1;
+(/eval)
+```
+
+##### <a name="shortcode-calc"></a> `calc`
+
+Calculate values.
+
+**Examples**
+
+```text
+(calc:'1+1')
 ```
 
 ##### <a name="shortcode-strings"></a> `strings`
@@ -276,7 +303,7 @@ append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, words
 (strings upper)foo(/strings)
 
 // HELLO WORLD
-(strings preppend: "Hello " upper)World(/strings)
+(strings preppend: 'Hello ' upper)World(/strings)
 
 // ...
 ```
@@ -316,7 +343,7 @@ Do filesystem manipulation.
 **Examples**
 
 ```text
-(filesystem get: "file.txt")
+(filesystem get file:'file.txt')
 ```
 
 ##### <a name="shortcode-tr"></a> `tr`
@@ -326,67 +353,54 @@ Returns translation of a string. If no translation exists, the original string w
 **Examples**
 
 ```text
-(tr find: "translate_key")
+(tr:'translate_key')
 ```
 
 ##### <a name="shortcode-if"></a> `if`
 
 Adds ability to use logical if conditions.
 
-You may use the following operators:
-
-```text
-<, lt, >, gt, <=, le, >=, eq, =, !=, <>, neq, 
-gte, lte, contains, like, ncontains, nlike, regex,
-nregex, starts_with, ends_with, newer, older
-```
-
 **Examples**
 
 ```text
-(if val1: "@field[price]" operator: ">" val2: "100") 
+(if:'100 > 20') 
   Display content here...
 (/if)
 ```
 
-##### <a name="shortcode-uuid1"></a> `uuid1`
+##### <a name="shortcode-when"></a> `when`
 
-Generates UUID1.
+Adds ability to use logical positive if conditions.
 
 **Examples**
 
 ```text
-(uuid1)
+(when:'100 > 20') 
+  Display content here...
+(/when)
 ```
 
-##### <a name="shortcode-uuid2"></a> `uuid2`
+##### <a name="shortcode-unless"></a> `unless`
 
-Generates UUID2.
+Adds ability to use logical negative if conditions.
 
 **Examples**
 
 ```text
-(uuid2)
+(unless:'100 < 20') 
+  Display content here...
+(/unless)
 ```
 
-##### <a name="shortcode-uuid3"></a> `uuid3`
+##### <a name="shortcode-uuid"></a> `uuid`
 
-Generates UUID3.
-
-**Examples**
-
-```text
-(uuid3)
-```
-
-##### <a name="shortcode-uuid4"></a> `uuid4`
-
-Generates UUID4.
+Generates UUID.
 
 **Examples**
 
 ```text
-(uuid4)
+(uuid)
+(uuid:4)
 ```
 
 ##### <a name="shortcode-getBasePath"></a> `getBasePath`
@@ -436,7 +450,7 @@ Get the url for a named route.
 **Examples**
 
 ```
-(urlFor routeName: "route-name" data: '{"foo": "Foo"}' queryParams: '{"foo": "Foo"}')
+(urlFor routeName: 'route-name' data: '{"foo": "Foo"}' queryParams: '{"foo": "Foo"}')
 ```
 
 ### <a name="methods"></a> Methods
