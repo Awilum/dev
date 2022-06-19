@@ -1824,6 +1824,10 @@ a.brand-logo:hover > svg {
   margin-right: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -1854,10 +1858,6 @@ a.brand-logo:hover > svg {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mt-4 {
@@ -2044,12 +2044,12 @@ a.brand-logo:hover > svg {
   height: 12rem;
 }
 
-.w-20 {
-  width: 5rem;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .w-10\/12 {
@@ -2269,12 +2269,12 @@ a.brand-logo:hover > svg {
   border-top-left-radius: 0.25rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-2 {
   border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-x {
@@ -2315,12 +2315,25 @@ a.brand-logo:hover > svg {
   border-bottom-width: 0px;
 }
 
+.border-l-4 {
+  border-left-width: 4px;
+}
+
+.border-l-2 {
+  border-left-width: 2px;
+}
+
 .border-double {
   border-style: double;
 }
 
 .border-hidden {
   border-style: hidden;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-slate-900 {
@@ -2333,9 +2346,14 @@ a.brand-logo:hover > svg {
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
 
-.border-black {
+.border-lime-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(132 204 22 / var(--tw-border-opacity));
+}
+
+.border-l-lime-500 {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(132 204 22 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -2431,6 +2449,11 @@ a.brand-logo:hover > svg {
   padding-bottom: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2459,11 +2482,6 @@ a.brand-logo:hover > svg {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .py-0 {
@@ -2587,6 +2605,10 @@ a.brand-logo:hover > svg {
   padding-left: 0px;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2620,9 +2642,14 @@ a.brand-logo:hover > svg {
   line-height: 1.75rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -2630,14 +2657,14 @@ a.brand-logo:hover > svg {
   line-height: 1.25rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-5xl {
@@ -2936,16 +2963,16 @@ a.brand-logo:hover > svg {
     margin: 0px;
   }
 
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .lg\:mr-2 {
     margin-right: 0.5rem;
   }
 
   .lg\:ml-2 {
     margin-left: 0.5rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:ml-4 {
@@ -2962,6 +2989,14 @@ a.brand-logo:hover > svg {
 
   .lg\:mr-10 {
     margin-right: 2.5rem;
+  }
+
+  .lg\:mr-3 {
+    margin-right: 0.75rem;
+  }
+
+  .lg\:ml-3 {
+    margin-left: 0.75rem;
   }
 
   .lg\:block {
@@ -2992,16 +3027,16 @@ a.brand-logo:hover > svg {
     max-height: 100vh;
   }
 
+  .lg\:w-6\/12 {
+    width: 50%;
+  }
+
   .lg\:w-1\/12 {
     width: 8.333333%;
   }
 
   .lg\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .lg\:w-6\/12 {
-    width: 50%;
   }
 
   .lg\:w-9\/12 {
@@ -3062,6 +3097,10 @@ a.brand-logo:hover > svg {
 
   .lg\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:px-28 {
