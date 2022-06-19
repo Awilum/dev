@@ -57,7 +57,7 @@ Go to your console and run the following command:
 php ./bin/flextype tokens:create
 ```
 
-This will craete a new token and an hashed access token.
+This will create a new token and a hashed access token.
 
 ### <a name="http-details"></a> HTTP details
 
