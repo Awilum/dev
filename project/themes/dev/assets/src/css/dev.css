@@ -1092,4 +1092,26 @@
             box-shadow: 3px 3px 0 #ec4899;
         }
     }
+
+    .releases h3 {
+        @apply text-5xl uppercase text-center my-20;
+    }
+
+    .releases ul > li {
+        @apply p-4 mt-3 mb-3;
+    }
+
+    .releases strong:first-child {
+        @apply border-2 border-black px-2 mr-2 py-1;
+    }
+
+    .releases p {
+        @apply leading-8;
+    }
+/*
+    .releases ul > li p,
+    .releases ul > li code {
+        @apply m-0;
+    }
+    */
 }

@@ -10,8 +10,8 @@
         {{ entry.description|raw }}
     </h2>
     {% endif %}
-    <div>
-        {{ entry.content|shortcode|raw }}
+    <div class="releases lg:px-20">
+        {{ entry.content|shortcode|markdown|raw }}
     </div>
 </div>
 {% endblock %}
