@@ -59,6 +59,9 @@ on_this_page:
         title: "getBaseUrl"
         link: "shortcode-getBaseUrl"
       -
+        title: "getProjectUrl"
+        link: "shortcode-getProjectUrl"
+      -
         title: "getBasePath"
         link: "shortcode-getBasePath"
       -
@@ -180,6 +183,11 @@ There are several default shortcodes available.
             <td><a href="#shortcode-getBaseUrl">getBaseUrl</a></td>
             <td></td>
             <td>Get the application base url.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-getProjectUrl">getProjectUrl</a></td>
+            <td></td>
+            <td>Get the application project url.</td>
         </tr>
         <tr>
             <td><a href="#shortcode-getBasePath">getBasePath</a></td>
@@ -413,7 +421,7 @@ Get the application base path.
 (getBaseUrl)
 ```
 
-##### <a name="shortcode-getBasePath"></a> `getBasePath`
+##### <a name="shortcode-getBaseUrl"></a> `getBaseUrl`
 
 Get the application base path.
 
@@ -421,6 +429,16 @@ Get the application base path.
 
 ```
 (getBaseUrl])
+```
+
+##### <a name="shortcode-getProjectUrl"></a> `getProjectUrl`
+
+Get the application project url.
+
+**Examples**
+
+```
+(getProjectUrl)
 ```
 
 ##### <a name="shortcode-getAbsoluteUrl"></a> `getAbsoluteUrl`
@@ -481,7 +499,7 @@ Get the url for a named route.
         </tr>
         <tr>
             <td><a href="#methods-getCacheID">getCacheID</a></td>
-            <td>Get Cache ID for shortcode</td>
+            <td>Get Cache ID for shortcode.</td>
         </tr>
     </tbody>
 </table>
@@ -597,15 +615,16 @@ Get Cache ID for shortcode.
 
 ```php
 /**
- * Get Cache ID for shortcode
+ * Get Cache ID for shortcode.
  *
- * @param  string $input Input
- *
- * @return string Cache ID
+ * @param  string $input Input.
+ * @param  string $string String to append to the Cache ID.
+ * 
+ * @return string Cache ID.
  *
  * @access public
  */
-public function getCacheID(string $input): string
+public function getCacheID(string $input, string $string = ''): string
 ```
 
 **Examples**
