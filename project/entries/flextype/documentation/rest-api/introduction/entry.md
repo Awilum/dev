@@ -54,7 +54,7 @@ You should send the authentication token `token` to an API as a query parameter 
 Go to your console and run the following command:
 
 ```text
-php ./bin/flextype tokens:create
+./bin/flextype tokens:create
 ```
 
 This will create a new token and a hashed access token.

@@ -91,7 +91,7 @@ on_this_page:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:fetch -h
+./bin/flextype tokens:fetch -h
 
 Description:
   Fetch token entry.
@@ -137,7 +137,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:has -h
+./bin/flextype tokens:has -h
 
 Description:
   Check whether token entry exists.
@@ -162,7 +162,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:generate -h
+./bin/flextype tokens:generate -h
 
 Description:
   Generate token.
@@ -187,7 +187,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:generate-hash -h
+./bin/flextype tokens:generate-hash -h
 
 Description:
   Generate token hash.
@@ -212,7 +212,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:verify-hash -h
+./bin/flextype tokens:verify-hash -h
 
 Description:
   Verify token hash.
@@ -238,7 +238,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:create -h
+./bin/flextype tokens:create -h
 
 Description:
   Create a new unique token.
@@ -263,7 +263,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:delete -h
+./bin/flextype tokens:delete -h
 
 Description:
   Delete token entry.
@@ -288,7 +288,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype tokens:update -h
+./bin/flextype tokens:update -h
 
 Description:
   Update tokens entry.

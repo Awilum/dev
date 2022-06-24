@@ -84,7 +84,7 @@ on_this_page:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:fetch -h
+./bin/flextype entries:fetch -h
 
 Description:
   Fetch entry.
@@ -130,7 +130,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:has -h
+./bin/flextype entries:has -h
 
 Description:
   Check whether entry exists.
@@ -155,7 +155,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:move -h
+./bin/flextype entries:move -h
 
 Description:
   Move entry.
@@ -181,7 +181,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:copy -h
+./bin/flextype entries:copy -h
 
 Description:
   Copy entry.
@@ -207,7 +207,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:create -h
+./bin/flextype entries:create -h
 
 Description:
   Create entry.
@@ -233,7 +233,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:delete -h
+./bin/flextype entries:delete -h
 
 Description:
   Delete entry.
@@ -258,7 +258,7 @@ Options:
 <div class="file-header">Console</div>
 
 ```text
-php ./bin/flextype entries:update -h
+./bin/flextype entries:update -h
 
 Description:
   Update entry.
