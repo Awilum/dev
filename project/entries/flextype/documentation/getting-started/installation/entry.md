@@ -29,6 +29,10 @@ Flextype core package with a minimal Flextype setup with the basics you need to 
     <li>Unzip the contents to a new folder on your local computer, and upload to your webhost using the (S)FTP client of your choice. After you’ve done this, create directory <code>project</code> and be sure to chmod the following directory to <code>755</code> (or <code>777</code>), so it is readable and writable by Flextype.</li>
 </ol>
 
+> If you are running Flextype in subdirectory you should update `RewriteBase` in your `.htaccess` with  `/subdirectory/path/` and update base_path setting in your `project/config/flextype/settings.yaml` with `subdirectory/path`
+
+> By default cache is enabled, so after any changes you do with site templates, content or settings, you should delete flextype root var folder manually or with help of console command `./bin/flextype cache:clear` 
+
 ### <a name="installation-issues"></a> Installation issues
 
 ##### Broken subpages

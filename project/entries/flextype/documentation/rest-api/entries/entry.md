@@ -17,22 +17,22 @@ on_this_page:
     link: "endpoints"
     level2:
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v1/entries'
             link: "endpoint-fetch"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> /api/v1/entries'
             link: "endpoint-create"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> /api/v1/entries'
             link: "endpoint-update"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v1/entries'
             link: "endpoint-move"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v0/entries/copy'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> /api/v1/entries/copy'
             link: "endpoint-copy"
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> /api/v0/entries'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> /api/v1/entries'
             link: "endpoint-delete"
 ---
 
@@ -52,37 +52,37 @@ The Flextype Entries API organized around Representational State Transfer (REST)
     <tbody>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
-            <td><a href="#endpoint-fetch">/api/v0/entries</a></td>
+            <td><a href="#endpoint-fetch">/api/v1/entries</a></td>
             <td>entries.fetch</td>
             <td>Fetch entry (entries collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
-            <td><a href="#endpoint-create">/api/v0/entries</a></td>
+            <td><a href="#endpoint-create">/api/v1/entries</a></td>
             <td>entries.create</td>
             <td>Create entry.</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span></td>
-            <td><a href="#endpoint-update">/api/v0/entries</td>
+            <td><a href="#endpoint-update">/api/v1/entries</td>
             <td>entries.update</td>
             <td>Update entry.</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
-            <td><a href="#endpoint-move">/api/v0/entries</a></td>
+            <td><a href="#endpoint-move">/api/v1/entries</a></td>
             <td>entries.move</td>
             <td>Move entry (entries collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span></td>
-            <td><a href="#endpoint-copy">/api/v0/entries/copy</a></td>
+            <td><a href="#endpoint-copy">/api/v1/entries/copy</a></td>
             <td>entries.copy</td>
             <td>Copy entry (entries collection).</td>
         </tr>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span></td>
-            <td><a href="#endpoint-delete">/api/v0/entries</a></td>
+            <td><a href="#endpoint-delete">/api/v1/entries</a></td>
             <td>entries.delete</td>
             <td>Delete entry (entries collection).</td>
         </tr>
@@ -91,7 +91,7 @@ The Flextype Entries API organized around Representational State Transfer (REST)
 
 <br>
 
-##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/entries`
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v1/entries`
 
 Fetch entry or entries collection.
 
@@ -100,7 +100,7 @@ Fetch entry or entries collection.
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
+GET /api/v1/entries?id=YOUR_ENTRY_ID&[options]&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -143,7 +143,7 @@ Fetch Movies Entry
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v1/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ##### Fetch entries collection
@@ -151,7 +151,7 @@ GET /api/v0/entries?id=movies&token=6f047babd1894064fbf7662080a9a2f0
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
+GET /api/v1/entries?id=YOUR_ENTRY_ID&options[collection]=true&token=YOUR_ENTRIES_TOKEN
 ```
 
 ##### Query
@@ -195,7 +195,7 @@ Fetch Movies Collection
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v1/entries?id=movies&options[collection]=true&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan**
@@ -203,7 +203,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan**
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v1/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][9][operator]=eq&options[filter][where][0][value]=Cathy+Yan&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 Fetch Movies Collection where **director** is equal to **Cathy Yan** and where year is equal to **2020** and where genre is contains **action**
@@ -211,7 +211,7 @@ Fetch Movies Collection where **director** is equal to **Cathy Yan** and where y
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
+GET /api/v1/entries?id=movies&options[collection]=true&options[filter][where][0][key]=director&options[filter][where][0][operator]=eq&options[filter][where][0][value]=Cathy+Yan&options[filter][where][1][key]=year&options[filter][where][1][operator]=eq&options[filter][where][1][value]=2020&options[filter][where][2][key]=genre&options[filter][where][1][operator]=contains&options[filter][where][1][value]=drama&token=6f047babd1894064fbf7662080a9a2f0
 ```
 
 ##### Options
@@ -222,14 +222,14 @@ You can send options for the query to search items in a collection that matches 
 
 <br>
 
-##### <a name="endpoint-create"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/entries`
+##### <a name="endpoint-create"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v1/entries`
 
 Create entry.
 
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/entries
+POST /api/v1/entries
 ```
 
 ##### Body
@@ -276,7 +276,7 @@ Create new entry **platform**
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/entries
+POST /api/v1/entries
 ```
 
 <div class="file-header">Body</div>
@@ -315,14 +315,14 @@ POST /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-update"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> `/api/v0/entries`
+##### <a name="endpoint-update"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(20 184 166); color: white;">PATCH</span> `/api/v1/entries`
 
 Update entry.
 
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/v0/entries
+PATCH /api/v1/entries
 ```
 
 ##### Body
@@ -369,7 +369,7 @@ Update content for entry **platform**
 <div class="file-header">Request</div>
 
 ```
-PATCH /api/v0/entries
+PATCH /api/v1/entries
 ```
 
 <div class="file-header">Body</div>
@@ -407,14 +407,14 @@ PATCH /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-move"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries`
+##### <a name="endpoint-move"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v1/entries`
 
 Move entry.
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v1/entries
 ```
 
 ##### Body
@@ -461,7 +461,7 @@ Move entry **platform** to the **the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v1/entries
 ```
 
 <div class="file-header">Body</div>
@@ -500,7 +500,7 @@ Move entry **movies/the-platform** to the **movies/2019/the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries
+PUT /api/v1/entries
 ```
 
 <div class="file-header">Body</div>
@@ -536,14 +536,14 @@ PUT /api/v0/entries
 
 <br>
 
-##### <a name="endpoint-copy"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v0/entries/copy`
+##### <a name="endpoint-copy"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(249 115 22); color: white;">PUT</span> `/api/v1/entries/copy`
 
 Copy entry (entries collection).
 
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries/copy
+PUT /api/v1/entries/copy
 ```
 
 ##### Body
@@ -590,7 +590,7 @@ Copy for entry **movies/2019/the-platform** to **movies/horror/the-platform**
 <div class="file-header">Request</div>
 
 ```
-PUT /api/v0/entries/copy
+PUT /api/v1/entries/copy
 ```
 
 <div class="file-header">Body</div>
@@ -626,14 +626,14 @@ PUT /api/v0/entries/copy
 
 <br>
 
-##### <a name="endpoint-delete"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> `/api/v0/entries`
+##### <a name="endpoint-delete"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(244 63 94); color: white;">DELETE</span> `/api/v1/entries`
 
 Delete entry.
 
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/v0/entries
+DELETE /api/v1/entries
 ```
 
 ##### Body
@@ -675,7 +675,7 @@ Delete entry **movies/horror/the-platform**
 <div class="file-header">Request</div>
 
 ```
-DELETE /api/v0/entries
+DELETE /api/v1/entries
 ```
 
 <div class="file-header">Body</div>

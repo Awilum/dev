@@ -32,19 +32,19 @@ The Flextype Cache API is organized around Representational State Transfer (REST
     <tbody>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
-            <td><a href="#endpoint-cache-clear">/api/v0/cache/clear</a></td>
+            <td><a href="#endpoint-cache-clear">/api/v1/cache/clear</a></td>
             <td>cache.clear</td>
             <td>Clear cache</td>
         </tr>
     </tbody>
 </table>
 
-##### <a name="endpoint-cache-clear"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v0/cache/clear`
+##### <a name="endpoint-cache-clear"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v1/cache/clear`
 
 <div class="file-header">Request</div>
 
 ```
-POST /api/v0/cache/clear?token=YOUR_CACHE_TOKEN&access_token=YOUR_CACHE_TOKEN
+POST /api/v1/cache/clear?token=YOUR_CACHE_TOKEN&access_token=YOUR_CACHE_TOKEN
 ```
 
 ##### Body
@@ -82,7 +82,7 @@ Clear cache.
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/cache/clear?token=efe1e36e4d60fcd547e22eb9f795dff9&access_token=efe1e36e4d60fcd547e22eb9f795dff9
+GET /api/v1/cache/clear?token=efe1e36e4d60fcd547e22eb9f795dff9&access_token=efe1e36e4d60fcd547e22eb9f795dff9
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>

@@ -39,13 +39,13 @@ locale: en_US
 
 # Application Base url
 #
-# Define application base url
+# Define application base url (without trailing slash)
 base_url: ''
 
 # Application Base Path
 #
-# Define application base path if application located in subdirectory
-base_path: '/'
+# Define application base path (without trailing and without starting slash) if application located in subdirectory
+base_path: ''
 
 # Valid date format
 #
@@ -94,56 +94,135 @@ errors:
 
 # Entries
 entries:
-  directory: '/entries'
+  directory: 'entries'
+  cache:
+    string: ""
+  vars:
+    debug: false
+  expressions:
+    actions:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\ActionsExpression"
+    registry:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\RegistryExpression"
+    entries:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\EntriesExpression"
+    filesystem:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\FilesystemExpression"
+    i18n:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\I18nExpression"
+    serializers:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\SerializersExpression"
+    parsers:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\ParsersExpression"
+    slugify:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\SlugifyExpression"
+    strings:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\StringsExpression"
+    collection:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\CollectionExpression"
+    csrf:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\CsrfExpression"
+    var:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\VarExpression"
+    field:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\FieldExpression"
+    const:
+      enabled: true
+      class: "Flextype\\Entries\\Expressions\\ConstExpression"
+  directives:
+    expressions:
+      enabled: true
+      enabled_globally: true
+      path: "src/flextype/core/Entries/Directives/ExpressionsDirective.php"
+      opening_tag: "[["
+      closing_tag: "]]"
+    shortcodes:
+      enabled: true
+      enabled_globally: true
+      path: "src/flextype/core/Entries/Directives/ShortcodesDirective.php"
+    markdown:
+      enabled: true
+      enabled_globally: false
+      path: "src/flextype/core/Entries/Directives/MarkdownDirective.php"
+    textile:
+      enabled: true
+      enabled_globally: false
+      path: "src/flextype/core/Entries/Directives/TextileDirective.php"
+    php:
+      enabled: true
+      enabled_globally: false
+      path: "src/flextype/core/Entries/Directives/PhpDirective.php"
+    types:
+      enabled: true
+      path: "src/flextype/core/Entries/Directives/TypesDirective.php"
+  macros:
+    debug: false
+    vars:
+      enabled: true
+      path: "src/flextype/core/Entries/Macros/VarsMacros.php"
+    php:
+      enabled: true
+      path: "src/flextype/core/Entries/Macros/PhpMacros.php"
+    registry:
+      enabled: true
+      path: "src/flextype/core/Entries/Macros/RegistryMacros.php"
+      get:
+        enabled: true
+    entries:
+      enabled: true
+      path: "src/flextype/core/Entries/Macros/EntriesMacros.php"
+      fetch:
+        enabled: true
+        type: array
   collections:
     default:
       filename: entry
       extension: md
       serializer: frontmatter
       fields:
-        registry:
-          enabled: true
-          dump: false
-          path: "/src/flextype/core/Entries/Fields/Default/RegistryField.php"
-        entries:
-          enabled: true
-          dump: false
-          path: "/src/flextype/core/Entries/Fields/Default/EntriesField.php"
-          fetch:
-            result: toObject
         slug:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/SlugField.php"
+          path: "src/flextype/core/Entries/Fields/Default/SlugField.php"
         published_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/PublishedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/PublishedAtField.php"
         published_by:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/PublishedByField.php"
+          path: "src/flextype/core/Entries/Fields/Default/PublishedByField.php"
         modified_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
         created_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
         created_by:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedByField.php"
         routable:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/RoutableField.php"
-        parsers:
-          enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/ParsersField.php"
+          path: "src/flextype/core/Entries/Fields/Default/RoutableField.php"
         visibility:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/VisibilityField.php"
+          path: "src/flextype/core/Entries/Fields/Default/VisibilityField.php"
         uuid:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+          path: "src/flextype/core/Entries/Fields/Default/UuidField.php"
         id:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+          path: "src/flextype/core/Entries/Fields/Default/IdField.php"
     tokens:
       pattern: tokens
       filename: token
@@ -152,19 +231,19 @@ entries:
       fields: 
         modified_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
         created_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
         created_by:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedByField.php"
         uuid:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+          path: "src/flextype/core/Entries/Fields/Default/UuidField.php"
         id:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+          path: "src/flextype/core/Entries/Fields/Default/IdField.php"
     tokens_item:
       pattern: tokens/([a-zA-Z0-9_-]+)
       filename: token
@@ -173,28 +252,28 @@ entries:
       fields: 
         modified_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/ModifiedAtField.php"
         created_at:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedAtField.php"
         created_by:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/CreatedByField.php"
+          path: "src/flextype/core/Entries/Fields/Default/CreatedByField.php"
         uuid:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/UuidField.php"
+          path: "src/flextype/core/Entries/Fields/Default/UuidField.php"
         id:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Default/IdField.php"
+          path: "src/flextype/core/Entries/Fields/Tokens/Items/IdField.php"
         calls:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Tokens/Items/CallsField.php"
+          path: "src/flextype/core/Entries/Fields/Tokens/Items/CallsField.php"
         limit_calls:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Tokens/Items/LimitCallsField.php"
+          path: "src/flextype/core/Entries/Fields/Tokens/Items/LimitCallsField.php"
         state:
           enabled: true
-          path: "/src/flextype/core/Entries/Fields/Tokens/Items/StateField.php"
+          path: "src/flextype/core/Entries/Fields/Tokens/Items/StateField.php"
 
 
 # Cache
@@ -376,13 +455,20 @@ router:
 
   # Caching the FastRoute routes for better perfomance. 
   # Set to true to enable the FastRoute cache system.
-  cache: true
+  cache: 
+    enabled: true
   
 # Set to true to enable the Flextype CLI Application
-cli: true
+cli: 
+  enabled: true
 
 # Set to true to enable the Flextype Application
-app: true
+app: 
+  enabled: true
+
+# View
+view:
+  extension: 'php'
 
 # Slugify
 slugify:
@@ -442,12 +528,23 @@ slugify:
 # neon.encode.flags: The flag can be 1, which will create multiline output.
 #
 # phparray.decode.cache: Cache result data or no. Default is true.
-#
-# phpcode.decode.cache: Cache result data or no. Default is true.
 serializers:
   json: 
     decode:
-      cache: true
+      cache: 
+        enabled: true
+        string: ""
+      assoc: true
+      depth: 512
+      flags: 0
+    encode: 
+      options: 0
+      depth: 512
+  json5: 
+    decode:
+      cache: 
+        enabled: true
+        string: ""
       assoc: true
       depth: 512
       flags: 0
@@ -456,7 +553,9 @@ serializers:
       depth: 512
   yaml:
     decode:
-      cache: true
+      cache: 
+        enabled: true
+        string: ""
       native: true
       flags: 0
     encode:    
@@ -465,23 +564,30 @@ serializers:
       flags: 0
   frontmatter:
     decode:
-      cache: true
+      cache: 
+        enabled: true
+        string: ""
+      cache_id_string: ""
       header:
         serializer: yaml
-        allowed: ['yaml', 'json', 'neon']
+        allowed: ['yaml', 'json', 'json5', 'neon']
     encode:    
       header:
         serializer: yaml
-        allowed: ['yaml', 'json', 'neon']
+        allowed: ['yaml', 'json', 'json5', 'neon']
   neon:
     decode:
-      cache: true
+      cache: 
+        enabled: true
+        string: ""
     encode:
       blockMode: false
       indentation: "\t"
   phparray:
     decode:
-      cache: true
+      cache: 
+        enabled: true
+        string: ""
     encode:
       wrap: true
 
@@ -514,7 +620,9 @@ serializers:
 # - markdown.commonmark.slug_normalizer.max_length: Limits the size of generated slugs (defaults to 255 characters)
 parsers:
   markdown:
-    cache: true
+    cache: 
+      enabled: true
+      string: ""
     commonmark:
       renderer:
         block_separator: "\n"
@@ -531,21 +639,100 @@ parsers:
       max_nesting_level: 9223372036854775807
       slug_normalizer:
         max_length: 255
+  textile:
+    cache: 
+      enabled: true
+      string: ""
+    restricted: false
+    document_type: 'xhtml'
+    document_root_directory: ''
+    lite: false
+    images: true
+    link_relation_ship: ''
+    raw_blocks: false
+    block_tags: true
+    line_wrap: true
+    image_prefix: ''
+    link_prefix: ''
+    symbol: []
+    dimensionless_images: true
   shortcodes:
-    cache: true
+    cache: 
+      enabled: true
+      string: ""
+    cache_id_string: ""
+    opening_tag: "("
+    closing_tag: ")"
+    closing_tag_marker: "/"
+    parameter_value_separator: ":"
+    parameter_value_delimiter: "'"
     shortcodes:
       entries:
         enabled: true
-        path: "/src/flextype/core/Parsers/Shortcodes/EntriesShortcode.php"
+        path: "src/flextype/core/Parsers/Shortcodes/EntriesShortcode.php"
+        fetch:
+          enabled: true
+      php:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/PhpShortcode.php"
       raw:
         enabled: true
-        path: "/src/flextype/core/Parsers/Shortcodes/RawShortcode.php"
+        path: "src/flextype/core/Parsers/Shortcodes/RawShortcode.php"
+      textile:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/TextileShortcode.php"
+      markdown:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/MarkdownShortcode.php"
       registry:
         enabled: true
-        path: "/src/flextype/core/Parsers/Shortcodes/RegistryShortcode.php"
+        path: "src/flextype/core/Parsers/Shortcodes/RegistryShortcode.php"
+        get:
+          enabled: true
       url:
         enabled: true
-        path: "/src/flextype/core/Parsers/Shortcodes/UrlShortcode.php"
+        path: "src/flextype/core/Parsers/Shortcodes/UrlShortcode.php"
+      strings:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/StringsShortcode.php"
+      filesystem:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/FilesystemShortcode.php"
+        get:
+          enabled: true
+      i18n:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/I18nShortcode.php"
+      if:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/IfShortcode.php"
+      when:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/WhenShortcode.php"
+      unless:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/UnlessShortcode.php"
+      uuid:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/UuidShortcode.php"
+      const:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/ConstShortcode.php"
+      var:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/VarShortcode.php"
+      field:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/FieldShortcode.php"  
+      calc:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/CalcShortcode.php"  
+      eval:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/EvalShortcode.php" 
+      type:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/TypeShortcode.php" 
 
 # CORS
 #
@@ -593,7 +780,7 @@ cors:
 upload:
 
   # Uploads directory
-  directory: '/uploads'
+  directory: 'uploads'
 
   # Overwrite existing files.
   overwrite: true
@@ -669,16 +856,22 @@ api:
     # Set to true to enable Registry API
     enabled: true
 
-  # Utils API
-  utils:
+  # Tokens API
+  tokens:
 
-    # Set to true to enable Utils API
+    # Set to true to enable Tokens API
+    enabled: true
+
+  # Cache API
+  cache:
+
+    # Set to true to enable Cache API
     enabled: true
 ```
 
 ### PHP constants
 
-Your `index.php` file can define certain PHP constants, which Flextype bootstrap script will check for while loading and configuring Flextype.
+You may redefine all these constants in your root `index.php` file.
 
 <table>
     <thead>
@@ -693,11 +886,15 @@ Your `index.php` file can define certain PHP constants, which Flextype bootstrap
             <td>Define the path to the root directory (without trailing slash).</td>
         </tr>
         <tr>
-            <td>PATH['project']</td>
+            <td>PROJECT_NAME</td>
+            <td>Define the project name.</td>
+        </tr>
+        <tr>
+            <td>PATH_PROJECT</td>
             <td>Define the PATH to the project (without trailing slash).</td>
         </tr>
         <tr>
-            <td>PATH['tmp']</td>
+            <td>PATH_TMP</td>
             <td>Define the PATH to the tmp (without trailing slash).</td>
         </tr>
     </tbody>

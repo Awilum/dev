@@ -12,7 +12,7 @@ on_this_page:
     link: "endpoints"
     level2:
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v0/registry'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v1/registry'
             link: "endpoint-fetch"
 ---
 
@@ -32,7 +32,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
     <tbody>
         <tr>
             <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
-            <td><a href="#endpoint-fetch">/api/v0/registry</a></td>
+            <td><a href="#endpoint-fetch">/api/v1/registry</a></td>
             <td>registry.get</td>
             <td>Fetch registry item</td>
         </tr>
@@ -41,14 +41,14 @@ The Flextype Registry API organized around Representational State Transfer (REST
 
 <br>
 
-##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v0/registry`
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v1/registry`
 
 Fetch registry item
 
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/registry?id=YOUR_REGISTRY_ITEM_ID&token=YOUR_REGISTRY_TOKEN
+GET /api/v1/registry?id=YOUR_REGISTRY_ITEM_ID&token=YOUR_REGISTRY_TOKEN
 ```
 
 ##### Query
@@ -86,7 +86,7 @@ Fetch Flextype Version from Flextype Registry
 <div class="file-header">Request</div>
 
 ```
-GET /api/v0/registry?id=flextype.manifest.version&token=efe1e36e4d60fcd547e22eb9f795dff9
+GET /api/v1/registry?id=flextype.manifest.version&token=efe1e36e4d60fcd547e22eb9f795dff9
 ```
 
 <div class="file-header flex justify-between"><div>Response</div> <div class="text-right">200 OK</div></div>
