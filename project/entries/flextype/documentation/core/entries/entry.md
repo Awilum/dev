@@ -540,7 +540,7 @@ You can create custom entry fields using any valid YAML syntax. These would be e
     title: My Entry Title
     description: My entry description
     author:
-      twitter: "@getflextype"
+      twitter: "@_flextype"
     ---
     My entry content here.
 
@@ -549,7 +549,7 @@ You can create custom entry fields using any valid YAML syntax. These would be e
 Get field `author.twitter` in PHP.
 
 ```php
-echo entries()->fetch('home')['author.twitter']; // @getflextype
+echo entries()->fetch('home')['author.twitter']; // @_flextype
 ```
 
 ### <a name="vars"></a> Vars

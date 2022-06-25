@@ -28,6 +28,6 @@ Link: <https://github.com/flextype>
 
 ### Twitter
 
-Follow [Flextype on Twitter](https://twitter.com/getflextype) to get real-time news regarding the development and all events we are attending.
+Follow [Flextype on Twitter](https://twitter.com/_flextype) to get real-time news regarding the development and all events we are attending.
 
-Link: <https://twitter.com/getflextype>
+Link: <https://twitter.com/_flextype>

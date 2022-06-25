@@ -554,7 +554,7 @@ You can create your own custom entry variables using any valid YAML syntax. Thes
     title: My Entry Title
     description: My entry description
     author:
-      twitter: "@getflextype"
+      twitter: "@_flextype"
     ---
     My entry content here.
 

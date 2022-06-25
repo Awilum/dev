@@ -203,8 +203,8 @@ flextype('emitter')->addListener('onThemeMeta', function() {
     echo '
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@getflextype">
-        <meta name="twitter:creator" content="@getflextype">
+        <meta name="twitter:site" content="@_flextype">
+        <meta name="twitter:creator" content="@_flextype">
         <meta name="twitter:title" content="Content Management System &mdash; Flextype">
         <meta name="twitter:description" content="Build fast, flexible, easier to manage websites with Flextype.">
         <meta name="twitter:image" content="https://github.com/flextype/flextype/raw/dev/site/plugins/admin/preview.png">';
@@ -225,8 +225,8 @@ flextype('emitter')->addListener('onThemeMeta', function() {
     echo '
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@getflextype">
-        <meta name="twitter:creator" content="@getflextype">
+        <meta name="twitter:site" content="@_flextype">
+        <meta name="twitter:creator" content="@_flextype">
         <meta name="twitter:title" content="Content Management System &mdash; Flextype">
         <meta name="twitter:description" content="Build fast, flexible, easier to manage websites with Flextype.">
         <meta name="twitter:image" content="https://github.com/flextype/flextype/raw/dev/site/plugins/admin/preview.png">';
