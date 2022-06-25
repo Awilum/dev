@@ -74,18 +74,6 @@ on_this_page:
             title: "textile"
             link: "directive-markdown"
         -
-            title: "calc"
-            link: "directive-calc"
-        -
-            title: "var"
-            link: "directive-var"
-        -
-            title: "const"
-            link: "directive-const"
-        -
-            title: "field"
-            link: "directive-field"
-        -
             title: "type"
             link: "directive-type"
         -
@@ -668,9 +656,9 @@ vars:
     title: "GT Fury"
     currency: "USD"
     vat: '@type[int] (strings random: "2,1234567890)"'
-title: "@var[title]"
-price: "@calc[100+@var[vat]]"
-price_with_currency: "@field[price] @var[currency]"
+title: "(var:title)"
+price: "(calc:'100+(var:vat)')"
+price_with_currency: "(field:price) (var:currency)"
 &minus;&minus;&minus;
 GT Fury content here...
 ```
@@ -798,15 +786,11 @@ macros:
             <td>Get filesystem instance.</td>
         </tr>
         <tr>
-            <td><a href="#expression-function-filesystem">filesystem</a></td>
-            <td>Get filesystem instance.</td>
-        </tr>
-        <tr>
             <td><a href="#expression-function-tr">tr</a></td>
             <td>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced.</td>
         </tr>
         <tr>
-            <td><a href="#expression-function-__"></a></td>
+            <td><a href="#expression-function-__">__</a></td>
             <td>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced.</td>
         </tr>
         <tr>
@@ -832,6 +816,46 @@ macros:
         <tr>
             <td><a href="#expression-function-strings">strings</a></td>
             <td>Get strings instance.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-urlFor">urlFor</a></td>
+            <td>Get the url for a named route.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-fullUrlFor">fullUrlFor</a></td>
+            <td>Get the full url for a named route.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-isCurrentUrl">isCurrentUrl</a></td>
+            <td>To determine is current url equal to route name.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getCurrentUrl">getCurrentUrl</a></td>
+            <td>To get current path on given Uri</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getBasePath">getBasePath</a></td>
+            <td>To get the base path.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getBaseUrl">getBaseUrl</a></td>
+            <td>To get the base url.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getAbsoluteUrl">getAbsoluteUrl</a></td>
+            <td>To get the absolute url.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getProjectUrl">getProjectUrl</a></td>
+            <td>To get the project url.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-getUriString">getUriString</a></td>
+            <td>To get the uri string.</td>
+        </tr>
+        <tr>
+            <td><a href="#expression-function-redirect">redirect</a></td>
+            <td>To create redirect.</td>
         </tr>
     </tbody>
 </table>
