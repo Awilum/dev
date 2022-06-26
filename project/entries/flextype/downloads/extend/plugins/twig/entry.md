@@ -24,13 +24,82 @@ seo:
 * [Filters](#filters)
 * [License](#license)
 
-#### Installation
+### Installation
 
 1. Download & Install all required dependencies.
-2. Create new folder `/project/plugins/twig`
-3. Download Twig Plugin and unzip plugin content to the folder `/project/plugins/twig`
+2. Create new folder `project/plugins/twig`
+3. Download Twig Plugin and unzip plugin content to the folder `project/plugins/twig`
 
-#### Introduction
+### Settings
+
+```yaml
+# enabled: true or false to disable the plugin
+enabled: true
+
+# Twig
+#
+# - auto_reload: When developing with Twig, it's useful to recompile the template
+#                whenever the source code changes. If you don't provide a value
+#                for the auto_reload option, it will be determined automatically
+#                based on the debug value.
+#
+# - debug:       When set to true, the generated templates have a __toString()
+#                method that you can use to display the generated nodes
+#
+# - charset:     The charset used by the templates.
+#
+# - cache:       Set false to disable caching.
+#
+# - extensions   Flextype Twig Extension to load.
+auto_reload: true
+cache: true
+debug: false
+charset: "UTF-8"
+entries:
+  expressions:
+    twig:
+      enabled: true
+      class: "Flextype\\Plugin\\Twig\\Expressions\\TwigExpression"
+  directives:
+    twig:
+      enabled: true
+      enabled_globally: false
+      path: "project/plugins/twig/src/twig/core/Entries/Directives/TwigDirective.php"
+parsers:
+  shortcodes:
+    shortcodes:
+      twig:
+        enabled: true
+        path: "project/plugins/twig/src/twig/core/Parsers/Shortcodes/TwigShortcode.php"
+extensions: 
+  - I18n
+  - Filesystem
+  - Csrf
+  - Constants
+  - Strings
+  - Collection
+  - Filters
+  - Functions
+  - Tests
+  - Emitter
+  - Actions
+  - Registry
+  - Entries
+  - Serializers
+  - Parsers
+  - Flash
+  - Slugify
+  - Cache
+  - Image
+  - Url
+
+# Twig plugin priority
+priority: 0
+```
+
+You may override the default settings in the plugin project configuration file `project/config/plugins/twig/settings.yaml`
+
+### Introduction
 
 Twig is a modern template engine for PHP.
 
@@ -48,7 +117,7 @@ There are three types of delimiters that Twig looks out for:
 `{%` – [Tags](#tags)  
 `{{` – [Print statements](#print-statements)  
 
-#### <a name="comments"></a> Comments
+### <a name="comments"></a> Comments
 
 Twig comments are wrapped in {# and #} delimiters. You can use them to leave little notes for yourself in the code.
 
@@ -59,13 +128,13 @@ They are similar to HTML comments in that they won’t show up as rendered text 
 {# This won’t! #}
 ```
 
-#### <a name="tags"></a> Tags
+### <a name="tags"></a> Tags
 
 Twig tags are wrapped in {% and %} delimiters, and are used to define the logic of your template, such as conditionals, loops, variable definitions, template includes, and other things.
 
 The syntax within the {% and %} delimiters varies from tag to tag, but they will always start with the same thing: the name of the tag.
 
-#### <a name="print-statements"></a> Print Statements
+### <a name="print-statements"></a> Print Statements
 
 To output additional HTML code dynamically, use a print statement. They are wrapped in {{ and }} delimiters, and you can put just about anything inside them, as long as it can be treated as a string.
 
@@ -75,7 +144,7 @@ To output additional HTML code dynamically, use a print statement. They are wrap
 
 Don’t place a print statement (or any other Twig code) within another print statement. [See Combining Strings to learn how to combine strings with other expressions](#combining-strings).
 
-#### <a name="auto-escaping"></a> Auto-escaping
+### <a name="auto-escaping"></a> Auto-escaping
 
 Most of the time, print statements will automatically HTML-encode the content before actually outputting it (called auto-escaping), which helps defend against cross-site scripting (XSS) vulnerabilities.
 
@@ -84,7 +153,7 @@ For example, let’s say you have a search results page, where the search query 
 ```
 {% set query = request.getQueryParam().q %}
 
-{% set entries = flextype.entries.fetch('blog', {'collection': true})
+{% set entries = entries().fetch('blog', {'collection': true})
                                  .where('title', 'contains', query)
                                  .all() %}
 
@@ -116,7 +185,7 @@ To do that, you could explicitly encode all HTML within the user-supplied conten
 {{ entry.content|escape|markdown }}
 ```
 
-#### <a name="resources"></a> Resources
+### <a name="resources"></a> Resources
 
 * [Official Twig Documentation](https://twig.sensiolabs.org/documentation)
 * [Twig for Template Designers](https://twig.sensiolabs.org/doc/templates.html)
@@ -124,7 +193,7 @@ To do that, you could explicitly encode all HTML within the user-supplied conten
 * [6 Minute Video Introduction to Twig](https://www.dev-metal.com/6min-video-introduction-twig-php-templating-engine/)
 * [Introduction to Twig](https://www.slideshare.net/markstory/introduction-to-twig)
 
-#### <a name="global-variables"></a> Global Variables
+### <a name="global-variables"></a> Global Variables
 
 The following Flextype Twig Global variables are available in Flextype Twig Templates:
 
@@ -133,60 +202,50 @@ The following Flextype Twig Global variables are available in Flextype Twig Temp
 | _self | The current template name. |
 | _context | The currently-defined variables. |
 | _charset | The current charset. |
-| PATH_PROJECT | Project path (without trailing slash). |
-| PHP_VERSION | PHP Version. |
-| flextype | Returns Flextype object. |
 
-#### PATH_PROJECT
-
-Project path (without trailing slash).
-
-```
-{{ PATH_PROJECT }}
-```
-
-#### PHP_VERSION
-
-PHP Version.
-
-```
-{{ PHP_VERSION }}
-```
-
-#### flextype
-
-Returns Flextype object, which provides access points to various helper functions and objects for templates.
-
-| Objects | Available Methods |
-|---|---|
-| `flextype.entries` | [fetch()](https://docs.flextype.org/core/entries#methods-fetch)
-| `flextype.media.files` | [fetch()](https://docs.flextype.org/core/media#methods-files-fetch) [has()](https://docs.flextype.org/core/media#methods-files-has) |
-| `flextype.media.files.meta` | [getFileMetaLocation()](https://docs.flextype.org/core/media#methods-files-meta-getFileMetaLocation) |
-| `flextype.media.folders` | [fetch()](https://docs.flextype.org/core/media#methods-folders-fetch) [getDirectoryLocation()](https://docs.flextype.org/core/media#methods-folders-getDirLocation) |
-| `flextype.media.folders.meta` | [getDirMetaLocation()](https://docs.flextype.org/core/media#methods-folders-meta-getDirMetaLocation) |
-| `flextype.registry` | [all methods available](https://docs.flextype.org/core/registry) |
-| `flextype.parsers` | [all methods available](https://docs.flextype.org/core/parsers) |
-| `flextype.serializers` | [all methods available](https://docs.flextype.org/core/serializers) |
-| `flextype.cache` | [all methods available](https://www.phpfastcache.com) |
-| `flextype.emitter` | [all methods available](https://event.thephpleague.com/2.0/) |
-
-#### <a name="functions"></a> Functions
+### <a name="functions"></a> Functions
 
 The following Flextype Twig Functions are available in Flextype Twig Templates:
 
-| Variable | Description |
+| Name | Description |
 |---|---|
-| arrays | Returns a new arrays object from the given elements. |
-| strings | Returns a new strings object from the given string. |
-| filesystem | Returns a new filesystem object from the given string. |
-| url | Returns application URL. |
+| collection | Create a new arrayable collection object from the given elements. |
+| collectionFromJson | Create a new arrayable collection object from the given JSON string. |
+| collectionFromString | Create a new arrayable collection object from the given string. |
+| collectionWithRange | Create a new arrayable object with a range of elements. |
+| collectionFromQueryString | Create a new arrayable object from the given query string. |
+| filterCollection | Create a filtered collection. |
+| actions | Get actions service. |
+| entries | Get entries service. |
+| const | Get php constant. |
+| var | Get entry var. |
+| field | Get entry field. |
+| csrf | Get csrf hidden input. |
+| filesystem | Get filesystem instance. |
+| tr | Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced. |
+| __ | Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced. |
+| parsers | Get parsers service. |
+| serializers | Get serializers service. |
+| slugify | Get slugify service. |
+| strings | Get strings instance. |
+| registry | Get registry service. |
+| urlFor | Get the url for a named route. |
+| fullUrlFor | Get the full url for a named route. |
+| isCurrentUrl | To determine is current url equal to route name. |
+| getCurrentUrl | To get current path on given Uri. |
+| getBasePath | To get the base path. |
+| getBaseUrl | To get the base url. |
+| getAbsoluteUrl | To get the absolute url. |
+| getProjectUrl |	To get the project url. |
+| getUriString | To get the uri string. |
+| redirect | To create redirect. |
 
-#### <a name="filters"></a> Filters
+### <a name="filters"></a> Filters
 
 The following Flextype Twig Filters are available in Flextype Twig Templates:
 
-| Variable | Description |
+| Name | Description |
 |---|---|
-| __ | Translate string |
-| shortcode | Shortcode parser |
-| markdown | Markdown parser |
+| tr | Translate string. |
+| markdown | Parse markdown string. |
+| shortodes | Translate string |

@@ -775,6 +775,10 @@ Learn more about [Symfony Expression Language Component](https://symfony.com/doc
             <td>Get actions service.</td>
         </tr>
         <tr>
+            <td><a href="#expression-function-actions">entries</a></td>
+            <td>Get entries service.</td>
+        </tr>
+        <tr>
             <td><a href="#expression-function-collection">collection</a></td>
             <td>Create a new arrayable collection object from the given elements.</td>
         </tr>
@@ -847,10 +851,6 @@ Learn more about [Symfony Expression Language Component](https://symfony.com/doc
             <td>Get registry service.</td>
         </tr>
         <tr>
-            <td><a href="#expression-function-strings">strings</a></td>
-            <td>Get strings instance.</td>
-        </tr>
-        <tr>
             <td><a href="#expression-function-urlFor">urlFor</a></td>
             <td>Get the url for a named route.</td>
         </tr>
@@ -864,7 +864,7 @@ Learn more about [Symfony Expression Language Component](https://symfony.com/doc
         </tr>
         <tr>
             <td><a href="#expression-function-getCurrentUrl">getCurrentUrl</a></td>
-            <td>To get current path on given Uri</td>
+            <td>To get current path on given Uri.</td>
         </tr>
         <tr>
             <td><a href="#expression-function-getBasePath">getBasePath</a></td>

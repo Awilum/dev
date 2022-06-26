@@ -17,122 +17,107 @@ seo:
   keywords: Flextype Site Plugin, Flextype CMS Site Plugin, Headless CMS Site Plugin, Download Flat File CMS Site Plugin, Download Flat File Content Management System Site Plugin, Download PHP CMS Site Plugin, Site Plugin, Plugin, Site, Content, Management, System, PHP, CMS
 ---
 
-#### Installation
+### Installation
 
 1. Download & Install all required dependencies.
-2. Create new folder `/project/plugins/site`
-3. Download Site Plugin and unzip plugin content to the folder `/project/plugins/site`
+2. Create new folder `project/plugins/site`
+3. Download Site Plugin and unzip plugin content to the folder `project/plugins/site`
 
-#### Settings
+### Default settings
 
-| Key | Value | Description |
-|---|---|---|
-| enabled | true | true or false to disable the plugin |
+```yaml
+# enabled: true or false to disable the plugin
+enabled: true
 
-#### Twig variables for Site Plugin
+# Site plugin priority
+priority: 10000
+
+# The title of the website
+title: Flextype
+
+# The description of the website
+description: Build fast, flexible, easier to manage websites with Flextype.
+
+# The keywords of the website
+keywords: flextype, php, cms, flat-file cms, flat cms, flatfile cms, html
+
+# The robots of the website
+robots: index, follow
+
+# The name and email address of the website author
+author:
+  email: ''
+  name: ''
+
+# Templates
+templates:
+  directory: "views/templates"
+  engine: view
+  extension: php
+  default: default
+
+# Site static cache
+cache:
+  enabled: false
+
+# Trailing slash
+trailing_slash: false
+
+# The entries settings
+#
+# - main:                 Main entry
+# - error404.title:       Title to display on Error404 page
+# - error404.description: Description to display on Error404 page
+# - error404.content:     Content to display on Error404 page
+# - error404.template:    Template to use on Error404 page
+entries:
+  main: home
+  error404:
+    title: Error 404
+    description: We're sorry but the page you are looking for doesn't appear to exist!
+    content: "<center>We're sorry but the page you are looking for doesn't appear to exist!</center>"
+    template: default
+
+# Redirects
+redirects: []
+  #- 
+    #from: /foo
+    #to: /bar
+    #to_route_name: home
+    #to_external: https://www.google.com
+    #status: 301
+
+# Settings for static site generation
+static:
+
+  # Destination for generated static site files (without trailing and without starting slash)
+  site_path: '_site'
+
+  # Site url (without trailing)
+  site_url: ''
+
+  # Ignore lists (without trailing and without starting slash)
+  ignore:
+    entries: []
+    assets: 
+      - src
+```
+
+You may override the default settings in the plugin project configuration file `project/config/plugins/site/settings.yaml`
+
+### Generate static site
+
+You may geneate a static site with help of the following console command:  
+```
+./bin/flextype site:generate
+```
+
+### Evailable variables
+
+Site plugin shares the following variables in your PHP, Twig, etc., templates:
 
 | Variable | Description |
 |---|---|
-| entry | The entry object with all the information about the current page you are currently on. |
-| query | The Query Params |
-| uri | The URI string |
-
-**Examples:**
-
-```twig
-{{ entry.title }} {# returns the current entry title #}
-```
-
-#### Theming
-
-#### Theme Installation
-
-1. Unzip theme to the folder `/project/themes/`
-2. Go to `/project/config/settings.yaml` and update `theme` setting with your theme name.
-3. Save your changes.
-
-#### Theme Configuration
-
-You can easily access theme configuration and theme information from your Twig and PHP files.
-
-#### Accessing Theme Information
-
-Information from the currently active theme can get from the `registry` object.
-
-Example information from `/project/themes/noir/theme.yaml`
-
-```yaml
-name: Noir
-version: 1.0.0
-description: Noir theme for Flextype
-author:
-  name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
-  url: https://flextype.org
-homepage: https://github.com/flextype-themes/noir
-bugs: https://github.com/flextype-themes/noir/issues
-license: MIT
-```
-
-You can reach any of these items via registry `themes` by using the standard dot-syntax:
-
-Usage:
-
-```twig
-Theme name: {{ flextype.registry.get('themes.noir.manifest.name') }}
-Theme version: {{ flextype.registry.get('themes.noir.manifest.version') }}
-```
-
-Result:
-
-```twig
-Theme name: Noir
-Theme version: 1.0.0
-```
-
-You can also reach these same values from a Flextype theme(s) with PHP syntax:
-
-Usage:
-
-```php
-$theme_name = flextype('registry')->get('themes.noir.manifest.name');
-$theme_version = flextype('registry')->get('themes.noir.manifest.version');
-```
-
-#### Accessing Theme Configuration
-
-Themes have default and project configuration files, named `settings.yaml` located in `/project/themes/<themename>/` and in `/project/config/themes/<themename>/`
-
-For example, let us consider the Noir theme and there is a file called `settings.yaml` in the themes site settings folder. The contents of this configuration file look like this:
-
-```yaml
-enabled: true
-```
-
-Let us add some custom theme settings.
-
-Open `/project/config/themes/noir/settings.yaml` and add new variable with value `highlight: red`
-
-```yaml
-enabled: true
-highlight: red
-```
-
-Then in your theme templates you can access these variable using the `themes.noir` object:
-
-```twig
-<h1 style="color:{{ flextype.registry.get('themes.noir.settings.highlight') }}">
-    BUILD FAST, FLEXIBLE, EASIER TO MANAGE WEBSITES WITH FLEXTYPE.
-</h1>
-```
-
-Result:
-
-<h1 style="color:red">BUILD FAST, FLEXIBLE, EASIER TO MANAGE WEBSITES WITH FLEXTYPE.</h1>
-
-
-In PHP you can access the current theme configuration like this:
-
-```php
-$highlight = flextype('registry')->get('themes.noir.settings.highlight');
-```
+| entry | Current entry data. |
+| uri | Current URI. |
+| request | Current request data. |
