@@ -1089,7 +1089,7 @@
     }
 
     .button {
-        @apply pl-6 pr-6 pt-2 pb-2 border-2 rounded-lg font-bold text-xs border-slate-900 no-underline relative;
+        @apply pl-10 pr-10 pt-3 pb-3 border-2 rounded-lg font-semibold text-sm border-slate-900 no-underline relative;
         box-shadow: 3px 3px 0;
     }
 
