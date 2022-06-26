@@ -1859,6 +1859,14 @@ a.brand-logo:hover > svg {
   margin: 2.5rem;
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .-mx-6 {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -2154,6 +2162,10 @@ a.brand-logo:hover > svg {
   width: 12rem;
 }
 
+.w-6\/12 {
+  width: 50%;
+}
+
 .max-w-prose {
   max-width: 65ch;
 }
@@ -2168,6 +2180,10 @@ a.brand-logo:hover > svg {
 
 .max-w-\[450px\] {
   max-width: 450px;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
 }
 
 .shrink {
@@ -2229,6 +2245,10 @@ a.brand-logo:hover > svg {
 
 .list-none {
   list-style-type: none;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-col-reverse {
@@ -2723,6 +2743,10 @@ a.brand-logo:hover > svg {
   padding-left: 0px;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3214,6 +3238,14 @@ a.brand-logo:hover > svg {
     overflow-y: auto;
   }
 
+  .lg\:p-4 {
+    padding: 1rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
   .lg\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
@@ -3270,6 +3302,14 @@ a.brand-logo:hover > svg {
 
   .lg\:pl-5 {
     padding-left: 1.25rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .lg\:pb-8 {
+    padding-bottom: 2rem;
   }
 
   .lg\:text-lg {

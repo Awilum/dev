@@ -34,7 +34,7 @@
                                         .sortBy('published_at', 'DESC') %}
     
             {% for item in plugins_items %}
-             <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-4 border-2 rounded-lg border-slate-900 flex items-center plate-shadow">
+             <a href="{{ url() }}/{{ item.id }}" class="p-6 py-4 no-underline bg-white dark:bg-slate-800 mb-8 border-2 rounded-lg border-slate-900 flex items-center plate-shadow">
                  <span class="icon-svg-medium mr-5">{{ icon(item.icon.name, item.icon.set) }}</span>
                  <div class="text-left">
                      <h4 class="w-full text-xl p-0 m-0">{{ item.title }}</h4>
