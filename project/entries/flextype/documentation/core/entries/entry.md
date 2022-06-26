@@ -727,6 +727,39 @@ macros:
 
 ### <a name="expressions"></a> Expressions
 
+Flextype uses Symfony Expression Language Component, which provides an engine that can compile and evaluate expressions.  
+
+The purpose of using this component is to allow developers to use expressions inside entries, configurations, etc.. more complex logic than just flat data.  
+
+The idea is to let the developers of Flextype powered projects do some business logic inside entries fields without using PHP or introducing security problems.
+
+Expressions can be seen as a very restricted PHP sandbox and are immune to external injections as you must explicitly declare which variables are available in an expression.
+
+**Examples**
+
+```yaml
+&minus;&minus;&minus;
+vars: 
+    title: "GT Fury"
+    currency: "USD"
+    vat: "@type[int] [[ strings().random(2, 1234567890) ]]"
+title: "[[ var('title') ]]"
+price: "[[ 100 + var('vat') ]]"
+message: "[[ field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' ]]"
+random: "[[ strings().random() ]]"
+&minus;&minus;&minus;
+### Price
+[[ field('price') ]]
+
+### Message
+[[ field('message') ]]
+
+### Random
+[[ field('random') ]]
+```
+
+Learn more about [Symfony Expression Language Component](https://symfony.com/doc/5.4/components/expression_language.html)
+
 ### <a name="functions"></a> Functions
 
 <table>
