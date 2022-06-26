@@ -12,7 +12,7 @@ on_this_page:
     link: "endpoints"
     level2:
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> /api/v1/registry'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(59 130 246); color: white;">GET</span> /api/v1/registry'
             link: "endpoint-fetch"
 ---
 
@@ -31,7 +31,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
     </thead>
     <tbody>
         <tr>
-            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span></td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(59 130 246); color: white;">GET</span></td>
             <td><a href="#endpoint-fetch">/api/v1/registry</a></td>
             <td>registry.get</td>
             <td>Fetch registry item</td>
@@ -41,7 +41,7 @@ The Flextype Registry API organized around Representational State Transfer (REST
 
 <br>
 
-##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v1/registry`
+##### <a name="endpoint-fetch"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(59 130 246); color: white;">GET</span> `/api/v1/registry`
 
 Fetch registry item
 

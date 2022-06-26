@@ -5,8 +5,9 @@
 @layer base {
     html, body {
         /*font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
-        font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        /*font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
         /*font-family: 'Nunito', sans-serif;*/
+        font-family: 'Maven Pro', sans-serif;
         font-size: 18px;
         font-weight: 300;
     }
@@ -68,11 +69,23 @@
 }
 
 @layer components {
+
+    pre {
+        @apply z-30;
+    }
+
     code {
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply bg-slate-800 px-2 py-1 text-slate-100 rounded;
+        @apply bg-slate-800 px-2 py-1 text-slate-100 rounded-lg border-2 border-slate-900;
+        font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    }
+
+    code.hljs {
+        font-size: 0.75em;
+        opacity: .9;
+        @apply bg-slate-800 rounded-lg;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -80,7 +93,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-800 py-4 mb-10 rounded;
+        @apply p-4 bg-slate-800 py-4 mb-10 rounded-lg;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -151,7 +164,7 @@
 
 
     .terminal {
-        @apply mb-8 border-2 text-slate-100 rounded;
+        @apply mb-8 border-2 text-slate-100 rounded-lg;
         overflow: hidden;
         background: #0d111a;
         border-color: #0c0b14;
@@ -180,8 +193,6 @@
     .terminal-command {
         padding-bottom: 5px;
     }
-
-
 
     .el-alert {
         width: 350px;
@@ -906,7 +917,8 @@
     table {
         width: 100%;
         text-align: left;
-        border: 1px solid #0d111a;
+        border: 2px solid #0d111a;
+        border-radius: 0.5rem;
     }
 
     td {
@@ -931,20 +943,18 @@
         width: 100%;
         box-shadow: 3px 3px 0 #0d111a;
         background: #0d111a;
-        border: 1px solid #0d111a;
+        border: 2px solid #0d111a;
         @apply text-slate-100;
     }
 
     th {
         font-weight: 500;
-        background: #0d111a;
-        @apply text-slate-100 font-normal;
+        @apply bg-amber-300 text-slate-900 font-semibold border-b-2;
     }
 
     table table thead {
         font-weight: 300;
-        background: #0d111a;
-        @apply border-b text-slate-100 border-slate-900;
+        @apply border-b-2 text-slate-100 border-slate-900;
     }
 
     .plate-shadow {
@@ -1026,7 +1036,7 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply p-4 bg-slate-800 mb-10 px-2 text-slate-100 rounded;
+        @apply p-4 bg-slate-800 mb-10 px-2 text-slate-100 rounded-lg;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -1057,11 +1067,17 @@
 
     .file-header {
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-        padding: 8px 18px 8px!important;
-        margin-bottom: -5px;
+        padding: 10.5px 18px 10.5px!important;
+        margin-bottom: -8px;
         font-size: 0.75em;
-        @apply bg-slate-800 text-slate-100 rounded-tr rounded-tl border-b border-b-slate-500;
+        @apply bg-amber-300 relative text-slate-900 rounded-tr-lg rounded-tl-lg border-2 border-b-slate-900 border-t-2 border-t-slate-900 border-l-slate-900 border-r-slate-900 z-50 font-semibold;
     }
+
+    /*
+    .file-header ~ pre > code.hljs {
+        @apply rounded-tl-none rounded-tr-none;
+    }
+    */
 
     .file-header svg {
         display: inline-flex;
@@ -1073,7 +1089,7 @@
     }
 
     .button {
-        @apply pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-slate-900 no-underline relative;
+        @apply pl-6 pr-6 pt-2 pb-2 border-2 rounded-lg font-bold text-xs border-slate-900 no-underline relative;
         box-shadow: 3px 3px 0;
     }
 
@@ -1084,7 +1100,7 @@
     @media (prefers-color-scheme: dark) {
         .button {
             box-shadow: 3px 3px 0 #0d111a;
-            @apply bg-slate-800 pl-6 pr-6 pt-2 pb-2 border rounded font-bold text-xs border-slate-900 no-underline relative;
+            @apply bg-slate-800 pl-6 pr-6 pt-2 pb-2 border rounded-lg font-bold text-xs border-slate-900 no-underline relative;
         }
     
         .button:hover {
@@ -1102,7 +1118,7 @@
     }
 
     .releases strong:first-child {
-        @apply border-2 border-black px-2 mr-2 py-1;
+        @apply border-2 border-black px-2 mr-2 py-1 rounded-lg;
     }
 
     .releases p {

@@ -12,7 +12,7 @@ on_this_page:
     link: "endpoints"
     level2:
         -
-            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> Clear cache'
+            title: '<span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(34 197 94); color: white;">POST</span> Clear cache'
             link: "endpoint-cache-clear"
 ---
 
@@ -31,7 +31,7 @@ The Flextype Cache API is organized around Representational State Transfer (REST
     </thead>
     <tbody>
         <tr>
-            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span></td>
+            <td><span class="text-decoration-none text-sm" style="padding: 3px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(34 197 94); color: white;">POST</span></td>
             <td><a href="#endpoint-cache-clear">/api/v1/cache/clear</a></td>
             <td>cache.clear</td>
             <td>Clear cache</td>
@@ -39,7 +39,7 @@ The Flextype Cache API is organized around Representational State Transfer (REST
     </tbody>
 </table>
 
-##### <a name="endpoint-cache-clear"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.25rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v1/cache/clear`
+##### <a name="endpoint-cache-clear"></a> <span class="text-decoration-none text-sm" style="padding: 4.5px 5px; font-size: 0.75em; opacity: .9; border-radius: 0.5rem; background: rgb(34 197 94); color: white;">POST</span> `/api/v1/cache/clear`
 
 <div class="file-header">Request</div>
 

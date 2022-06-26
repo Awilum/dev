@@ -17,7 +17,7 @@
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins">PLUGINS</a></span>
         </div>
     </div>
-    <div>
+    <div class="plate border-2 border-slate-900 rounded-lg p-4 plate-shadow">
         {% set repo_name = entry.github|split('/')  %}
         {% set repo_name_length = repo_name|length %}
 
@@ -45,8 +45,8 @@
                 {{ entry.content|shortcode|markdown|raw }}
             </div>
             <div class="w-full lg:w-3/12 p-2">
-                <div class="text-left p-6 mb-6 border-slate-800 dark:bg-slate-800 border plate-shadow">
-                    <div class="flex content-center flex-wrap">
+                <div class="text-left mb-6 border-slate-800 dark:bg-slate-800 border">
+                    <div class="flex content-center flex-wrap p-6 pb-0">
                         <div class="w-full">
                             <p class="m-0 opacity-50">Version</p>
                             <p>{{ plugin.version }}</p>
@@ -72,29 +72,30 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex content-center flex-wrap">
+                    <div class="flex content-center flex-wrap p-6 pt-0">
                         <div class="w-full">
                             <p class="m-0 opacity-50">Categories</p>
                             <p>
                                 {% set categories = entry.category|replace({' ': ''}) %}
                                 {% for category in categories|split(',') %}
-                                    <a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins?category={{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
+                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/plugins?category={{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="text-center">
-                    <a class="button"
-                    href="{{ entry.github }}/releases/download/v{{ plugin.version }}/{{ entry.slug }}-{{ plugin.version }}.zip">DOWNLOAD</a>
+                    <div class="border-t border-slate-900 ">
+                        <a class="bg-amber-300 hover:text-slate-900 hover:bg-amber-200 no-underline block text-center py-2"
+                        href="{{ entry.github }}/releases/download/v{{ plugin.version }}/{{ entry.slug }}-{{ plugin.version }}.zip">DOWNLOAD</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <hr class="mb-6 border-b border-plate-800">
-
-        <div class="p-2 mb-6">
-            <h4>Other plugins by {{ plugin.author.name }}</h4>
+        </div>
+    
+    <div>
+        <div class="p-2 mt-8">
+            <h4 class="text-2xl">Other plugins by {{ plugin.author.name }}</h4>
             {% if entry.author.email is not empty %}
                 {% set related_plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true})
                                                 .where('author.email', 'eq', entry.author.email)

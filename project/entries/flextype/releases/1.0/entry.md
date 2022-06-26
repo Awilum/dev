@@ -1,8 +1,9 @@
 ---
-title: "Flextype 1.0 <br><span class='text-sm lowercase border-2 border-black px-2 py-1'>alpha.1</span>"
+title: "Flextype 1.0 <br><span class='text-sm lowercase border-2 rounded-lg border-black px-2 py-1'>alpha.1</span>"
 template: flextype/releases
 visibility: visible
 ---
+
 
 ### Features
 
@@ -31,6 +32,7 @@ visibility: visible
       -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Available commands:
+      about                       Get information about Flextype.
       completion                  Dump the shell completion script
       help                        Display help for a command
       list                        List commands
@@ -74,6 +76,8 @@ visibility: visible
 * **core** Added New [Glowy PHP](https://awilum.github.io/glowyphp/) Packages `View`, `Macroable`, `Strings`, `Arrays`, `Csrf`, `Filesystem`, `Registry`, `Session`.
 
 * **core** Added built-in I18n module.
+
+* **core** Added ability to override core defines.
 
 * **entries** Added new functionality that allows implementing Virtual Entries by overriding default entries CRUD methods with the help of events.
 
@@ -179,7 +183,7 @@ visibility: visible
 
 * **serializers** Added ability to set global settings for all built-in serializers. 
 
-    `/src/flextype/settings.yaml`
+    `src/flextype/settings.yaml`
     ```yaml
     serializers:
       json: 
@@ -247,7 +251,7 @@ visibility: visible
 
 * **serializers** Added ability to set specific header serializer for `Frontmatter` serializer (default is YAML).
 
-    `/src/flextype/settings.yaml`
+    `src/flextype/settings.yaml`
     ```yaml
     frontmatter:
       decode:
@@ -270,7 +274,7 @@ visibility: visible
 
 * **parsers** Added ability to set global settings for all parsers. 
 
-    `/src/flextype/settings.yaml`
+    `src/flextype/settings.yaml`
     ```yaml
     parsers:
       markdown:
@@ -403,7 +407,7 @@ visibility: visible
           ...
           url:
             enabled: true
-            path: "/src/flextype/core/Parsers/Shortcodes/UrlShortcode.php"
+            path: "src/flextype/core/Parsers/Shortcodes/UrlShortcode.php"
           ...
         ...
       ...
@@ -419,7 +423,7 @@ visibility: visible
           ...
           url:
             enabled: true
-            path: "/project/plugins/your-custom-plugin/Parsers/Shortcodes/UrlShortcode.php"
+            path: "project/plugins/your-custom-plugin/Parsers/Shortcodes/UrlShortcode.php"
           ...
         ...
       ...
@@ -510,6 +514,8 @@ visibility: visible
 
 * **expressions** Added new expression function `tr` to return translation of a string. If no translation exists, the original string will be returned.
 
+* **expressions** Added new expression function `__` to return translation of a string. If no translation exists, the original string will be returned.
+
 * **expressions** Added new expression function `parsers` to get parsers service.
 
 * **expressions** Added new expression function `serializers` to get serializers service.
@@ -517,6 +523,26 @@ visibility: visible
 * **expressions** Added new expression function `registry` to get registry service.
 
 * **expressions** Added new expression function `slugify` to get slugify service.
+
+* **expressions** Added new expression function `urlFor` to get the url for a named route.
+
+* **expressions** Added new expression function `fullUrlFor` to get the full url for a named route.
+
+* **expressions** Added new expression function `isCurrentUrl` to determine is current url equal to route name.
+
+* **expressions** Added new expression function `getCurrentUrl` to get current path on given Uri.
+
+* **expressions** Added new expression function `getBasePath` to get the base path.
+
+* **expressions** Added new expression function `getBaseUrl` to get the base url.
+
+* **expressions** Added new expression function `getAbsoluteUrl` to get the absolute url.
+
+* **expressions** Added new expression function `getProjectUrl` to get the project url.
+
+* **expressions** Added new expression function `getUriString` to get the uri string.
+
+* **expressions** Added new expression function `redirect` to create redirect.
 
 * **cache** Added new cache driver `Phparray` to store cache data in raw php arrays files.
 
@@ -526,7 +552,7 @@ visibility: visible
 
 * **tokens** Added new Tokens API.
 
-* **helpers** All core helpers are located in the `/src/flextype/helpers/`.
+* **helpers** All core helpers are located in the `src/flextype/helpers/`.
 
 * **helpers** Added helper function `app` to get Flextype Application instance.
 
@@ -637,7 +663,7 @@ visibility: visible
           quality: 70
     ```
 
-* **macros** All core macros are located in the `/src/flextype/macros/`.
+* **macros** All core macros are located in the `src/flextype/macros/`.
 
 * **macros** Added `onlyFromCollection` and `exceptFromCollection` macros for Arrays ([#553](https://github.com/flextype/flextype/issues/553))
 
@@ -747,7 +773,7 @@ visibility: visible
 
 * **helpers** Use helper function `filterCollection` instead of old `filter`.
 
-* **tokens** Project tokens moved from `/project/tokens/` to `/project/entries/tokens/`.
+* **tokens** Project tokens moved from `project/tokens` to `project/entries/tokens`.
 
 * **entries** Changes for etnries memory storage.
 
