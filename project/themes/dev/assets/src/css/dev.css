@@ -948,13 +948,11 @@
     }
 
     th {
-        font-weight: 500;
         @apply bg-amber-300 text-slate-900 font-semibold border-b-2;
     }
 
-    table table thead {
-        font-weight: 300;
-        @apply border-b-2 text-slate-100 border-slate-900;
+    table thead {
+        @apply border-b-2 text-slate-900 border-slate-900;
     }
 
     .plate-shadow {
@@ -963,7 +961,7 @@
 
     @media (prefers-color-scheme: dark) {
         .plate-shadow {
-            box-shadow: 3px 3px 0 #0d111a;
+            box-shadow: 3px 3px 0 rgb(100, 116, 139);
         }
     }
 
