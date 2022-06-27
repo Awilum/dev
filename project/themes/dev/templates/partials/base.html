@@ -75,7 +75,7 @@
                     :aria-expanded="open"
                     :aria-controls="$id('dropdown-button')"
                     type="button"
-                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-semibold text-xs uppercase no-underline border-r-2 border-slate-900 {% if currentUriContains('/thermage') or currentUriContains('/flextype') %}text-pink-500{% endif %}"
+                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-semibold text-xs uppercase no-underline border-r-2 border-slate-900 dark:border-slate-500 {% if currentUriContains('/thermage') or currentUriContains('/flextype') %}text-pink-500{% endif %}"
                 >
                     <span>Projects</span>
                 </button>
@@ -88,13 +88,13 @@
                     x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')"
                     style="display: none;"
-                    class="absolute left-0 mt-2 w-44 bg-white border-2 border-slate-900 rounded-lg overflow-hidden z-50 dark:bg-slate-800"
+                    class="absolute left-0 mt-2 w-44 bg-white border-2 border-slate-900 dark:border-slate-500 rounded-lg overflow-hidden z-50 dark:bg-slate-800"
                 >
                     <div>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b-2 border-slate-900" href="{{ url() }}/thermage">Thermage</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b-2 border-slate-900" href="{{ url() }}/flextype">Flextype</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b-2 border-slate-900" href="{{ url() }}/glowyphp">Glowy PHP</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-slate-900" href="https://github.com/faker-javascript">Faker JavaScript</a>
+                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/thermage">Thermage</a>
+                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/flextype">Flextype</a>
+                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/glowyphp">Glowy PHP</a>
+                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-slate-900 dark:border-slate-500" href="https://github.com/faker-javascript">Faker JavaScript</a>
                     </div>
                 </div>
             </div>
