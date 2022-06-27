@@ -979,7 +979,7 @@
         }
 
         code {
-            @apply border-slate-500;
+            @apply border-slate-500 bg-slate-800;
         }
 
         pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}

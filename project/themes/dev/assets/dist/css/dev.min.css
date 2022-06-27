@@ -1586,6 +1586,11 @@ code.hljs{
     border-color: rgb(100 116 139 / var(--tw-border-opacity));
   }
 
+  code {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+
   pre code.hljs{
     display:block;
     overflow-x:auto;
@@ -2614,6 +2619,11 @@ a.brand-logo:hover > svg {
 
 .border-hidden {
   border-style: hidden;
+}
+
+.border-slate-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
 .border-slate-900 {
