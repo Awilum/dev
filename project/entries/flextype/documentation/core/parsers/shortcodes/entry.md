@@ -1,6 +1,6 @@
 ---
-title: SHORTCODE
-description: Shortcode is a small piece of code, indicated by brackets like `[this]`, that performs a dedicated function on your site.
+title: SHORTCODES
+description: Shortcodes are a small piece of code, indicated by brackets like `(this)`, that performs a dedicated function on your site.
 template: flextype/docs
 seo:
   title: Shortcode | Flextype
@@ -94,7 +94,7 @@ on_this_page:
         link: "methods-getCacheID"
 ---
 
-Shortcode is a small piece of code, indicated by brackets like `[raw](this)[/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
+Shortcodes are a small piece of code, indicated by brackets like `[raw](this)[/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 ### <a name="shortcodes"></a> Shortcodes
 
