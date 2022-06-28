@@ -109,7 +109,7 @@ on_this_page:
 
 ##### <a name="commands-cache-clear"></a> `cache:clear`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:clear -h
@@ -131,7 +131,7 @@ Options:
 
 ##### <a name="commands-cache-clear-config"></a> `cache:clear-config`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:clear-config -h
@@ -153,7 +153,7 @@ Options:
 
 ##### <a name="commands-cache-clear-data"></a> `cache:clear-data`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:clear-data -h
@@ -175,7 +175,7 @@ Options:
 
 ##### <a name="commands-cache-clear-routes"></a> `cache:clear-routes`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:clear-routes -h
@@ -197,7 +197,7 @@ Options:
 
 ##### <a name="commands-cache-delete"></a> `cache:delete`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:delete -h
@@ -222,7 +222,7 @@ Options:
 
 ##### <a name="commands-cache-delete-multiple"></a> `cache:delete-multiple`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:delete-multiple -h
@@ -247,7 +247,7 @@ Options:
 
 ##### <a name="commands-cache-get"></a> `cache:get`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:get -h
@@ -273,7 +273,7 @@ Options:
 
 ##### <a name="commands-cache-get-multiple"></a> `cache:get-multiple`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:get-multiple -h
@@ -299,7 +299,7 @@ Options:
 
 ##### <a name="commands-cache-has"></a> `cache:has`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:get-has -h
@@ -324,7 +324,7 @@ Options:
 
 ##### <a name="commands-cache-set"></a> `cache:set`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:set -h
@@ -351,7 +351,7 @@ Options:
 
 ##### <a name="commands-cache-set-multiple"></a> `cache:set-multiple`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype cache:set-multiple -h

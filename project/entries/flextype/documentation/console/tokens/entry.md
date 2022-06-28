@@ -88,7 +88,7 @@ on_this_page:
 
 ##### <a name="commands-tokens-fetch"></a> `tokens:fetch`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:fetch -h
@@ -134,7 +134,7 @@ Options:
 
 ##### <a name="commands-tokens-has"></a> `tokens:has`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:has -h
@@ -159,7 +159,7 @@ Options:
 
 ##### <a name="commands-tokens-generate"></a> `tokens:generate`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:generate -h
@@ -184,7 +184,7 @@ Options:
 
 ##### <a name="commands-tokens-generate-hash"></a> `tokens:generate-hash`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:generate-hash -h
@@ -209,7 +209,7 @@ Options:
 
 ##### <a name="commands-tokens-verify-hash"></a> `tokens:verify-hash`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:verify-hash -h
@@ -235,7 +235,7 @@ Options:
 
 ##### <a name="commands-tokens-create"></a> `tokens:create`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:create -h
@@ -260,7 +260,7 @@ Options:
 
 ##### <a name="commands-tokens-delete"></a> `tokens:delete`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:delete -h
@@ -285,7 +285,7 @@ Options:
 
 ##### <a name="commands-tokens-update"></a> `tokens:update`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype tokens:update -h

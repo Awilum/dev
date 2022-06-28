@@ -81,7 +81,7 @@ on_this_page:
 
 ##### <a name="commands-entries-fetch"></a> `entries:fetch`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:fetch -h
@@ -127,7 +127,7 @@ Options:
 
 ##### <a name="commands-entries-has"></a> `entries:has`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:has -h
@@ -152,7 +152,7 @@ Options:
 
 ##### <a name="commands-entries-move"></a> `entries:move`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:move -h
@@ -178,7 +178,7 @@ Options:
 
 ##### <a name="commands-entries-copy"></a> `entries:copy`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:copy -h
@@ -204,7 +204,7 @@ Options:
 
 ##### <a name="commands-entries-create"></a> `entries:create`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:create -h
@@ -230,7 +230,7 @@ Options:
 
 ##### <a name="commands-entries-delete"></a> `entries:delete`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:delete -h
@@ -255,7 +255,7 @@ Options:
 
 ##### <a name="commands-entries-update"></a> `entries:update`
 
-<div class="file-header">Console</div>
+<div class="file-header text-center">TERMINAL</div>
 
 ```text
 ./bin/flextype entries:update -h
