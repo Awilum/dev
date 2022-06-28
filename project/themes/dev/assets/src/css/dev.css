@@ -78,7 +78,9 @@
         position: relative;
         font-size: 0.75em;
         opacity: .9;
-        @apply px-2 py-1 rounded-lg border-2 border-slate-900;
+        padding-top: 0.15rem;
+        padding-bottom: 0.15rem;
+        @apply px-2 rounded-lg border-2 border-slate-900;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
