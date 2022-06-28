@@ -96,7 +96,7 @@
     
     <div>
         <div class="p-2 mt-8">
-            <h4 class="text-2xl">Other starter_kits by {{ starter_kit.author.name }}</h4>
+            <h4 class="text-2xl">Other Starter Kits by {{ starter_kit.author.name }}</h4>
             {% if entry.author.email is not empty %}
                 {% set related_starter_kits = flextype.entries.fetch('flextype/downloads/extend/starter-kits', {'collection': true})
                                                 .where('author.email', 'eq', entry.author.email)
