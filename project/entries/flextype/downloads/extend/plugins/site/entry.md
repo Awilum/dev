@@ -19,9 +19,9 @@ seo:
 
 ### Installation
 
-1. Download & Install all required dependencies.
-2. Create new folder `project/plugins/site`
-3. Download Site Plugin and unzip plugin content to the folder `project/plugins/site`
+1. Download & Install all required [dependencies](https://github.com/flextype-plugins/site#dependencies).
+2. Create new folder `project/plugins/site`.
+3. Download [Site Plugin](https://github.com/flextype-plugins/site/releases) and unzip plugin content to the folder `project`.
 
 ### Default settings
 

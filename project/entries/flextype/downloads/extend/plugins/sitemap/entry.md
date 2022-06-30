@@ -19,9 +19,9 @@ seo:
 
 ### Installation
 
-1. Download & Install all required dependencies.
-2. Create new folder `project/plugins/sitemap`
-3. Download Sitemap Plugin and unzip plugin content to the folder `project/plugins/sitemap`
+1. Download & Install all required [dependencies](https://github.com/flextype-plugins/sitemap#dependencies).
+2. Create new folder `project/plugins/sitemap`.
+3. Download [Sitemap Plugin](https://github.com/flextype-plugins/sitemap/releases) and unzip plugin content to the folder `project`.
 
 ### Settings
 
