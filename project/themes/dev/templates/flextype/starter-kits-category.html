@@ -40,7 +40,7 @@
              <div class="w-full flex flex-wrap">   
                 {% for item in starter_kits_items %}
                 <div class="lg:p-4 lg:pb-8 lg:pt-0 pb-8 lg:w-6/12">
-                    <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border-2 rounded-lg border-slate-900 block plate-shadow">
+                    <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 block plate-shadow">
                     <img src="{{ item.preview }}" alt="" class="w-full border-b-2 border-slate-900 p-6">
                     <div class="flex p-6">
                         <div class="text-left">
@@ -60,7 +60,7 @@
 
         </div>
         <div class="w-full lg:w-3/12">
-            <div class="p-6 bg-white dark:bg-slate-800 mb-8 border-2 rounded-lg border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-8 border rounded-lg border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
             
                 {# CATEGORY CLOUD #}
                 {% set starterKitsCloudCacheID = strings('starterKitsCloudCacheID').hash().toString() %}

@@ -587,7 +587,7 @@ code {
   padding-top: 0.15rem;
   padding-bottom: 0.15rem;
   border-radius: 0.5rem;
-  border-width: 2px;
+  border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
   padding-left: 0.5rem;
@@ -682,7 +682,7 @@ pre > code.hljs {
 .terminal {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
-  border-width: 2px;
+  border-width: 1px;
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
   overflow: hidden;
@@ -698,7 +698,7 @@ pre > code.hljs {
   font-size: 12px;
   background: #0c0b14;
   border-color: #0c0b14;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1434,7 +1434,7 @@ table tbody tr {
 table {
   width: 100%;
   text-align: left;
-  border: 2px solid #0d111a;
+  border: 1px solid #0d111a;
   border-radius: 0.5rem;
 }
 
@@ -1463,13 +1463,13 @@ table {
   width: 100%;
   box-shadow: 3px 3px 0 #0d111a;
   background: #0d111a;
-  border: 2px solid #0d111a;
+  border: 1px solid #0d111a;
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 th {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   --tw-bg-opacity: 1;
   background-color: rgb(252 211 77 / var(--tw-bg-opacity));
   font-weight: 600;
@@ -1478,7 +1478,7 @@ th {
 }
 
 table thead {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
@@ -1796,8 +1796,8 @@ code.hljs{
   z-index: 50;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-  border-width: 2px;
-  border-top-width: 2px;
+  border-width: 1px;
+  border-top-width: 1px;
   border-bottom-color: rgb(15 23 42 / var(--tw-border-opacity));
   border-top-color: rgb(15 23 42 / var(--tw-border-opacity));
   border-left-color: rgb(15 23 42 / var(--tw-border-opacity));
@@ -1828,7 +1828,7 @@ a.brand-logo:hover > svg {
 .button {
   position: relative;
   border-radius: 0.5rem;
-  border-width: 2px;
+  border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
   padding-left: 2.5rem;
@@ -1962,7 +1962,7 @@ a.brand-logo:hover > svg {
 .releases strong:first-child {
   margin-right: 0.5rem;
   border-radius: 0.5rem;
-  border-width: 2px;
+  border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   padding-left: 0.5rem;
@@ -2559,12 +2559,12 @@ a.brand-logo:hover > svg {
   border-bottom-left-radius: 0.5rem;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border {
   border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-x {
@@ -2577,24 +2577,24 @@ a.brand-logo:hover > svg {
   border-bottom-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-
-.border-t-2 {
-  border-top-width: 2px;
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-t {
   border-top-width: 1px;
 }
 
-.border-b {
-  border-bottom-width: 1px;
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .border-r {
   border-right-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-r-2 {
@@ -2756,6 +2756,10 @@ a.brand-logo:hover > svg {
   padding: 3rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -2869,6 +2873,10 @@ a.brand-logo:hover > svg {
   padding-bottom: 0.5rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -2883,10 +2891,6 @@ a.brand-logo:hover > svg {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pt-0 {
-  padding-top: 0px;
 }
 
 .pt-4 {
@@ -3214,16 +3218,6 @@ a.brand-logo:hover > svg {
   transition-duration: 150ms;
 }
 
-.hover\:bg-amber-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-amber-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(180 83 9 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-amber-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
@@ -3240,11 +3234,6 @@ a.brand-logo:hover > svg {
 .hover\:text-slate-900:hover {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:text-pink-500:hover {

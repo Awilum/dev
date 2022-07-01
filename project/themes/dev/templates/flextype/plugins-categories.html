@@ -29,7 +29,7 @@
                 {% do flextype.cache.set(pluginsCacheID, plugins) %}
             {% endif %}
 
-            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border-2 rounded-lg border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border rounded-lg border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
             
                 {# CATEGORY CLOUD #}
                 {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID').hash().toString() %}

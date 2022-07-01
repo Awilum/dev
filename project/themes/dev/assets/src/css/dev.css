@@ -80,7 +80,7 @@
         opacity: .9;
         padding-top: 0.15rem;
         padding-bottom: 0.15rem;
-        @apply px-2 rounded-lg border-2 border-slate-900;
+        @apply px-2 rounded-lg border border-slate-900;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
@@ -166,7 +166,7 @@
 
 
     .terminal {
-        @apply mb-8 border-2 text-slate-100 rounded-lg;
+        @apply mb-8 border text-slate-100 rounded-lg;
         overflow: hidden;
         background: #0d111a;
         border-color: #0c0b14;
@@ -180,7 +180,7 @@
         font-size: 12px;
         background: #0c0b14;
         border-color: #0c0b14;
-        @apply border-b-2  text-white uppercase;
+        @apply border-b  text-white uppercase;
     }
 
     .terminal-body {
@@ -919,7 +919,7 @@
     table {
         width: 100%;
         text-align: left;
-        border: 2px solid #0d111a;
+        border: 1px solid #0d111a;
         border-radius: 0.5rem;
     }
 
@@ -945,16 +945,16 @@
         width: 100%;
         box-shadow: 3px 3px 0 #0d111a;
         background: #0d111a;
-        border: 2px solid #0d111a;
+        border: 1px solid #0d111a;
         @apply text-slate-100;
     }
 
     th {
-        @apply bg-amber-300 text-slate-900 font-semibold border-b-2;
+        @apply bg-amber-300 text-slate-900 font-semibold border-b;
     }
 
     table thead {
-        @apply border-b-2 text-slate-900 border-slate-900;
+        @apply border-b text-slate-900 border-slate-900;
     }
 
     .plate-shadow {
@@ -1105,7 +1105,7 @@
         padding: 10.5px 18px 10.5px!important;
         margin-bottom: -8px;
         font-size: 0.75em;
-        @apply bg-amber-300 relative text-slate-900 rounded-tr-lg rounded-tl-lg border-2 border-b-slate-900 border-t-2 border-t-slate-900 border-l-slate-900 border-r-slate-900 z-50 font-semibold;
+        @apply bg-amber-300 relative text-slate-900 rounded-tr-lg rounded-tl-lg border border-b-slate-900 border-t border-t-slate-900 border-l-slate-900 border-r-slate-900 z-50 font-semibold;
     }
 
     /*
@@ -1124,7 +1124,7 @@
     }
 
     .button {
-        @apply pl-10 pr-10 pt-3 pb-3 border-2 rounded-lg font-semibold text-sm border-slate-900 no-underline relative;
+        @apply pl-10 pr-10 pt-3 pb-3 border rounded-lg font-semibold text-sm border-slate-900 no-underline relative;
         box-shadow: 3px 3px 0;
     }
 
@@ -1166,7 +1166,7 @@
     }
 
     .releases strong:first-child {
-        @apply border-2 border-black px-2 mr-2 py-1 rounded-lg;
+        @apply border border-black px-2 mr-2 py-1 rounded-lg;
     }
 
     .releases p {
