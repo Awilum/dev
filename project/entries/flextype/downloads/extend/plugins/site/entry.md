@@ -3,7 +3,7 @@ title: Site
 description: Site plugin to display entries content on the website frontend.
 icon:
   name: globe
-  set: solid
+  set: fontawesome|solid  
 category: content
 author:
   name: Sergey Romanenko
@@ -118,6 +118,6 @@ Site plugin shares the following variables in your PHP, Twig, etc., templates:
 
 | Variable | Description |
 |---|---|
-| entry | Current entry data. |
+| - | All entry fields. |
 | uri | Current URI. |
 | request | Current request data. |

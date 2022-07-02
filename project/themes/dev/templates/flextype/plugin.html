@@ -27,14 +27,14 @@
             <div class="w-full lg:w-9/12 pl-2 pr-7 text-left">
                 <div class="text-plate-900 mb-6">
                     <div class="flex align-middle items-center">
-                        <span class="icon-svg-large mr-5">{{ icon(plugin.icon.name, plugin.icon.set) }}</span>
+                        <span class="icon-svg-large mr-5">{{ icon(entry.icon.name, entry.icon.set) }}</span>
                         <div class="text-left">
-                            <h4 class="text-2xl pb-0 mb-0 block">{{ plugin.name }}</h4>
+                            <h4 class="text-2xl pb-0 mb-0 block">{{ entry.name }}</h4>
                             <p class="m-0">
-                                {{ plugin.description }}
+                                {{ entry.description }}
                             </p>
                             <p class="m-0 text-sm">
-                                <span class="opacity-50">by</span> <a href="{{ plugin.author.url }}"><b>{{ plugin.author.name }}</b></a>
+                                <span class="opacity-50">by</span> <a href="{{ entry.author.url }}"><b>{{ entry.author.name }}</b></a>
                             </p>
                         </div>
                     </div>
