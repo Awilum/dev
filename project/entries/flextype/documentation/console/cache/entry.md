@@ -112,7 +112,7 @@ on_this_page:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:clear -h
+bin/flextype cache:clear -h
 
 Description:
   Clear cache.
@@ -134,7 +134,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:clear-config -h
+bin/flextype cache:clear-config -h
 
 Description:
   Clear cache config.
@@ -156,7 +156,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:clear-data -h
+bin/flextype cache:clear-data -h
 
 Description:
   Clear cache data.
@@ -178,7 +178,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:clear-routes -h
+bin/flextype cache:clear-routes -h
 
 Description:
   Clear cache routes.
@@ -200,7 +200,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:delete -h
+bin/flextype cache:delete -h
 
 Description:
   Delete item.
@@ -225,7 +225,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:delete-multiple -h
+bin/flextype cache:delete-multiple -h
 
 Description:
   Delete mutiple items.
@@ -250,7 +250,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:get -h
+bin/flextype cache:get -h
 
 Description:
   Get item.
@@ -276,7 +276,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:get-multiple -h
+bin/flextype cache:get-multiple -h
 
 Description:
   Get multiple items.
@@ -302,7 +302,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:get-has -h
+bin/flextype cache:get-has -h
 
 Description:
   Check whether cache item exists.
@@ -327,7 +327,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:set -h
+bin/flextype cache:set -h
 
 Description:
   Set item.
@@ -354,7 +354,7 @@ Options:
 <div class="file-header text-center">TERMINAL</div>
 
 ```text
-./bin/flextype cache:set-multiple -h
+bin/flextype cache:set-multiple -h
 
 Description:
   Set multiple items.

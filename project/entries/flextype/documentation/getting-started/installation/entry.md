@@ -31,7 +31,7 @@ Flextype core package with a minimal Flextype setup with the basics you need to 
 
 > If you are running Flextype in subdirectory you should update `RewriteBase` in your `.htaccess` with  `/subdirectory/path/` and update base_path setting in your `project/config/flextype/settings.yaml` with `subdirectory/path`
 
-> By default cache is enabled, so after any changes you do with site templates, content or settings, you should delete flextype root var folder manually or with help of console command `./bin/flextype cache:clear` 
+> By default cache is enabled, so after any changes you do with site templates, content or settings, you should delete flextype root var folder manually or with help of console command `bin/flextype cache:clear` 
 
 ### <a name="installation-issues"></a> Installation issues
 
