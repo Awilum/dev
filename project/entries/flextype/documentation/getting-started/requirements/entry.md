@@ -21,7 +21,7 @@ on_this_page:
 You can easily run Flextype on your local computer and on any Web hosting providers. Make sure that your server meets the following requirements:
 
 * Web Server (Apache, Nginx, LiteSpeed, Lightly, IIS, etc.)
-* PHP 7.4.0 or higher.
+* PHP 8.1.0 or higher.
 
 ### <a name="web-server-requirements"></a> Web Server Requirements
 
@@ -37,11 +37,13 @@ For local development you may install one of this amazing servers:
 
 * [Laragon](https://laragon.org) is a fast & powerful local development environment.
 
-Make sure that your web server provides Mod Rewrite.
+* [Symfony Local Web Server](https://symfony.com/doc/current/setup/symfony_server.html) the local Symfony Web Server for local development environment.
+
+> Make sure that your web server provides Mod Rewrite.
 
 ### <a name="php-requirements"></a> PHP Requirements
 
-Flextype needs PHP 7.4.0 or higher and the following PHP extensions to be enabled:
+Flextype needs PHP 8.1.0 or higher and the following PHP extensions to be enabled:
 
 - [mbstring](https://php.net/manual/book.mbstring.php) module for full UTF-8 support.
 - [gd](https://php.net/manual/book.image.php) or [ImageMagick](https://php.net/manual/book.imagick.php) module for image processing.
