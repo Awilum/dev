@@ -101,7 +101,6 @@ breadcrumbs:
 
 <hr /><a id="class-flextypeplugins"></a>
 
-
 ### Class: \Flextype\Plugins
 
 | Visibility | Function |
@@ -128,7 +127,7 @@ breadcrumbs:
 |:-----------|:---------|
 | public | <strong>__wakeup()</strong> : <em>void</em><br /><em>Flextype should not be restorable from strings.</em> |
 | public | <strong>app()</strong> : <em>App Returns Flextype Application.</em><br /><em>Get Flextype Application.</em> |
-| public | <strong>container()</strong> : <em>Container Returns Flextype Application Container.</em><br /><em>Get Flextype Application Container.</em> |
+| public | <strong>container()</strong> : <em>ContainerInterface Returns Flextype Application Container.</em><br /><em>Get Flextype Application Container.</em> |
 | public static | <strong>getInstance(</strong><em>\Psr\Container\ContainerInterface</em> <strong>$container=null</strong>)</strong> : <em>Flextype Returns the current Flextype Instance.</em><br /><em>Returns Flextype Instance. Gets the instance via lazy initialization (created on first usage)</em> |
 | public | <strong>getVersion()</strong> : <em>string Returns the current Flextype version.</em><br /><em>Get the current Flextype version.</em> |
 | protected | <strong>__clone()</strong> : <em>void</em><br /><em>Flextype should not be cloneable.</em> |
@@ -140,8 +139,8 @@ breadcrumbs:
 
 | Visibility | Function |
 |:-----------|:---------|
-| public static | <strong>add(</strong><em>string/array</em> <strong>$translates</strong>, <em>\string</em> <strong>$locale=null</strong>)</strong> : <em>void</em><br /><em>Add translation keys New translation keus for default locale I18n::add(['auth_login' => 'Login', 'auth_password' => 'Password']); New translation keys for `en_US` locale I18n::add(['auth_login' => 'Login', 'auth_password' => 'Password'], 'en_US');</em> |
-| public static | <strong>find(</strong><em>\string</em> <strong>$translate</strong>, <em>array</em> <strong>$values=array()</strong>, <em>\string</em> <strong>$locale=null</strong>)</strong> : <em>string</em><br /><em>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced. Get translated string for `auth_login` for default locale $translated_string = I18n::find('auth_login');</em> |
+| public static | <strong>add(</strong><em>array</em> <strong>$translates</strong>, <em>\string</em> <strong>$locale=null</strong>)</strong> : <em>void</em><br /><em>Add translation keys New translation keus for default locale I18n::add(['auth_login' => 'Login', 'auth_password' => 'Password']); New translation keys for `en_US` locale I18n::add(['auth_login' => 'Login', 'auth_password' => 'Password'], 'en_US');</em> |
+| public static | <strong>find(</strong><em>\string</em> <strong>$translate</strong>, <em>array</em> <strong>$values=array()</strong>, <em>\string</em> <strong>$locale=null</strong>)</strong> : <em>mixed</em><br /><em>Returns translation of a string. If no translation exists, the original string will be returned. No parameters are replaced. Get translated string for `auth_login` for default locale $translated_string = I18n::find('auth_login');</em> |
 
 <hr /><a id="class-flextypewhoops"></a>
 
@@ -150,7 +149,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>__construct(</strong><em>array</em> <strong>$settings=array()</strong>)</strong> : <em>void</em><br /><em>Instance the whoops guard object</em> |
-| public | <strong>install()</strong> : <em>[\Flextype\Whoops](#class-flextypewhoops)Run/null</em><br /><em>Install the whoops guard object</em> |
+| public | <strong>install()</strong> : <em>void</em><br /><em>Install the whoops guard object</em> |
 | public | <strong>setHandlers(</strong><em>array</em> <strong>$handlers</strong>)</strong> : <em>void</em><br /><em>Set the custom handlers for whoops</em> |
 | public | <strong>setRequest(</strong><em>\Psr\Http\Message\ServerRequestInterface</em> <strong>$request</strong>)</strong> : <em>void</em><br /><em>Set the server request object</em> |
 
@@ -549,10 +548,10 @@ breadcrumbs:
 | public static | <strong>macro(</strong><em>\string</em> <strong>$name</strong>, <em>object/callable</em> <strong>$macro</strong>)</strong> : <em>void</em><br /><em>Register a custom macro.</em> |
 | public static | <strong>mixin(</strong><em>\object</em> <strong>$mixin</strong>, <em>\bool</em> <strong>$replace=true</strong>)</strong> : <em>void</em><br /><em>Mix another object into the class.</em> |
 | public | <strong>move(</strong><em>\string</em> <strong>$id</strong>, <em>\string</em> <strong>$newID</strong>)</strong> : <em>bool True on success, false on failure.</em><br /><em>Move entry.</em> |
-| public | <strong>options()</strong> : <em>array Returns entries options.</em><br /><em>Get Entries options.</em> |
+| public | <strong>options()</strong> : <em>Collection Returns entries options.</em><br /><em>Get Entries options.</em> |
 | public | <strong>registry()</strong> : <em>Collection Returns entries registry.</em><br /><em>Get Entries Registry.</em> |
-| public | <strong>setOptions(</strong><em>mixed</em> <strong>$options=null</strong>)</strong> : <em>void</em><br /><em>Set Entries options.</em> |
-| public | <strong>setRegistry(</strong><em>mixed</em> <strong>$registry=null</strong>)</strong> : <em>void</em><br /><em>Set Entries registry.</em> |
+| public | <strong>setOptions(</strong><em>mixed</em> <strong>$options=null</strong>)</strong> : <em>\Flextype\Entries\self</em><br /><em>Set Entries options.</em> |
+| public | <strong>setRegistry(</strong><em>mixed</em> <strong>$registry=null</strong>)</strong> : <em>\Flextype\Entries\self</em><br /><em>Set Entries registry.</em> |
 | public | <strong>update(</strong><em>\string</em> <strong>$id</strong>, <em>array</em> <strong>$data</strong>)</strong> : <em>bool True on success, false on failure.</em><br /><em>Update entry.</em> |
 
 <hr /><a id="class-flextypeentriesexpressionsvarexpression"></a>
@@ -711,7 +710,7 @@ breadcrumbs:
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__invoke(</strong><em>\Flextype\Middlewares\ServerRequest/\Psr\Http\Message\ServerRequestInterface</em> <strong>$request</strong>, <em>\Flextype\Middlewares\RequestHandler/\Psr\Http\Server\RequestHandlerInterface</em> <strong>$handler</strong>)</strong> : <em>\Slim\Psr7\Response</em><br /><em>Invoke</em> |
+| public | <strong>__invoke(</strong><em>\Psr\Http\Message\ServerRequestInterface</em> <strong>$request</strong>, <em>\Psr\Http\Server\RequestHandlerInterface</em> <strong>$handler</strong>)</strong> : <em>void</em><br /><em>Invoke</em> |
 
 <hr /><a id="class-flextypemiddlewareswhoopsmiddleware"></a>
 
@@ -720,7 +719,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>__construct(</strong><em>array</em> <strong>$settings=array()</strong>, <em>array</em> <strong>$handlers=array()</strong>)</strong> : <em>void</em><br /><em>Instance the whoops middleware object</em> |
-| public | <strong>process(</strong><em>\Psr\Http\Message\ServerRequestInterface</em> <strong>$request</strong>, <em>\Psr\Http\Server\RequestHandlerInterface</em> <strong>$handler</strong>)</strong> : <em>\Psr\Http\Message\ResponseInterface</em><br /><em>Handle the requests</em> |
+| public | <strong>process(</strong><em>\Psr\Http\Message\ServerRequestInterface</em> <strong>$request</strong>, <em>\Psr\Http\Server\RequestHandlerInterface</em> <strong>$handler</strong>)</strong> : <em>void</em><br /><em>Handle the requests</em> |
 
 *This class implements \Psr\Http\Server\MiddlewareInterface*
 
@@ -794,7 +793,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The FRONTMATTER converted to a PHP value.</em><br /><em>Takes a FRONTMATTER encoded string and converts it into a PHP variable.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>string A FRONTMATTER string representing the original PHP value.</em><br /><em>Returns the FRONTMATTER representation of a value.</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>string A FRONTMATTER string representing the original PHP value.</em><br /><em>Returns the FRONTMATTER representation of a value.</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for frontmatter.</em> |
 
 <hr /><a id="class-flextypeserializersjson"></a>
@@ -804,7 +803,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The JSON converted to a PHP value</em><br /><em>Takes a JSON encoded string and converts it into a PHP variable.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>mixed A JSON string representing the original PHP value</em><br /><em>Returns the JSON representation of a value</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>mixed A JSON string representing the original PHP value</em><br /><em>Returns the JSON representation of a value</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for JSON.</em> |
 
 <hr /><a id="class-flextypeserializersserializers"></a>
@@ -833,7 +832,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The PhpArray converted to a PHP value.</em><br /><em>Takes a PhpArray encoded string and converts it into a PHP variable.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>string A PhpArray string representing the original PHP value.</em><br /><em>Returns the PhpArray representation of a value.</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>string A PhpArray string representing the original PHP value.</em><br /><em>Returns the PhpArray representation of a value.</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for phparray.</em> |
 
 <hr /><a id="class-flextypeserializersjson5"></a>
@@ -843,7 +842,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The JSON5 converted to a PHP value.</em><br /><em>Takes a JSON5 encoded string and converts it into a PHP variable.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>mixed A JSON5 string representing the original PHP value.</em><br /><em>Returns the JSON5 representation of a value.</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>mixed A JSON5 string representing the original PHP value.</em><br /><em>Returns the JSON5 representation of a value.</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for JSON5.</em> |
 
 <hr /><a id="class-flextypeserializersyaml"></a>
@@ -853,7 +852,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The YAML converted to a PHP value.</em><br /><em>Parses YAML into a PHP value.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>string A YAML string representing the original PHP value.</em><br /><em>Dumps a PHP value to a YAML string. The dump method, when supplied with an array, will do its best to convert the array into friendly YAML.</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>string A YAML string representing the original PHP value.</em><br /><em>Dumps a PHP value to a YAML string. The dump method, when supplied with an array, will do its best to convert the array into friendly YAML.</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for YAML.</em> |
 
 <hr /><a id="class-flextypeserializersneon"></a>
@@ -863,7 +862,7 @@ breadcrumbs:
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>decode(</strong><em>\string</em> <strong>$input</strong>)</strong> : <em>mixed The NEON converted to a PHP value.</em><br /><em>Takes a NEON encoded string and converts it into a PHP variable.</em> |
-| public | <strong>encode(</strong><em>mixed</em> <strong>$input</strong>)</strong> : <em>string A NEON string representing the original PHP value.</em><br /><em>Returns the NEON representation of a value.</em> |
+| public | <strong>encode(</strong><em>\mixed</em> <strong>$input</strong>)</strong> : <em>string A NEON string representing the original PHP value.</em><br /><em>Returns the NEON representation of a value.</em> |
 | public | <strong>getCacheID(</strong><em>\string</em> <strong>$input</strong>, <em>\string</em> <strong>$string=`''`</strong>)</strong> : <em>string Cache ID.</em><br /><em>Get Cache ID for neon.</em> |
 
 <hr /><a id="class-phpfastcachedriversphparrayconfig"></a>
@@ -872,159 +871,162 @@ breadcrumbs:
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>getCacheFileExtension()</strong> : <em>string</em> |
-| public | <strong>getHtaccess()</strong> : <em>bool</em> |
-| public | <strong>getSecurityKey()</strong> : <em>string</em> |
-| public | <strong>isSecureFileManipulation()</strong> : <em>bool</em> |
-| public | <strong>setCacheFileExtension(</strong><em>\string</em> <strong>$cacheFileExtension</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\self</em> |
-| public | <strong>setHtaccess(</strong><em>\bool</em> <strong>$htaccess</strong>)</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)</em> |
-| public | <strong>setSecureFileManipulation(</strong><em>\bool</em> <strong>$secureFileManipulation</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\self</em> |
-| public | <strong>setSecurityKey(</strong><em>\string</em> <strong>$securityKey</strong>)</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)</em> |
+| public | <strong>__construct(</strong><em>array</em> <strong>$parameters=array()</strong>)</strong> : <em>void</em><br /><em>ConfigurationOptionInterface constructor.</em> |
 
-*This class extends \Phpfastcache\Config\ConfigurationOption*
+*This class extends \Phpfastcache\Config\IOConfigurationOption*
 
-*This class implements \Phpfastcache\Config\ConfigurationOptionInterface, \Traversable, \Countable, \Iterator, \ArrayAccess*
+*This class implements \Phpfastcache\Config\ConfigurationOptionInterface, \Phpfastcache\Config\LockableConfigurationInterface, \Phpfastcache\Config\IOConfigurationOptionInterface*
 
 <hr /><a id="class-phpfastcachedriversphparraydriver"></a>
 
 ### Class: \Phpfastcache\Drivers\Phparray\Driver
 
-> Class Driver
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)</em> <strong>$config</strong>, <em>\string</em> <strong>$instanceId</strong>)</strong> : <em>void</em><br /><em>Driver constructor.</em> |
-| public | <strong>appendItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>array/string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully appended. False if there was an error.</em><br /><em>Decrement the items from the pool by tag. The tag for which to append</em> |
-| public | <strong>appendItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>array/string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the items were successfully appended. False if there was an error.</em><br /><em>Append the items from the pool by one of multiple tag names. The tag for which to append</em> |
+| public | <strong>__construct(</strong><em>\Phpfastcache\Config\ConfigurationOptionInterface</em> <strong>$config</strong>, <em>\string</em> <strong>$instanceId</strong>, <em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>void</em> |
+| public | <strong>__driverBaseConstruct(</strong><em>\Phpfastcache\Config\ConfigurationOptionInterface</em> <strong>$config</strong>, <em>\string</em> <strong>$instanceId</strong>, <em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>void</em><br /><em>Driver constructor.</em> |
+| public | <strong>appendItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\Phpfastcache\Core\Pool\array<mixed>/string/\string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully appended. False if there was an error.</em><br /><em>Decrement the items from the pool by tag. The tag for which to append</em> |
+| public | <strong>appendItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\Phpfastcache\Core\Pool\array<mixed>/string/\string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the items were successfully appended. False if there was an error.</em><br /><em>Append the items from the pool by one of multiple tag names. The tag for which to append</em> |
 | public | <strong>attachItem(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
 | public | <strong>clear()</strong> : <em>bool</em> |
 | public | <strong>commit()</strong> : <em>bool</em> |
 | public | <strong>decrementItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\int</em> <strong>$step=1</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully decremented. False if there was an error.</em><br /><em>Decrement the items from the pool by tag. The tag for which to decrement</em> |
 | public | <strong>decrementItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$step=1</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully decremented. False if there was an error.</em><br /><em>Decrement the items from the pool by one of multiple tag names. The tag for which to decrement</em> |
-| public | <strong>deleteItem(</strong><em>string</em> <strong>$key</strong>)</strong> : <em>bool</em> |
-| public | <strong>deleteItems(</strong><em>array</em> <strong>$keys</strong>)</strong> : <em>bool</em> |
+| public | <strong>deleteItem(</strong><em>\string</em> <strong>$key</strong>)</strong> : <em>bool</em> |
+| public | <strong>deleteItems(</strong><em>string[]</em> <strong>$keys</strong>)</strong> : <em>bool True if the items were successfully removed. False if there was an error.</em><br /><em>Removes multiple items from the pool. An array of keys that should be removed from the pool.</em> |
 | public | <strong>deleteItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully removed. False if there was an error.</em><br /><em>Removes the item from the pool by tag. The tag for which to delete</em> |
 | public | <strong>deleteItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the items were successfully removed. False if there was an error.</em><br /><em>Removes the item from the pool by one of multiple tag names. The tag for which to delete</em> |
 | public | <strong>detachAllItems()</strong> : <em>void</em> |
 | public | <strong>detachItem(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| public | <strong>driverCheck()</strong> : <em>bool</em> |
-| public | <strong>driverPreWrap(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>array</em> |
-| public | <strong>driverUnwrapCdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\?DateTimeInterface</em> |
+| public | <strong>driverCheck()</strong> : <em>void</em> |
+| public | <strong>driverPreWrap(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>, <em>\bool</em> <strong>$stringifyDate=false</strong>)</strong> : <em>array<string, mixed></em> |
+| public | <strong>driverUnwrapCdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface/null</em> |
 | public | <strong>driverUnwrapData(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>mixed</em> |
-| public | <strong>driverUnwrapEdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\?DateTimeInterface</em> |
-| public | <strong>driverUnwrapMdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\?DateTimeInterface</em> |
+| public | <strong>driverUnwrapEdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface</em> |
+| public | <strong>driverUnwrapMdate(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface/null</em> |
 | public | <strong>getClassName()</strong> : <em>string</em> |
-| public | <strong>getClassNamespace()</strong> : <em>string</em> |
-| public | <strong>getConfig()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)urationOption</em> |
+| public static | <strong>getClassNamespace()</strong> : <em>string</em> |
+| public | <strong>getConfig()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)urationOptionInterface</em> |
 | public static | <strong>getConfigClass()</strong> : <em>string</em> |
-| public | <strong>getDefaultConfig()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)urationOption</em> |
+| public | <strong>getDefaultConfig()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Config](#class-phpfastcachedriversphparrayconfig)urationOptionInterface</em> |
 | public | <strong>getDriverName()</strong> : <em>string</em> |
 | public | <strong>getEventManager()</strong> : <em>\Phpfastcache\Drivers\Phparray\EventManagerInterface</em> |
 | public | <strong>getHelp()</strong> : <em>string</em> |
 | public | <strong>getIO()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Driver](#class-phpfastcachedriversphparraydriver)IO</em> |
 | public | <strong>getInstanceId()</strong> : <em>string</em> |
-| public | <strong>getItem(</strong><em>string</em> <strong>$key</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>getItems(</strong><em>array</em> <strong>$keys=array()</strong>)</strong> : <em>array</em> |
-| public | <strong>getItemsAsJsonString(</strong><em>array</em> <strong>$keys=array()</strong>, <em>\int</em> <strong>$option</strong>, <em>\int</em> <strong>$depth=512</strong>)</strong> : <em>string</em><br /><em>Returns A json string that represents an array of items. An indexed array of keys of items to retrieve.</em> |
+| public | <strong>getItem(</strong><em>\string</em> <strong>$key</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public static | <strong>getItemClass()</strong> : <em>mixed</em> |
+| public | <strong>getItems(</strong><em>array/string[]</em> <strong>$keys=array()</strong>)</strong> : <em>iterable An iterable collection of Cache Items keyed by the cache keys of each item. A Cache item will be returned for each key, even if that key is not found. However, if no keys are specified then an empty traversable MUST be returned instead.</em><br /><em>Returns a traversable set of cache items. An indexed array of keys of items to retrieve.</em> |
+| public | <strong>getItemsAsJsonString(</strong><em>array/\Phpfastcache\Core\Pool\array<string>/array</em> <strong>$keys=array()</strong>, <em>\int</em> <strong>$options=4194304</strong>, <em>\int</em> <strong>$depth=512</strong>)</strong> : <em>string</em><br /><em>Returns A json string that represents an array of items.</em> |
 | public | <strong>getItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>ExtendedCacheItemInterface[] A traversable collection of Cache Items keyed by the cache keys of each item. A Cache item will be returned for each key, even if that key is not found. However, if no keys are specified then an empty traversable MUST be returned instead.</em><br /><em>Returns a traversable set of cache items by a tag name. An indexed array of keys of items to retrieve.</em> |
 | public | <strong>getItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>ExtendedCacheItemInterface[] A traversable collection of Cache Items keyed by the cache keys of each item. A Cache item will be returned for each key, even if that key is not found. However, if no keys are specified then an empty traversable MUST be returned instead.</em><br /><em>Returns a traversable set of cache items by one of multiple tag names. An indexed array of keys of items to retrieve.</em> |
-| public | <strong>getItemsByTagsAsJsonString(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$option</strong>, <em>\int</em> <strong>$depth=512</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>string</em><br /><em>Returns A json string that represents an array of items by tags-based. An indexed array of keys of items to retrieve.</em> |
-| public | <strong>getPath(</strong><em>bool</em> <strong>$readonly=false</strong>)</strong> : <em>string</em> |
+| public | <strong>getItemsByTagsAsJsonString(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$option=4194304</strong>, <em>\int</em> <strong>$depth=512</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>string</em><br /><em>Returns A json string that represents an array of items by tags-based. An indexed array of keys of items to retrieve.</em> |
+| public | <strong>getPath(</strong><em>\bool</em> <strong>$readonly=false</strong>)</strong> : <em>string</em> |
 | public | <strong>getStats()</strong> : <em>[\Phpfastcache\Drivers\Phparray\Driver](#class-phpfastcachedriversphparraydriver)Statistic</em><br /><em>Provide a generic getStats() method for files-based drivers</em> |
 | public | <strong>hasEventManager()</strong> : <em>bool</em> |
-| public | <strong>hasItem(</strong><em>string</em> <strong>$key</strong>)</strong> : <em>bool</em> |
+| public | <strong>hasItem(</strong><em>\string</em> <strong>$key</strong>)</strong> : <em>bool</em> |
 | public | <strong>incrementItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\int</em> <strong>$step=1</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully incremented. False if there was an error.</em><br /><em>Increment the items from the pool by tag. The tag for which to increment</em> |
 | public | <strong>incrementItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$step=1</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the items were successfully incremented. False if there was an error.</em><br /><em>Increment the items from the pool by one of multiple tag names. The tag for which to increment</em> |
-| public | <strong>isAttached(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool/null</em><br /><em>Returns true if the item exists, is attached and the Spl Hash matches Returns false if the item exists, is attached and the Spl Hash mismatches Returns null if the item does not exists</em> |
-| public | <strong>prependItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>array/string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully prepended. False if there was an error.</em><br /><em>Prepend the items from the pool by tag. The tag for which to prepend</em> |
-| public | <strong>prependItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>array/string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully prepended. False if there was an error.</em><br /><em>Prepend the items from the pool by one of multiple tag names. The tag for which to prepend</em> |
+| public | <strong>isAggregatedBy()</strong> : <em>bool</em> |
+| public | <strong>isAttached(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
+| public | <strong>prependItemsByTag(</strong><em>\string</em> <strong>$tagName</strong>, <em>\Phpfastcache\Core\Pool\array<mixed>/string/\string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully prepended. False if there was an error.</em><br /><em>Prepend the items from the pool by tag. The tag for which to prepend</em> |
+| public | <strong>prependItemsByTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\Phpfastcache\Core\Pool\array<mixed>/string/\string</em> <strong>$data</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool True if the item was successfully prepended. False if there was an error.</em><br /><em>Prepend the items from the pool by one of multiple tag names. The tag for which to prepend</em> |
 | public | <strong>save(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
-| public | <strong>saveDeferred(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>\Psr\Cache\CacheItemInterface</em> |
-| public | <strong>saveMultiple(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemInterface[]</em> <strong>$items</strong>)</strong> : <em>bool</em><br /><em>Save multiple items, possible uses: saveMultiple([$item1, $item2, $item3]); saveMultiple($item1, $item2, $item3);</em> |
-| public | <strong>setConfig(</strong><em>\Phpfastcache\Config\ConfigurationOption</em> <strong>$config</strong>)</strong> : <em>void</em> |
-| public | <strong>setEventManager(</strong><em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\EventManagerDispatcherInterface</em> |
+| public | <strong>saveDeferred(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
+| public | <strong>saveMultiple(</strong><em>mixed</em> <strong>$items</strong>)</strong> : <em>bool</em> |
+| public | <strong>setAggregatedBy(</strong><em>\Phpfastcache\Cluster\ClusterPoolInterface</em> <strong>$clusterPool</strong>)</strong> : <em>void</em> |
+| public | <strong>setConfig(</strong><em>\Phpfastcache\Config\ConfigurationOptionInterface</em> <strong>$config</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\static</em> |
+| public | <strong>setEventManager(</strong><em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\static</em> |
 | public | <strong>setItem(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| protected static | <strong>cleanFileName(</strong><em>mixed</em> <strong>$filename</strong>)</strong> : <em>string</em> |
+| protected | <strong>assertCacheItemType(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>, <em>\string</em> <strong>$expectedClassType</strong>)</strong> : <em>void</em> |
+| protected | <strong>buildSecurityKey(</strong><em>\string</em> <strong>$httpHost</strong>)</strong> : <em>void</em> |
+| protected static | <strong>buildTokenClasses(</strong><em>\string</em> <strong>$namespace</strong>, <em>\string</em> <strong>$class</strong>, <em>string[]</em> <strong>$classes</strong>, <em>\int</em> <strong>$index</strong>, <em>\Phpfastcache\Drivers\Phparray\array<array<mixed>/\Phpfastcache\Drivers\Phparray\string>/array</em> <strong>$tokens</strong>)</strong> : <em>string[]</em> |
+| protected static | <strong>buildTokenNamespace(</strong><em>\int</em> <strong>$index</strong>, <em>\Phpfastcache\Drivers\Phparray\array<array<mixed>/\Phpfastcache\Drivers\Phparray\string>/array</em> <strong>$tokens</strong>)</strong> : <em>string</em> |
+| protected static | <strong>cleanFileName(</strong><em>\string</em> <strong>$filename</strong>)</strong> : <em>string</em> |
 | protected | <strong>cleanItemTags(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| protected static | <strong>createClassMap(</strong><em>\Phpfastcache\Drivers\Phparray\Iterator/string/array</em> <strong>$dir</strong>)</strong> : <em>array A class map array</em><br /><em>Iterate over all files in the given directory searching for classes. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
-| protected | <strong>decode(</strong><em>string/null</em> <strong>$value</strong>)</strong> : <em>mixed</em><br /><em>Decode data types such as object/array for driver that does not support non-scalar value</em> |
+| protected static | <strong>createClassMap(</strong><em>\string</em> <strong>$dir</strong>)</strong> : <em>array<string, string> A class map array</em><br /><em>Iterate over all files in the given directory searching for classes. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
+| protected | <strong>decode(</strong><em>string/null/\string</em> <strong>$value</strong>)</strong> : <em>mixed</em><br /><em>Decode data types such as object/array for driver that does not support non-scalar value</em> |
 | protected | <strong>deregisterItem(</strong><em>\string</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| protected | <strong>driverClear()</strong> : <em>bool</em> |
-| protected | <strong>driverConnect()</strong> : <em>bool</em> |
-| protected | <strong>driverDelete(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
-| protected | <strong>driverRead(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>null/array</em> |
-| protected | <strong>driverUnwrapTags(</strong><em>array</em> <strong>$wrapper</strong>)</strong> : <em>mixed</em> |
-| protected | <strong>driverWrite(</strong><em>\Psr\Cache\CacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
+| protected | <strong>driverClear()</strong> : <em>void</em> |
+| protected | <strong>driverConnect()</strong> : <em>void</em> |
+| protected | <strong>driverDelete(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
+| protected | <strong>driverRead(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>?array<string, mixed></em> |
+| protected | <strong>driverUnwrapTags(</strong><em>\Phpfastcache\Drivers\Phparray\array<mixed>/array</em> <strong>$wrapper</strong>)</strong> : <em>string[]</em> |
+| protected | <strong>driverWrite(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
 | protected | <strong>driverWriteTags(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>bool</em> |
-| protected | <strong>encode(</strong><em>mixed</em> <strong>$data</strong>)</strong> : <em>string</em><br /><em>Encode data types such as object/array for driver that does not support non-scalar value</em> |
-| protected | <strong>encodeFilename(</strong><em>mixed</em> <strong>$keyword</strong>)</strong> : <em>string</em> |
-| protected | <strong>fetchItemsByTagFromBackend(</strong><em>\string</em> <strong>$tagName</strong>)</strong> : <em>array</em> |
-| protected static | <strong>findClasses(</strong><em>\string</em> <strong>$path</strong>)</strong> : <em>array The found classes</em><br /><em>Extract the classes in the given file. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
+| protected | <strong>encode(</strong><em>\mixed</em> <strong>$data</strong>)</strong> : <em>string</em><br /><em>Encode data types such as object/array for driver that does not support non-scalar value</em> |
+| protected | <strong>encodeFilename(</strong><em>\string</em> <strong>$keyword</strong>)</strong> : <em>string</em> |
+| protected | <strong>fetchItemsByTagFromBackend(</strong><em>\string</em> <strong>$tagName</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface[]</em> |
+| protected static | <strong>findClasses(</strong><em>\string</em> <strong>$path</strong>)</strong> : <em>string[] The found classes</em><br /><em>Extract the classes in the given file. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
 | protected | <strong>getDefaultChmod()</strong> : <em>int</em> |
-| protected | <strong>getFilePath(</strong><em>mixed</em> <strong>$keyword</strong>, <em>bool</em> <strong>$skip=false</strong>)</strong> : <em>string</em> |
+| protected | <strong>getFilePath(</strong><em>string/bool/\bool</em> <strong>$keyword</strong>, <em>\bool</em> <strong>$skip=false</strong>)</strong> : <em>string</em> |
 | protected | <strong>getTagKey(</strong><em>\string</em> <strong>$key</strong>)</strong> : <em>string</em> |
-| protected | <strong>getTagKeys(</strong><em>array</em> <strong>$keys</strong>)</strong> : <em>array</em> |
-| protected | <strong>htaccessGen(</strong><em>mixed</em> <strong>$path</strong>, <em>bool</em> <strong>$create=true</strong>)</strong> : <em>void</em> |
-| protected | <strong>isPHPModule()</strong> : <em>bool</em><br /><em>Check if phpModule or CGI</em> |
-| protected | <strong>readFile(</strong><em>mixed</em> <strong>$file</strong>)</strong> : <em>string</em> |
-| protected | <strong>writefile(</strong><em>\string</em> <strong>$file</strong>, <em>\string</em> <strong>$data</strong>, <em>\bool</em> <strong>$secureFileManipulation=false</strong>)</strong> : <em>bool</em> |
+| protected | <strong>getTagKeys(</strong><em>\Phpfastcache\Drivers\Phparray\array<string>/array</em> <strong>$keys</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\array<string></em> |
+| protected | <strong>handleExpiredCacheItem(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$item</strong>)</strong> : <em>void</em> |
+| protected | <strong>mkdir(</strong><em>\string</em> <strong>$fullPath</strong>, <em>\string</em> <strong>$fullPathTmp</strong>)</strong> : <em>void</em> |
+| protected | <strong>readFile(</strong><em>\string</em> <strong>$file</strong>)</strong> : <em>string</em> |
+| protected | <strong>validateCacheKey(</strong><em>\string</em> <strong>$key</strong>)</strong> : <em>void</em> |
+| protected | <strong>writeFile(</strong><em>\string</em> <strong>$file</strong>, <em>\string</em> <strong>$data</strong>, <em>\bool</em> <strong>$secureFileManipulation=false</strong>)</strong> : <em>bool</em> |
 
-*This class implements \Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface, \Phpfastcache\Cluster\AggregatablePoolInterface, \Phpfastcache\Core\Pool\TaggableCacheItemPoolInterface, \Phpfastcache\Util\ClassNamespaceResolverInterface, \Phpfastcache\Event\EventManagerDispatcherInterface, \Psr\Cache\CacheItemPoolInterface*
+*This class implements \Phpfastcache\Cluster\AggregatablePoolInterface, \Psr\Cache\CacheItemPoolInterface, \Phpfastcache\Event\EventManagerDispatcherInterface, \Phpfastcache\Util\ClassNamespaceResolverInterface, \Phpfastcache\Core\Pool\TaggableCacheItemPoolInterface, \Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface*
 
 <hr /><a id="class-phpfastcachedriversphparrayitem"></a>
 
 ### Class: \Phpfastcache\Drivers\Phparray\Item
 
-> Class Item
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__BaseConstruct(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driver</strong>, <em>mixed</em> <strong>$key</strong>)</strong> : <em>void</em><br /><em>Item constructor.</em> |
-| public | <strong>__construct(</strong><em>[\Phpfastcache\Drivers\Phparray\Driver](#class-phpfastcachedriversphparraydriver)</em> <strong>$driver</strong>, <em>mixed</em> <strong>$key</strong>)</strong> : <em>void</em><br /><em>Item constructor.</em> |
-| public | <strong>__debugInfo()</strong> : <em>array</em> |
-| public | <strong>addTag(</strong><em>mixed/\string</em> <strong>$tagName</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>addTags(</strong><em>array</em> <strong>$tagNames</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>append(</strong><em>array/string</em> <strong>$data</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>decrement(</strong><em>int</em> <strong>$step=1</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>doesItemBelongToThatDriverBackend(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driverPool</strong>)</strong> : <em>bool</em> |
-| public | <strong>expiresAfter(</strong><em>\Phpfastcache\Drivers\Phparray\DateInterval/int</em> <strong>$time</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\$this</em> |
-| public | <strong>expiresAt(</strong><em>\Phpfastcache\Drivers\Phparray\DateTimeInterface</em> <strong>$expiration</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
+| public | <strong>__construct(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driver</strong>, <em>\string</em> <strong>$key</strong>, <em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>void</em><br /><em>Item constructor.</em> |
+| public | <strong>addTag(</strong><em>\string</em> <strong>$tagName</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>addTags(</strong><em>string[]</em> <strong>$tagNames</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>append(</strong><em>\string</em> <strong>$data</strong>)</strong> : <em>void</em> |
+| public | <strong>cloneInto(</strong><em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> <strong>$itemTarget</strong>, <em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$itemPoolTarget=null</strong>)</strong> : <em>void</em> |
+| public | <strong>decrement(</strong><em>\int</em> <strong>$step=1</strong>)</strong> : <em>void</em> |
+| public | <strong>doesItemBelongToThatDriverBackend(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driverPool</strong>)</strong> : <em>void</em> |
+| public | <strong>expiresAfter(</strong><em>\null</em> <strong>$time</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\$this</em> |
+| public | <strong>expiresAt(</strong><em>\DateTimeInterface</em> <strong>$expiration</strong>)</strong> : <em>void</em> |
 | public | <strong>get()</strong> : <em>mixed</em> |
 | public | <strong>getClassName()</strong> : <em>string</em> |
-| public | <strong>getClassNamespace()</strong> : <em>string</em> |
-| public | <strong>getCreationDate()</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface</em> |
-| public | <strong>getDataAsJsonString(</strong><em>\int</em> <strong>$option</strong>, <em>\int</em> <strong>$depth=512</strong>)</strong> : <em>string</em><br /><em>Return the data as a well-formatted string. Any scalar value will be casted to an array</em> |
-| public | <strong>getEncodedKey()</strong> : <em>string</em> |
+| public static | <strong>getClassNamespace()</strong> : <em>string</em> |
+| public | <strong>getCreationDate()</strong> : <em>\DateTimeInterface</em> |
+| public | <strong>getDataAsJsonString(</strong><em>\int</em> <strong>$options=4194304</strong>, <em>\int</em> <strong>$depth=512</strong>)</strong> : <em>string</em><br /><em>Return the data as a well-formatted string. Any scalar value will be casted to an array</em> |
+| public | <strong>getEncodedKey()</strong> : <em>string The encoded key string for this cache item.</em><br /><em>Returns the encoded key for the current cache item. Is a MD5 (default),SHA1,SHA256 hash if "defaultKeyHashFunction" config option is configured Else return the plain cache item key "defaultKeyHashFunction" config option is emptied</em> |
 | public | <strong>getEventManager()</strong> : <em>\Phpfastcache\Drivers\Phparray\EventManagerInterface</em> |
-| public | <strong>getExpirationDate()</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface</em> |
-| public | <strong>getKey()</strong> : <em>string</em> |
+| public | <strong>getExpirationDate()</strong> : <em>\DateTimeInterface</em> |
+| public | <strong>getKey()</strong> : <em>mixed</em> |
 | public | <strong>getLength()</strong> : <em>int</em><br /><em>Return the data length: Either the string length if it's a string (binary mode) # or the number of element (count) if it's an array # or the number returned by count() if it's an object implementing \Countable interface # -1 for anything else</em> |
-| public | <strong>getModificationDate()</strong> : <em>\Phpfastcache\Drivers\Phparray\DateTimeInterface</em> |
-| public | <strong>getRemovedTags()</strong> : <em>array</em> |
-| public | <strong>getTags()</strong> : <em>array</em> |
+| public | <strong>getModificationDate()</strong> : <em>\DateTimeInterface</em> |
+| public | <strong>getRawValue()</strong> : <em>mixed</em><br /><em>Returns the raw value, regardless of hit status. This method can be called if the cache item is NOT YET persisted, and you need to access to its set value. Although not part of the CacheItemInterface, this method is used by the pool for extracting information for saving.</em> |
+| public | <strong>getRemovedTags()</strong> : <em>string[]</em> |
+| public | <strong>getTags()</strong> : <em>string[]</em> |
 | public | <strong>getTagsAsString(</strong><em>\string</em> <strong>$separator=`', '`</strong>)</strong> : <em>string</em> |
-| public | <strong>getTtl()</strong> : <em>int</em> |
+| public | <strong>getTtl()</strong> : <em>mixed</em> |
 | public | <strong>hasEventManager()</strong> : <em>bool</em> |
-| public | <strong>increment(</strong><em>int</em> <strong>$step=1</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
+| public | <strong>hasTag(</strong><em>\string</em> <strong>$tagName</strong>)</strong> : <em>bool</em> |
+| public | <strong>hasTags(</strong><em>string[]</em> <strong>$tagNames</strong>, <em>\int</em> <strong>$strategy=1</strong>)</strong> : <em>bool</em> |
+| public | <strong>increment(</strong><em>\int</em> <strong>$step=1</strong>)</strong> : <em>void</em> |
 | public | <strong>isEmpty()</strong> : <em>bool</em> |
 | public | <strong>isExpired()</strong> : <em>bool</em> |
 | public | <strong>isHit()</strong> : <em>bool</em> |
 | public | <strong>isNull()</strong> : <em>bool</em> |
-| public | <strong>jsonSerialize()</strong> : <em>mixed</em><br /><em>Implements \JsonSerializable interface</em> |
-| public | <strong>prepend(</strong><em>array/string</em> <strong>$data</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>removeTag(</strong><em>mixed/\string</em> <strong>$tagName</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>removeTags(</strong><em>array</em> <strong>$tagNames</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>set(</strong><em>mixed</em> <strong>$value</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\$this</em> |
-| public | <strong>setCreationDate(</strong><em>\DateTimeInterface</em> <strong>$date</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>setDriver(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driver</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\static</em> |
-| public | <strong>setEventManager(</strong><em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\EventManagerDispatcherInterface</em> |
+| public | <strong>jsonSerialize()</strong> : <em>void</em> |
+| public | <strong>prepend(</strong><em>\string</em> <strong>$data</strong>)</strong> : <em>void</em> |
+| public | <strong>removeTag(</strong><em>\string</em> <strong>$tagName</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>removeTags(</strong><em>string[]</em> <strong>$tagNames</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>set(</strong><em>\mixed</em> <strong>$value</strong>)</strong> : <em>void</em> |
+| public | <strong>setCreationDate(</strong><em>mixed/\DateTimeInterface</em> <strong>$date</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>setDriver(</strong><em>\Phpfastcache\Core\Pool\ExtendedCacheItemPoolInterface</em> <strong>$driver</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>setEventManager(</strong><em>\Phpfastcache\Event\EventManagerInterface</em> <strong>$em</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\static</em> |
 | public | <strong>setExpirationDate(</strong><em>\DateTimeInterface</em> <strong>$expiration</strong>)</strong> : <em>ExtendedCacheItemInterface The called object.</em><br /><em>Alias of expireAt() with forced $expiration param The point in time after which the item MUST be considered expired. If null is passed explicitly, a default value MAY be used. If none is set, the value should be stored permanently or for as long as the implementation allows.</em> |
-| public | <strong>setHit(</strong><em>bool</em> <strong>$isHit</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>setModificationDate(</strong><em>\DateTimeInterface</em> <strong>$date</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| public | <strong>setTags(</strong><em>array</em> <strong>$tags</strong>)</strong> : <em>\Phpfastcache\Drivers\Phparray\ExtendedCacheItemInterface</em> |
-| protected static | <strong>createClassMap(</strong><em>\Phpfastcache\Drivers\Phparray\Iterator/string/array</em> <strong>$dir</strong>)</strong> : <em>array A class map array</em><br /><em>Iterate over all files in the given directory searching for classes. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
+| public | <strong>setHit(</strong><em>\bool</em> <strong>$isHit</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>setModificationDate(</strong><em>mixed/\DateTimeInterface</em> <strong>$date</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| public | <strong>setTags(</strong><em>string[]</em> <strong>$tags</strong>)</strong> : <em>\Phpfastcache\Core\Item\ExtendedCacheItemInterface</em> |
+| protected static | <strong>buildTokenClasses(</strong><em>\string</em> <strong>$namespace</strong>, <em>\string</em> <strong>$class</strong>, <em>string[]</em> <strong>$classes</strong>, <em>\int</em> <strong>$index</strong>, <em>\Phpfastcache\Drivers\Phparray\array<array<mixed>/\Phpfastcache\Drivers\Phparray\string>/array</em> <strong>$tokens</strong>)</strong> : <em>string[]</em> |
+| protected static | <strong>buildTokenNamespace(</strong><em>\int</em> <strong>$index</strong>, <em>\Phpfastcache\Drivers\Phparray\array<array<mixed>/\Phpfastcache\Drivers\Phparray\string>/array</em> <strong>$tokens</strong>)</strong> : <em>string</em> |
+| protected static | <strong>createClassMap(</strong><em>\string</em> <strong>$dir</strong>)</strong> : <em>array<string, string> A class map array</em><br /><em>Iterate over all files in the given directory searching for classes. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
 | protected | <strong>demutateDatetime(</strong><em>\DateTimeInterface</em> <strong>$dateTime</strong>)</strong> : <em>void</em> |
-| protected static | <strong>findClasses(</strong><em>\string</em> <strong>$path</strong>)</strong> : <em>array The found classes</em><br /><em>Extract the classes in the given file. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
+| protected static | <strong>findClasses(</strong><em>\string</em> <strong>$path</strong>)</strong> : <em>string[] The found classes</em><br /><em>Extract the classes in the given file. NOTICE: This method has been borrowed from Symfony ClassLoader 3.4 since they deprecated the whole component as of SF4. Our thanks to them.</em> |
+| protected | <strong>getDriverClass()</strong> : <em>mixed</em> |
 
 *This class implements \Phpfastcache\Core\Item\ExtendedCacheItemInterface, \Phpfastcache\Core\Item\TaggableCacheItemInterface, \JsonSerializable, \Phpfastcache\Util\ClassNamespaceResolverInterface, \Phpfastcache\Event\EventManagerDispatcherInterface, \Psr\Cache\CacheItemInterface*
 
