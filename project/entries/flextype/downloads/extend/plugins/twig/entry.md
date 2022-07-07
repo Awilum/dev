@@ -139,7 +139,7 @@ The syntax within the {% and %} delimiters varies from tag to tag, but they will
 To output additional HTML code dynamically, use a print statement. They are wrapped in {{ and }} delimiters, and you can put just about anything inside them, as long as it can be treated as a string.
 
 ```
-<p>Hi, {{ entry.title }}</p>
+<p>Hi, {{ title }}</p>
 ```
 
 Don’t place a print statement (or any other Twig code) within another print statement. [See Combining Strings to learn how to combine strings with other expressions](#combining-strings).
@@ -161,7 +161,7 @@ For example, let’s say you have a search results page, where the search query 
   <h3>Search Results</h3>
   <ul>
     {% for entry in entries %}
-      <li>{{ entry.id }}</li>
+      <li>{{ id }}</li>
     {% endfor %}
   </ul>
 {% else %}
@@ -182,7 +182,7 @@ To do that, you could explicitly encode all HTML within the user-supplied conten
 
 ```
 {# Escape any HTML in the Content field, then format as Markdown #}
-{{ entry.content|escape|markdown }}
+{{ content|escape|markdown }}
 ```
 
 ### <a name="resources"></a> Resources
