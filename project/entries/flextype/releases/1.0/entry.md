@@ -7,6 +7,8 @@ visibility: visible
 
 ### Features
 
+* **core** Minimum PHP version required PHP 8.1.0.
+
 * **core** Core application updated from Slim 3 to Slim 4!
 
   See: [Upgrade Guide](https://www.slimframework.com/docs/v4/start/upgrade.html)
@@ -69,7 +71,12 @@ visibility: visible
 
 * **core** Added `Thermage` library for better Flextype CLI Application styling.
 
-* **core** Added new core constants: `PROJECT_NAME`, `PATH_PROJECT`, `PATH_TMP`. 
+* **core** Added ability to execute specific project related code.
+
+  - `before-plugins` to bootstrap file before plugins intialization.
+  - `after-plugins` to bootstrap file after plugins intialization.
+
+* **core** Added new core constants: `FLEXTYPE_PROJECT_NAME`, `FLEXTYPE_PATH_PROJECT`, `FLEXTYPE_PATH_TMP`, `FLEXTYPE_START_TIME`. 
 
 * **core** Added ability to run Flextype in silent mode by disabling `app` and `cli`. 
 
@@ -77,7 +84,7 @@ visibility: visible
 
 * **core** Added built-in I18n module.
 
-* **core** Added ability to override core defines.
+* **core** Added ability to override default constants
 
 * **entries** Added new functionality that allows implementing Virtual Entries by overriding default entries CRUD methods with the help of events.
 
@@ -454,17 +461,23 @@ visibility: visible
 
 * **shortcodes** Added new shortcode `(markdown)` to parse markdown text.
 
+* **shortcodes** Added new shortcode `(getProjectUrl)` to get project url.
+
 * **shortcodes** Added new shortcode `(getBaseUrl)` to get base url.
 
 * **shortcodes** Added new shortcode `(getBasePath)` to get base path.
 
 * **shortcodes** Added new shortcode `(getAbsoluteUrl)` to get absolute url.
 
+* **shortcodes** Added new shortcode `(url)` to get url.
+
 * **shortcodes** Added new shortcode `(urlFor)` to get url for route.
 
 * **shortcodes** Added new shortcode `(getUriString)` to get uri string.
 
 * **shortcodes** Added new shortcode `(filesystem)` to do filesytem manipulations.
+
+* **shortcodes** Added new shortcode `(date)` to get date.
 
 * **shortcodes** Added new shortcode `(tr)` to returns translation of a string. 
 
@@ -516,6 +529,14 @@ visibility: visible
 
 * **expressions** Added new expression function `__` to return translation of a string. If no translation exists, the original string will be returned.
 
+* **expressions** Added new expression function `max` to return the highest value in an array, or the highest value of several specified values.
+
+* **expressions** Added new expression function `min` to return the lowest value in an array, or the lowest value of several specified values.
+
+* **expressions** Added new expression function `ceil` to round a number up to the nearest integer.
+
+* **expressions** Added new expression function `floor` to round a number down to the nearest integer.
+
 * **expressions** Added new expression function `parsers` to get parsers service.
 
 * **expressions** Added new expression function `serializers` to get serializers service.
@@ -523,6 +544,10 @@ visibility: visible
 * **expressions** Added new expression function `registry` to get registry service.
 
 * **expressions** Added new expression function `slugify` to get slugify service.
+
+* **expressions** Added new expression function `date` to get date.
+
+* **expressions** Added new expression function `url` to get the url.
 
 * **expressions** Added new expression function `urlFor` to get the url for a named route.
 
@@ -587,6 +612,8 @@ visibility: visible
 * **helpers** Added helper function `generateTokenHash` to generate unique token hash.
 
 * **helpers** Added helper function `verifyTokenHash` to validate token hash.
+
+* **helpers** Added helper function `url` to get url.
 
 * **helpers** Added helper function `urlFor` to get url for a named route.
 
@@ -739,7 +766,7 @@ visibility: visible
 
 * **media** Media and Glide functionality removed from the flextype core due to security and perfomance reasons. Recomended to use imagekit or imgix instead.
 
-* **core** Use new constant `PATH_PROJECT` instead of `PATH['project']` and `PATH_TMP` instead of `PATH['tmp']`.
+* **core** Use new constant `FLEXTYPE_PATH_PROJECT` instead of `PATH['project']` and `FLEXTYPE_PATH_TMP` instead of `PATH['tmp']`.
 
 * **shortcodes** New default shortcodes syntax and signatures changes for all shortocodes.
   ```yaml
@@ -782,8 +809,8 @@ visibility: visible
   * use `entries()->registry()->has()` instead of `flextype('entries')->storage()->has()`
   * use `entries()->registry()->delete()` instead of `flextype('entries')->storage()->delete()`
 
-  note: all method from Atomastic Arrays are available for Arrays Storage Object manipulations
-  docs: https://github.com/atomastic/arrays
+  note: all method from Glowy PHP Arrays are available for Arrays Storage Object manipulations
+  docs: https://github.com/glowyphp/arrays
 
 ### Refactoring
 
