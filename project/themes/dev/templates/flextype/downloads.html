@@ -9,8 +9,8 @@
     <h2 class="text-center m-0 pl-6 pr-6 lg:pl-40 lg:pr-40 pb-24 text-xl font-normal">
         {{ entry.description|raw }}
     </h2>
-    <div class="flex content-center flex-wrap mt-12 justify-center border rounded-lg border-slate-900 plate-shadow">
-        <div class="w-full lg:w-6/12 p-6 text-center border-r border-slate-900">
+    <div class="flex content-center flex-wrap mt-12 justify-center border rounded-lg border-slate-900 dark:border-slate-500 plate-shadow">
+        <div class="w-full lg:w-6/12 p-6 text-center border-r border-slate-900 dark:border-slate-500">
             <div class="p-12 h-full plate">
                 <div class="icon-svg-large mb-5 text-center">{{ icon('download', 'fontawesome|solid') }}</div>
                 <h4 class="text-3xl">Flextype</h4>
@@ -18,7 +18,7 @@
                     Release package contains:<br>
                     <div class="no-underline px-2 py-1 mb-2 inline-block"><b>Flextype 1.0.0-alpha.1</b></div>
                 </div>
-                <a class="button" href="https://github.com/flextype/flextype/releases/download/v1.0.0-alpha.1/flextype-1.0.0-aplha.1.zip">Download</a>
+                <a class="button dark:border-slate-500" href="https://github.com/flextype/flextype/releases/download/v1.0.0-alpha.1/flextype-1.0.0-aplha.1.zip">Download</a>
             </div>
         </div>
         <div class="w-full lg:w-6/12 p-6 text-center">
@@ -29,7 +29,7 @@
                     Extend and Customize Flextype Core Functionality by adding plugins and other packages.
                     <br>
                 </div>
-                <a class="button" href="{{ url() }}/flextype/downloads/extend">Extend</a>
+                <a class="button dark:border-slate-500" href="{{ url() }}/flextype/downloads/extend">Extend</a>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ icon:
 category: seo
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/sitemap
 documentation: https://github.com/flextype-plugins/sitemap
 template: flextype/plugin
@@ -61,57 +61,10 @@ date_format: Y-m-d
 static:
 
   # sitemap.xml path (without trailing and without starting slash)
-  sitemap_path: '_site'
-```
+  path: '_site'
 
-You may override the default settings in the plugin project configuration file `project/config/plugins/sitemap/settings.yaml`
-
-### Ignore entry(entries)
-
-You can ignore your specific entries by providing a list of slug's to ignore.
-
-```yaml
-ignore:
-  - blog/blog-post-to-ignore
-  - ignore-this-entry
-```
-
-You can also use a entry Frontmatter to signal that the sitemap should ignore it:
-```yaml
-sitemap:
-  ignore: true
-```
-
-### Set default values for entry(entries)
-
-```yaml
-sitemap:
-  changefreq: weekly
-  priority: 0.8
-```
-
-### Manually add entry(entries) to the sitemap
-
-```yaml
-additions:
-  -
-    loc: something-special
-    lastmod: '2020-04-16'
-    changefreq: hourly
-    priority: 0.3
-```
-
-### Dynamically adding entry(entries) to the sitemap
-
-```php
-emitter()->addListener('onSitemapAfterInitialized', function() {
-    registry()->set('plugins.sitemap.items.something', [
-        'loc' => 'something-special-to-add',
-        'lastmod' => '03-07-2020 09:46',
-        'changefreq' => 'daily',
-        'priority' => 1.0
-      ]);
-});
+  # Site url (without trailing slash)
+  site_url: ''
 ```
 
 ### Generate static sitemap

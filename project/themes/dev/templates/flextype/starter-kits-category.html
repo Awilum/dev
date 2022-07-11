@@ -40,8 +40,8 @@
              <div class="w-full flex flex-wrap">   
                 {% for item in starter_kits_items %}
                 <div class="lg:p-4 lg:pb-8 lg:pt-0 pb-8 lg:w-6/12">
-                    <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 block plate-shadow">
-                    <img src="{{ item.preview }}" alt="" class="w-full border-b-2 border-slate-900 p-6">
+                    <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 block dark:border-slate-500 plate-shadow">
+                    <img src="{{ item.preview }}" alt="" class="w-full border-b-2 border-slate-900 dark:border-slate-500 p-6">
                     <div class="flex p-6">
                         <div class="text-left">
                             <h4 class="w-full text-xl p-0 m-0">{{ item.title }}</h4>
@@ -60,7 +60,7 @@
 
         </div>
         <div class="w-full lg:w-3/12">
-            <div class="p-6 bg-white dark:bg-slate-800 mb-8 border rounded-lg border-slate-900" style="box-shadow: 3px 3px 0 #0f172a">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-8 border rounded-lg border-slate-900 dark:border-slate-500 plate-shadow">
             
                 {# CATEGORY CLOUD #}
                 {% set starterKitsCloudCacheID = strings('starterKitsCloudCacheID').hash().toString() %}
@@ -86,7 +86,7 @@
                 {% endfor %}
 
                 {% if category_cloud|length > 0 %}
-                    <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Categories</h3>
+                    <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900 dark:border-slate-500">Categories</h3>
                     <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
                             {% if category != '' %}

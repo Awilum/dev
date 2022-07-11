@@ -17,7 +17,7 @@
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins">PLUGINS</a></span>
         </div>
     </div>
-    <div class="plate border border-slate-900 rounded-lg p-4 plate-shadow">
+    <div class="plate border border-slate-900 dark:border-slate-500 rounded-lg p-4 plate-shadow">
         {% set repo_name = entry.github|split('/')  %}
         {% set repo_name_length = repo_name|length %}
 
@@ -40,12 +40,12 @@
                     </div>
                 </div>
 
-                <hr class="mb-6 border-b border-slate-800">
+                <hr class="mb-6 border-b border-slate-800 dark:border-slate-500">
 
                 {{ entry.content|shortcode|markdown|raw }}
             </div>
             <div class="w-full lg:w-3/12 p-2">
-                <div class="text-left mb-6 border-slate-800 dark:bg-slate-800 border">
+                <div class="text-left mb-6 border-slate-800 dark:border-slate-500 dark:bg-slate-800 border">
                     <div class="flex content-center flex-wrap p-6 pb-0">
                         <div class="w-full">
                             <p class="m-0 opacity-50">Version</p>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="border-t border-slate-900 ">
-                        <a class="bg-amber-300 dark:bg-amber-800 hover:text-slate-900 hover:bg-amber-400 no-underline block text-center py-2"
+                        <a class="bg-amber-300 dark:bg-amber-800 dark:hover:bg-amber-900 dark:hover:text-white hover:text-slate-900 hover:bg-amber-400 no-underline block text-center py-2"
                         href="{{ entry.github }}/releases/download/v{{ plugin.version }}/{{ entry.slug }}-{{ plugin.version }}.zip">DOWNLOAD</a>
                     </div>
                 </div>

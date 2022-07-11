@@ -7,7 +7,7 @@ icon:
 category: templating
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/twig
 documentation: https://github.com/flextype-plugins/twig
 template: flextype/plugin
@@ -72,6 +72,7 @@ parsers:
         enabled: true
         path: "project/plugins/twig/src/twig/core/Parsers/Shortcodes/TwigShortcode.php"
 extensions: 
+  - Math
   - I18n
   - Filesystem
   - Csrf

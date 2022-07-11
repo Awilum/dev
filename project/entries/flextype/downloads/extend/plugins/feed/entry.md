@@ -39,10 +39,10 @@ feeds: []
 static:
 
   # Feeds path (without trailing and without starting slash)
-  feed_path: '_site'
+  path: '_site'
 
   # Site url (without trailing slash)
-  feed_url: ''
+  site_url: ''
 ```
 
 You may override the default settings in the plugin project configuration file `project/config/plugins/feed/settings.yaml`
