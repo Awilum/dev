@@ -873,8 +873,6 @@
     background-color: #083a42;
     }
 
-
-
     .tabs__nav {
         display: flex;
     }
@@ -1135,11 +1133,16 @@
     @media (prefers-color-scheme: dark) {
 
         table {
-            @apply border-slate-500;
+            border: 1px solid rgb(100, 116, 139);
+            box-shadow: 3px 3px 0 rgb(100, 116, 139);
         }
 
+        td {
+            @apply border-slate-500;
+        }
+        
         th {
-            @apply bg-amber-700 ;
+            @apply bg-amber-700;
         }
 
         .file-header {
