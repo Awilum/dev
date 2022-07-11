@@ -10,7 +10,7 @@ seo:
   keywords: Flextype Noir Theme, Flextype CMS Noir Theme, Headless CMS Noir Theme, Download Flat File CMS Noir Theme, Download Flat File Content Management System Noir Theme, Download PHP CMS Noir Theme, Noir, Theme, Content, Management, System, PHP, CMS
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 template: flextype/09/theme
 ---
 

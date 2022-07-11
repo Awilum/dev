@@ -7,7 +7,7 @@ icon:
 category: content
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/site
 documentation: https://github.com/flextype-plugins/site
 template: flextype/09/plugin
@@ -67,8 +67,8 @@ version: 1.0.0
 description: Noir theme for Flextype
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
-  url: https://flextype.org
+  email: awilum@msn.com
+  url: https://awilum.github.io/flextype
 homepage: https://github.com/flextype-themes/noir
 bugs: https://github.com/flextype-themes/noir/issues
 license: MIT

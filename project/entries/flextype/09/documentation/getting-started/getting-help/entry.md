@@ -18,7 +18,7 @@ If you can't find the right answers to your questions on our Website, you can tu
 
 Got a question about setting up or using Flextype? We'll do our best to help you out. Also here you may start discussions about core, plugin and themes development.
 
-Link: <https://flextype.org/discord>
+Link: <https://awilum.github.io/flextype/discord>
 
 ### Github
 

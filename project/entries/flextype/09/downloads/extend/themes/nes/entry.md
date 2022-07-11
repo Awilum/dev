@@ -6,7 +6,7 @@ github: https://github.com/flextype-themes/nes
 preview: https://github.com/flextype-themes/nes/raw/master/preview.png
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 template: flextype/09/theme
 seo:
   title: Get Nes Theme for Open Source Hybrid Content Management System | Flextype

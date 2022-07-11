@@ -7,7 +7,7 @@ icon:
 category: security
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/data-guard
 documentation: https://github.com/flextype-plugins/data-guard
 template: flextype/09/plugin

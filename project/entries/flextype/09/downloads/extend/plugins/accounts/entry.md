@@ -9,7 +9,7 @@ github: https://github.com/flextype-plugins/accounts
 documentation: https://github.com/flextype-plugins/accounts
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 template: flextype/09/plugin
 seo:
   title: Get Accounts Plugin for Open Source Hybrid Content Management System | Flextype
@@ -56,7 +56,7 @@ seo:
 |---|---|---|
 | enabled | true | true or false to disable the plugin |
 | priority | 80 | Accounts plugin priority |
-| from.email | sergey.romanenko@flextype.org | From email |
+| from.email | awilum@msn.com | From email |
 | index.enabled | true | Allow accounts index `true` or `false` |
 | registration.enabled | true | Allow user registration `true` or `false` |
 | registration.default_roles | user | Default roles for new users |

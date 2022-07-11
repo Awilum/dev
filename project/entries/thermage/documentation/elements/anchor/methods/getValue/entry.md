@@ -26,5 +26,5 @@ use function Thermage\render;
 
 // ...
 
-$value = anchor('Thermage')->href('https://digital.flextype.org/thermage/')->getValue();
+$value = anchor('Thermage')->href('https://awilum.github.io/thermage/')->getValue();
 ```

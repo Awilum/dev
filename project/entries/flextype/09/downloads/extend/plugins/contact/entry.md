@@ -7,7 +7,7 @@ icon:
 category: emails
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/contact
 documentation: https://github.com/flextype-plugins/contact
 template: flextype/09/plugin
@@ -33,9 +33,9 @@ seo:
 | default_subject | Default subject | Default subject for email |
 | message_success | Email sended. | Message to show after email send. |
 | from.name | Flextype | From name |
-| from.email | sergey.romanenko@flextype.org | From email |
+| from.email | awilum@msn.com | From email |
 | to.name | Flextype | Receiver name. |
-| to.email | sergey.romanenko@flextype.org | Receiver email |
+| to.email | awilum@msn.com | Receiver email |
 
 #### Create your own contact form
 

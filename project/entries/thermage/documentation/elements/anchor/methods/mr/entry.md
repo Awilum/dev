@@ -25,21 +25,21 @@ public function mr(int $value): self
 Set margin right style using fluent interface
 ```php
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->mr(10)
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->mr(10)
 );
 ```
 
 Set margin right style using magic method fluent interface
 ```php
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->mr10()
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->mr10()
 );
 ```
 
 Set margin right style using magic classes pipeline
 ```php
 render(
-  anchor('Thermage', 'mr-10')->href('https://digital.flextype.org/thermage/')
+  anchor('Thermage', 'mr-10')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -47,6 +47,6 @@ render(
   <div class="terminal-header">Terminal</div>
   <div class="terminal-body">
     <div class="terminal-command">$ php thermage.php</div>
-    <div class="el-a"><a href="https://digital.flextype.org/thermage/">Thermage</a></div>
+    <div class="el-a"><a href="https://awilum.github.io/thermage/">Thermage</a></div>
   </div>
 </div>

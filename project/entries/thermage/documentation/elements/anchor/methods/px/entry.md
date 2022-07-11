@@ -30,7 +30,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->px(10)
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->px(10)
 );
 ```
 
@@ -42,7 +42,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->px10()
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->px10()
 );
 ```
 
@@ -54,7 +54,7 @@ use function Thermage\render;
 // ...
 
 render( 
-  anchor('Thermage', 'px-10')->href('https://digital.flextype.org/thermage/')
+  anchor('Thermage', 'px-10')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -62,6 +62,6 @@ render(
   <div class="terminal-header">Terminal</div>
   <div class="terminal-body">
     <div class="terminal-command">$ php thermage.php</div>
-    <div class="el-a" style="margin-left: 40px;"><a href="https://digital.flextype.org/thermage/">Thermage</a></div>
+    <div class="el-a" style="margin-left: 40px;"><a href="https://awilum.github.io/thermage/">Thermage</a></div>
   </div>
 </div>

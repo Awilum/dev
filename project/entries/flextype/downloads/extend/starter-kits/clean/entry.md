@@ -18,17 +18,16 @@ seo:
 
 ### Installation
 
-1. Download & Install all required [dependencies](https://github.com/flextype-starter-kits/clean#dependencies).
-2. Create new folder `project`
-3. Download [Clean Starter Kit](https://github.com/flextype-starter-kits/clean/releases) and unzip plugin content to the folder `project`
+1. Create new folder `project`
+2. Download [Clean Starter Kit](https://github.com/flextype-starter-kits/clean/releases) and unzip starter kit content to the folder `project`
 
 ### Recompile the CSS (optional)
 1. Go to `project` folder in your console and run `npm install` to install node dependencies.
 2. Run `npx tailwindcss -i ./assets/src/css/styles.css -o ./assets/dist/css/styles.css --minify`
 
 ### Update vendors (optional)
-1. Go to flextype root folder in your console and run `composer update`
 2. Go to flextype `project/plugins/twig` folder in your console and run `composer update`
 3. Go to flextype `project/plugins/site` folder in your console and run `composer update`
 4. Go to flextype `project/plugins/sitemap` folder in your console and run `composer update`
+4. Go to flextype `project/plugins/feed` folder in your console and run `composer update`
 

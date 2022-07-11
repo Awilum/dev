@@ -11,10 +11,10 @@ seo:
 
 Usage of shortcode
 ```
-[anchor href="https://digital.flextype.org/thermage/"]Thermage[/anchor]
+[anchor href="https://awilum.github.io/thermage/"]Thermage[/anchor]
 ```
 
 Usage of shortcode short variant
 ```
-[a href="https://digital.flextype.org/thermage/"]Thermage[/a]
+[a href="https://awilum.github.io/thermage/"]Thermage[/a]
 ```

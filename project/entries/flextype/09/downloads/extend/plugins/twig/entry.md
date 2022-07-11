@@ -7,7 +7,7 @@ icon:
 category: templating
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/twig
 documentation: https://github.com/flextype-plugins/twig
 template: flextype/09/plugin
@@ -159,14 +159,14 @@ Returns Flextype object, which provides access points to various helper function
 
 | Objects | Available Methods |
 |---|---|
-| `flextype.entries` | [fetch()](https://docs.flextype.org/core/entries#methods-fetch)
-| `flextype.media.files` | [fetch()](https://docs.flextype.org/core/media#methods-files-fetch) [has()](https://docs.flextype.org/core/media#methods-files-has) |
-| `flextype.media.files.meta` | [getFileMetaLocation()](https://docs.flextype.org/core/media#methods-files-meta-getFileMetaLocation) |
-| `flextype.media.folders` | [fetch()](https://docs.flextype.org/core/media#methods-folders-fetch) [getDirectoryLocation()](https://docs.flextype.org/core/media#methods-folders-getDirLocation) |
-| `flextype.media.folders.meta` | [getDirMetaLocation()](https://docs.flextype.org/core/media#methods-folders-meta-getDirMetaLocation) |
-| `flextype.registry` | [all methods available](https://docs.flextype.org/core/registry) |
-| `flextype.parsers` | [all methods available](https://docs.flextype.org/core/parsers) |
-| `flextype.serializers` | [all methods available](https://docs.flextype.org/core/serializers) |
+| `flextype.entries` | [fetch()](https://docs.awilum.flextype.org/flextype/core/entries#methods-fetch)
+| `flextype.media.files` | [fetch()](https://docs.awilum.flextype.org/flextype/core/media#methods-files-fetch) [has()](https://docs.awilum.flextype.org/flextype/core/media#methods-files-has) |
+| `flextype.media.files.meta` | [getFileMetaLocation()](https://docs.awilum.flextype.org/flextype/core/media#methods-files-meta-getFileMetaLocation) |
+| `flextype.media.folders` | [fetch()](https://docs.awilum.flextype.org/flextype/core/media#methods-folders-fetch) [getDirectoryLocation()](https://docs.awilum.flextype.org/flextype/core/media#methods-folders-getDirLocation) |
+| `flextype.media.folders.meta` | [getDirMetaLocation()](https://docs.awilum.flextype.org/flextype/core/media#methods-folders-meta-getDirMetaLocation) |
+| `flextype.registry` | [all methods available](https://docs.awilum.flextype.org/flextype/core/registry) |
+| `flextype.parsers` | [all methods available](https://docs.awilum.flextype.org/flextype/core/parsers) |
+| `flextype.serializers` | [all methods available](https://docs.awilum.flextype.org/flextype/core/serializers) |
 | `flextype.cache` | [all methods available](https://www.phpfastcache.com) |
 | `flextype.emitter` | [all methods available](https://event.thephpleague.com/2.0/) |
 

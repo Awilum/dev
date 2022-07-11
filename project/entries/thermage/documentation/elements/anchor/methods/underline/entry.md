@@ -28,7 +28,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->underline()
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->underline()
 );
 ```
 
@@ -40,7 +40,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage', 'underline')->href('https://digital.flextype.org/thermage/')
+  anchor('Thermage', 'underline')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -52,8 +52,8 @@ use function Thermage\render;
 // ...
 
 render( 
-  anchor('[underline]Thermage[/underline]')->href('https://digital.flextype.org/thermage/').
-  anchor('[u]Thermage[/u]')->href('https://digital.flextype.org/thermage/')
+  anchor('[underline]Thermage[/underline]')->href('https://awilum.github.io/thermage/').
+  anchor('[u]Thermage[/u]')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -61,6 +61,6 @@ render(
   <div class="terminal-header">Terminal</div>
   <div class="terminal-body">
     <div class="terminal-command">$ php thermage.php</div>
-    <div class="el-a" style="text-decoration: underline;"><a href="https://digital.flextype.org/thermage/">Thermage</a></div>
+    <div class="el-a" style="text-decoration: underline;"><a href="https://awilum.github.io/thermage/">Thermage</a></div>
   </div>
 </div>

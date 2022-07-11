@@ -30,7 +30,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->border('square')
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->border('square')
 );
 ```
 
@@ -42,7 +42,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->borderSquare()
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->borderSquare()
 );
 ```
 
@@ -54,7 +54,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage', 'border-square')->href('https://digital.flextype.org/thermage/')
+  anchor('Thermage', 'border-square')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -62,7 +62,7 @@ render(
   <div class="terminal-header">Terminal</div>
   <div class="terminal-body">
     <div class="terminal-command">$ php thermage.php</div>
-    <div class="el-div" style="width: 100%; color: white; text-align: left;"><div style="border: 1px solid rgb(234, 219, 255)!important; padding-left: 0px; padding-top: 7px; padding-bottom:7px;"><div class="el-a"><a href="https://digital.flextype.org/thermage/">Thermage</a></div></div></div>
+    <div class="el-div" style="width: 100%; color: white; text-align: left;"><div style="border: 1px solid rgb(234, 219, 255)!important; padding-left: 0px; padding-top: 7px; padding-bottom:7px;"><div class="el-a"><a href="https://awilum.github.io/thermage/">Thermage</a></div></div></div>
   </div>
 </div>
 

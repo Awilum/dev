@@ -7,7 +7,7 @@ icon:
 category: accounts
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/acl
 documentation: https://github.com/flextype-plugins/acl
 template: flextype/09/plugin
@@ -97,7 +97,7 @@ flextype()->get('/my-route', 'MyController:method()')
 flextype()->get('/my-route', 'MyController:method()')
      ->setName('my.route.name')
      ->add(new AclIsUserLoggedInEmailsInMiddleware([
-                                                    'emails' => 'jack@flextype.org, jack@flextype.org'
+                                                    'emails' => 'jack@awilum.flextype.org/flextype, jack@awilum.flextype.org/flextype'
                                                     'redirect' => 'another.route.name']));
 ```
 
@@ -170,7 +170,7 @@ flextype()->get('/my-route', 'MyController:method()')
 flextype()->get('/my-route', 'MyController:method()')
      ->setName('my.route.name')
      ->add(new AclIsUserLoggedInEmailsNotInMiddleware([
-                                                       'emails' => 'jack@flextype.org, sam@flextype.org'
+                                                       'emails' => 'jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype'
                                                        'redirect' => 'another.route.name']));
 ```
 
@@ -204,7 +204,7 @@ You may restrict access for specific users to your entry(entries) in the entry(e
     acl:
       accounts:
         roles: student, ACL
-        emails: jack@flextype.org, sam@flextype.org
+        emails: jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype
         uuids: ea7432a3-b2d5-4b04-b31d-1c5acc7a55e2, d549af27-79a0-44f2-b9b1-e82b47bf87e2
     ---
     Lesson content is here...
@@ -256,7 +256,7 @@ You may restrict access for specific users to your specific content inside the e
     [/userLoggedInUuidIn]
 
 
-#### Show private content for users with emails jack@flextype.org, sam@flextype.org
+#### Show private content for users with emails jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype
 
 `/project/entries/lessons/lesson-42.md`
 
@@ -265,7 +265,7 @@ You may restrict access for specific users to your specific content inside the e
     ---
     Public text here...
 
-    [userLoggedInEmailIn emails="jack@flextype.org, sam@flextype.org"]
+    [userLoggedInEmailIn emails="jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype"]
         Private content here..
     [/userLoggedInEmailIn]
 
@@ -361,7 +361,7 @@ Example:
     [/userLoggedInUuidNotIn]
 
 
-#### Show public content for users with emails jack@flextype.org, sam@flextype.org
+#### Show public content for users with emails jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype
 
 `/project/entries/lessons/lesson-42.md`
 
@@ -370,7 +370,7 @@ Example:
     ---
     Public text here...
 
-    [userLoggedInEmailNotIn emails="jack@flextype.org, sam@flextype.org"]
+    [userLoggedInEmailNotIn emails="jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype"]
         Public content for users is here...
     [/userLoggedInEmailNotIn]
 
@@ -457,10 +457,10 @@ You may restrict access for specific users to your specific content inside the T
 {% endif %}
 ```
 
-#### Show private content for users with emails jack@flextype.org, sam@flextype.org
+#### Show private content for users with emails jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype
 
 ```
-{% if flextype.acl.isUserLoggedInEmailIn('jack@flextype.org, sam@flextype.org') %}
+{% if flextype.acl.isUserLoggedInEmailIn('jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype') %}
     Public content for users is here...
 {% else %}
     Public content for users is here...
@@ -516,10 +516,10 @@ if (flextype('acl')->isUserLoggedInUuidIn('ea7432a3-b2d5-4b04-b31d-1c5acc7a55e2,
 }
 ```
 
-#### Run private code for users with emails jack@flextype.org, sam@flextype.org
+#### Run private code for users with emails jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype
 
 ```php
-if (flextype('acl')->isUserLoggedInEmailIn('jack@flextype.org, sam@flextype.org')) {
+if (flextype('acl')->isUserLoggedInEmailIn('jack@awilum.flextype.org/flextype, sam@awilum.flextype.org/flextype')) {
     // Private content here..
 }
 ```

@@ -1009,12 +1009,12 @@ The rendered output looks like this:
 To add a link to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
 
 ```
-[![Flextype](https://camo.githubusercontent.com/a0e5b6039aa6d34aaa5550bf375a9dce9314db6f/68747470733a2f2f696d61676573322e696d67626f782e636f6d2f34392f38642f346970487155636a5f6f2e6a7067 "Flextype is an open-source Hybrid Content Management System")](https://flextype.org)
+[![Flextype](https://camo.githubusercontent.com/a0e5b6039aa6d34aaa5550bf375a9dce9314db6f/68747470733a2f2f696d61676573322e696d67626f782e636f6d2f34392f38642f346970487155636a5f6f2e6a7067 "Flextype is an open-source Hybrid Content Management System")](https://awilum.github.io/flextype)
 ```
 
 The rendered output looks like this:
 
-<p><a href="https://flextype.org"><img src="https://camo.githubusercontent.com/a0e5b6039aa6d34aaa5550bf375a9dce9314db6f/68747470733a2f2f696d61676573322e696d67626f782e636f6d2f34392f38642f346970487155636a5f6f2e6a7067" alt="Flextype" title="
+<p><a href="https://awilum.github.io/flextype"><img src="https://camo.githubusercontent.com/a0e5b6039aa6d34aaa5550bf375a9dce9314db6f/68747470733a2f2f696d61676573322e696d67626f782e636f6d2f34392f38642f346970487155636a5f6f2e6a7067" alt="Flextype" title="
 Flextype is an open-source Hybrid Content Management System" /></a></p>
 
 

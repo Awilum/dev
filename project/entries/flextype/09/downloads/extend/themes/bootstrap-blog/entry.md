@@ -6,7 +6,7 @@ github: https://github.com/flextype-themes/bootstrap-blog
 preview: https://github.com/flextype-themes/bootstrap-blog/raw/master/preview.png
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 template: flextype/09/theme
 seo:
   title: Get Bootstrap Blog Theme for Open Source Hybrid Content Management System | Flextype

@@ -27,7 +27,7 @@ Each Flextype plugin is an additional piece of software that can be easily insta
 
 This allows you to customize your Flextype powered project with your desired functionality. Since so much functionality is provided through plugins, Flextype core is full-featured and customizable, without having to include everything for everyone.
 
-Plugins are available via the [Flextype Plugin Directory](https://flextype.org/downloads/extend/plugins).
+Plugins are available via the [Flextype Plugin Directory](https://awilum.github.io/flextype/downloads/extend/plugins).
 
 ### <a name="installation"></a> Installation
 
@@ -59,8 +59,8 @@ icon:
   set: "fontawesome|solid"
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
-  url: https://flextype.org
+  email: awilum@msn.com
+  url: https://awilum.github.io/flextype
 homepage: https://github.com/flextype-plugins/site
 bugs: https://github.com/flextype-plugins/site/issues
 license: MIT
@@ -234,7 +234,7 @@ flextype('emitter')->addListener('onThemeMeta', function() {
 flextype('emitter')->addListener('onThemeMeta', function() {
     echo '
         <!-- Facebook -->
-        <meta property="og:url" content="https://flextype.org">
+        <meta property="og:url" content="https://awilum.github.io/flextype">
         <meta property="og:title" content="Content Management System &mdash; Flextype">
         <meta property="og:description" content="Build fast, flexible, easier to manage websites with Flextype.">
         <meta property="og:type" content="website">

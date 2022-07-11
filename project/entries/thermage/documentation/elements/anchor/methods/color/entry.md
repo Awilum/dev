@@ -31,7 +31,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->color('red')
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->color('red')
 );
 ```
 
@@ -43,7 +43,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->color('#dc3545')
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->color('#dc3545')
 );
 ```
 
@@ -55,7 +55,7 @@ use function Thermage\render;
 // ...
 
 render (
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->color('rgb(220, 53, 69)')
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->color('rgb(220, 53, 69)')
 );
 ```
 
@@ -67,7 +67,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('Thermage')->href('https://digital.flextype.org/thermage/')->colorRed()
+  anchor('Thermage')->href('https://awilum.github.io/thermage/')->colorRed()
 );
 ```
 
@@ -79,7 +79,7 @@ use function Thermage\render;
 // ...
 
 render( 
-  anchor('Thermage', 'color-red')->href('https://digital.flextype.org/thermage/')
+  anchor('Thermage', 'color-red')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -91,7 +91,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('[color=red]Thermage[/color]')->href('https://digital.flextype.org/thermage/')
+  anchor('[color=red]Thermage[/color]')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -103,7 +103,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('[color=#dc3545]Thermage[/color]')->href('https://digital.flextype.org/thermage/')
+  anchor('[color=#dc3545]Thermage[/color]')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -115,7 +115,7 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor('[color="rgb(220, 53, 69)"]Thermage[/color]')->href('https://digital.flextype.org/thermage/')
+  anchor('[color="rgb(220, 53, 69)"]Thermage[/color]')->href('https://awilum.github.io/thermage/')
 );
 ```
 
@@ -123,6 +123,6 @@ render(
   <div class="terminal-header">Terminal</div>
   <div class="terminal-body">
     <div class="terminal-command">$ php thermage.php</div>
-    <div class="el-a"><a href="https://digital.flextype.org/thermage/" style="color:red;">Thermage</a></div>
+    <div class="el-a"><a href="https://awilum.github.io/thermage/" style="color:red;">Thermage</a></div>
   </div>
 </div>

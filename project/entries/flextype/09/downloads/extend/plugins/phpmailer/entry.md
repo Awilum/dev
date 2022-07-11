@@ -7,7 +7,7 @@ icon:
 category: emails
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/phpmailer
 documentation: https://github.com/flextype-plugins/phpmailer
 template: flextype/09/plugin

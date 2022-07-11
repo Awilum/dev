@@ -74,8 +74,8 @@ Flextype is an open source project and community contributions are essential to 
 Flextype is an MIT-licensed open source project and completely free to use.
 However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. <br><br> You can support it's ongoing development by being a project backer or a sponsor:<br>
 <a href="//patreon.com/awilum">Become a backer or sponsor on Patreon</a>,
-<a href="//flextype.org/one-time-donation">One-time donation via PayPal, QIWI, Sberbank, Yandex</a>,
-<a href="//flextype.org/sponsors">Visit our Sponsors & Backers page</a>
+<a href="//awilum.flextype.org/flextype/one-time-donation">One-time donation via PayPal, QIWI, Sberbank, Yandex</a>,
+<a href="//awilum.flextype.org/flextype/sponsors">Visit our Sponsors & Backers page</a>
 
 ##### International translator team
 
@@ -86,4 +86,4 @@ Our crowdin projects:<br>
 
 ### Flextype Press kit
 
-You can find a summary about Flextype, including Flextype logos and press information, on our [press kit page.](//flextype.org/press-kit)
+You can find a summary about Flextype, including Flextype logos and press information, on our [press kit page.](//awilum.flextype.org/flextype/press-kit)

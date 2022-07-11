@@ -7,7 +7,7 @@ icon:
 category: seo
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
+  email: awilum@msn.com
 github: https://github.com/flextype-plugins/feed
 documentation: https://github.com/flextype-plugins/feed
 template: flextype/09/plugin

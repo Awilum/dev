@@ -29,6 +29,6 @@ use function Thermage\render;
 // ...
 
 render(
-  anchor()->value('Thermage')->href('https://digital.flextype.org/thermage/')
+  anchor()->value('Thermage')->href('https://awilum.github.io/thermage/')
 );
 ```
