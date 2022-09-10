@@ -57,10 +57,6 @@ on_this_page:
         title: "id"
         link: "field-id"
   -
-    title: "Vars"
-    link: "vars"
-    level2: []
-  -
     title: "Directives"
     link: "directives"
     level2: 
@@ -79,6 +75,9 @@ on_this_page:
         -
             title: "php"
             link: "directive-php"
+        -   
+            title: "expression"
+            link: "directive-expression"
   -
     title: "Macros"
     link: "macros"
@@ -131,12 +130,12 @@ on_this_page:
     title: Extending
     link: "extending"
 ---
-
+<a name="overview"></a>
 Entries are the fundamental building blocks of your Flextype powered project. Entries are local **flat files** or **external resources** that can be represented as a PHP array inside the controllers, templates, etc...
 
-### Entries formats
+### <a name="formats"></a> Entries formats
 
-Flextype support several **flat files** formats for entries out of the box.
+Flextype support several **flat files** entries formats.
 
 #### Frontmatter (.md)
 
@@ -153,7 +152,7 @@ stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
 SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
 ```
 
-For **Frontmatter** header you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. For example:
+For **Frontmatter** header you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. <br><br>Example:
 
 ```yaml
 &minus;&minus;&minus;json
@@ -227,11 +226,11 @@ content: '''
 }
 ```
 
-### <a name="entries-and-urls-structure"></a> Entries and Urls structure
+### <a name="structure"></a> Entries and Urls structure
 
 All project entries are located in the `project/entries` folder.
 
-Each entry file should be placed in its folder.
+Each entry file should be placed in its idividual folder.
 
 Folder names should also be valid **slugs**. Slugs are entirely lowercase, with accented characters replaced by letters from the Latin alphabet and whitespace characters replaced by a dash or an underscore to avoid being encoded.
 
@@ -271,8 +270,6 @@ episode-21
 ```
 
 ### <a name="fields"></a> Fields
-
-Several default entry fields are available for each entry.
 
 ##### <a name="field-visibility"></a> `visibility`
 
@@ -520,7 +517,7 @@ The field should be in lowercase, with accented characters replaced by letters f
 
 <br>
 
-You can create custom entry fields using any valid YAML syntax. These would be entry-specific fields and be available for Rest API and any extension such as plugin, theme, etc...
+You can define custom fields.
 
 <div class="file-header"><i class="far fa-file-alt"></i> project/entries/home/entry.md</div>
 
@@ -530,39 +527,18 @@ You can create custom entry fields using any valid YAML syntax. These would be e
     author:
       twitter: "@_flextype"
     ---
-    My entry content here.
+    My entry content here, author twitter: [[ author.twitter ]]
 
 **Examples**
 
-Get field `author.twitter` in PHP.
+Get field `author.twitter` and field `content` in PHP.
 
 ```php
-echo entries()->fetch('home')['author.twitter']; // @_flextype
-```
+//=> @_flextype
+echo entries()->fetch('home')['author.twitter']; 
 
-### <a name="vars"></a> Vars
-
-You may define variables in your entries.
-
-```yaml
-&minus;&minus;&minus;
-vars:
-  title: Meridian
-  ratings:
-    stars: 5
-title: "(var:title)"
-description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
-director: William Waring
-writers: Brad Wright, Jonathan Glassner
-stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
-&minus;&minus;&minus;
-
-Title: (var:title)
-
-Rating: (var:ratings.stars) stars.
-
-Content:
-SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
+//=> My entry content here, author twitter: @_flextype
+echo entries()->fetch('home')['content'];
 ```
 
 ### <a name="directives"></a> Directives
@@ -596,8 +572,8 @@ SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering 
             <td>Set current field type.</td>
         </tr>
         <tr>
-            <td><a href="#directive-expressions">[raw][[ ]][/raw]</a></td>
-            <td>Eval expression.</td>
+            <td><a href="#directive-expressions">[raw][[ ]] [% %] [# #][/raw]</a></td>
+            <td>Evaluate expression.</td>
         </tr>
     </tbody>
 </table>
@@ -605,6 +581,8 @@ SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering 
 ### Directives Details
 
 ##### <a name="directive-update"></a> `shortcodes`
+
+Parse shortcodes text inside current field.
 
 **Examples**
 
@@ -616,6 +594,8 @@ discount: "@shortcodes (strings random)"
 
 ##### <a name="directive-markdown"></a> `markdown`
 
+Parse markdown text inside current field.
+
 **Examples**
 
 ```yaml
@@ -625,6 +605,8 @@ text: "@markdown **bold text here**"
 ```
 
 ##### <a name="directive-textile"></a> `textile`
+
+Parse textile text inside current field.
 
 **Examples**
 
@@ -636,6 +618,8 @@ text: "@textile **bold text here**"
 
 ##### <a name="directive-php"></a> `php`
 
+Execute php code inside current field.
+
 **Examples**
 
 ```yaml
@@ -646,30 +630,35 @@ text: "@php echo 'Hello World';"
 
 ##### <a name="directive-type"></a> `type`
 
+Set current field type.
+
 Available types: `int`, `integer`, `float`, `bool`, `boolean`, `array`, `json`, `collection`, `null` and `string`.
 
 **Examples**
 
 ```yaml
 &minus;&minus;&minus;
-vars: 
+_vars: 
     title: "GT Fury"
     currency: "USD"
     vat: '@type[int] (strings random: "2,1234567890)"'
-title: "(var:title)"
-price: "(calc:'100+(var:vat)')"
-price_with_currency: "(field:price) (var:currency)"
+title: "[[ _vars.title ]]"
+price: "(calc:'100+[[_vars.vat]]')"
+price_with_currency: "[[ price ]] [[ _vars.currency ]]"
 &minus;&minus;&minus;
 GT Fury content here...
 ```
 
-##### <a name="directive-expression"></a> `[[ ]]`
+##### <a name="directive-expression"></a> `[[ ]] [% %] [# #]`
 
-Eval expression.
+Evaluate expression.
 
 ```yaml
 price: "[[ 100 + var('vat') ]]"
 message: "[[ field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' ]]"
+content: |
+  [# This is comment #]
+  [% entries().create('movies/sg-1/season-5/episode-23', {}) %]
 ```
 
 ### <a name="macros"></a> Macros

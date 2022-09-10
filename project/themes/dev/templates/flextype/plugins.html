@@ -19,14 +19,8 @@
     <div class="flex content-center flex-wrap">
         <div class="w-full lg:w-9/12 lg:pr-8 text-center">
 
-            {% set pluginsCacheID = strings('pluginsCacheID').hash().toString() %}
-            {% if flextype.cache.has(pluginsCacheID) %}
-                {% set plugins = flextype.cache.get(pluginsCacheID) %}
-            {% else %}
-                {% set plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true}) %}
-                {% do flextype.cache.set(pluginsCacheID, plugins) %}
-            {% endif %}
-
+            {% set plugins = flextype.entries.fetch('flextype/downloads/extend/plugins', {'collection': true}) %}
+            
             {% set plugins_items = plugins.copy()
                                         .where('visibility', 'nin', ['draft', 'hidden'])
                                         .where('template', 'ncontains', 'flextype/plugins-categories')
@@ -53,19 +47,14 @@
             <div class="p-6 bg-white dark:bg-slate-800 mb-8 border rounded-lg border-slate-900 dark:border-slate-500 plate-shadow">
             
                 {# CATEGORY CLOUD #}
-                {% set categoryPluginsCloudCacheID = strings('categoryPluginsCloudCacheID').hash().toString() %}
-                {% if flextype.cache.has(categoryPluginsCloudCacheID) %}
-                    {% set category_cloud = flextype.cache.get(categoryPluginsCloudCacheID) %}
-                {% else %}
-                    {% set category_cloud = [] %}
-                    {% for item in plugins.copy()
-                                       .where('visibility', 'nin', ['draft', 'hidden'])
-                                       .sortBy('published_at', 'DESC') %}
-                        {% set category = item.category|replace({' ': ''}) %}
-                        {% set category_cloud = category_cloud|merge(category|split(',')) %}
-                    {% endfor %}
-                    {% do flextype.cache.set(categoryPluginsCloudCacheID, category_cloud) %}
-                {% endif %}
+
+                {% set category_cloud = [] %}
+                {% for item in plugins.copy()
+                                    .where('visibility', 'nin', ['draft', 'hidden'])
+                                    .sortBy('published_at', 'DESC') %}
+                    {% set category = item.category|replace({' ': ''}) %}
+                    {% set category_cloud = category_cloud|merge(category|split(',')) %}
+                {% endfor %}
 
                 {% set category_cloud = [] %}
                 {% for item in plugins.copy() %}

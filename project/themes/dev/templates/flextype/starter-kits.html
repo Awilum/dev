@@ -18,14 +18,8 @@
     </div>
     <div class="flex content-center flex-wrap">
         <div class="w-full lg:w-9/12 lg:pr-8 text-center">
-
-            {% set starterKitsCacheID = strings('starterKitsCacheID').hash().toString() %}
-            {% if flextype.cache.has(starterKitsCacheID) %}
-                {% set starterKits = flextype.cache.get(starterKitsCacheID) %}
-            {% else %}
-                {% set starterKits = flextype.entries.fetch('flextype/downloads/extend/starter-kits', {'collection': true}) %}
-                {% do flextype.cache.set(starterKitsCacheID, starterKits) %}
-            {% endif %}
+   
+            {% set starterKits = flextype.entries.fetch('flextype/downloads/extend/starter-kits', {'collection': true}) %}
 
             {% set starter_kits_items = starterKits.copy()
                                         .where('visibility', 'nin', ['draft', 'hidden'])
@@ -36,7 +30,9 @@
             {% for item in starter_kits_items %}
             <div class="lg:p-4 lg:pb-8 lg:pt-0 pb-8 lg:w-6/12">
              <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 dark:border-slate-500 block plate-shadow">
-                <img src="{{ item.preview }}" alt="" class="w-full border-b-2 border-slate-900 dark:border-slate-500 p-6">
+                <div style="height: 300px; display: flex; align-items: center;" class="border-b-2 border-slate-900 dark:border-slate-500">
+                    <img src="{{ item.preview }}" alt="" class="w-full p-6">
+                </div>
                 <div class="flex p-6">
                     <div class="text-left">
                         <h4 class="w-full text-xl p-0 m-0">{{ item.title }}</h4>
@@ -52,25 +48,20 @@
             </div>
             {% endfor %}
             </div> 
-
         </div>
         <div class="w-full lg:w-3/12">
             <div class="p-6 bg-white dark:bg-slate-800 mb-8 border rounded-lg border-slate-900 dark:border-slate-500 plate-shadow">
             
                 {# CATEGORY CLOUD #}
-                {% set starterKitsCloudCacheID = strings('starterKitsCloudCacheID').hash().toString() %}
-                {% if flextype.cache.has(starterKitsCloudCacheID) %}
-                    {% set category_cloud = flextype.cache.get(starterKitsCloudCacheID) %}
-                {% else %}
-                    {% set category_cloud = [] %}
-                    {% for item in starterKits.copy()
-                                       .where('visibility', 'nin', ['draft', 'hidden'])
-                                       .sortBy('published_at', 'DESC') %}
-                        {% set category = item.category|replace({' ': ''}) %}
-                        {% set category_cloud = category_cloud|merge(category|split(',')) %}
-                    {% endfor %}
-                    {% do flextype.cache.set(starterKitsCloudCacheID, category_cloud) %}
-                {% endif %}
+
+                {% set category_cloud = [] %}
+                {% for item in starterKits.copy()
+                                    .where('visibility', 'nin', ['draft', 'hidden'])
+                                    .sortBy('published_at', 'DESC') %}
+                    {% set category = item.category|replace({' ': ''}) %}
+                    {% set category_cloud = category_cloud|merge(category|split(',')) %}
+                {% endfor %}
+        
 
                 {% set category_cloud = [] %}
                 {% for item in starterKits.copy() %}

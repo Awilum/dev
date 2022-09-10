@@ -7,7 +7,7 @@
 <div class="container mx-auto text-plate-900 pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits/{{ name }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits/{{ entry.slug }}">{{ entry.title }}</a></h1>
         </div>
         <div>
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">DOWNLOADS</a></span>
@@ -109,7 +109,7 @@
                             {% if related_starter_kit.slug != entry.slug %}
                             <a href="{{ url() }}/{{ related_starter_kit.id }}" class="w-full p-2 lg:w-6/12 no-underline ">
                                 <div class="flex p-6 align-middle">
-                                    <span class="icon-svg-large mr-5">{{ icon(related_starter_kit.icon.name, related_starter_kit.icon.set) }}</span>
+                                    <img src="{{ related_starter_kit.preview }}" alt="" class="w-40 p-6 border border-black mx-4">
                                     <div class="text-left">
                                         <h4 class="text-xl p-0 m-0 block">{{ related_starter_kit.title }}</h4>
                                         <p class="m-0">

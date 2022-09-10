@@ -7,7 +7,7 @@
 <div class="container mx-auto text-plate-900 pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ name }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ entry.slug }}">{{ entry.title }}</a></h1>
         </div>
         <div>
             <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">DOWNLOADS</a></span>
@@ -58,7 +58,11 @@
                         <div class="w-full">
                             <p class="m-0 opacity-50">Dependencies</p>
                             {% for key, val in plugin.dependencies %}
-                                <a href="{{ url() }}/flextype/downloads/extend/plugins/{{ key }}">{{ key }}</a>: {{ val }}<br>
+                                {% if key == 'flextype' %}
+                                    <a href="{{ url() }}/flextype/downloads">{{ key }}</a>: {{ val }}<br>
+                                {% else %}
+                                    <a href="{{ url() }}/flextype/downloads/extend/plugins/{{ key }}">{{ key }}</a>: {{ val }}<br>
+                                {% endif %}
                             {% endfor %}
                             <p></p>
                         </div>
