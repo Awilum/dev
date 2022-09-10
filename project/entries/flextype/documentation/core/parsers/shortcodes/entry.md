@@ -41,6 +41,12 @@ on_this_page:
         title: "filesystem"
         link: "shortcode-filesystem"
       -
+        title: "var"
+        link: "shortcode-var"
+      -
+        title: "field"
+        link: "shortcode-field"
+      -
         title: "tr"
         link: "shortcode-tr"
       -
@@ -155,6 +161,16 @@ There are several default shortcodes available.
             <td>Do filesystem manipulation.</td>
         </tr>
         <tr>
+            <td><a href="#shortcode-var">var</a></td>
+            <td>set, get, unset, delete</td>
+            <td>Access global vars.</td>
+        </tr>
+        <tr>
+            <td><a href="#shortcode-field">field</a></td>
+            <td>set, get, unset, delete</td>
+            <td>Access current entry fields.</td>
+        </tr>
+        <tr>
             <td><a href="#shortcode-tr">tr</a></td>
             <td>values, locale</td>
             <td>Returns translation of a string. If no translation exists, the original string will be returned.</td>
@@ -227,25 +243,25 @@ Fetch entry (or entries collection) or a specific field.
 
 **Fetch single entry**
 
-```text
+```md
 (entries fetch id:'blog')
 ```
 
 **Fetch secific field from a single entry**
 
-```text
+```md
 (entries fetch id:'blog' field:'title' default:'Blog')
 ```
 
 **Fetch entries collection**
 
-```text
+```md
 (entries fetch id:'blog' options:'collection=true')
 ```
 
 **Fetch entries collection with filtering options**
 
-```text
+```md
 (entries fetch id:'blog' options:'collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC')
 ```
 
@@ -255,7 +271,7 @@ Get specific item from registry.
 
 **Examples**
 
-```text
+```md
 (registry get id:'flextype.manifest.name' default:'Flextype')
 ```
 
@@ -265,7 +281,7 @@ Execute php code.
 
 **Examples**
 
-```text
+```md
 (php)
   echo "Hello World!";
 (/php)
@@ -277,7 +293,7 @@ Eval expression.
 
 **Examples**
 
-```text
+```md
 (eval)
   1 + 1;
 (/eval)
@@ -289,7 +305,7 @@ Calculate values.
 
 **Examples**
 
-```text
+```md
 (calc:'1+1')
 ```
 
@@ -303,7 +319,7 @@ append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, words
 
 **Examples**
 
-```text
+```md
 // foo
 (strings lower)Foo(/strings)
 
@@ -322,7 +338,7 @@ Parse textile text.
 
 **Examples**
 
-```text
+```md
 (textile)
   h2. Textile
   * is a _shorthand syntax_ used to generate valid HTML
@@ -337,7 +353,7 @@ Parse markdown text.
 
 **Examples**
 
-```text
+```md
 (markdown)
   # Markdown
   ** markdown text **
@@ -350,8 +366,37 @@ Do filesystem manipulation.
 
 **Examples**
 
-```text
+```md
 (filesystem get file:'file.txt')
+```
+
+##### <a name="shortcode-var"></a> `var`
+
+Access to global vars.
+
+**Examples**
+
+```md
+(var:foo)
+(var get:foo)
+(var set:foo value:Foo)
+(var set:foo) Foo (/var)
+```
+
+##### <a name="shortcode-field"></a> `field`
+
+Access current entry fields.
+
+**Examples**
+
+```md
+(field:title)
+(field get:foo default:Foo)
+(field get:foo) Default (/field)
+(field set:foo value:Foo)
+(field set:foo) Foo (/field)
+(field unset:foo)
+(field delete:foo)
 ```
 
 ##### <a name="shortcode-tr"></a> `tr`
@@ -360,7 +405,7 @@ Returns translation of a string. If no translation exists, the original string w
 
 **Examples**
 
-```text
+```md
 (tr:'translate_key')
 ```
 
@@ -370,7 +415,7 @@ Adds ability to use logical if conditions.
 
 **Examples**
 
-```text
+```md
 (if:'100 > 20') 
   Display content here...
 (/if)
@@ -382,7 +427,7 @@ Adds ability to use logical positive if conditions.
 
 **Examples**
 
-```text
+```md
 (when:'100 > 20') 
   Display content here...
 (/when)
@@ -394,7 +439,7 @@ Adds ability to use logical negative if conditions.
 
 **Examples**
 
-```text
+```md
 (unless:'100 < 20') 
   Display content here...
 (/unless)
@@ -406,7 +451,7 @@ Generates UUID.
 
 **Examples**
 
-```text
+```md
 (uuid)
 (uuid:4)
 ```
@@ -428,7 +473,7 @@ Get the application base path.
 **Examples**
 
 ```
-(getBaseUrl])
+(getBaseUrl)
 ```
 
 ##### <a name="shortcode-getProjectUrl"></a> `getProjectUrl`
