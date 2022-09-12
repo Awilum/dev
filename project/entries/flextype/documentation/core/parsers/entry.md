@@ -23,3 +23,9 @@ For more details <a href="[url]/flextype/documentation/core/parsers/markdown">re
 Shortcodes are a small piece of code, indicated by brackets like `(this)`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 For more details <a href="[url]/flextype/documentation/core/parsers/shortcodes">read the guide for the SHORTCODE</a>.
+
+### EXPRESSIONS
+
+The Expressions parser provides an engine that can compile and evaluate expressions.
+
+For more details <a href="[url]/flextype/documentation/core/parsers/expressions">read the guide for the EXPRESSIONS</a>.
