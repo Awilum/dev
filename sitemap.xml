@@ -4310,12 +4310,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://awilum.github.io/flextype/documentation/rest-api</loc>
-    <lastmod>2022-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://awilum.github.io/flextype/documentation/core/serializers/json</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
@@ -4406,12 +4400,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://awilum.github.io/flextype/documentation/core/entries</loc>
-    <lastmod>2022-06-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://awilum.github.io/flextype/downloads/extend/starter-kits</loc>
     <lastmod>2022-06-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4437,18 +4425,6 @@
   </url>
   <url>
     <loc>https://awilum.github.io/flextype/documentation/getting-started/folder-structure</loc>
-    <lastmod>2022-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/documentation/core/parsers/shortcodes</loc>
-    <lastmod>2022-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/documentation/core/parsers</loc>
     <lastmod>2022-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -4894,6 +4870,42 @@
   <url>
     <loc>https://awilum.github.io/flextype/downloads/extend/starter-kits/simpledoc</loc>
     <lastmod>2022-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/core/entries</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/core/parsers/shortcodes</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/core/parsers</loc>
+    <lastmod>2022-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/core/parsers/expressions</loc>
+    <lastmod>2022-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/rest-api/query</loc>
+    <lastmod>2022-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://awilum.github.io/flextype/documentation/rest-api</loc>
+    <lastmod>2022-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
