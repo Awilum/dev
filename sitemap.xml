@@ -3764,30 +3764,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/forms</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/security</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/emails</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/admin</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/content</loc>
     <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
@@ -3795,24 +3771,6 @@
   </url>
   <url>
     <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/templating</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/accounts</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/icons</loc>
-    <lastmod>2022-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://awilum.github.io/flextype/downloads/extend/plugins/categories/javascript</loc>
     <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
