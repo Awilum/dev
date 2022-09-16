@@ -35,7 +35,21 @@ class SitemapController
                             ->fetch('', ['collection' => true, 'find' => ['depth' => '> 0']])
                             ->sortBy('modified_at', 'asc')
                             ->all();
-    
+
+            $depths = [];
+            $priorities = [];
+            foreach ($entries as $id => $value) {
+                $depths[$id] = count(explode('/', $id));
+            }
+            foreach ($depths as $id => $value) {
+                $res = round(100 / $value);
+                if ($res == 100) {
+                    $res = 80;
+                }
+                $priorities[$id] = "0." . $res;
+            }
+
+
             foreach ($entries as $entry) {
 
                 // Check entry visibility field
@@ -61,11 +75,14 @@ class SitemapController
                 }
 
                 // Check entry priority field
+                /* 
                 if (isset($entry['sitemap']['priority'])) {
                     $entry['priority'] = $entry['sitemap']['priority'];
                 } else {
                     $entry['priority'] = flextype('registry')->get('plugins.sitemap.settings.default.priority');
                 }
+                */
+
 
                 // Check ignore list
                 if (in_array($entry['id'], (array) flextype('registry')->get('plugins.sitemap.settings.ignore'))) {
@@ -73,10 +90,17 @@ class SitemapController
                 }
 
                 // Prepare data
-                $entry_to_add['loc']        = $entry['id'];
-                $entry_to_add['lastmod']    = $entry['modified_at'];
-                $entry_to_add['changefreq'] = $entry['changefreq'];
-                $entry_to_add['priority']   = $entry['priority'];
+                if (in_array($entry['id'], (array) flextype('registry')->get('plugins.site.settings.entries.main'))) {
+                    $entry_to_add['loc']        = '';
+                    $entry_to_add['lastmod']    = $entry['modified_at'];
+                    $entry_to_add['changefreq'] = $entry['changefreq'];
+                    $entry_to_add['priority']   = 1.0;
+                } else {
+                    $entry_to_add['loc']        = $entry['id'] . '/';
+                    $entry_to_add['lastmod']    = $entry['modified_at'];
+                    $entry_to_add['changefreq'] = $entry['changefreq'];
+                    $entry_to_add['priority']   = $priorities[$entry['id']];
+                }
 
                 // Add entry to sitemap
                 $sitemap[] = $entry_to_add;
