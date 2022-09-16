@@ -82,7 +82,7 @@
                             <p>
                                 {% set categories = entry.category|replace({' ': ''}) %}
                                 {% for category in categories|split(',') %}
-                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/plugins?category={{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
+                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/plugins/categories/{{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </p>
                         </div>
