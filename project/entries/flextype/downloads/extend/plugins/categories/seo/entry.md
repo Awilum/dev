@@ -1,4 +1,4 @@
 ---
-title: JavaScript
+title: Seo
 template: flextype/plugins-category
 ---
