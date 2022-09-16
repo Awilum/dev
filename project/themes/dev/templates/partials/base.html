@@ -204,21 +204,6 @@
             $tabs('.frameworks');
         {% endif %}
 
-        var formatter = new Intl.NumberFormat('en-US');
-        fetch('https://raw.githubusercontent.com/Awilum/awilum/master/github-metrics.json')
-        .then(response => response.json())
-        .then(function(data) {
-            var ghCommits = document.querySelector(".github-commits");
-            var ghLinesAdded = document.querySelector(".github-lines-added");
-            var ghDeleted = document.querySelector(".github-lines-deleted");
-            var ghContibuteTo = document.querySelector(".github-repositories-contributed-to");
-
-            if (ghCommits != null) ghCommits.innerHTML = formatter.format(data.computed.commits);
-            if (ghLinesAdded != null) ghLinesAdded.innerHTML = formatter.format(data.plugins.lines.added);
-            if (ghDeleted != null) ghDeleted.innerHTML = formatter.format(data.plugins.lines.deleted);
-            if (ghContibuteTo != null) ghContibuteTo.innerHTML = formatter.format(data.user.repositoriesContributedTo.totalCount);
-        });
-
     </script>
     {% do flextype.emitter.emit('onThemeTail') %}
     <!-- Yandex.Metrika counter -->
