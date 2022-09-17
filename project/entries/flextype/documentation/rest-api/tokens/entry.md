@@ -3,7 +3,8 @@ title: Tokens
 template: flextype/docs
 order: 2
 seo:
-  title: Tokens Rest API | Flextype
+  title: Tokens Rest API for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Tokens Rest API for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Rest API"

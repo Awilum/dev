@@ -3,7 +3,8 @@ title: Parsers
 template: flextype/docs
 order: 6
 seo:
-  title: Parsers | Flextype
+  title: Parsers for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using parsers for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Core Concepts"

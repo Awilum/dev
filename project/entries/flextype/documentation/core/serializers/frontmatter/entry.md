@@ -2,6 +2,9 @@
 title: FRONTMATTER
 description: Any file that contains a YAML front matter block will be processed by Flextype as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Between these triple-dashed lines, you can set predefined variables or even create custom ones of your own.
 template: flextype/docs
+seo:
+  title: Frontmatter for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using frontmatter in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Core Concepts"

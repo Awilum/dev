@@ -3,7 +3,8 @@ title: NEON
 description: NEON is a human-readable structured data format. In Nette, it is used for configuration files. It is also used for structured data such as settings, language translations, etc.
 template: flextype/docs
 seo:
-  title: NEON | Flextype
+  title: NEON for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using a human-readable structured data format NEON in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Core Concepts"

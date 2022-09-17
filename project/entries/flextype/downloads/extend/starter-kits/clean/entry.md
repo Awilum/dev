@@ -11,9 +11,9 @@ documentation: https://github.com/flextype-starter-kits/clean
 preview: https://raw.githubusercontent.com/flextype-starter-kits/clean/1.x/preview.png
 template: flextype/starter-kit
 seo:
-  title: Get Site Plugin for Open Source Hybrid Content Management System | Flextype
-  description: Site Plugin to display entries content on the website frontend for Open Source Hybrid Content Management System
-  keywords: Flextype Site Plugin, Flextype CMS Site Plugin, Headless CMS Site Plugin, Download Flat File CMS Site Plugin, Download Flat File Content Management System Site Plugin, Download PHP CMS Site Plugin, Site Plugin, Plugin, Site, Content, Management, System, PHP, CMS
+  title: Get Clean Starter Kit for Modern Open Source Flat Files Flextype CMS
+  description: Clean is a minimalist Starter Kit for a blog or personal site for Modern Open Source Flat Files Flextype CMS
+  keywords: Flextype Clean Starter Kit, Flextype CMS Clean Starter Kit, Headless CMS Clean Starter Kit, Download Flat File CMS Clean Starter Kit, Download Flat File Content Management System Clean Starter Kit, Download PHP CMS Clean Starter Kit, Clean Starter Kit, Starter Kit, Clean, Content, Management, System, PHP, CMS
 ---
 
 ### Installation

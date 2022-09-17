@@ -4,7 +4,8 @@ template: flextype/docs
 order: 2
 description: Entries are the fundamental building-blocks of your project. 
 seo:
-  title: Entries | Flextype
+  title: Entries for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Entries for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Core Concepts"

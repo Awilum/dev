@@ -1,9 +1,5 @@
-{% if (strings(entry.slug) == 'home') %}
-    Developer | Sergey Romanenko
+{% if (entry.seo.title) %}
+    {{ entry.seo.title|e('html') }}
 {% else %}
-    {% if entry.seo.title %}
-        {{ entry.seo.title|e('html') }}
-    {% else %}
-        {{ entry.title|e('html') }} | {{ flextype.registry.get('plugins.site.settings.title')|e('html') }}
-    {% endif %}
+    {{ entry.title|e('html') }} | {{ flextype.registry.get('plugins.site.settings.title')|e('html') }}
 {% endif %}

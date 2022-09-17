@@ -3,7 +3,8 @@ title: Entries
 template: flextype/docs
 order: 2
 seo:
-  title: Entries | Flextype
+  title: Console Entries Commands for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about the Console Entries Commands for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Console"

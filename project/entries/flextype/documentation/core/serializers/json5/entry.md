@@ -3,7 +3,8 @@ title: JSON5
 description: JSON5 is a superset of JSON that allows for comments and trailing commas.
 template: flextype/docs
 seo:
-  title: JSON5 | Flextype
+  title: JSON5 for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using JSON5 in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Core Concepts"

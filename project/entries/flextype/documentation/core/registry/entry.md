@@ -3,7 +3,8 @@ title: Registry
 template: flextype/docs
 order: 5
 seo:
-  title: Registry | Flextype
+  title: Registry for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using regisry in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Core Concepts"

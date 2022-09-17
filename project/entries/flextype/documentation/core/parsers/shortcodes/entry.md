@@ -3,7 +3,8 @@ title: SHORTCODES
 description: Shortcodes are a small piece of code, indicated by brackets like `(this)`, that performs a dedicated function on your site.
 template: flextype/docs
 seo:
-  title: Shortcode | Flextype
+  title: Shortcodes for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using Shotcodes in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Core Concepts"

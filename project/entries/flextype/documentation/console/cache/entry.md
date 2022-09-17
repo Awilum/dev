@@ -3,7 +3,8 @@ title: Cache
 template: flextype/docs
 order: 2
 seo:
-  title: Cache | Flextype
+  title: Cache Commands for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Cache Commands for Modern Open Source Flat Files Fextype CMS
 breadcrumbs:
   -
     title: "Console"

@@ -1,7 +1,8 @@
 ---
 title: Core Concepts
 seo:
-  title: Core Concepts | Flextype
+  title: Core Concepts of Modern Open Source Flat Files Flextype CMS
+  description:: Read the core concepts of Modern Open Source Flat Files Flextype CMS
 order: 2
 template: flextype/docs 
 ---

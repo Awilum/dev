@@ -4,7 +4,8 @@ description: Flextype is incredibly easy to set up and get running.
 order: 3
 template: flextype/docs
 seo:
-  title: Installation | Flextype
+  title: Installation of Modern Open Source Flat Files Flextype CMS
+  description: Read the installation documentation for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Getting Started"

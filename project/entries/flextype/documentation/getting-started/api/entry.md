@@ -3,7 +3,8 @@ title: API Reference
 template: flextype/docs   
 order: 6
 seo:
-  title: API Reference | Flextype
+  title: API Reference for Modern Open Source Flat Files Flextype CMS
+  description: Read the API Reference for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Getting Started"

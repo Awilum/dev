@@ -3,7 +3,8 @@ title: What is Flextype?
 template: flextype/docs   
 order: 1
 seo:
-  title: What is Flextype? | Flextype
+  title: What is Flextype?
+  description: What is Fextype?
 breadcrumbs:
   1:
     title: "Getting Started"

@@ -2,6 +2,9 @@
 title: Cache
 template: flextype/docs
 order: 5
+seo:
+  title: Cache Rest API for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation abot Cache REST API for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Rest API"

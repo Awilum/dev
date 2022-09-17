@@ -3,7 +3,8 @@ title: Tokens
 template: flextype/docs
 order: 3
 seo:
-  title: Tokens | Flextype
+  title: Tokens Commands for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Tokens Commands for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Console"

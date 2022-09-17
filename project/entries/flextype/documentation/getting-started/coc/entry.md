@@ -3,6 +3,9 @@ title: Code of Conduct
 description: Like the technical community as a whole, the Flextype team and community is made up of a mixture of professionals and volunteers from all over the world, working on every aspect of the mission - including mentorship, teaching, and connecting people.
 order: 6
 template: flextype/docs
+seo:
+  title: Code of Conduct for Modern Open Source Flat Files Flextype CMS
+  description: Like the technical community as a whole, the Flextype team and community is made up of a mixture of professionals and volunteers from all over the world, working on every aspect of the mission - including mentorship, teaching, and connecting people.
 breadcrumbs:
   1:
     title: "Getting Started"

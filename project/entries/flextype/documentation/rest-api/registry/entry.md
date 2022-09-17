@@ -2,6 +2,9 @@
 title: Registry
 template: flextype/docs
 order: 5
+seo: 
+  title: Registry Rest API for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Registry Rest API for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Rest API"

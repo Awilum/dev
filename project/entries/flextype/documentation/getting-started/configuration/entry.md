@@ -4,7 +4,8 @@ description: Flextype allows you to configure your site in any way you can dream
 order: 4
 template: flextype/docs
 seo:
-  title: Configuration | Flextype
+  title: Configuration for Modern Open Source Flat Files Flextype CMS
+  description: Read the configuration documentation for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Getting Started"
@@ -81,7 +82,7 @@ date_display_format: 'd-m-Y H:i'
 errors:
 
   # Set true to display errors.
-  display: true
+  display: false
 
   # Editor (emacs, idea, macvim, phpstorm, sublime, textmate, xdebug, vscode, atom, espresso)
   editor: atom
@@ -97,58 +98,11 @@ entries:
   directory: 'entries'
   cache:
     string: ""
-  vars:
-    debug: false
-  expressions:
-    actions:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\ActionsExpression"
-    registry:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\RegistryExpression"
-    entries:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\EntriesExpression"
-    filesystem:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\FilesystemExpression"
-    i18n:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\I18nExpression"
-    serializers:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\SerializersExpression"
-    parsers:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\ParsersExpression"
-    slugify:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\SlugifyExpression"
-    strings:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\StringsExpression"
-    collection:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\CollectionExpression"
-    csrf:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\CsrfExpression"
-    var:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\VarExpression"
-    field:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\FieldExpression"
-    const:
-      enabled: true
-      class: "Flextype\\Entries\\Expressions\\ConstExpression"
   directives:
     expressions:
       enabled: true
       enabled_globally: true
       path: "src/flextype/core/Entries/Directives/ExpressionsDirective.php"
-      opening_tag: "[["
-      closing_tag: "]]"
     shortcodes:
       enabled: true
       enabled_globally: true
@@ -162,7 +116,7 @@ entries:
       enabled_globally: false
       path: "src/flextype/core/Entries/Directives/TextileDirective.php"
     php:
-      enabled: true
+      enabled: false
       enabled_globally: false
       path: "src/flextype/core/Entries/Directives/PhpDirective.php"
     types:
@@ -170,11 +124,8 @@ entries:
       path: "src/flextype/core/Entries/Directives/TypesDirective.php"
   macros:
     debug: false
-    vars:
-      enabled: true
-      path: "src/flextype/core/Entries/Macros/VarsMacros.php"
     php:
-      enabled: true
+      enabled: false
       path: "src/flextype/core/Entries/Macros/PhpMacros.php"
     registry:
       enabled: true
@@ -318,7 +269,7 @@ entries:
 #
 # - drivers.files.cache_slams_timeout: This option defines the cache slams timeout in seconds.
 cache:
-  enabled: false
+  enabled: true
   driver: auto
   drivers:
     apcu: {}
@@ -330,17 +281,6 @@ cache:
       password: ''
       ssl_enabled: false
       ssl_verify: false
-      default_ttl: 900
-    cookie:
-      aware_of_untrustable_data: false
-      limited_memory_by_object: 4096
-      default_ttl: 900
-    couchbase:
-      host: '127.0.0.1'
-      port: 8091
-      username: ''
-      password: ''
-      bucket_name: default
       default_ttl: 900
     couchdb:
       database: 'flextype'
@@ -354,25 +294,20 @@ cache:
       timeout: 10
       default_ttl: 900
     devnull: {}
-    devfalse: {}
-    devtrue: {}
     phparray:
       path: '/data'
       security_key: 'auto'
-      htaccess: true
       secure_file_manipulation: false
       default_ttl: 900
     files:
       path: '/data'
       security_key: 'auto'
-      htaccess: true
       secure_file_manipulation: false
       cache_file_extension: txt
       default_ttl: 900
     leveldb:
       path: '/data'
       security_key: 'auto'
-      htaccess: true
       default_ttl: 900
     memcache:
       host: '127.0.0.1'
@@ -419,15 +354,9 @@ cache:
       database: 0
       opt_prefix: ''
       default_ttl: 900
-    riak:
-      host: '127.0.0.1'
-      port: 8098
-      prefix: 'riak'
-      default_ttl: 900
     sqlite:
       path: '/data'
       security_key: auto
-      htaccess: true
       default_ttl: 900
     ssdb:
       host: 127.0.0.1
@@ -672,8 +601,11 @@ parsers:
         path: "src/flextype/core/Parsers/Shortcodes/EntriesShortcode.php"
         fetch:
           enabled: true
-      php:
+      date:
         enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/DateShortcode.php"
+      php:
+        enabled: false
         path: "src/flextype/core/Parsers/Shortcodes/PhpShortcode.php"
       raw:
         enabled: true
@@ -724,6 +656,9 @@ parsers:
       field:
         enabled: true
         path: "src/flextype/core/Parsers/Shortcodes/FieldShortcode.php"  
+      fetch:
+        enabled: true
+        path: "src/flextype/core/Parsers/Shortcodes/FetchShortcode.php"
       calc:
         enabled: true
         path: "src/flextype/core/Parsers/Shortcodes/CalcShortcode.php"  
@@ -733,6 +668,91 @@ parsers:
       type:
         enabled: true
         path: "src/flextype/core/Parsers/Shortcodes/TypeShortcode.php" 
+  expressions:
+    cache:
+      enabled: true
+      string: ''
+    opening_variable_tag: "[["
+    closing_variable_tag: "]]"
+    opening_block_tag: "[%"
+    closing_block_tag: "%]"
+    opening_comment_tag: "[#"
+    closing_comment_tag: "#]"
+    expressions:
+      math:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\MathExpression"
+      date:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\DateExpression"
+      actions:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\ActionsExpression"
+      registry:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\RegistryExpression"
+      entries:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\EntriesExpression"
+        fetch:
+          enabled: true
+        has:
+          enabled: true
+        registry:
+          enabled: true
+        create:
+          enabled: false
+        move:
+          enabled: false
+        update:
+          enabled: false
+        delete:
+          enabled: false
+      fetch:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\FetchExpression"
+      filesystem:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\FilesystemExpression"
+      i18n:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\I18nExpression"
+      serializers:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\SerializersExpression"
+      parsers:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\ParsersExpression"
+      slugify:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\SlugifyExpression"
+      strings:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\StringsExpression"
+      collection:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\CollectionExpression"
+      csrf:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\CsrfExpression"
+      var:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\VarExpression"
+      field:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\FieldExpression"
+      const:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\ConstExpression"
+      url:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\UrlExpression"
+      when:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\WhenExpression"
+      unless:
+        enabled: true
+        class: "Flextype\\Parsers\\Expressions\\UnlessExpression"
 
 # CORS
 #
@@ -866,6 +886,12 @@ api:
   cache:
 
     # Set to true to enable Cache API
+    enabled: true
+
+  # Query API
+  query:
+
+    # Set to true to enable Query API
     enabled: true
 ```
 

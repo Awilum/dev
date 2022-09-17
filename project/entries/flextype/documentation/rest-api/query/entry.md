@@ -3,7 +3,8 @@ title: Query
 template: flextype/docs
 order: 2
 seo:
-  title: Query Rest API | Flextype
+  title: Query Rest API for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Query Rest API for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Rest API"

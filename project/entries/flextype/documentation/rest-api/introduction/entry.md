@@ -2,6 +2,9 @@
 title: Introducion
 template: flextype/docs
 order: 1
+seo: 
+  title: Introducion to the Flextype Rest APIs 
+  description: Read the documentation about Flextype Rest APIs
 breadcrumbs:
   1:
     title: "Rest API"

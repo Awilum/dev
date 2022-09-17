@@ -3,7 +3,8 @@ title: License
 order: 8
 template: flextype/docs
 seo:
-  title: License | Flextype
+  title: License for Modern Open Source Flat Files Flextype CMS
+  description: Read the License for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Getting Started"

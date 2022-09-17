@@ -12,8 +12,8 @@ github: https://github.com/flextype-plugins/twig
 documentation: https://github.com/flextype-plugins/twig
 template: flextype/plugin
 seo:
-  title: Get Twig Plugin for Open Source Hybrid Content Management System | Flextype
-  description: Twig Plugin to present Twig template engine for Open Source Hybrid Content Management System
+  title: Get Twig Plugin for Modern Open Source Flat Files Flextype CMS
+  description: Twig Plugin to present Twig template engine for Modern Open Source Flat Files Flextype CMS
   keywords: Flextype Twig Plugin, Flextype CMS Twig Plugin, Headless CMS Twig Plugin, Download Flat File CMS Twig Plugin, Download Flat File Content Management System Twig Plugin, Download PHP CMS Twig Plugin, Twig Plugin, Plugin, Twig, Content, Management, System, PHP, CMS
 ---
 
@@ -28,7 +28,7 @@ seo:
 
 1. Download & Install all required [dependencies](https://github.com/flextype-plugins/twig#dependencies).
 2. Create new folder `project/plugins/twig`.
-3. Download [Sitemap Plugin](https://github.com/flextype-plugins/twig/releases) and unzip plugin content to the folder `project`.
+3. Download [Twig Plugin](https://github.com/flextype-plugins/twig/releases) and unzip plugin content to the folder `project`.
 
 ### Settings
 
@@ -93,6 +93,8 @@ extensions:
   - Cache
   - Image
   - Url
+  - Var
+  - Fetch
 
 # Twig plugin priority
 priority: 0

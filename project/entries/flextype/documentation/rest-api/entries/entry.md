@@ -3,7 +3,8 @@ title: Entries
 template: flextype/docs
 order: 2
 seo:
-  title: Entries Rest API | Flextype
+  title: Entries Rest API for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about Entries REST API for Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   -
     title: "Rest API"

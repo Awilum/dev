@@ -11,9 +11,9 @@ documentation: https://github.com/flextype-starter-kits/simpledoc
 preview: https://raw.githubusercontent.com/flextype-starter-kits/simpledoc/1.x/preview.png
 template: flextype/starter-kit
 seo:
-  title: Get Site Plugin for Open Source Hybrid Content Management System | Flextype
-  description: Site Plugin to display entries content on the website frontend for Open Source Hybrid Content Management System
-  keywords: Flextype Site Plugin, Flextype CMS Site Plugin, Headless CMS Site Plugin, Download Flat File CMS Site Plugin, Download Flat File Content Management System Site Plugin, Download PHP CMS Site Plugin, Site Plugin, Plugin, Site, Content, Management, System, PHP, CMS
+  title: Get Simpledoc Starter Kit for Modern Open Source Flat Files Flextype CMS
+  description: Simpledoc is a minimalist Starter Kit for a documentation site for Modern Open Source Flat Files Flextype CMS
+  keywords: Flextype Simpledoc Starter Kit, Headless CMS Simledoc Starter Kit, Download Flat File CMS Simpledoc Starter Kit, Download Flat File Content Management System Simpledoc Starter Kit, Download PHP CMS Simpledoc Starter Kit, Simpledoc Starter Kit, Starter Kit, Simpledoc, Content, Management, System, PHP, CMS
 ---
 
 ![](https://raw.githubusercontent.com/flextype-starter-kits/simpledoc/1.x/preview-2.png)

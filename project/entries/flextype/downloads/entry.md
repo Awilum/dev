@@ -4,8 +4,8 @@ template: flextype/downloads
 visibility: visible
 description: "Download Flextype package, plugins, and if you want to report a bug or contribute your ideas, you can use the Flextype GitHub Issues tracker"
 seo:
-  title: Download Open Source Hybrid Content Management System | Flextype
-  description: Flextype core package, plugins, themes add if you want to report a bug or contribute your ideas, you can use the Flextype GitHub Issues tracker
+  title: Download Modern Open Source Flat Files Flextype CMS
+  description: Flextype core package, plugins, starter kits add if you want to report a bug or contribute your ideas, you can use the Flextype GitHub Issues tracker
   keywords: Download Flextype, Download Flextype CMS, Download Headless CMS, Download Flat File CMS, Download Flat File Content Management System, Download PHP CMS, Content, Management, System, PHP, CMS
 download_flextype: Download Flextype
 txt_release_package_contains: Release package contains

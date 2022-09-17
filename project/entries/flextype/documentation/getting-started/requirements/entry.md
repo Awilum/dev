@@ -3,7 +3,8 @@ title: Requirements
 description: System and Browser requirements for Flextype
 template: flextype/docs  
 seo:
-  title: Requirements | Flextype
+  title: Requirements for Modern Open Source Flat Files Flextype CMS
+  description: Read the Requirements for Modern Open Source Flat Files Flextype CMS
 order: 2
 breadcrumbs:
   1:

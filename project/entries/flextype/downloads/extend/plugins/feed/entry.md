@@ -12,8 +12,8 @@ github: https://github.com/flextype-plugins/feed
 documentation: https://awilum.github.io/flextype/downloads/extend/plugins/feed
 template: flextype/plugin
 seo:
-  title: Get Feed Plugin for Open Source Hybrid Content Management System | Flextype
-  description: Feed Plugin to display entries content on the website frontend for Open Source Hybrid Content Management System
+  title: Get Feed Plugin for Modern Open Source Flat Files Flextype CMS
+  description: Feed Plugin to display entries content on the website frontend for Modern Open Source Flat Files Flextype CMS
   keywords: Flextype Site Plugin, Flextype CMS Site Plugin, Headless CMS Site Plugin, Download Flat File CMS Site Plugin, Download Flat File Content Management System Site Plugin, Download PHP CMS Site Plugin, Site Plugin, Plugin, Site, Content, Management, System, PHP, CMS
 ---
 

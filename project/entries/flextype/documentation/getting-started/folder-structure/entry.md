@@ -4,7 +4,8 @@ description: Flextype folder structure
 order: 5
 template: flextype/docs
 seo:
-  title: Folder structure | Flextype
+  title: Folder structure of Modern Open Source Flat Files Flextype CMS
+  description: Learn the folder structure of Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Getting Started"

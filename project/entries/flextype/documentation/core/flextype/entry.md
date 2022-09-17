@@ -4,7 +4,7 @@ description: Common part of Flextype is a Flextype Core Class that extends Slim 
 template: flextype/docs
 visibility: draft
 seo:
-  title: Core | Flextype
+  title: Core for Modern Open Source Flat Files Flextype CMS
 order: 1
 breadcrumbs:
   -

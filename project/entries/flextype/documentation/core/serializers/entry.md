@@ -3,7 +3,8 @@ title: Serializers
 template: flextype/docs
 order: 7
 seo:
-  title: Serializers | Flextype
+  title: Serializers for Modern Open Source Flat Files Flextype CMS
+  description: Read the documentation about using serializers in Modern Open Source Flat Files Flextype CMS
 breadcrumbs:
   1:
     title: "Core Concepts"
