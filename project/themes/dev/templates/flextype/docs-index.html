@@ -23,7 +23,7 @@
                 <ul class="list-none m-0">
                 {% for page in pages %} 
                     {% if page.visibility != 'draft' %}       
-                        <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}">{{ page.title }}</a></li>
+                        <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}/">{{ page.title }}</a></li>
                     {% endif %}
                 {% endfor %}
                 </ul>
@@ -45,7 +45,7 @@
                 <ul class="list-none m-0">
                 {% for page in pages %} 
                     {% if page.visibility != 'draft' %}       
-                        <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}">{{ page.title }}</a></li>
+                        <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}/">{{ page.title }}</a></li>
                     {% endif %}
                 {% endfor %}
                 </ul>

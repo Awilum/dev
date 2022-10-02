@@ -8,11 +8,11 @@
 <div class="container mx-auto pb-24 px-4 lg:px-0">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}/">{{ entry.title }}</a></h1>
         </div>
         {% if entry.breadcrumbs %}
         <div class="opacity-50">
-            <a class="no-underline" href="{{ url() }}/flextype/documentation">Documentation</a> <span>/</span>
+            <a class="no-underline" href="{{ url() }}/flextype/documentation/">Documentation</a> <span>/</span>
             {% for item in entry.breadcrumbs %}
                 <a class="no-underline" href="{{ item.link|shortcode }}">{{ item.title }}</a> {% if loop.last == false %}<span>/</span>{% endif %}
             {% endfor %}
@@ -24,89 +24,89 @@
             <h4 class="mt-0 pt-0">Getting Started</h4>
             <ul class="m-0 p-0 list-none">
                 <li class="{% if entry.id == locale %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/what-is-flextype" class="no-underline">What is Flextype?</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/what-is-flextype/" class="no-underline">What is Flextype?</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/requirements" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/requirements" class="no-underline">Requirements</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/requirements/" class="no-underline">Requirements</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/installation" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/installation" class="no-underline">Installation</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/installation/" class="no-underline">Installation</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/configuration" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/configuration" class="no-underline">Configuration</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/configuration/" class="no-underline">Configuration</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/folder-structure" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/folder-structure" class="no-underline">Folder Structure</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/folder-structure/" class="no-underline">Folder Structure</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/api" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/api" class="no-underline">API Reference</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/api/" class="no-underline">API Reference</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/coc" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/coc" class="no-underline">Code of Conduct</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/coc/" class="no-underline">Code of Conduct</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/getting-help" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/getting-help" class="no-underline">Getting Help</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/getting-help/" class="no-underline">Getting Help</a>
                 </li>
                 <li class="{% if entry.id == "/getting-started/license" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/getting-started/license" class="no-underline">License</a>
+                    <a href="{{ url() }}/flextype/documentation/getting-started/license/" class="no-underline">License</a>
                 </li>
             </ul>
             <h4 class="pt-8">Core Concepts</h4>
             <ul class="m-0 p-0 list-none">
                 {#
                 <li class="{% if entry.id == "/core/flextype" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/flextype" class="no-underline">Flextype</a>
+                    <a href="{{ url() }}/flextype/documentation/core/flextype/" class="no-underline">Flextype</a>
                 </li>
                 #}
                 <li class="{% if entry.id == "/core/entries" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/entries" class="no-underline">Entries</a>
+                    <a href="{{ url() }}/flextype/documentation/core/entries/" class="no-underline">Entries</a>
                 </li>
                 {#
                 <li class="{% if entry.id == "/core/plugins" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/plugins" class="no-underline">Plugins</a>
+                    <a href="{{ url() }}/flextype/documentation/core/plugins/" class="no-underline">Plugins</a>
                 </li>
                 #}
                 <li class="{% if entry.id == "/core/parsers" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/parsers" class="no-underline">Parsers</a>
+                    <a href="{{ url() }}/flextype/documentation/core/parsers/" class="no-underline">Parsers</a>
                 </li>
                 <li class="{% if entry.id == "/core/serializers" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/serializers" class="no-underline">Serializers</a>
+                    <a href="{{ url() }}/flextype/documentation/core/serializers/" class="no-underline">Serializers</a>
                 </li>
                 <li class="{% if entry.id == "/core/registry" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/core/registry" class="no-underline">Registry</a>
+                    <a href="{{ url() }}/flextype/documentation/core/registry/" class="no-underline">Registry</a>
                 </li>
             </ul>
             <h4 class="pt-8">Console</h4>
             <ul class="m-0 p-0 list-none">
                 <li class="{% if entry.id == "/console/entries" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/console/entries" class="no-underline">Entries</a>
+                    <a href="{{ url() }}/flextype/documentation/console/entries/" class="no-underline">Entries</a>
                 </li>
                 <li class="{% if entry.id == "/console/tokens" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/console/tokens" class="no-underline">Tokens</a>
+                    <a href="{{ url() }}/flextype/documentation/console/tokens/" class="no-underline">Tokens</a>
                 </li>
                 <li class="{% if entry.id == "/console/cache" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/console/cache" class="no-underline">Cache</a>
+                    <a href="{{ url() }}/flextype/documentation/console/cache/" class="no-underline">Cache</a>
                 </li>
             </ul>
             <h4 class="pt-8">Rest API</h4>
             <ul class="m-0 p-0 list-none">
                 <li class="{% if entry.id == "/rest-api/introduction" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/introduction" class="no-underline">Introduction</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/introduction/" class="no-underline">Introduction</a>
                 </li>
                 <li class="{% if entry.id == "/rest-api/entries" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/entries" class="no-underline">Entries</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/entries/" class="no-underline">Entries</a>
                 </li>
                 <li class="{% if entry.id == "/rest-api/tokens" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/tokens" class="no-underline">Tokens</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/tokens/" class="no-underline">Tokens</a>
                 </li>
                 <li class="{% if entry.id == "/rest-api/cache" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/cache" class="no-underline">Cache</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/cache/" class="no-underline">Cache</a>
                 </li>
                 <li class="{% if entry.id == "/rest-api/registry" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/registry" class="no-underline">Registry</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/registry/" class="no-underline">Registry</a>
                 </li>
                 <li class="{% if entry.id == "/rest-api/query" %}active{% endif %}">
-                    <a href="{{ url() }}/flextype/documentation/rest-api/query" class="no-underline">Query</a>
+                    <a href="{{ url() }}/flextype/documentation/rest-api/query/" class="no-underline">Query</a>
                 </li>
             </ul>
         </div>

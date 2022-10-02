@@ -11,6 +11,6 @@
 
 {% if tagsCloud|length > 0 %}
     {% for tag in tagsCloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
-        <a href="{{ url() }}/blog/tags/{{ tag|trim }}" class="inline-block no-underline px-2 text-slate-900 border border-slate-900 dark:bg-slate-800 dark:text-slate-200 text-sm py-1 my-1">{{ tag|trim }}</a>
+        <a href="{{ url() }}/blog/tags/{{ tag|trim }}/" class="inline-block no-underline px-2 text-slate-900 border border-slate-900 dark:bg-slate-800 dark:text-slate-200 text-sm py-1 my-1">{{ tag|trim }}</a>
     {% endfor %}
 {% endif %}

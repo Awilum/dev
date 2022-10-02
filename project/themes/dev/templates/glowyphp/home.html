@@ -23,7 +23,7 @@
 
     <div class="lg:flex lg:flex-wrap px-4 lg:px-0">
         {% for component in components %}
-        <a href="{{ url() }}/{{ component.id }}" class="p-4 w-full lg:w-4/12 cursor-pointer no-underline">
+        <a href="{{ url() }}/{{ component.id }}/" class="p-4 w-full lg:w-4/12 cursor-pointer no-underline">
             <h3 class="mb-2">{{ component.title }}</h3>
             <div>
                 {{ component.description }}

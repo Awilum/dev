@@ -8,14 +8,14 @@
 <div class="container mx-auto pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">Category - {{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ entry.id }}/">Category - {{ entry.title }}</a></h1>
         </div>
         <div>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">Downloads</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/">Downloads</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend">Extend</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/">Extend</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits">Starter Kits</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits/">Starter Kits</a></span>
         </div>
     </div>
     <div class="flex content-center flex-wrap">
@@ -40,7 +40,7 @@
              <div class="w-full flex flex-wrap">   
                 {% for item in starter_kits_items %}
                 <div class="lg:p-4 lg:pb-8 lg:pt-0 pb-8 lg:w-6/12">
-                    <a href="{{ url() }}/{{ item.id }}" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 block dark:border-slate-500 plate-shadow">
+                    <a href="{{ url() }}/{{ item.id }}/" class="no-underline bg-white dark:bg-slate-800 border rounded-lg border-slate-900 block dark:border-slate-500 plate-shadow">
                     <img src="{{ item.preview }}" alt="" class="w-full border-b-2 border-slate-900 dark:border-slate-500 p-6">
                     <div class="flex p-6">
                         <div class="text-left">
@@ -90,7 +90,7 @@
                     <div class="mr-12 mt-5">
                         {% for category in category_cloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
                             {% if category != '' %}
-                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/starter-kits/categories/{{ category|trim }}">
+                            <a class="no-underline mb-2 flex items-center" href="{{ url() }}/flextype/downloads/extend/starter-kits/categories/{{ category|trim }}/">
                                 {% if category == 'accounts' %}
                                 <span class="inline-block w-6 text-center mr-1 icon-svg-small">{{ icon('users', 'fontawesome|solid') }}</span>
                                 {% elseif category == 'emails' %}

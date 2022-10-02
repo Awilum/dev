@@ -7,14 +7,14 @@
 <div class="container mx-auto text-plate-900 pb-24">
     <div class="uppercase text-center mt-24 mb-24">
         <div>
-            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ entry.slug }}">{{ entry.title }}</a></h1>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ entry.slug }}/">{{ entry.title }}</a></h1>
         </div>
         <div>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads">DOWNLOADS</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/">DOWNLOADS</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend">EXTEND</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/">EXTEND</a></span>
             <span class="opacity-50">/</span>
-            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins">PLUGINS</a></span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/">PLUGINS</a></span>
         </div>
     </div>
     <div class="plate border border-slate-900 dark:border-slate-500 rounded-lg p-4 plate-shadow">
@@ -59,9 +59,9 @@
                             <p class="m-0 opacity-50">Dependencies</p>
                             {% for key, val in plugin.dependencies %}
                                 {% if key == 'flextype' %}
-                                    <a href="{{ url() }}/flextype/downloads">{{ key }}</a>: {{ val }}<br>
+                                    <a href="{{ url() }}/flextype/downloads/">{{ key }}</a>: {{ val }}<br>
                                 {% else %}
-                                    <a href="{{ url() }}/flextype/downloads/extend/plugins/{{ key }}">{{ key }}</a>: {{ val }}<br>
+                                    <a href="{{ url() }}/flextype/downloads/extend/plugins/{{ key }}/">{{ key }}</a>: {{ val }}<br>
                                 {% endif %}
                             {% endfor %}
                             <p></p>
@@ -82,12 +82,12 @@
                             <p>
                                 {% set categories = entry.category|replace({' ': ''}) %}
                                 {% for category in categories|split(',') %}
-                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/plugins/categories/{{ category|trim }}">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
+                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/plugins/categories/{{ category|trim }}/">{{ category|trim }}</a>{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </p>
                         </div>
                     </div>
-                    <div class="border-t border-slate-900 ">
+                    <div class="border-t border-slate-900">
                         <a class="bg-amber-300 dark:bg-amber-800 dark:hover:bg-amber-900 dark:hover:text-white hover:text-slate-900 hover:bg-amber-400 no-underline block text-center py-2"
                         href="{{ entry.github }}/releases/download/v{{ plugin.version }}/{{ entry.slug }}-{{ plugin.version }}.zip">DOWNLOAD</a>
                     </div>
@@ -110,7 +110,7 @@
                     <div class="flex content-center flex-wrap mt-5">
                         {% for related_plugin in related_plugins %}
                             {% if related_plugin.slug != entry.slug %}
-                            <a href="{{ url() }}/{{ related_plugin.id }}" class="w-full p-2 lg:w-6/12 no-underline ">
+                            <a href="{{ url() }}/{{ related_plugin.id }}/" class="w-full p-2 lg:w-6/12 no-underline ">
                                 <div class="flex p-6 align-middle">
                                     <span class="icon-svg-large mr-5">{{ icon(related_plugin.icon.name, related_plugin.icon.set) }}</span>
                                     <div class="text-left">
@@ -131,7 +131,7 @@
         <hr class="mb-6 border-b border-slate-800">
 
         <div class="p-2">
-            <a href="{{ url() }}/flextype/downloads/extend/plugins">More plugins</a>
+            <a href="{{ url() }}/flextype/downloads/extend/plugins/">More plugins</a>
         </div>
     </div>
 </div>

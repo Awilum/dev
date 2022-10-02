@@ -24,22 +24,22 @@
 {% endif %}
 
 <div class="text-center pt-24 pb-24 m-0 px-4 lg:px-0">
-    <h2 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}">{{ entry.title }}</a></h2>
+    <h2 class="text-3xl lg:text-6xl mb-0 {% if uri3 == '' or uri2 == 'getting-started' %}uppercase{% endif %}"><a class="no-underline" href="{{ url() }}/{{ entry.id }}/">{{ entry.title }}</a></h2>
     <div class="text-sm lg:text-lg">
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation">DOCUMENTATION</a></span>
         <span class="opacity-20">/</span>
         <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation/elements">ELEMENTS</a></span>
         {% if uri2 == 'methods' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}">METHODS</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}/">METHODS</a></span>
         {% endif %}
         {% if uri2 == 'getting-started' %}
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/">{{ flextype.entries.fetch('thermage/documentation/elements/' ~ uri1).title }}</a></span>
         <span class="opacity-20">/</span>
-        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}">GETTING STARTED</a></span>
+        <span class="opacity-60"><a class="no-underline uppercase" href="{{ url() }}/thermage/documentation/elements/{{ uri1 }}/{{ uri2 }}/">GETTING STARTED</a></span>
         {% endif %}
     </div>
 </div>
@@ -58,7 +58,7 @@
                     <tbody>
                     {% for item in methods %}
                         <tr>
-                            <td class="flex lg:table-cell {% if loop.last %}border-b-0{% endif %}"><a href="{{ url() }}/{{ item.id }}" class="font-normal">{{ item.title }}</a></td>
+                            <td class="flex lg:table-cell {% if loop.last %}border-b-0{% endif %}"><a href="{{ url() }}/{{ item.id }}/" class="font-normal">{{ item.title }}</a></td>
                             <td class="flex lg:table-cell {% if loop.last %}border-b-0{% endif %}">{{ item.description }}</td>
                         </tr>
                     {% endfor %}
@@ -72,14 +72,14 @@
             <h4 class="mb-2 mt-0">Getting Started</h4>
             <ul>
                 {% for item in gettingStarted %}
-                <li class="mb-2 list-none ml-0"><a href="{{ url() }}/{{ item.id }}">{{ item.title }}</a></li>
+                <li class="mb-2 list-none ml-0"><a href="{{ url() }}/{{ item.id }}/">{{ item.title }}</a></li>
                 {% endfor %}
             </ul>
             <h4 class="mt-4 mb-2">Methods</h4>
             <ul>
                 {% for item in methods %}
                 <li class="mb-2 list-none ml-0">
-                    <a href="{{ url() }}/{{ item.id }}" class="block">
+                    <a href="{{ url() }}/{{ item.id }}/" class="block">
                         {{ item.title }}
                         <small class="opacity-75 block base-color">
                             {{ item.description }}
