@@ -46,59 +46,9 @@
         <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline hidden lg:block {% if currentUriContains('/blog') %}text-pink-500{% endif %}" rel="nofollow" href="{{ url() }}/blog/">
             Blog
         </a>
-        <div class="flex justify-center hidden lg:block">
-            <div
-                x-data="{
-                    open: false,
-                    toggle() {
-                        if (this.open) {
-                            return this.close()
-                        }
-
-                        this.open = true
-                    },
-                    close(focusAfter) {
-                        this.open = false
-
-                        focusAfter && focusAfter.focus()
-                    }
-                }"
-                x-on:keydown.escape.prevent.stop="close($refs.button)"
-                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-                x-id="['dropdown-button']"
-                class="relative"
-            >
-                <!-- Button -->
-                <button
-                    x-ref="button"
-                    x-on:click="toggle()"
-                    :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')"
-                    type="button"
-                    class="outline-none hover:text-pink-500 m-0 p-0 px-3 py-2 font-semibold text-xs uppercase no-underline border-r border-slate-900 dark:border-slate-500 {% if currentUriContains('/thermage') or currentUriContains('/flextype') %}text-pink-500{% endif %}"
-                >
-                    <span>Projects</span>
-                </button>
-
-                <!-- Panel -->
-                <div
-                    x-ref="panel"
-                    x-show="open"
-                    x-transition.origin.top.left
-                    x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')"
-                    style="display: none;"
-                    class="absolute left-0 mt-2 w-44 bg-white border border-slate-900 dark:border-slate-500 rounded-lg overflow-hidden z-50 dark:bg-slate-800"
-                >
-                    <div>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/thermage/">Thermage</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/flextype/">Flextype</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-b border-slate-900 dark:border-slate-500" href="{{ url() }}/glowyphp/">Glowy PHP</a>
-                        <a class="block px-3 py-2 font-semibold text-xs uppercase no-underline border-slate-900 dark:border-slate-500" href="https://github.com/faker-javascript">Faker JavaScript</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a class="m-0 p-0 px-3 py-2 border-r border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline hidden lg:block {% if currentUriContains('/projects') %}text-pink-500{% endif %}" rel="nofollow" href="{{ url() }}/projects/">
+            Projects
+        </a> 
         {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/mobile-nav.html' %}
         <div class="flex" style="margin-left: auto;">
             <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline {% if currentUriContains('/sponsors') %}text-pink-500{% endif %}" href="{{ url() }}/sponsors/">
