@@ -1,0 +1,34 @@
+{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
+
+{% block content %}
+<h1 class="text-6xl p-0 mt-16 mb-16 font-bold text-center uppercase">{{ entry.title }}</h1>
+<div class="lg:flex mt-4">
+    <div class="w-full">
+        <div class="p-6 dark:bg-slate-800 mb-8 border rounded-lg border-slate-900 plate-shadow dark:border-slate-500">
+            Developing open-source software is a passion of mine. It requires a significant amount of time to create new features, fix bugs, write documentation, helps the community, etc. If you benefit from any of my open-source work and would like to help contribute, here are all the ways you can do it.  
+            <div class="lg:flex mt-8 text-center border-t pt-8 border-slate-900 dark:border-slate-500">
+                <div class="lg:w-3/12">
+                    <div class="font-bold">Binance</div>
+                    sergey-romanenko (513154447)
+                </div>
+                <div class="lg:w-3/12">
+                    <div class="font-bold">Boosty</div>
+                    <a target="_blank" href="https://boosty.to/awilum" class="text-sm">AWILUM</a>
+                </div>
+                <div class="lg:w-3/12">
+                    <div class="font-bold">QIWI</div>
+                    <a target="_blank" href="https://qiwi.com/n/AWILUM" class="text-sm">AWILUM</a>
+                </div>
+                <div class="lg:w-3/12">
+                    <div class="font-bold">Yoomoney</div>
+                    <a target="_blank" href="https://yoomoney.ru/to/4100117657353439" class="text-sm">4100117657353439</a>
+                </div>
+                <div class="lg:w-3/12">
+                    <div class="font-bold">Tinkoff</div>
+                    <a target="_blank" href="https://www.tinkoff.ru/rm/romanenko.sergey296/FlLrR50490" class="text-sm">5536914170511020</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

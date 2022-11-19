@@ -51,8 +51,11 @@
         </a> 
         {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/mobile-nav.html' %}
         <div class="flex" style="margin-left: auto;">
-            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline {% if currentUriContains('/sponsors') %}text-pink-500{% endif %}" href="{{ url() }}/sponsors/">
-                Sponsors
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline {% if currentUriContains('/sponsors') %}text-pink-500{% endif %}" href="{{ url() }}/donate/">
+                Donate
+            </a>
+            <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline {% if currentUriContains('/sponsors') %}text-pink-500{% endif %}" href="{{ url() }}/supporters/">
+                Supporters
             </a>
             <a class="m-0 p-0 px-3 py-2 border-l border-slate-900 dark:border-slate-500 font-semibold text-xs uppercase no-underline" href="{{ url() }}/about/">
                 About
