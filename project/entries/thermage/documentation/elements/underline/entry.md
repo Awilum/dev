@@ -9,6 +9,6 @@ The Underline element represents a span of inline text which should be rendered 
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/underline/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/underline/getting-started/usage' field:'content')
 
 ### Methods

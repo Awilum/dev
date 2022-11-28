@@ -17,10 +17,49 @@ enabled: true
 #
 # - extensions   Flextype Twig Extension to load.
 auto_reload: true
-cache: false
+cache: true
 debug: false
 charset: "UTF-8"
-extensions: ['I18n', 'Filesystem', 'Csrf', 'Constants', 'Strings', 'Arrays', 'Flextype', 'Filters', 'Url']
+entries:
+  expressions:
+    twig:
+      enabled: true
+      class: "Flextype\\Plugin\\Twig\\Expressions\\TwigExpression"
+  directives:
+    twig:
+      enabled: true
+      enabled_globally: false
+      path: "project/plugins/twig/src/twig/core/Entries/Directives/TwigDirective.php"
+parsers:
+  shortcodes:
+    shortcodes:
+      twig:
+        enabled: true
+        path: "project/plugins/twig/src/twig/core/Parsers/Shortcodes/TwigShortcode.php"
+extensions: 
+  - Math
+  - I18n
+  - Filesystem
+  - Csrf
+  - Constants
+  - Strings
+  - Collection
+  - Filters
+  - Functions
+  - Tests
+  - Emitter
+  - Actions
+  - Registry
+  - Entries
+  - Serializers
+  - Parsers
+  - Flash
+  - Slugify
+  - Cache
+  - Image
+  - Url
+  - Vars
+  - Fetch
 
 # Twig plugin priority
 priority: 0

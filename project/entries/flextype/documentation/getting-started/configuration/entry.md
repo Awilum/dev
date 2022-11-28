@@ -9,7 +9,7 @@ seo:
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/flextype/documentation/getting-started/"
+    link: "(getBaseUrl)/flextype/documentation/getting-started/"
 ---
 Flextype allows you to configure your project in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that make this possible.
 

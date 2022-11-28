@@ -10,10 +10,10 @@ Filesystem Package provide a fluent, object-oriented interface for working with 
 
 ### Installation
 
-[entries_fetch id="glowyphp/filesystem/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/filesystem/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/filesystem/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/filesystem/getting-started/usage' field:'content')
 
 ### Methods

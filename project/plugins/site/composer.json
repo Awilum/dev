@@ -3,35 +3,33 @@
     "type": "project",
     "description": "Site plugin to display entries content on the website frontend.",
     "keywords": ["site", "plugin", "flextype", "php", "html"],
-    "homepage": "https://github.com/flextype-plugins/site",
+    "homepage": "https://awilum.github.io/flextype/downloads/extend/plugins/site",
     "license": "MIT",
     "authors": [
         {
             "name": "Sergey Romanenko",
-            "email": "sergey.romanenko@flextype.org",
-            "homepage": "https://flextype.org"
+            "email": "awilum@msn.com",
+            "homepage": "https://awilum.github.io"
         }
     ],
     "support": {
       "issues": "https://github.com/flextype-plugins/site/issues"
     },
     "require": {
-        "php": ">=7.4.0",
+        "php": "^8.1",
         "ext-json": "*",
-        "middlewares/trailing-slash": "~1.1.0",
-        "flextype-components/arrays" : "3.0.1",
-        "flextype-components/filesystem": "2.0.8"
+        "middlewares/trailing-slash": "^2.0.1",
+        "voku/html-min": "^4.5"
     },
     "config": {
         "apcu-autoloader": true,
         "optimize-autoloader": true,
-        "platform": {
-            "php": "7.4.0"
-        }
+        "platform-check": false,
+        "sort-packages": true
     },
     "autoload": {
         "classmap": [
-            "app"
+            "src"
         ]
     }
 }

@@ -9,6 +9,6 @@ The Bold element is used to draw the reader's attention to the element's content
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/bold/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/bold/getting-started/usage' field:'content')
 
 ### Methods

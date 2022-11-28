@@ -8,10 +8,10 @@ seo:
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/flextype/documentation/core/"
+    link: "(getBaseUrl)/flextype/documentation/core/"
   -
     title: "Serializers"
-    link: "[url]/flextype/documentation/core/serializers/"
+    link: "(getBaseUrl)/flextype/documentation/core/serializers/"
 on_this_page:
   -
     title: "JSON Syntax"
@@ -35,7 +35,7 @@ Primarily, JSON is built on two structures:
 * A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
 * An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
 
-We are using JSON sytnax in our [Rest APIs]([url]/flextype/documentation/rest-api).
+We are using JSON sytnax in our [Rest APIs]((getBaseUrl)/flextype/documentation/rest-api).
 
 ### <a name="json-syntax"></a> JSON Syntax
 

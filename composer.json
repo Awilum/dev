@@ -1,0 +1,96 @@
+{
+    "name": "flextype/flextype",
+    "type": "project",
+    "description": "Modern Open Source Flat Files Content Management System.",
+    "keywords": ["flextype", "php", "cms", "flat-file cms", "flat cms", "flatfile cms", "headless", "API", "html"],
+    "homepage": "https://awilum.github.io/flextype",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Romanenko",
+            "email": "awilum@msn.com",
+            "homepage": "https://awilum.github.io"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/flextype/flextype",
+        "issues": "https://github.com/flextype/flextype/issues"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-dom": "*",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-spl": "*",
+        "cocur/slugify": "^4.2.0",
+        "colinodell/json5": "^2.2.2",
+        "composer/semver": "^3.3.2",
+        "filp/whoops": "^2.14.5",
+        "glowy/arrays": "^5.0.0",
+        "glowy/csrf": "^3.0.0",
+        "glowy/filesystem": "^5.0.0",
+        "glowy/macroable": "^4.0.0",
+        "glowy/registry": "^5.0.0",
+        "glowy/session": "^4.0.0",
+        "glowy/strings": "^5.0.1",
+        "glowy/view": "^2.0.0",
+        "glowy/benchmark": "^1.0.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "intervention/image": "^2.7.2",
+        "intervention/imagecache": "^2.5.2",
+        "league/commonmark": "^2.3.7",
+        "league/event": "^2.2.0",
+        "monolog/monolog": "^3.2.0",
+        "netcarver/textile": "^3.7",
+        "nette/neon": "^3.3.3",
+        "php-di/php-di": "^6.4.0",
+        "php-di/slim-bridge": "^3.2.0",
+        "phpfastcache/phpfastcache": "^9.1.2",
+        "ramsey/uuid": "4.4.0",
+        "respect/validation": "^2.2.3",
+        "siriusphp/upload": "^3.0.1",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.11.0",
+        "symfony/console": "^6.1.7",
+        "symfony/expression-language": "^6.1.6",
+        "symfony/finder": "^6.1.3",
+        "symfony/var-dumper": "^6.1.6",
+        "symfony/var-exporter": "^6.1.3",
+        "symfony/yaml": "^6.1.6",
+        "thermage/thermage": "^0.20.1",
+        "thunderer/shortcode": "^0.7.5"
+    },
+    "suggest": {
+        "ext-zend-opcache": "Recommended for better performance",
+        "ext-memcache": "Needed to support Memcache servers",
+        "ext-memcached": "Needed to support Memcached servers",
+        "ext-redis": "Needed to support Redis servers"
+    },
+    "autoload": {
+        "classmap": [
+            "src/flextype"
+        ],
+        "files": [
+            "src/flextype/helpers/helpers.php",
+            "src/flextype/macros/macros.php"
+        ]
+    },
+    "config": {
+        "apcu-autoloader": true,
+        "optimize-autoloader": true,
+        "platform-check": false,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "ext-iconv": "*",
+        "doctrine/coding-standard": "9.0.0",
+        "pestphp/pest": "^1.21.3",
+        "phpstan/phpstan": "^1.9.2",
+        "victorjonsson/markdowndocs": "dev-master"
+    }
+}

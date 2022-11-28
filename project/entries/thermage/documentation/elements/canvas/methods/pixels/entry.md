@@ -21,6 +21,7 @@ public function pixels(array $pixels): self
 #### Examples
 
 Set Canvas element pixels using fluent interface
+
 ```php
 use function Thermage\canvas;
 use function Thermage\render;
@@ -28,7 +29,7 @@ use function Thermage\render;
 // ...
 
 render(
-  canvas()->pixels([['red', 'red', 'red'], ['green', 'green', 'green'], ['blue', 'blue', 'blue']])
+  canvas()->pixels([ ['red', 'red', 'red'], ['green', 'green', 'green'], ['blue', 'blue', 'blue'] ])
 );
 ```
 

@@ -9,6 +9,6 @@ The Anchor element, with its href attribute, creates a hyperlink to the web page
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/anchor/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/anchor/getting-started/usage' field:'content')
 
 ### Methods

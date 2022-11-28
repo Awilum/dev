@@ -9,7 +9,7 @@ seo:
 breadcrumbs:
   1:
     title: "Core Concepts"
-    link: "[url]/flextype/documentation/core/"
+    link: "(getBaseUrl)/flextype/documentation/core/"
 on_this_page:
   -
     title: "Overview"
@@ -143,20 +143,20 @@ Flextype support several **flat files** entries formats.
 <div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.md</div>
 
 ```yaml
-&minus;&minus;&minus;
+%minus%%minus%%minus%
 title: Meridian
 description: As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.
 director: William Waring
 writers: Brad Wright, Jonathan Glassner
 stars: Richard Dean Anderson, Michael Shanks, Amanda Tapping
-&minus;&minus;&minus;
+%minus%%minus%%minus%
 SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
 ```
 
 For **Frontmatter** header you may define custom frontmatter header serializer as `yaml`, `json`, `json5` or `neon` by adding serializer name after first `---`. <br><br>Example:
 
 ```yaml
-&minus;&minus;&minus;json
+%minus%%minus%%minus%json
 {
   "title": "Meridian",
   "description": "As Jackson suffers from a fatal dose of radiation, he struggles with the value of his life while his friends deal with the emotional and diplomatic repercussions.",
@@ -164,13 +164,13 @@ For **Frontmatter** header you may define custom frontmatter header serializer a
   "writers": "Brad Wright, Jonathan Glassner",
   "stars": "Richard Dean Anderson, Michael Shanks, Amanda Tapping"
 }
-&minus;&minus;&minus;
+%minus%%minus%%minus%
 SG-1 returns from an off-world mission to P9Y-3C3 with Daniel Jackson suffering from what is likely a fatal dose of radiation. On the planet, they dealt with the country of Kelowna and their representative Jonas Quinn. That country was at the same stage of development as the United States in the 1940s and well on their way to creating an atomic weapon using Goa'uld technology found in an ancient temple. Daniel argued against the Kelownans developing such a weapon and is accused of attempting to sabotage the project. As members of the team sit by his deathbed, Daniel receives an unexpected offer from someone they once met off-world.
 ```
 
 #### YAML (.yaml)
 
-<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.yaml</div>
+<div class="file-header">(icon name:'file-text' set:'bootstrap') project/entries/movies/sg-1/season-5/episode-21/entry.yaml</div>
 
 ```yaml
 title: Meridian
@@ -184,7 +184,7 @@ content: |
 
 #### NEON (.neon)
 
-<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.neon</div>
+<div class="file-header">(icon name:'file-text' set:'bootstrap') project/entries/movies/sg-1/season-5/episode-21/entry.neon</div>
 
 ```text
 title: "Meridian"
@@ -199,7 +199,7 @@ content: '''
 
 #### JSON (.json)
 
-<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.json</div>
+<div class="file-header">(icon name:'file-text' set:'bootstrap') project/entries/movies/sg-1/season-5/episode-21/entry.json</div>
 
 ```text
 {
@@ -214,7 +214,7 @@ content: '''
 
 #### JSON5 (.json5)
 
-<div class="file-header">[icon name="file-text" set="bootstrap"] project/entries/movies/sg-1/season-5/episode-21/entry.json5</div>
+<div class="file-header">(icon name:'file-text' set:'bootstrap') project/entries/movies/sg-1/season-5/episode-21/entry.json5</div>
 
 ```text
 {
@@ -528,7 +528,7 @@ You can define custom fields.
     author:
       twitter: "@_flextype"
     ---
-    My entry content here, author twitter: [[ author.twitter ]]
+    My entry content here, author twitter: %closing_variable_tag% author.twitter %closing_variable_tag%
 
 **Examples**
 
@@ -573,7 +573,7 @@ echo entries()->fetch('home')['content'];
             <td>Set current field type.</td>
         </tr>
         <tr>
-            <td><a href="#directive-expressions">[raw][[ ]] [% %] [# #][/raw]</a></td>
+            <td><a href="#directive-expressions">%opening_variable_tag%%closing_variable_tag%</a></td>
             <td>Evaluate expression.</td>
         </tr>
     </tbody>
@@ -588,9 +588,9 @@ Parse shortcodes text inside current field.
 **Examples**
 
 ```yaml
-&minus;&minus;&minus;
-discount: "@shortcodes (strings random)" 
-&minus;&minus;&minus;
+%minus%%minus%%minus%
+discount: "%directive_opening%shortcodes %opening parenthesis%strings random%closing parenthesis%" 
+%minus%%minus%%minus%
 ```
 
 ##### <a name="directive-markdown"></a> `markdown`
@@ -600,9 +600,9 @@ Parse markdown text inside current field.
 **Examples**
 
 ```yaml
-&minus;&minus;&minus;
-text: "@markdown **bold text here**" 
-&minus;&minus;&minus;
+%minus%%minus%%minus%
+text: "%directive_opening%markdown **bold text here**" 
+%minus%%minus%%minus%
 ```
 
 ##### <a name="directive-textile"></a> `textile`
@@ -612,9 +612,9 @@ Parse textile text inside current field.
 **Examples**
 
 ```yaml
-&minus;&minus;&minus;
-text: "@textile **bold text here**" 
-&minus;&minus;&minus;
+%minus%%minus%%minus%
+text: "%directive_opening%textile **bold text here**" 
+%minus%%minus%%minus%
 ```
 
 ##### <a name="directive-php"></a> `php`
@@ -624,9 +624,9 @@ Execute php code inside current field.
 **Examples**
 
 ```yaml
-&minus;&minus;&minus;
-text: "@php echo 'Hello World';" 
-&minus;&minus;&minus;
+%minus%%minus%%minus%
+text: "%directive_opening%php echo 'Hello World';" 
+%minus%%minus%%minus%
 ```
 
 ##### <a name="directive-type"></a> `type`
@@ -642,24 +642,24 @@ Available types: `int`, `integer`, `float`, `bool`, `boolean`, `array`, `json`, 
 _vars: 
     title: "GT Fury"
     currency: "USD"
-    vat: '@type[int] (strings random: "2,1234567890)"'
-title: "[[ _vars.title ]]"
-price: "(calc:'100+[[_vars.vat]]')"
-price_with_currency: "[[ price ]] [[ _vars.currency ]]"
+    vat: '%directive_opening%type[int]  %opening parenthesis%strings random: "2,1234567890%closing parenthesis%"'
+title: "%opening_variable_tag% _vars.title %closing_variable_tag%"
+price: "%opening parenthesis%calc:'100+%opening_variable_tag% _vars.vat %closing_variable_tag%' %closing parenthesis%"
+price_with_currency: "%opening_variable_tag% price %closing_variable_tag% %opening_variable_tag% _vars.currency %closing_variable_tag%"
 &minus;&minus;&minus;
 GT Fury content here...
 ```
 
-##### <a name="directive-expression"></a> `[[ ]] [% %] [# #]`
+##### <a name="directive-expression"></a> `%opening_variable_tag% %closing_variable_tag% %opening_block_tag% %closing_block_tag% %opening_comment_tag% %closing_comment_tag%`
 
 Evaluate expression.
 
 ```yaml
-price: "[[ 100 + var('vat') ]]"
-message: "[[ field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' ]]"
+price: "%opening_variable_tag% 100 + var('vat') %closing_variable_tag%"
+message: "%opening_variable_tag% field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' %closing_variable_tag%"
 content: |
-  [# This is comment #]
-  [% entries().create('movies/sg-1/season-5/episode-23', {}) %]
+  %opening_comment_tag% This is comment %closing_comment_tag%
+  %opening_block_tag% entries().create('movies/sg-1/season-5/episode-23', {}) %closing_block_tag%
 ```
 
 ### <a name="macros"></a> Macros
@@ -728,24 +728,24 @@ Expressions can be seen as a very restricted PHP sandbox and are immune to exter
 **Examples**
 
 ```yaml
-&minus;&minus;&minus;
+%minus%%minus%%minus%
 vars: 
     title: "GT Fury"
     currency: "USD"
-    vat: "@type[int] [[ strings().random(2, 1234567890) ]]"
-title: "[[ var('title') ]]"
-price: "[[ 100 + var('vat') ]]"
-message: "[[ field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' ]]"
-random: "[[ strings().random() ]]"
-&minus;&minus;&minus;
+    vat: "%directive_opening%type[int] %opening_variable_tag% strings().random(2, 1234567890) %closing_variable_tag%"
+title: "%opening_variable_tag% var('title') %closing_variable_tag%"
+price: "%opening_variable_tag% 100 + var('vat') %closing_variable_tag%"
+message: "%opening_variable_tag% field('price') > 100 ? 'Price is greater than 100' : 'Price is less than 100' %closing_variable_tag%"
+random: "%opening_variable_tag% strings().random() %closing_variable_tag%"
+%minus%%minus%%minus%
 ### Price
-[[ field('price') ]]
+%opening_variable_tag% field('price') %closing_variable_tag%
 
 ### Message
-[[ field('message') ]]
+%opening_variable_tag% field('message') %closing_variable_tag%
 
 ### Random
-[[ field('random') ]]
+%opening_variable_tag% field('random') %closing_variable_tag%
 ```
 
 Learn more about [Symfony Expression Language Component](https://symfony.com/doc/5.4/components/expression_language.html)

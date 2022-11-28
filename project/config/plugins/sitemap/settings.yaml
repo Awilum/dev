@@ -4,19 +4,39 @@ enabled: true
 # Sitemap plugin priority
 priority: 100
 
-# Route
-route: sitemap.xml
+# Sitemap route
+route: /sitemap.xml
 
-# Ignore list
-ignore:
+# List of entries to ignore
+ignore: []
 
-# Addition list
-additions:
+# List of additions to add
+additions: []
 
 # Default values for entries
 default:
+
+  # How frequently the page is likely to change. 
+  # This value provides general information to search engines and may not correlate exactly to how often they crawl the page. 
+  # Valid values are: always, hourly, daily, weekly, monthly, yearly, never.
   changefreq: daily
-  priority: !!float 1
+
+  # The priority of this URL relative to other URLs on your site. 
+  # Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites—it only lets the search engines know which pages you deem most important for the crawlers. 
+  # The default priority of a page is 1.
+  priority: 1.0
 
 # Date format
 date_format: Y-m-d
+
+# Trailing slash
+trailing_slash: false
+
+# Settings for static sitemap generation
+static:
+
+  # sitemap.xml path (without trailing and without starting slash)
+  path: '_site'
+
+  # Site url (without trailing slash)
+  site_url: ''

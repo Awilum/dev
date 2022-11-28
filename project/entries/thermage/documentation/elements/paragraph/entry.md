@@ -9,6 +9,6 @@ The Paragraph element represents a paragraph.
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/paragraph/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/paragraph/getting-started/usage' field:'content')
 
 ### Methods

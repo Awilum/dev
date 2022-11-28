@@ -9,7 +9,7 @@ template: flextype/docs
 
 ### Topics
 
-* [Entries]([url]/flextype/flextype/documentation/core/entries)
-* [Parsers]([url]/flextype/flextype/documentation/core/parsers)
-* [Serializers]([url]/flextype/flextype/documentation/core/serializers)
-* [Registry]([url]/flextype/flextype/documentation/core/registry)
+* [Entries]((getBaseUrl)/flextype/flextype/documentation/core/entries)
+* [Parsers]((getBaseUrl)/flextype/flextype/documentation/core/parsers)
+* [Serializers]((getBaseUrl)/flextype/flextype/documentation/core/serializers)
+* [Registry]((getBaseUrl)/flextype/flextype/documentation/core/registry)

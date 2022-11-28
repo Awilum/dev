@@ -9,6 +9,6 @@ The Hr element represents a thematic break between paragraph-level elements: for
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/hr/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/hr/getting-started/usage' field:'content')
 
 ### Methods

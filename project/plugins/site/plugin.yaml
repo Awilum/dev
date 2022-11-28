@@ -1,17 +1,17 @@
 name: Site
-version: 1.11.0
+version: 2.1.1
 description: Site plugin to display entries content on the website frontend.
 icon:
   name: globe
-  set: "fontawesome|solid"
+  set: fontawesome|solid  
+category: content
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
-  url: https://flextype.org
-homepage: https://github.com/flextype-plugins/site
+  email: awilum@msn.com
+  url: https://awilum.github.io
+homepage: https://awilum.github.io/flextype/downloads/extend/plugins/site
 bugs: https://github.com/flextype-plugins/site/issues
 license: MIT
 
 dependencies:
-  flextype: 0.9.16
-  twig: '>=2.0.0'
+  flextype: "^1.0.0-alpha.2"

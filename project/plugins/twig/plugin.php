@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * @link https://flextype.org
+ * @link https://awilum.github.io/flextype
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,12 +11,26 @@ declare(strict_types=1);
 
 namespace Flextype\Plugin\Twig;
 
+use Flextype\Plugin\Twig\Console\Commands\Cache\CacheClearTwigTemplatesCommand;
 use function is_file;
+use Slim\Http\Environment;
+use Slim\Http\Uri;
+use Slim\Csrf\Guard;
+use Slim\Flash\Messages;
+use Twig\Extension\DebugExtension;
+use Twig\Extension\StringLoaderExtension;
+use function Flextype\console;
+use function Flextype\registry;
+use function Flextype\entries;
+use function Flextype\parsers;
+use function Flextype\flash;
+use function Flextype\container;
+use function Flextype\Plugin\Twig\twig;
 
 /**
  * Ensure vendor libraries exist
  */
-! is_file($twig_autoload = __DIR__ . '/vendor/autoload.php') and exit('Please run: <i>composer install</i> for twig plugin');
+! is_file($twigAutoload = __DIR__ . '/vendor/autoload.php') and exit('Please run: <i>composer install</i> for twig plugin');
 
 /**
  * Register The Auto Loader
@@ -27,14 +41,49 @@ use function is_file;
  * loading any of our classes later on. It feels nice to relax.
  * Register The Auto Loader
  */
-$twig_loader = require_once $twig_autoload;
+$twigLoader = require_once $twigAutoload;
 
-/**
- * Include Twig
- */
-include_once 'Twig.php';
+// Add Twig console command.
+console()->add(new CacheClearTwigTemplatesCommand());
 
-/**
- * Include dependencies
- */
-include_once 'dependencies.php';
+// Set flash service.
+container()->set('flash', new Messages());
+   
+// Add Twig service to Flextype container
+container()->set('twig', function () {
+
+    // Create Twig View
+    $twig = Twig::create(FLEXTYPE_PATH_PROJECT,
+                        ['auto_reload' => registry()->get('plugins.twig.settings.auto_reload'),
+                         'cache' => registry()->get('plugins.twig.settings.cache') ? FLEXTYPE_PATH_TMP . '/twig' : false,
+                         'debug' => registry()->get('plugins.twig.settings.debug'),
+                         'charset' => registry()->get('plugins.twig.settings.charset')]);
+
+    // Add Twig Extensions
+    $twig->addExtension(new DebugExtension());
+    $twig->addExtension(new StringLoaderExtension());
+
+    // Load Flextype Twig extensions from directory /flextype/twig/ based on settings.twig.extensions array
+    $twigExtensions = registry()->get('plugins.twig.settings.extensions');
+
+    foreach ($twigExtensions as $twigExtension) {
+        $twigExtensionClassName = $twigExtension . 'TwigExtension';
+        $twigExtensionClassNameWithNamespace = 'Flextype\\Plugin\\Twig\\Extension\\' . $twigExtension . 'TwigExtension';
+
+        if (file_exists(FLEXTYPE_PATH_PROJECT . '/plugins/twig/src/twig/core/Extensions/' . $twigExtensionClassName . '.php')) {
+            $twig->addExtension(new $twigExtensionClassNameWithNamespace());
+        }
+    }
+
+    // Return Twig instance
+    return $twig;
+});
+
+// Init Twig Shortcodes
+parsers()->shortcodes()->registerShortcodes(registry()->get('plugins.twig.settings.parsers.shortcodes.shortcodes'));
+
+// Init Twig Directives 
+entries()->registerDirectives(registry()->get('plugins.twig.settings.entries.directives'));
+
+// Register Twig Expressions
+parsers()->expressions()->registerExpressions(registry()->get('plugins.twig.settings.entries.expressions'));

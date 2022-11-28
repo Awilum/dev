@@ -9,6 +9,6 @@ The Heading element represent five levels of section headings.
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/heading/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/heading/getting-started/usage' field:'content')
 
 ### Methods

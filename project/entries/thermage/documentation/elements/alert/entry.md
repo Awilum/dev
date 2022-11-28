@@ -9,6 +9,6 @@ The Alert element provide contextual feedback messages for typical user actions 
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/alert/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/alert/getting-started/usage' field:'content')
 
 ### Methods

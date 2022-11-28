@@ -6,7 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Flextype\\Component\\Arrays\\Arrays' => $vendorDir . '/flextype-components/arrays/src/Arrays.php',
-    'Flextype\\Component\\Filesystem\\Filesystem' => $vendorDir . '/flextype-components/filesystem/Filesystem.php',
-    'Flextype\\Plugin\\Sitemap\\Controllers\\SitemapController' => $baseDir . '/app/Controllers/SitemapController.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Flextype\\Plugin\\Sitemap\\Console\\Commands\\Sitemap\\SitemapGenerateCommand' => $baseDir . '/src/core/Console/Commands/Sitemap/SitemapGenerateCommand.php',
+    'Flextype\\Plugin\\Sitemap\\Controllers\\SitemapController' => $baseDir . '/src/core/Controllers/SitemapController.php',
+    'Flextype\\Plugin\\Sitemap\\Sitemap' => $baseDir . '/src/core/Sitemap.php',
 );

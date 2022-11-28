@@ -9,6 +9,6 @@ seo:
 
 ### Topics
 
-* [Entries]([url]/flextype/documentation/console/entries)
-* [Tokens]([url]/flextype/documentation/console/tokens)
-* [Cache]([url]/flextype/documentation/console/cache)
+* [Entries]((getBaseUrl)/flextype/documentation/console/entries)
+* [Tokens]((getBaseUrl)/flextype/documentation/console/tokens)
+* [Cache]((getBaseUrl)/flextype/documentation/console/cache)

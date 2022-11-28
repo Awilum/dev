@@ -6,11 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'voku\\helper\\' => array($vendorDir . '/voku/simple_html_dom/src/voku/helper'),
+    'voku\\' => array($vendorDir . '/voku/html-min/src/voku'),
+    'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Psr\\Http\\Server\\' => array($vendorDir . '/psr/http-server-handler/src', $vendorDir . '/psr/http-server-middleware/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Middlewares\\Utils\\' => array($vendorDir . '/middlewares/utils/src'),
     'Middlewares\\' => array($vendorDir . '/middlewares/trailing-slash/src'),
-    'Flextype\\Component\\Filesystem\\' => array($vendorDir . '/flextype-components/filesystem'),
-    'Flextype\\Component\\Arrays\\' => array($vendorDir . '/flextype-components/arrays/src'),
 );

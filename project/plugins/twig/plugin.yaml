@@ -1,16 +1,17 @@
 name: Twig
-version: 2.1.0
+version: 3.2.0
 description: Twig plugin to present Twig template engine for Flextype.
 icon:
   name: palette
-  set: "fontawesome|solid"
+  set: fontawesome|solid
+catogory: templating
 author:
   name: Sergey Romanenko
-  email: sergey.romanenko@flextype.org
-  url: https://flextype.org
-homepage: https://github.com/flextype-plugins/twig
+  email: awilum@msn.com
+  url: https://awilum.github.io
+homepage: https://awilum.github.io/flextype/downloads/extend/plugins/twig
 bugs: https://github.com/flextype-plugins/twig/issues
 license: MIT
 
 dependencies:
-  flextype: 0.9.16
+  flextype: "^1.0.0-alpha.2"

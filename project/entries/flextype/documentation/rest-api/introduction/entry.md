@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   1:
     title: "Rest API"
-    link: "[url]/flextype/documentation/rest-api/"
+    link: "(getBaseUrl)/flextype/documentation/rest-api/"
 on_this_page:
   0:
     title: "Rest API's"
@@ -30,19 +30,19 @@ Flextype provides APIs organized around <b>Re</b>presentational <b>S</b>tate <b>
 
 #### Entries
 
-For more details <a href="[url]/flextype/documentation/rest-api/entries">read the reference guide for the Entries API</a>.
+For more details <a href="(getBaseUrl)/flextype/documentation/rest-api/entries">read the reference guide for the Entries API</a>.
 
 #### Tokens
 
-For more details <a href="[url]/flextype/documentation/rest-api/tokens">read the reference guide for the Tokens API</a>.
+For more details <a href="(getBaseUrl)/flextype/documentation/rest-api/tokens">read the reference guide for the Tokens API</a>.
 
 #### Cache
 
-For more details <a href="[url]/flextype/documentation/rest-api/cache">read the reference guide for the Cache API</a>.
+For more details <a href="(getBaseUrl)/flextype/documentation/rest-api/cache">read the reference guide for the Cache API</a>.
 
 #### Registry
 
-For more details <a href="[url]/flextype/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
+For more details <a href="(getBaseUrl)/flextype/documentation/rest-api/registry">read the reference guide for the Registry API</a>.
 
 ### <a name="authentication"></a> Authentication
 

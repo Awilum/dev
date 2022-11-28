@@ -22,10 +22,8 @@ class NativeCalculator extends Calculator
      * For addition, it is assumed that an extra digit can hold a carry (1) without overflowing.
      * Example: 32-bit: max number 1,999,999,999 (9 digits + carry)
      *          64-bit: max number 1,999,999,999,999,999,999 (18 digits + carry)
-     *
-     * @var int
      */
-    private $maxDigits;
+    private int $maxDigits;
 
     /**
      * Class constructor.
@@ -53,6 +51,10 @@ class NativeCalculator extends Calculator
      */
     public function add(string $a, string $b) : string
     {
+        /**
+         * @psalm-var numeric-string $a
+         * @psalm-var numeric-string $b
+         */
         $result = $a + $b;
 
         if (is_int($result)) {
@@ -69,11 +71,7 @@ class NativeCalculator extends Calculator
 
         [$aNeg, $bNeg, $aDig, $bDig] = $this->init($a, $b);
 
-        if ($aNeg === $bNeg) {
-            $result = $this->doAdd($aDig, $bDig);
-        } else {
-            $result = $this->doSub($aDig, $bDig);
-        }
+        $result = $aNeg === $bNeg ? $this->doAdd($aDig, $bDig) : $this->doSub($aDig, $bDig);
 
         if ($aNeg) {
             $result = $this->neg($result);
@@ -95,6 +93,10 @@ class NativeCalculator extends Calculator
      */
     public function mul(string $a, string $b) : string
     {
+        /**
+         * @psalm-var numeric-string $a
+         * @psalm-var numeric-string $b
+         */
         $result = $a * $b;
 
         if (is_int($result)) {
@@ -169,9 +171,11 @@ class NativeCalculator extends Calculator
             return [$this->neg($a), '0'];
         }
 
+        /** @psalm-var numeric-string $a */
         $na = $a * 1; // cast to number
 
         if (is_int($na)) {
+            /** @psalm-var numeric-string $b */
             $nb = $b * 1;
 
             if (is_int($nb)) {
@@ -221,6 +225,8 @@ class NativeCalculator extends Calculator
         $e -= $odd;
 
         $aa = $this->mul($a, $a);
+
+        /** @psalm-suppress PossiblyInvalidArgument We're sure that $e / 2 is an int now */
         $result = $this->pow($aa, $e / 2);
 
         if ($odd === 1) {
@@ -316,10 +322,14 @@ class NativeCalculator extends Calculator
 
             if ($i < 0) {
                 $blockLength += $i;
+                /** @psalm-suppress LoopInvalidation */
                 $i = 0;
             }
 
+            /** @psalm-var numeric-string $blockA */
             $blockA = \substr($a, $i, $blockLength);
+
+            /** @psalm-var numeric-string $blockB */
             $blockB = \substr($b, $i, $blockLength);
 
             $sum = (string) ($blockA + $blockB + $carry);
@@ -386,10 +396,14 @@ class NativeCalculator extends Calculator
 
             if ($i < 0) {
                 $blockLength += $i;
+                /** @psalm-suppress LoopInvalidation */
                 $i = 0;
             }
 
+            /** @psalm-var numeric-string $blockA */
             $blockA = \substr($a, $i, $blockLength);
+
+            /** @psalm-var numeric-string $blockB */
             $blockB = \substr($b, $i, $blockLength);
 
             $sum = $blockA - $blockB - $carry;
@@ -450,6 +464,7 @@ class NativeCalculator extends Calculator
 
             if ($i < 0) {
                 $blockALength += $i;
+                /** @psalm-suppress LoopInvalidation */
                 $i = 0;
             }
 
@@ -463,6 +478,7 @@ class NativeCalculator extends Calculator
 
                 if ($j < 0) {
                     $blockBLength += $j;
+                    /** @psalm-suppress LoopInvalidation */
                     $j = 0;
                 }
 
@@ -592,7 +608,7 @@ class NativeCalculator extends Calculator
      * @param string $a The first operand.
      * @param string $b The second operand.
      *
-     * @return array{0: string, 1: string, 2: int}
+     * @return array{string, string, int}
      */
     private function pad(string $a, string $b) : array
     {

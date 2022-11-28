@@ -3,34 +3,31 @@
     "type": "project",
     "description": "Sitemap plugin provide automatically generated XML sitemap for Flextype.",
     "keywords": ["sitemap", "plugin", "flextype"],
-    "homepage": "https://github.com/flextype-plugins/sitemap",
+    "homepage": "https://awilum.github.io/flextype/downloads/extend/plugins/sitemap",
     "license": "MIT",
     "authors": [
         {
             "name": "Sergey Romanenko",
-            "email": "sergey.romanenko@flextype.org",
-            "homepage": "https://flextype.org"
+            "email": "awilum@msn.com",
+            "homepage": "https://awilum.github.io"
         }
     ],
     "support": {
       "issues": "https://github.com/flextype-plugins/sitemap/issues"
     },
     "require": {
-        "php": ">=7.4.0",
-        "ext-json": "*",
-        "flextype-components/arrays" : "3.0.1",
-        "flextype-components/filesystem": "2.0.8"
+        "php": "^8.1",
+        "ext-json": "*"
     },
     "config": {
         "apcu-autoloader": true,
         "optimize-autoloader": true,
-        "platform": {
-            "php": "7.4.0"
-        }
+        "platform-check": false,
+        "sort-packages": true
     },
     "autoload": {
         "classmap": [
-            "app"
+            "src"
         ]
     }
 }

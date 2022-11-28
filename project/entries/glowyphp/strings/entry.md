@@ -10,10 +10,10 @@ Strings Package provide a fluent, object-oriented interface for working with str
 
 ### Installation
 
-[entries_fetch id="glowyphp/strings/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/strings/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/strings/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/strings/getting-started/usage' field:'content')
 
 ### Methods

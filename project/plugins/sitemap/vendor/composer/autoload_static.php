@@ -4,39 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit95bbc1f8f99e97ceb8265460c8696499
+class ComposerStaticInit2ca2a1b90e217ddb5eaf24e626f53008
 {
-    public static $prefixLengthsPsr4 = array (
-        'F' => 
-        array (
-            'Flextype\\Component\\Filesystem\\' => 30,
-            'Flextype\\Component\\Arrays\\' => 26,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Flextype\\Component\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flextype-components/filesystem',
-        ),
-        'Flextype\\Component\\Arrays\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flextype-components/arrays/src',
-        ),
-    );
-
     public static $classMap = array (
-        'Flextype\\Component\\Arrays\\Arrays' => __DIR__ . '/..' . '/flextype-components/arrays/src/Arrays.php',
-        'Flextype\\Component\\Filesystem\\Filesystem' => __DIR__ . '/..' . '/flextype-components/filesystem/Filesystem.php',
-        'Flextype\\Plugin\\Sitemap\\Controllers\\SitemapController' => __DIR__ . '/../..' . '/app/Controllers/SitemapController.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Flextype\\Plugin\\Sitemap\\Console\\Commands\\Sitemap\\SitemapGenerateCommand' => __DIR__ . '/../..' . '/src/core/Console/Commands/Sitemap/SitemapGenerateCommand.php',
+        'Flextype\\Plugin\\Sitemap\\Controllers\\SitemapController' => __DIR__ . '/../..' . '/src/core/Controllers/SitemapController.php',
+        'Flextype\\Plugin\\Sitemap\\Sitemap' => __DIR__ . '/../..' . '/src/core/Sitemap.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit95bbc1f8f99e97ceb8265460c8696499::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit95bbc1f8f99e97ceb8265460c8696499::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit95bbc1f8f99e97ceb8265460c8696499::$classMap;
+            $loader->classMap = ComposerStaticInit2ca2a1b90e217ddb5eaf24e626f53008::$classMap;
 
         }, null, ClassLoader::class);
     }

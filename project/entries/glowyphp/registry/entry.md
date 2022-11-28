@@ -13,10 +13,10 @@ Registry Package provides a fluent, object-oriented interface for storing data g
 
 ### Installation
 
-[entries_fetch id="glowyphp/registry/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/registry/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/registry/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/registry/getting-started/usage' field:'content')
 
 ### Methods

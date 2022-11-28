@@ -2,7 +2,7 @@
 title: Sitemap
 description: Provide automatically generated XML sitemap.
 icon:
-  name: map-marked-alt
+  name: sitemap
   set: fontawesome|solid
 category: seo
 author:

@@ -8,8 +8,8 @@ seo:
 
 ### Installation
 
-[entries_fetch id="components/benchmark/getting-started/installation" field="content"]
+(entries fetch id:'components/benchmark/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="components/benchmark/getting-started/usage" field="content"]
+(entries fetch id:'components/benchmark/getting-started/usage' field:'content')

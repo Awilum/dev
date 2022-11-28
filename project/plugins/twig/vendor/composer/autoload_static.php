@@ -4,11 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd
+class ComposerStaticInit55cfbc05490cdb851ee4d2238e495177
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6480e3949abc6a380c2cb7e766542f81' => __DIR__ . '/../..' . '/src/twig/helpers/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -21,16 +22,6 @@ class ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Slim\\Flash\\' => 11,
-            'Slim\\Csrf\\' => 10,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-        ),
-        'F' => 
-        array (
-            'Flextype\\Component\\Filesystem\\' => 30,
-            'Flextype\\Component\\Arrays\\' => 26,
         ),
     );
 
@@ -51,54 +42,41 @@ class ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd
         array (
             0 => __DIR__ . '/..' . '/slim/flash/src',
         ),
-        'Slim\\Csrf\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/csrf/src',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Flextype\\Component\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flextype-components/filesystem',
-        ),
-        'Flextype\\Component\\Arrays\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flextype-components/arrays/src',
-        ),
     );
 
     public static $classMap = array (
-        'Flextype\\Component\\Arrays\\Arrays' => __DIR__ . '/..' . '/flextype-components/arrays/src/Arrays.php',
-        'Flextype\\Component\\Filesystem\\Filesystem' => __DIR__ . '/..' . '/flextype-components/filesystem/Filesystem.php',
-        'Flextype\\Plugin\\Twig\\Twig\\ArraysTwigExtension' => __DIR__ . '/../..' . '/twig/ArraysTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\ConstantsTwigExtension' => __DIR__ . '/../..' . '/twig/ConstantsTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\CsrfTwigExtension' => __DIR__ . '/../..' . '/twig/CsrfTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\EntriesTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FilesystemDirectoryTwig' => __DIR__ . '/../..' . '/twig/FilesystemTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FilesystemFileTwig' => __DIR__ . '/../..' . '/twig/FilesystemTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FilesystemTwig' => __DIR__ . '/../..' . '/twig/FilesystemTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FilesystemTwigExtension' => __DIR__ . '/../..' . '/twig/FilesystemTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FiltersTwigExtension' => __DIR__ . '/../..' . '/twig/FiltersTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FlextypeTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\FlextypeTwigExtension' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\I18nTwigExtension' => __DIR__ . '/../..' . '/twig/I18nTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\MediaFilesMetaTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\MediaFilesTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\MediaFoldersMetaTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\MediaFoldersTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\MediaTwig' => __DIR__ . '/../..' . '/twig/FlextypeTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\StringsTwigExtension' => __DIR__ . '/../..' . '/twig/StringsTwigExtension.php',
-        'Flextype\\Plugin\\Twig\\Twig\\UrlTwigExtension' => __DIR__ . '/../..' . '/twig/UrlTwigExtension.php',
-        'Psr\\Http\\Message\\MessageInterface' => __DIR__ . '/..' . '/psr/http-message/src/MessageInterface.php',
-        'Psr\\Http\\Message\\RequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/RequestInterface.php',
-        'Psr\\Http\\Message\\ResponseInterface' => __DIR__ . '/..' . '/psr/http-message/src/ResponseInterface.php',
-        'Psr\\Http\\Message\\ServerRequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/ServerRequestInterface.php',
-        'Psr\\Http\\Message\\StreamInterface' => __DIR__ . '/..' . '/psr/http-message/src/StreamInterface.php',
-        'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
-        'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
-        'Slim\\Csrf\\Guard' => __DIR__ . '/..' . '/slim/csrf/src/Guard.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Flextype\\Plugin\\Twig\\Console\\Commands\\Cache\\CacheClearTwigTemplatesCommand' => __DIR__ . '/../..' . '/src/twig/core/Console/Commands/Cache/CacheClearTwigTemplatesCommand.php',
+        'Flextype\\Plugin\\Twig\\Expressions\\TwigExpression' => __DIR__ . '/../..' . '/src/twig/core/Parsers/Expressions/TwigExpression.php',
+        'Flextype\\Plugin\\Twig\\Expressions\\TwigExpressionMethods' => __DIR__ . '/../..' . '/src/twig/core/Parsers/Expressions/TwigExpression.php',
+        'Flextype\\Plugin\\Twig\\Extension\\ActionsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/ActionsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\CacheTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/CacheTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\CollectionTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/CollectionTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\ConstantsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/ConstantsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\CsrfTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/CsrfTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\EmitterTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/EmitterTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\EntriesTwig' => __DIR__ . '/../..' . '/src/twig/core/Extensions/EntriesTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\EntriesTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/EntriesTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FetchTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FetchTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FilesystemDirectoryTwig' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FilesystemTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FilesystemFileTwig' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FilesystemTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FilesystemTwig' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FilesystemTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FilesystemTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FilesystemTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FiltersTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FiltersTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FlashTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FlashTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\FunctionsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/FunctionsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\I18nTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/I18nTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\ImageTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/ImageTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\MathTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/MathTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\ParsersTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/ParsersTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\RegistryTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/RegistryTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\SerializersTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/SerializersTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\SlugifyTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/SlugifyTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\StringsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/StringsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\TestsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/TestsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\UrlTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/UrlTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Extension\\VarsTwigExtension' => __DIR__ . '/../..' . '/src/twig/core/Extensions/VarsTwigExtension.php',
+        'Flextype\\Plugin\\Twig\\Twig' => __DIR__ . '/../..' . '/src/twig/core/Twig.php',
         'Slim\\Flash\\Messages' => __DIR__ . '/..' . '/slim/flash/src/Messages.php',
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
@@ -281,9 +259,9 @@ class ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf49fd72add91714e0c7262b5d4f71cbd::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit55cfbc05490cdb851ee4d2238e495177::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit55cfbc05490cdb851ee4d2238e495177::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit55cfbc05490cdb851ee4d2238e495177::$classMap;
 
         }, null, ClassLoader::class);
     }

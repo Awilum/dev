@@ -10,9 +10,9 @@ seo:
 
 ### Topics
 
-* [Introduction]([url]/flextype/documentation/rest-api/introduction)
-* [Entries]([url]/flextype/documentation/rest-api/entries)
-* [Tokens]([url]/flextype/documentation/rest-api/tokens)
-* [Registry]([url]/flextype/documentation/rest-api/registry)
-* [Cache]([url]/flextype/documentation/rest-api/cache)
-* [Query]([url]/flextype/documentation/rest-api/query)
+* [Introduction]((getBaseUrl)/flextype/documentation/rest-api/introduction)
+* [Entries]((getBaseUrl)/flextype/documentation/rest-api/entries)
+* [Tokens]((getBaseUrl)/flextype/documentation/rest-api/tokens)
+* [Registry]((getBaseUrl)/flextype/documentation/rest-api/registry)
+* [Cache]((getBaseUrl)/flextype/documentation/rest-api/cache)
+* [Query]((getBaseUrl)/flextype/documentation/rest-api/query)

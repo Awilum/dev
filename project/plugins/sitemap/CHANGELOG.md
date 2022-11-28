@@ -1,3 +1,26 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/flextype-plugins/sitemap/compare/v3.0.1...v3.1.0) (2022-09-13)
+
+### Features
+
+* **core** Update code base for new Flextype 1.0.0-alpha.2 release.
+
+<a name="3.0.1"></a>
+# [3.0.1](https://github.com/flextype-plugins/sitemap/compare/v3.0.0...v3.0.1) (2022-07-11)
+
+### Bug Fixes
+
+* **console** fix issue with sitemap generate command if destination directory does not exist.
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/flextype-plugins/sitemap/compare/v2.10.0...v3.0.0) (2022-07-11)
+
+### Features
+
+* **core** Update code base for new Flextype 1.0.0-alpha.1 release.
+
+* **core** Added ability to generate static sitemap.
+
 <a name="2.10.0"></a>
 # [2.10.0](https://github.com/flextype-plugins/sitemap/compare/v2.9.1...v2.10.0) (2021-01-14)
 

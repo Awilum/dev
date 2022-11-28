@@ -11,7 +11,7 @@
 
 namespace Monolog\Handler;
 
-use Monolog\Logger;
+use Monolog\Level;
 use Monolog\Formatter\LineFormatter;
 
 /**
@@ -24,55 +24,49 @@ class NativeMailerHandler extends MailHandler
 {
     /**
      * The email addresses to which the message will be sent
-     * @var array
+     * @var string[]
      */
-    protected $to;
+    protected array $to;
 
     /**
      * The subject of the email
-     * @var string
      */
-    protected $subject;
+    protected string $subject;
 
     /**
      * Optional headers for the message
-     * @var array
+     * @var string[]
      */
-    protected $headers = [];
+    protected array $headers = [];
 
     /**
      * Optional parameters for the message
-     * @var array
+     * @var string[]
      */
-    protected $parameters = [];
+    protected array $parameters = [];
 
     /**
      * The wordwrap length for the message
-     * @var int
      */
-    protected $maxColumnWidth;
+    protected int $maxColumnWidth;
 
     /**
      * The Content-type for the message
-     * @var string|null
      */
-    protected $contentType;
+    protected string|null $contentType = null;
 
     /**
      * The encoding for the message
-     * @var string
      */
-    protected $encoding = 'utf-8';
+    protected string $encoding = 'utf-8';
 
     /**
-     * @param string|array $to             The receiver of the mail
-     * @param string       $subject        The subject of the mail
-     * @param string       $from           The sender of the mail
-     * @param string|int   $level          The minimum logging level at which this handler will be triggered
-     * @param bool         $bubble         Whether the messages that are handled can bubble up the stack or not
-     * @param int          $maxColumnWidth The maximum column width that the message lines will have
+     * @param string|string[] $to             The receiver of the mail
+     * @param string          $subject        The subject of the mail
+     * @param string          $from           The sender of the mail
+     * @param int             $maxColumnWidth The maximum column width that the message lines will have
      */
-    public function __construct($to, string $subject, string $from, $level = Logger::ERROR, bool $bubble = true, int $maxColumnWidth = 70)
+    public function __construct(string|array $to, string $subject, string $from, int|string|Level $level = Level::Error, bool $bubble = true, int $maxColumnWidth = 70)
     {
         parent::__construct($level, $bubble);
         $this->to = (array) $to;
@@ -84,7 +78,7 @@ class NativeMailerHandler extends MailHandler
     /**
      * Add headers to the message
      *
-     * @param string|array $headers Custom added headers
+     * @param string|string[] $headers Custom added headers
      */
     public function addHeader($headers): self
     {
@@ -101,7 +95,7 @@ class NativeMailerHandler extends MailHandler
     /**
      * Add parameters to the message
      *
-     * @param string|array $parameters Custom added parameters
+     * @param string|string[] $parameters Custom added parameters
      */
     public function addParameter($parameters): self
     {
@@ -111,11 +105,11 @@ class NativeMailerHandler extends MailHandler
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
     protected function send(string $content, array $records): void
     {
-        $contentType = $this->getContentType() ?: ($this->isHtmlBody($content) ? 'text/html' : 'text/plain');
+        $contentType = $this->getContentType() ?? ($this->isHtmlBody($content) ? 'text/html' : 'text/plain');
 
         if ($contentType !== 'text/html') {
             $content = wordwrap($content, $this->maxColumnWidth);
@@ -127,11 +121,8 @@ class NativeMailerHandler extends MailHandler
             $headers .= 'MIME-Version: 1.0' . "\r\n";
         }
 
-        $subject = $this->subject;
-        if ($records) {
-            $subjectFormatter = new LineFormatter($this->subject);
-            $subject = $subjectFormatter->format($this->getHighestRecord($records));
-        }
+        $subjectFormatter = new LineFormatter($this->subject);
+        $subject = $subjectFormatter->format($this->getHighestRecord($records));
 
         $parameters = implode(' ', $this->parameters);
         foreach ($this->to as $to) {

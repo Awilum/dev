@@ -10,8 +10,4 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Slim\\Flash\\' => array($vendorDir . '/slim/flash/src'),
-    'Slim\\Csrf\\' => array($vendorDir . '/slim/csrf/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
-    'Flextype\\Component\\Filesystem\\' => array($vendorDir . '/flextype-components/filesystem'),
-    'Flextype\\Component\\Arrays\\' => array($vendorDir . '/flextype-components/arrays/src'),
 );

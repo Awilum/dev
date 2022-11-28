@@ -9,6 +9,6 @@ The Canvas element is allows you to render arbitrary "pixels" also known as line
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/canvas/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/canvas/getting-started/usage' field:'content')
 
 ### Methods

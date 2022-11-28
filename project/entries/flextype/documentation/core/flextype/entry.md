@@ -9,7 +9,7 @@ order: 1
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/flextype/documentation/core/"
+    link: "(getBaseUrl)/flextype/documentation/core/"
 on_this_page:
   -
     title: "Methods"
@@ -225,23 +225,23 @@ List of available registered services in Flextype Dependency Injection Container
         </tr>
         <tr>
             <td>parsers</td>
-            <td><a href="[url]/flextype/documentation/core/parsers">documentation</a></td>
+            <td><a href="(getBaseUrl)/flextype/documentation/core/parsers">documentation</a></td>
         </tr>
         <tr>
             <td>serializers</td>
-            <td><a href="[url]/flextype/documentation/core/serializers">documentation</a></td>
+            <td><a href="(getBaseUrl)/flextype/documentation/core/serializers">documentation</a></td>
         </tr>
         <tr>
             <td>entries</td>
-            <td><a href="[url]/flextype/documentation/core/entries">documentation</a></td>
+            <td><a href="(getBaseUrl)/flextype/documentation/core/entries">documentation</a></td>
         </tr>
         <tr>
             <td>plugins</td>
-            <td><a href="[url]/flextype/documentation/core/plugins">documentation</a></td>
+            <td><a href="(getBaseUrl)/flextype/documentation/core/plugins">documentation</a></td>
         </tr>
         <tr>
             <td>plugins</td>
-            <td><a href="[url]/flextype/documentation/core/console">console</a></td>
+            <td><a href="(getBaseUrl)/flextype/documentation/core/console">console</a></td>
         </tr>
         <tr>
             <td>cors</td>

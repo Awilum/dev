@@ -13,10 +13,10 @@ Arrays Package provide a fluent, object-oriented interface for working with arra
 
 ### Installation
 
-[entries_fetch id="glowyphp/arrays/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/arrays/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/arrays/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/arrays/getting-started/usage' field:'content')
 
 ### Methods

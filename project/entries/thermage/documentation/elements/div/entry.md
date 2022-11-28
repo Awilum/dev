@@ -9,6 +9,6 @@ The Div element is the generic container for flow content.
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/div/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/div/getting-started/usage' field:'content')
 
 ### Methods

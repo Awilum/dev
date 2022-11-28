@@ -9,6 +9,6 @@ The Span element is a generic inline container for phrasing content, which does 
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/span/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/span/getting-started/usage' field:'content')
 
 ### Methods

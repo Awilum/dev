@@ -19,10 +19,10 @@ View Package provides basic methods for creating extendable PHP Views.
 
 ### Installation
 
-[entries_fetch id="glowyphp/view/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/view/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/view/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/view/getting-started/usage' field:'content')
 
 ### Methods

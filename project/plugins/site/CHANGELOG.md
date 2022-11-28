@@ -1,3 +1,50 @@
+<a name="2.1.1"></a>
+# [2.1.1](https://github.com/flextype-plugins/site/compare/v2.1.0...v2.1.1) (2022-09-14)
+
+### Bug Fixes
+
+* **site** fix issue with empty null cache id for error404 page.
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/flextype-plugins/site/compare/v2.0.3...v2.1.0) (2022-09-13)
+
+### Features
+
+* **core** update code base for new Flextype 1.0.0-alpha.2 release.
+
+<a name="2.0.3"></a>
+# [2.0.3](https://github.com/flextype-plugins/site/compare/v2.0.2...v2.0.3) (2022-09-13)
+
+### Bug Fixes
+
+* **static-site** Fix wrong destination folder displayed on site generation.
+
+<a name="2.0.2"></a>
+# [2.0.2](https://github.com/flextype-plugins/site/compare/v2.0.1...v2.0.2) (2022-07-12)
+
+### Bug Fixes
+
+* **core** Fix version.
+
+<a name="2.0.1"></a>
+# [2.0.1](https://github.com/flextype-plugins/site/compare/v2.0.0...v2.0.1) (2022-07-11)
+
+### Bug Fixes
+
+* **console** Fix settings naming for static site generation.
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/flextype-plugins/site/compare/v1.11.0...v2.0.0) (2022-07-11)
+
+### Features
+
+* **core** Updated code base for new Flextype 1.0.0-alpha.1.
+* **core** Added ability to generate static site.
+* **core** Added ability to use static pages cache.
+* **core** Added ability to use various template engines. Suppoerted Twig and View.
+* **core** Added ability to setup redirectes.
+* **core** Added ability to minify html output.
+
 <a name="1.11.0"></a>
 # [1.11.0](https://github.com/flextype-plugins/site/compare/v1.10.0...v1.11.0) (2021-01-14)
 

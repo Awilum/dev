@@ -1,5 +1,0 @@
-{% if (entry.seo.title) %}
-    {{ entry.seo.title|e('html') }}
-{% else %}
-    {{ entry.title|e('html') }} | {{ flextype.registry.get('plugins.site.settings.title')|e('html') }}
-{% endif %}

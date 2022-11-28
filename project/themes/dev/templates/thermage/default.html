@@ -1,6 +1,0 @@
-{% extends 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/partials/base.html' %}
-
-{% block content %}
-    {% include 'themes/' ~ flextype.registry.get('plugins.site.settings.theme') ~ '/templates/thermage/partials/nav.html' %}
-    {{ entry.content|shortcode|raw }}
-{% endblock %}

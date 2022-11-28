@@ -9,6 +9,6 @@ The Breakline element produces a line break in text.
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/breakline/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/breakline/getting-started/usage' field:'content')
 
 ### Methods

@@ -8,10 +8,10 @@ seo:
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/flextype/documentation/core/"
+    link: "(getBaseUrl)/flextype/documentation/core/"
   -
     title: "Parsers"
-    link: "[url]/flextype/documentation/core/parsers/"
+    link: "(getBaseUrl)/flextype/documentation/core/parsers/"
 on_this_page:
   -
     title: "Shortcodes"
@@ -101,7 +101,7 @@ on_this_page:
         link: "methods-getCacheID"
 ---
 
-Shortcodes are a small piece of code, indicated by brackets like `[raw](this)[/raw]`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
+Shortcodes are a small piece of code, indicated by brackets like `(this)`, that performs a dedicated function on your site. You can place it just about anywhere you’d like, and it will add a specific feature to your page, post, or other content. For example, you can use shortcodes to display galleries, videos, or even playlists.
 
 ### <a name="shortcodes"></a> Shortcodes
 
@@ -245,25 +245,25 @@ Fetch entry (or entries collection) or a specific field.
 **Fetch single entry**
 
 ```md
-(entries fetch id:'blog')
+%opening parenthesis%entries fetch id:'blog'%closing parenthesis%
 ```
 
 **Fetch secific field from a single entry**
 
 ```md
-(entries fetch id:'blog' field:'title' default:'Blog')
+%opening parenthesis%entries fetch id:'blog' field:'title' default:'Blog'%closing parenthesis%
 ```
 
 **Fetch entries collection**
 
 ```md
-(entries fetch id:'blog' options:'collection=true')
+%opening parenthesis%entries fetch id:'blog' options:'collection=true'%closing parenthesis%
 ```
 
 **Fetch entries collection with filtering options**
 
 ```md
-(entries fetch id:'blog' options:'collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC')
+%opening parenthesis%entries fetch id:'blog' options:'collection=true&filter[sort_by][key]=date&filter[sort_by][direction]=ASC'%closing parenthesis%
 ```
 
 ##### <a name="shortcode-registry"></a> `registry`
@@ -273,7 +273,7 @@ Get specific item from registry.
 **Examples**
 
 ```md
-(registry get id:'flextype.manifest.name' default:'Flextype')
+%opening parenthesis%registry get id:'flextype.manifest.name' default:'Flextype'%closing parenthesis%
 ```
 
 ##### <a name="shortcode-php"></a> `php`
@@ -283,9 +283,9 @@ Execute php code.
 **Examples**
 
 ```md
-(php)
+%opening parenthesis%php%closing parenthesis%
   echo "Hello World!";
-(/php)
+%opening parenthesis%/php%closing parenthesis%
 ```
 
 ##### <a name="shortcode-eval"></a> `eval`
@@ -295,9 +295,9 @@ Eval expression.
 **Examples**
 
 ```md
-(eval)
-  1 + 1;
-(/eval)
+%opening parenthesis%eval%closing parenthesis%
+  1 + 1
+%opening parenthesis%/eval%closing parenthesis%
 ```
 
 ##### <a name="shortcode-calc"></a> `calc`
@@ -307,7 +307,7 @@ Calculate values.
 **Examples**
 
 ```md
-(calc:'1+1')
+%opening parenthesis%calc:'1+1'%closing parenthesis%
 ```
 
 ##### <a name="shortcode-strings"></a> `strings`
@@ -322,13 +322,13 @@ append, prepend, after, afterLast, before, beforeLast, lower, upper, sort, words
 
 ```md
 // foo
-(strings lower)Foo(/strings)
+%opening parenthesis%strings lower%closing parenthesis%Foo%opening parenthesis%/strings%closing parenthesis%
 
 // FOO
-(strings upper)foo(/strings)
+%opening parenthesis%strings upper%closing parenthesis%foo%opening parenthesis%/strings%closing parenthesis%
 
 // HELLO WORLD
-(strings preppend: 'Hello ' upper)World(/strings)
+%opening parenthesis%strings preppend: 'Hello ' upper%closing parenthesis%World%opening parenthesis%/strings%closing parenthesis%
 
 // ...
 ```
@@ -340,12 +340,12 @@ Parse textile text.
 **Examples**
 
 ```md
-(textile)
+%opening parenthesis%textile%closing parenthesis%
   h2. Textile
   * is a _shorthand syntax_ used to generate valid HTML
   * is *easy* to read and *easy* to write
   * can generate complex pages, including: headings, quotes, lists, tables and figures
-(/textile)
+%opening parenthesis%/textile%closing parenthesis%
 ```
 
 ##### <a name="shortcode-textile"></a> `markdown`
@@ -355,10 +355,10 @@ Parse markdown text.
 **Examples**
 
 ```md
-(markdown)
+%opening parenthesis%markdown%closing parenthesis%
   # Markdown
   ** markdown text **
-(/markdown)
+%opening parenthesis%/markdown%closing parenthesis%
 ```
 
 ##### <a name="shortcode-filesystem"></a> `filesystem`
@@ -368,7 +368,7 @@ Do filesystem manipulation.
 **Examples**
 
 ```md
-(filesystem get file:'file.txt')
+%opening parenthesis%filesystem get file:'file.txt'%closing parenthesis%
 ```
 
 ##### <a name="shortcode-var"></a> `var`
@@ -378,10 +378,10 @@ Access to global vars.
 **Examples**
 
 ```md
-(var:foo)
-(var get:foo)
-(var set:foo value:Foo)
-(var set:foo) Foo (/var)
+%opening parenthesis%var:foo%closing parenthesis%
+%opening parenthesis%var get:foo%closing parenthesis%
+%opening parenthesis%var set:foo value:Foo%closing parenthesis%
+%opening parenthesis%var set:foo%closing parenthesis% Foo %opening parenthesis%/var%closing parenthesis%
 ```
 
 ##### <a name="shortcode-field"></a> `field`
@@ -391,13 +391,13 @@ Access current entry fields.
 **Examples**
 
 ```md
-(field:title)
-(field get:foo default:Foo)
-(field get:foo) Default (/field)
-(field set:foo value:Foo)
-(field set:foo) Foo (/field)
-(field unset:foo)
-(field delete:foo)
+%opening parenthesis%field:title%closing parenthesis%
+%opening parenthesis%field get:foo default:Foo%closing parenthesis%
+%opening parenthesis%field get:foo%closing parenthesis% Default %opening parenthesis%/field%closing parenthesis%
+%opening parenthesis%field set:foo value:Foo%closing parenthesis%
+%opening parenthesis%field set:foo%closing parenthesis% Foo %opening parenthesis%/field%closing parenthesis%
+%opening parenthesis%field unset:foo%closing parenthesis%
+%opening parenthesis%field delete:foo%closing parenthesis%
 ```
 
 ##### <a name="shortcode-tr"></a> `tr`
@@ -407,7 +407,7 @@ Returns translation of a string. If no translation exists, the original string w
 **Examples**
 
 ```md
-(tr:'translate_key')
+%opening parenthesis%tr:'translate_key'%closing parenthesis%
 ```
 
 ##### <a name="shortcode-if"></a> `if`
@@ -417,9 +417,9 @@ Adds ability to use logical if conditions.
 **Examples**
 
 ```md
-(if:'100 > 20') 
+%opening parenthesis%if:'100 > 20'%closing parenthesis% 
   Display content here...
-(/if)
+%opening parenthesis%/if%closing parenthesis%
 ```
 
 ##### <a name="shortcode-when"></a> `when`
@@ -429,9 +429,9 @@ Adds ability to use logical positive if conditions.
 **Examples**
 
 ```md
-(when:'100 > 20') 
+%opening parenthesis%when:'100 > 20'%closing parenthesis% 
   Display content here...
-(/when)
+%opening parenthesis%/when%closing parenthesis%
 ```
 
 ##### <a name="shortcode-unless"></a> `unless`
@@ -441,9 +441,9 @@ Adds ability to use logical negative if conditions.
 **Examples**
 
 ```md
-(unless:'100 < 20') 
+%opening parenthesis%unless:'100 < 20'%closing parenthesis% 
   Display content here...
-(/unless)
+%opening parenthesis%/unless%closing parenthesis%
 ```
 
 ##### <a name="shortcode-uuid"></a> `uuid`
@@ -453,8 +453,8 @@ Generates UUID.
 **Examples**
 
 ```md
-(uuid)
-(uuid:4)
+%opening parenthesis%uuid%closing parenthesis%
+%opening parenthesis%uuid:4%closing parenthesis%
 ```
 
 ##### <a name="shortcode-getBasePath"></a> `getBasePath`
@@ -464,7 +464,7 @@ Get the application base path.
 **Examples**
 
 ```
-(getBaseUrl)
+%opening parenthesis%getBaseUrl%closing parenthesis%
 ```
 
 ##### <a name="shortcode-getBaseUrl"></a> `getBaseUrl`
@@ -474,7 +474,7 @@ Get the application base path.
 **Examples**
 
 ```
-(getBaseUrl)
+%opening parenthesis%getBaseUrl%closing parenthesis%
 ```
 
 ##### <a name="shortcode-getProjectUrl"></a> `getProjectUrl`
@@ -484,7 +484,7 @@ Get the application project url.
 **Examples**
 
 ```
-(getProjectUrl)
+%opening parenthesis%getProjectUrl%closing parenthesis%
 ```
 
 ##### <a name="shortcode-getAbsoluteUrl"></a> `getAbsoluteUrl`
@@ -494,7 +494,7 @@ Get the application absolute url.
 **Examples**
 
 ```
-(getAbsoluteUrl)
+%opening parenthesis%getAbsoluteUrl%closing parenthesis%
 ```
 
 ##### <a name="shortcode-getUriString"></a> `getUriString`
@@ -504,7 +504,7 @@ Get uri string.
 **Examples**
 
 ```
-(getAbsoluteUrl)
+%opening parenthesis%getAbsoluteUrl%closing parenthesis%
 ```
 
 ##### <a name="shortcode-urlFor"></a> `urlFor`
@@ -514,7 +514,7 @@ Get the url for a named route.
 **Examples**
 
 ```
-(urlFor routeName: 'route-name' data: '{"foo": "Foo"}' queryParams: '{"foo": "Foo"}')
+%opening parenthesis%urlFor routeName: 'route-name' data: '{"foo": "Foo"}' queryParams: '{"foo": "Foo"}'%closing parenthesis%
 ```
 
 ### <a name="methods"></a> Methods

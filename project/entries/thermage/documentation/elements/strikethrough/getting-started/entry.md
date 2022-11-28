@@ -8,4 +8,4 @@ seo:
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/strikethrough/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/strikethrough/getting-started/usage' field:'content')

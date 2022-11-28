@@ -13,10 +13,10 @@ Csrf Package provides Cross Site Request Forgery protection by comparing provide
 
 ### Installation
 
-[entries_fetch id="glowyphp/csrf/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/csrf/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/csrf/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/csrf/getting-started/usage' field:'content')
 
 ### Methods

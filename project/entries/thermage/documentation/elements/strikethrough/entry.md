@@ -9,6 +9,6 @@ The Strikethrough element renders text with a strikethrough, or a line through i
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/strikethrough/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/strikethrough/getting-started/usage' field:'content')
 
 ### Methods

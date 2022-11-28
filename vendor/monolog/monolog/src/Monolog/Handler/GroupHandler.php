@@ -13,6 +13,7 @@ namespace Monolog\Handler;
 
 use Monolog\Formatter\FormatterInterface;
 use Monolog\ResettableInterface;
+use Monolog\LogRecord;
 
 /**
  * Forwards records to multiple handlers
@@ -24,8 +25,8 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
     use ProcessableHandlerTrait;
 
     /** @var HandlerInterface[] */
-    protected $handlers;
-    protected $bubble;
+    protected array $handlers;
+    protected bool $bubble;
 
     /**
      * @param HandlerInterface[] $handlers Array of Handlers.
@@ -44,9 +45,9 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
-    public function isHandling(array $record): bool
+    public function isHandling(LogRecord $record): bool
     {
         foreach ($this->handlers as $handler) {
             if ($handler->isHandling($record)) {
@@ -58,11 +59,11 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
-    public function handle(array $record): bool
+    public function handle(LogRecord $record): bool
     {
-        if ($this->processors) {
+        if (\count($this->processors) > 0) {
             $record = $this->processRecord($record);
         }
 
@@ -74,11 +75,11 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
     public function handleBatch(array $records): void
     {
-        if ($this->processors) {
+        if (\count($this->processors) > 0) {
             $processed = [];
             foreach ($records as $record) {
                 $processed[] = $this->processRecord($record);
@@ -91,7 +92,7 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
         }
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->resetProcessors();
 
@@ -112,7 +113,7 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
     public function setFormatter(FormatterInterface $formatter): HandlerInterface
     {

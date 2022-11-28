@@ -9,7 +9,7 @@ order: 4
 breadcrumbs:
   -
     title: "Core Concepts"
-    link: "[url]/flextype/documentation/core/"
+    link: "(getBaseUrl)/flextype/documentation/core/"
 on_this_page:
   -
     title: "Installation"

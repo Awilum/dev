@@ -12,15 +12,23 @@
 namespace Monolog\Handler;
 
 use Throwable;
+use Monolog\LogRecord;
 
+/**
+ * Forwards records to at most one handler
+ *
+ * If a handler fails, the exception is suppressed and the record is forwarded to the next handler.
+ *
+ * As soon as one handler handles a record successfully, the handling stops there.
+ */
 class FallbackGroupHandler extends GroupHandler
 {
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
-    public function handle(array $record): bool
+    public function handle(LogRecord $record): bool
     {
-        if ($this->processors) {
+        if (\count($this->processors) > 0) {
             $record = $this->processRecord($record);
         }
         foreach ($this->handlers as $handler) {
@@ -36,11 +44,11 @@ class FallbackGroupHandler extends GroupHandler
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      */
     public function handleBatch(array $records): void
     {
-        if ($this->processors) {
+        if (\count($this->processors) > 0) {
             $processed = [];
             foreach ($records as $record) {
                 $processed[] = $this->processRecord($record);

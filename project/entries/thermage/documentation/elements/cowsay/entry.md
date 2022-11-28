@@ -11,6 +11,6 @@ Originialy cowsay was a Perl program that generates ASCII art pictures of a cow 
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/cowsay/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/cowsay/getting-started/usage' field:'content')
 
 ### Methods

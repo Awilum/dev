@@ -9,6 +9,6 @@ The Italic element represents a range of text that is set off from the normal te
 
 ### Usage
 
-[entries_fetch id="thermage/documentation/elements/italic/getting-started/usage" field="content"]
+(entries fetch id:'thermage/documentation/elements/italic/getting-started/usage' field:'content')
 
 ### Methods

@@ -1,0 +1,12 @@
+parameters:
+  level: 5
+  reportUnmatchedIgnoredErrors: false
+  bootstrapFiles:
+    - src/flextype/defines.php
+  paths:
+    - src
+  ignoreErrors:
+    - '#Undefined variable: \$this.*#'
+    - '/Variable \$api_errors might not be defined./'
+    - '/Variable \$registry might not be defined./'
+    - '/\$mode of function round expects 1\|2\|3\|4, int given./'

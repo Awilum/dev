@@ -8,7 +8,7 @@ seo:
 breadcrumbs:
   -
     title: "Console"
-    link: "[url]/flextype/flextype/documentation/console/"
+    link: "(getBaseUrl)/flextype/flextype/documentation/console/"
 on_this_page:
   -
     title: "Commands"

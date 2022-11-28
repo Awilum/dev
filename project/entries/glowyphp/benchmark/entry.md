@@ -13,8 +13,8 @@ Benchmark Package provide basic functionality for benchmarking.
 
 ### Installation
 
-[entries_fetch id="glowyphp/benchmark/getting-started/installation" field="content"]
+(entries fetch id:'glowyphp/benchmark/getting-started/installation' field:'content')
 
 ### Usage
 
-[entries_fetch id="glowyphp/benchmark/getting-started/usage" field="content"]
+(entries fetch id:'glowyphp/benchmark/getting-started/usage' field:'content')

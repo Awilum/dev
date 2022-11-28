@@ -9,7 +9,7 @@ seo:
 breadcrumbs:
   1:
     title: "Getting Started"
-    link: "[url]/flextype/documentation/getting-started/"
+    link: "(getBaseUrl)/flextype/documentation/getting-started/"
 ---
 
 <ul class="file-list">
