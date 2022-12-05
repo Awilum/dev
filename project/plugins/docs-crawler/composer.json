@@ -1,0 +1,34 @@
+{
+    "name": "flextype-plugins/docs-crawler",
+    "type": "project",
+    "description": "Feed plugin for Flextype supports Atom 1.0, RSS and JSON feed types and allows you to generate feeds for entries.",
+    "keywords": ["feed", "plugin", "flextype"],
+    "homepage": "https://awilum.github.io/flextype/downloads/extend/plugins/feed",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Romanenko",
+            "email": "awilum@msn.com",
+            "homepage": "https://awilum.github.io"
+        }
+    ],
+    "support": {
+      "issues": "https://github.com/flextype-plugins/feed/issues"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "symfony/dom-crawler": "^6.1"
+    },
+    "config": {
+        "apcu-autoloader": true,
+        "optimize-autoloader": true,
+        "platform-check": false,
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{# Format specification: https://tools.ietf.org/html/rfc4287 #}
+{% extends 'plugins/feed/views/templates/partials/base.html' %}
+{% set feed_updated = 0 %}
+{% for entry in entries %}
+    {%- if feed.options.feed.show_last_modified -%}
+        {%- set feed_updated = max(feed_updated, entry.modified_at) -%}
+    {%- else %}
+        {%- set feed_updated = max(feed_updated, entry.published_at) -%}
+    {%- endif -%}
+{% endfor %}
+{% block feed %}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ feed.options.feed.title }}</title>
+    <link href="{{ getBaseUrl() ~ feed.options.feed.route }}" rel="self" />
+    <subtitle>{{ feed.options.feed.description }}</subtitle>
+    <updated>{{ feed_updated|date("Y-m-d\\TH:i:sP") }}</updated>
+    <author>
+        <name>{{ registry().get('plugins.site.settings.author.name') }}</name>
+    </author>
+    <id>{{ getBaseUrl() }}/{{ feed.id }}</id>
+    {% for entry in entries %}
+    <entry>
+        <title>{{ entry.title|e }}</title>
+        <id>{{ getBaseUrl() }}/{{ entry.id }}</id>
+        {% if feed.options.feed.show_last_modified %}
+        <updated>{{ entry.modified_at|date("Y-m-d\\TH:i:sP") }}</updated>
+        {% else %}
+        <updated>{{ entry.published_at|date("Y-m-d\\TH:i:sP") }}</updated>
+        {% endif %}
+        <published>{{ entry.published_at|date("Y-m-d\\TH:i:sP") }}</published>
+        <link href="{{ getBaseUrl() }}/{{ id }}"/>
+        <content type="html">
+            <![CDATA[
+            {{ entry.content|markdown|raw }}
+            ]]>
+        </content>
+    </entry>
+    {% endfor %}
+</feed>
+{% endblock %}

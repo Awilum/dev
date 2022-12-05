@@ -1,0 +1,36 @@
+{# Format specification: https://www.rssboard.org/rss-specification #}
+{% extends 'plugins/feed/views/templates/partials/base.html' %}
+{% set lastBuildDate = 0 %}
+{% for entry in entries %}
+    {%- if feed.options.show_last_modified -%}
+        {%- set lastBuildDate = max(lastBuildDate, entry.modified_at) -%}
+    {%- else %}
+        {%- set lastBuildDate = max(lastBuildDate, entry.published_at) -%}
+    {%- endif -%}
+{% endfor %}
+{% block feed %}
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>{{ feed.options.feed.title }}</title>
+        <link>{{ getBaseUrl() }}/{{ feed.id }}</link>
+        <atom:link href="{{ getBaseUrl() ~ feed.options.feed.route }}" rel="self" type="application/rss+xml"/>
+        <description>{{ feed.options.feed.description }}</description>
+        <language>{% if feed.options.feed.language %}{{ feed.options.feed.language }}{% else %}{{ registry().get('flextype.settings.locale') }}{% endif %}</language>
+        <lastBuildDate>{{ lastBuildDate|date('D, d M Y H:i:s O') }}</lastBuildDate>
+        {% for entry in entries %}
+        <feed>
+            <title>{{ entry.title|e }}</title>
+            <link>{{ getBaseUrl() }}/{{ entry.id }}</link>
+            <guid>{{ getBaseUrl() }}/{{ entry.id }}</guid>
+            <pubDate>{{ entry.published_at|date('D, d M Y H:i:s O') }}</pubDate>
+            <description>
+                <![CDATA[
+                {{ entry.content|markdown|raw }}
+                ]]>
+            </description>
+        </feed>
+        {% endfor %}
+    </channel>
+</rss>
+{% endblock %}
