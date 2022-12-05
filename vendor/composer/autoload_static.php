@@ -4,15 +4,18 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
+class ComposerStaticInit1d0a41caaf7129bf29d638631e30624e
 {
     public static $files = array (
         '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
@@ -24,16 +27,13 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         '530fb0ecc852c2a46a3a92285667cf82' => __DIR__ . '/..' . '/glowy/strings/src/helpers.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '61ec4c7ec2443632ed344bbead420303' => __DIR__ . '/..' . '/glowy/filesystem/src/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
         '2df68f9e79c919e2d88506611769ed2e' => __DIR__ . '/..' . '/respect/stringifier/src/stringify.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '7aed44d824e149ce152c0fb82af9379a' => __DIR__ . '/..' . '/colinodell/json5/src/global.php',
         '2777ff17e33b74c66e29ac9ee3166adb' => __DIR__ . '/..' . '/glowy/benchmark/src/helpers.php',
         'f5bc657641c6207612de13ed1d7348ef' => __DIR__ . '/..' . '/glowy/registry/src/helpers.php',
@@ -328,8 +328,8 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -421,8 +421,8 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         ),
         'Intervention\\Image\\' => 
         array (
-            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
-            1 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
+            0 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
+            1 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -549,16 +549,6 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'PHPDocsMD' => 
-            array (
-                0 => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
@@ -641,6 +631,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Carbon\\Traits\\IntervalStep' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/IntervalStep.php',
         'Carbon\\Traits\\Localization' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Localization.php',
         'Carbon\\Traits\\Macro' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Macro.php',
+        'Carbon\\Traits\\MagicParameter' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/MagicParameter.php',
         'Carbon\\Traits\\Mixin' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Mixin.php',
         'Carbon\\Traits\\Modifiers' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Modifiers.php',
         'Carbon\\Traits\\Mutability' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Mutability.php',
@@ -2048,22 +2039,6 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/src/SecurityProvider.php',
         'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/src/SelfReference.php',
         'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/src/SerializableClosure.php',
-        'PHPDocsMD\\ClassEntity' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/ClassEntity.php',
-        'PHPDocsMD\\ClassEntityFactory' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/ClassEntityFactory.php',
-        'PHPDocsMD\\CodeEntity' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/CodeEntity.php',
-        'PHPDocsMD\\Console\\CLI' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/Console/CLI.php',
-        'PHPDocsMD\\Console\\PHPDocsMDCommand' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/Console/PHPDocsMDCommand.php',
-        'PHPDocsMD\\DocInfo' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/DocInfo.php',
-        'PHPDocsMD\\DocInfoExtractor' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/DocInfoExtractor.php',
-        'PHPDocsMD\\FunctionEntity' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/FunctionEntity.php',
-        'PHPDocsMD\\FunctionFinder' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/FunctionFinder.php',
-        'PHPDocsMD\\MDTableGenerator' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/MDTableGenerator.php',
-        'PHPDocsMD\\ParamEntity' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/ParamEntity.php',
-        'PHPDocsMD\\Reflector' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/Reflector.php',
-        'PHPDocsMD\\ReflectorInterface' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/ReflectorInterface.php',
-        'PHPDocsMD\\TableGenerator' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/TableGenerator.php',
-        'PHPDocsMD\\UseInspector' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/UseInspector.php',
-        'PHPDocsMD\\Utils' => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src/PHPDocsMD/Utils.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprArrayItemNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprArrayItemNode.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprArrayNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprArrayNode.php',
         'PHPStan\\PhpDocParser\\Ast\\ConstExpr\\ConstExprFalseNode' => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src/Ast/ConstExpr/ConstExprFalseNode.php',
@@ -4176,6 +4151,10 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\Cache\\Traits\\FilesystemCommonTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/FilesystemCommonTrait.php',
         'Symfony\\Component\\Cache\\Traits\\FilesystemTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/FilesystemTrait.php',
         'Symfony\\Component\\Cache\\Traits\\ProxyTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/ProxyTrait.php',
+        'Symfony\\Component\\Cache\\Traits\\Redis5Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/Redis5Proxy.php',
+        'Symfony\\Component\\Cache\\Traits\\Redis6Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/Redis6Proxy.php',
+        'Symfony\\Component\\Cache\\Traits\\RedisCluster5Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisCluster5Proxy.php',
+        'Symfony\\Component\\Cache\\Traits\\RedisCluster6Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisCluster6Proxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisClusterNodeProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisClusterNodeProxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisClusterProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisClusterProxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisProxy.php',
@@ -4200,6 +4179,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\Console\\Completion\\Output\\BashCompletionOutput' => __DIR__ . '/..' . '/symfony/console/Completion/Output/BashCompletionOutput.php',
         'Symfony\\Component\\Console\\Completion\\Output\\CompletionOutputInterface' => __DIR__ . '/..' . '/symfony/console/Completion/Output/CompletionOutputInterface.php',
         'Symfony\\Component\\Console\\Completion\\Output\\FishCompletionOutput' => __DIR__ . '/..' . '/symfony/console/Completion/Output/FishCompletionOutput.php',
+        'Symfony\\Component\\Console\\Completion\\Output\\ZshCompletionOutput' => __DIR__ . '/..' . '/symfony/console/Completion/Output/ZshCompletionOutput.php',
         'Symfony\\Component\\Console\\Completion\\Suggestion' => __DIR__ . '/..' . '/symfony/console/Completion/Suggestion.php',
         'Symfony\\Component\\Console\\ConsoleEvents' => __DIR__ . '/..' . '/symfony/console/ConsoleEvents.php',
         'Symfony\\Component\\Console\\Cursor' => __DIR__ . '/..' . '/symfony/console/Cursor.php',
@@ -4241,6 +4221,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\Console\\Helper\\HelperInterface' => __DIR__ . '/..' . '/symfony/console/Helper/HelperInterface.php',
         'Symfony\\Component\\Console\\Helper\\HelperSet' => __DIR__ . '/..' . '/symfony/console/Helper/HelperSet.php',
         'Symfony\\Component\\Console\\Helper\\InputAwareHelper' => __DIR__ . '/..' . '/symfony/console/Helper/InputAwareHelper.php',
+        'Symfony\\Component\\Console\\Helper\\OutputWrapper' => __DIR__ . '/..' . '/symfony/console/Helper/OutputWrapper.php',
         'Symfony\\Component\\Console\\Helper\\ProcessHelper' => __DIR__ . '/..' . '/symfony/console/Helper/ProcessHelper.php',
         'Symfony\\Component\\Console\\Helper\\ProgressBar' => __DIR__ . '/..' . '/symfony/console/Helper/ProgressBar.php',
         'Symfony\\Component\\Console\\Helper\\ProgressIndicator' => __DIR__ . '/..' . '/symfony/console/Helper/ProgressIndicator.php',
@@ -4263,6 +4244,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\Console\\Input\\StreamableInputInterface' => __DIR__ . '/..' . '/symfony/console/Input/StreamableInputInterface.php',
         'Symfony\\Component\\Console\\Input\\StringInput' => __DIR__ . '/..' . '/symfony/console/Input/StringInput.php',
         'Symfony\\Component\\Console\\Logger\\ConsoleLogger' => __DIR__ . '/..' . '/symfony/console/Logger/ConsoleLogger.php',
+        'Symfony\\Component\\Console\\Output\\AnsiColorMode' => __DIR__ . '/..' . '/symfony/console/Output/AnsiColorMode.php',
         'Symfony\\Component\\Console\\Output\\BufferedOutput' => __DIR__ . '/..' . '/symfony/console/Output/BufferedOutput.php',
         'Symfony\\Component\\Console\\Output\\ConsoleOutput' => __DIR__ . '/..' . '/symfony/console/Output/ConsoleOutput.php',
         'Symfony\\Component\\Console\\Output\\ConsoleOutputInterface' => __DIR__ . '/..' . '/symfony/console/Output/ConsoleOutputInterface.php',
@@ -4317,6 +4299,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\ExpressionLanguage\\Node\\GetAttrNode' => __DIR__ . '/..' . '/symfony/expression-language/Node/GetAttrNode.php',
         'Symfony\\Component\\ExpressionLanguage\\Node\\NameNode' => __DIR__ . '/..' . '/symfony/expression-language/Node/NameNode.php',
         'Symfony\\Component\\ExpressionLanguage\\Node\\Node' => __DIR__ . '/..' . '/symfony/expression-language/Node/Node.php',
+        'Symfony\\Component\\ExpressionLanguage\\Node\\NullCoalesceNode' => __DIR__ . '/..' . '/symfony/expression-language/Node/NullCoalesceNode.php',
         'Symfony\\Component\\ExpressionLanguage\\Node\\UnaryNode' => __DIR__ . '/..' . '/symfony/expression-language/Node/UnaryNode.php',
         'Symfony\\Component\\ExpressionLanguage\\ParsedExpression' => __DIR__ . '/..' . '/symfony/expression-language/ParsedExpression.php',
         'Symfony\\Component\\ExpressionLanguage\\Parser' => __DIR__ . '/..' . '/symfony/expression-language/Parser.php',
@@ -4402,8 +4385,13 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\Translation\\Extractor\\AbstractFileExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/AbstractFileExtractor.php',
         'Symfony\\Component\\Translation\\Extractor\\ChainExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/ChainExtractor.php',
         'Symfony\\Component\\Translation\\Extractor\\ExtractorInterface' => __DIR__ . '/..' . '/symfony/translation/Extractor/ExtractorInterface.php',
+        'Symfony\\Component\\Translation\\Extractor\\PhpAstExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpAstExtractor.php',
         'Symfony\\Component\\Translation\\Extractor\\PhpExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpExtractor.php',
         'Symfony\\Component\\Translation\\Extractor\\PhpStringTokenParser' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpStringTokenParser.php',
+        'Symfony\\Component\\Translation\\Extractor\\Visitor\\AbstractVisitor' => __DIR__ . '/..' . '/symfony/translation/Extractor/Visitor/AbstractVisitor.php',
+        'Symfony\\Component\\Translation\\Extractor\\Visitor\\ConstraintVisitor' => __DIR__ . '/..' . '/symfony/translation/Extractor/Visitor/ConstraintVisitor.php',
+        'Symfony\\Component\\Translation\\Extractor\\Visitor\\TransMethodVisitor' => __DIR__ . '/..' . '/symfony/translation/Extractor/Visitor/TransMethodVisitor.php',
+        'Symfony\\Component\\Translation\\Extractor\\Visitor\\TranslatableMessageVisitor' => __DIR__ . '/..' . '/symfony/translation/Extractor/Visitor/TranslatableMessageVisitor.php',
         'Symfony\\Component\\Translation\\Formatter\\IntlFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatter.php',
         'Symfony\\Component\\Translation\\Formatter\\IntlFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatterInterface.php',
         'Symfony\\Component\\Translation\\Formatter\\MessageFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/MessageFormatter.php',
@@ -4464,6 +4452,7 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\VarDumper\\Caster\\DsPairStub' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/DsPairStub.php',
         'Symfony\\Component\\VarDumper\\Caster\\EnumStub' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/EnumStub.php',
         'Symfony\\Component\\VarDumper\\Caster\\ExceptionCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/ExceptionCaster.php',
+        'Symfony\\Component\\VarDumper\\Caster\\FFICaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/FFICaster.php',
         'Symfony\\Component\\VarDumper\\Caster\\FiberCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/FiberCaster.php',
         'Symfony\\Component\\VarDumper\\Caster\\FrameStub' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/FrameStub.php',
         'Symfony\\Component\\VarDumper\\Caster\\GmpCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/GmpCaster.php',
@@ -4515,13 +4504,21 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
         'Symfony\\Component\\VarDumper\\VarDumper' => __DIR__ . '/..' . '/symfony/var-dumper/VarDumper.php',
         'Symfony\\Component\\VarExporter\\Exception\\ClassNotFoundException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/ClassNotFoundException.php',
         'Symfony\\Component\\VarExporter\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\VarExporter\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/LogicException.php',
         'Symfony\\Component\\VarExporter\\Exception\\NotInstantiableTypeException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/NotInstantiableTypeException.php',
+        'Symfony\\Component\\VarExporter\\Hydrator' => __DIR__ . '/..' . '/symfony/var-exporter/Hydrator.php',
         'Symfony\\Component\\VarExporter\\Instantiator' => __DIR__ . '/..' . '/symfony/var-exporter/Instantiator.php',
         'Symfony\\Component\\VarExporter\\Internal\\Exporter' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Exporter.php',
         'Symfony\\Component\\VarExporter\\Internal\\Hydrator' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Hydrator.php',
+        'Symfony\\Component\\VarExporter\\Internal\\LazyObjectRegistry' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/LazyObjectRegistry.php',
+        'Symfony\\Component\\VarExporter\\Internal\\LazyObjectState' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/LazyObjectState.php',
         'Symfony\\Component\\VarExporter\\Internal\\Reference' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Reference.php',
         'Symfony\\Component\\VarExporter\\Internal\\Registry' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Registry.php',
         'Symfony\\Component\\VarExporter\\Internal\\Values' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Values.php',
+        'Symfony\\Component\\VarExporter\\LazyGhostTrait' => __DIR__ . '/..' . '/symfony/var-exporter/LazyGhostTrait.php',
+        'Symfony\\Component\\VarExporter\\LazyObjectInterface' => __DIR__ . '/..' . '/symfony/var-exporter/LazyObjectInterface.php',
+        'Symfony\\Component\\VarExporter\\LazyProxyTrait' => __DIR__ . '/..' . '/symfony/var-exporter/LazyProxyTrait.php',
+        'Symfony\\Component\\VarExporter\\ProxyHelper' => __DIR__ . '/..' . '/symfony/var-exporter/ProxyHelper.php',
         'Symfony\\Component\\VarExporter\\VarExporter' => __DIR__ . '/..' . '/symfony/var-exporter/VarExporter.php',
         'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
         'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
@@ -4666,10 +4663,9 @@ class ComposerStaticInita08b025eda04979caf130b8ba4c6fb76
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita08b025eda04979caf130b8ba4c6fb76::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita08b025eda04979caf130b8ba4c6fb76::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInita08b025eda04979caf130b8ba4c6fb76::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInita08b025eda04979caf130b8ba4c6fb76::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1d0a41caaf7129bf29d638631e30624e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1d0a41caaf7129bf29d638631e30624e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1d0a41caaf7129bf29d638631e30624e::$classMap;
 
         }, null, ClassLoader::class);
     }
