@@ -1,0 +1,16 @@
+{% set tagsCloud = [] %}
+{% for post in blog.copy()
+                    .where('visibility', 'nin', ['draft', 'hidden'])
+                    .where('template', 'ncontains', 'blog-tags')
+                    .where('template', 'ncontains', 'blog-tag')
+                    .sortBy('published_at', 'DESC')
+                    .limit(blogPostsLimit) %}
+    {% set tags = post.tags|replace({' ': ''}) %}
+    {% set tagsCloud = tagsCloud|merge(tags|split(',')) %}
+{% endfor %}
+
+{% if tagsCloud|length > 0 %}
+    {% for tag in tagsCloud|reduce((unique, item) => item in unique ? unique : unique|merge([item]), [])  %}
+        <a href="{{ url() }}/blog/tags/{{ tag|trim }}/" class="inline-block no-underline px-2 text-slate-900 border border-slate-900 dark:bg-slate-800 dark:text-slate-200 text-sm py-1 my-1">{{ tag|trim }}</a>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,6 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+    {% include 'views/templates/thermage/partials/nav.html' %}
+    {{ content|shortcodes|raw }}
+{% endblock %}

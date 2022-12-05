@@ -1,0 +1,49 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+
+    {% set blogID = 'blog' %}
+    {% set blogCollectionCacheID = strings('blog-collection-' ~ blogID).hash().toString() %}
+    {% if cache().has(blogCollectionCacheID) %}
+        {% set blog = cache().get(blogCollectionCacheID) %}
+    {% else %}
+        {% set blog = entries().fetch(blogID, {'collection': true}).exceptFromCollection(['content']) %}
+        {% do cache().set(blogCollectionCacheID, blog) %}
+    {% endif %}
+
+    {% set blogPostData = entries().fetch(blogID) %}
+
+    {% set blogPosts = blog.copy()
+                            .where('visibility', 'nin', ['draft', 'hidden'])
+                            .where('template', 'ncontains', 'blog-tags')
+                            .where('template', 'ncontains', 'blog-tag')
+                            .where('tags', 'contains',id|split('/')[2])
+                            .sortBy('published_at', 'DESC')%}
+
+    <h1 class="text-6xl p-0 mt-16 mb-16 font-bold text-center uppercase">Tag - {{title }}</h1>
+    <div class="flex">
+        <div class="w-full lg:w-9/12">
+            {# blog-posts #}
+            <div class="flex content-center flex-wrap ">
+            {% for post in blogPosts %}
+                <div class="w-full px-4 py-0 flex mb-2">
+                    <h3 class="w-10/12 text-base font-bold m-0 p-0">
+                        <a href="{{ url() }}/{{ post.id }}" style="text-decoration: none;">
+                            <span class="text-center border-r border-slate-900 dark:border-slate-800 inline-block mr-2 opacity-70" style="width: 130px;">{{ post.published_at|date("M d Y") }}</span> {{ post.title }}
+                        </a>
+                    </h3>
+                </div>
+            {% endfor %}
+            </div>
+            {# /blog-posts #}
+        </div>
+        <div class="hidden lg:block lg:w-3/12 pl-5">
+            <div class="p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900">
+                <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Popular Tags</h3>
+                {# tags-cloud #}
+                {% include 'views/templates/partials/blog/tags-cloud.html' %}
+                {# /tags-cloud #}
+            </div>
+        </div>
+    </div>
+{% endblock %}

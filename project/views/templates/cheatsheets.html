@@ -1,0 +1,10 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+<div>
+    <h1 class="text-5xl lg:text-9xl p-0 mt-16 mb-2 text-center uppercase font-bold">{{ title }}</h1>
+    <h2 class="text-center m-0 p-0 pl-6 pr-6 lg:pl-52 lg:pr-52 pb-20 text-xl font-normal">
+        {{ description|raw }}
+    </h2>
+    {{ content|markdown|shortcodes|raw }}
+{% endblock %}

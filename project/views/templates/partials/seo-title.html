@@ -1,0 +1,5 @@
+{% if (seo.title) %}
+    {{ seo.title|e('html') }}
+{% else %}
+    {{ title|e('html') }} | {{ registry().get('plugins.site.settings.title')|e('html') }}
+{% endif %}

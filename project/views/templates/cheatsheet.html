@@ -1,0 +1,23 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+    {% if slug == 'mastercss' %}
+    <a href="https://css.master.co" rel="nofollow">
+        <themed-picture data-catalyst-inline="true" data-catalyst=""><picture>
+            <img alt="Master CSS" src="https://user-images.githubusercontent.com/33840671/201703010-77bf2373-9899-40cc-98f5-30cf9b546941.svg" width="100%" style="visibility:visible;max-width:100%;">
+        </picture></themed-picture>
+    </a>
+    {% else %}
+    <h1 class="text-6xl p-0 mt-16 mb-0 font-bold text-center uppercase">{{ title }}</h1>
+    {% endif %}
+
+    <h2 class="text-center m-0 p-0 pl-6 pr-6 lg:pl-40 lg:pr-40 mt-4 text-xl font-normal">
+        CHEETSHEET
+    </h2>
+    <div class="text-center mb-20 mt-4 opacity-70">
+        <a href="{{ profile.website }}">website</a> |
+        <a href="{{ profile.documentation }}">documentation</a> | 
+        <a href="{{ profile.repository }} ">repository</a>
+    </div>
+    {{ content|markdown|shortcodes|raw }}
+{% endblock %}

@@ -131,6 +131,7 @@ on_this_page:
     title: Extending
     link: "extending"
 ---
+
 <a name="overview"></a>
 Entries are the fundamental building blocks of your Flextype powered project. Entries are local **flat files** or **external resources** that can be represented as a PHP array inside the controllers, templates, etc...
 

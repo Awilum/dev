@@ -1,0 +1,31 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+
+    {% set blogID = 'blog' %}
+    {% set blogCollectionCacheID = strings('blog-collection-' ~ blogID).hash().toString() %}
+    {% if cache().has(blogCollectionCacheID) %}
+        {% set blog = cache().get(blogCollectionCacheID) %}
+    {% else %}
+        {% set blog = entries().fetch(blogID, {'collection': true}).exceptFromCollection(['content']) %}
+        {% do cache().set(blogCollectionCacheID, blog) %}
+    {% endif %}
+
+    {% set blogPostData = entries().fetch(blogID) %}
+
+    {% set blogPosts = blog.copy()
+                            .where('visibility', 'nin', ['draft', 'hidden'])
+                            .where('template', 'ncontains', 'blog-tags')
+                            .where('template', 'ncontains', 'blog-tag')
+                            .sortBy('published_at', 'DESC')%}
+
+    <h1 class="text-6xl p-0 mt-16 mb-16 font-bold text-center uppercase">{{ title }}</h1>
+    <div class="flex">
+        <div class="mx-auto p-6 bg-white dark:bg-slate-800 mb-4 border border-slate-900">
+            <h3 class="text-xl font-bold pb-4 pt-0 mb-4 mt-0 p-0 border-b border-slate-900">Popular Tags</h3>
+            {# tags-cloud #}
+            {% include 'views/templates/partials/blog/tags-cloud.html' %}
+            {# /tags-cloud #}
+        </div>
+    </div>
+{% endblock %}

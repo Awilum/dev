@@ -1,0 +1,54 @@
+{% extends 'views/templates/masterblocks/partials/base.html' %}
+
+{% block content %}
+<div>
+    <div class="d:flex font-size:34px by:1|solid|rgb(31,41,55) py:10 mb:40 align-items:center">
+        <div>{{ title }}</div>
+        <a href="{{getBaseUrl()}}/masterblocks/heroes" class="ml:auto bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.5em color:rgb(31,41,55) text-decoration:none px:10 bg:rgb(252,211,77):hover">Add New Block</a>
+    </div>
+    
+    {% set currentBlocksPath = const('FLEXTYPE_PATH_PROJECT') ~ '/entries/masterblocks/' ~ slug  %}
+    {% set blocks = filesystem().find().name(slug ~ '-block-*').in(currentBlocksPath).files() %}
+    {% for block in blocks %}
+        {% set currentBlock = serializers().frontmatter().decode(filesystem().file(block.getPathname()).get()) %}
+
+        <div class="
+        border:1|solid|rgb(31,41,55)
+        mb:30
+        bg:white
+        " 
+        x-data="{ activeTab:  0 }">
+
+            <div class="flex bb:1|solid|rgb(31,41,55)">
+                <label
+                @click="activeTab = 0"
+                class="tab-control p:4|10 cursor:pointer br:1|solid|rgb(31,41,55) bg:rgb(252,211,77):hover"
+                :class="{ 'active': activeTab === 0 }"
+                >Preview</label>
+                <label
+                @click="activeTab = 1"
+                class="tab-control p:4|10 cursor:pointer br:1|solid|rgb(31,41,55) bg:rgb(252,211,77):hover"
+                :class="{ 'active': activeTab === 1 }"
+                >Code</label>
+                <label
+                class="tab-control ml:auto p:4|10 cursor:pointer bl:1|solid|rgb(31,41,55) bg:rgb(252,211,77):hover"
+                ><a href="" class="text-decoration:none color:rgb(31,41,55)">Edit</a></label>
+            </div>
+
+            <div class="tab-panel py:20" :class="{ 'active': activeTab === 0 }" x-show.transition.in.opacity.duration.600="activeTab === 0">
+                {{ currentBlock.content|raw }}
+            </div>
+
+            <div class="tab-panel p:10|20 overflow-x:scroll overflow-y:scroll" :class="{ 'active': activeTab === 1 }" x-show.transition.in.opacity.duration.600="activeTab === 1">
+                <pre><code class="language-html hljs">{{ currentBlock.content }}</code></pre>
+            </div>
+                
+            <div class="flex bt:1|solid|rgb(31,41,55)">
+                <label class="p:4|10 cursor:auto br:1|solid|rgb(31,41,55) font-size:.75em"><span class="font-weight:bold">Created by:</span> <a target="_blank" href="{{ currentBlock.author.website }}" class="color:rgb(31,41,55) text-decoration:none">{{ currentBlock.author.name }}</a></label>
+                <label class="p:4|10 cursor:auto br:1|solid|rgb(31,41,55) font-size:.75em"><span class="font-weight:bold">Modifed at:</span> {{ filesystem().file(block.getPathname()).lastModified()|date() }}</label>
+            </div>
+
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

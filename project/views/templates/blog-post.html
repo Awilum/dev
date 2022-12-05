@@ -1,0 +1,17 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+<div class="blog-post px-6 lg:px-28">
+    <h2 class="text-5xl mt-16 mb-16 font-bold">{{ title }}</h2>
+    {{ content|shortcodes|markdown|raw }}
+    <div class="pt-6 mt-6 border-t-2 border-slate-800">
+        <strong>Date:</strong> {{ published_at|date(registry().get('flextype.date_display_format')) }}
+        <strong class="ml-2">Tags:</strong>
+        {% if tags is not empty %}
+            {% for tag in tags|split(',') %}
+            <a href="{{ url() }}/blog/tags/{{ tag|trim }}">{{ tag|trim }}</a>{% if loop.last %}{% else %},{% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

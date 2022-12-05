@@ -1,0 +1,135 @@
+{% extends 'views/templates/partials/base.html' %}
+{% block content %}
+
+{% set name = uri|split('/')|last %}
+
+<div class="container mx-auto text-plate-900 pb-24">
+    <div class="uppercase text-center mt-24 mb-24">
+        <div>
+            <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits/{{ slug }}/">{{ title }}</a></h1>
+        </div>
+        <div>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/">DOWNLOADS</a></span>
+            <span class="opacity-50">/</span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/">EXTEND</a></span>
+            <span class="opacity-50">/</span>
+            <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/starter-kits/">STARTER KITS</a></span>
+        </div>
+    </div>
+    <div class="plate border border-slate-900 bg-white rounded-lg p-4 dark:border-slate-500">
+        {% set repo_name = github|split('/')  %}
+        {% set repo_name_length = repo_name|length %}
+
+    
+        {% set starter_kit = serializers().yaml().decode(fetch("https://raw.githubusercontent.com/" ~ repo_name[repo_name_length-2] ~ "/" ~ repo_name[repo_name_length-1] ~ "/master/starter-kit.yaml").get('body')) %}
+
+        <div class="flex content-center flex-wrap">
+            <div class="w-full lg:w-9/12 pl-2 pr-7 text-left">
+                <img src="{{ preview }}" alt="" class="w-full border-b-2 border-slate-900 p-6 dark:border-slate-500">
+
+                <div class="text-plate-900 mb-6">
+                    <div class="flex align-middle items-center">
+                        <div class="text-left">
+                            <h4 class="text-2xl pb-0 mb-0 block">{{ title }}</h4>
+                            <p class="m-0">
+                                {{ description }}
+                            </p>
+                            <p class="m-0 text-sm">
+                                <span class="opacity-50">by</span> <a href="{{ author.url }}"><b>{{ author.name }}</b></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mb-6 border-b border-slate-800 dark:border-slate-500">
+
+                {{ content|shortcodes|markdown|raw }}
+            </div>
+            <div class="w-full lg:w-3/12 p-2">
+                <div class="text-left mb-6 border-slate-800 dark:bg-slate-800 dark:border-slate-500 border">
+                    <div class="flex content-center flex-wrap p-6 pb-0">
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Version</p>
+                            <p>{{ starter_kit.version }}</p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Lincense</p>
+                            <p>{{ starter_kit.license }}</p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Dependencies</p>
+                            {% for key, val in starter_kit.dependencies %}
+                                <a href="{{ url() }}/flextype/downloads/extend/stater-kits/{{ key }}/">{{ key }}</a>: {{ val }}<br>
+                            {% endfor %}
+                            <p></p>
+                        </div>
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Links</p>
+                            <p>
+                                {% if starter_kit.homepage %}<a href="{{ starter_kit.homepage }}">Homepage</a><br>{% elseif github %}<a href="{{ github }}">Homepage</a><br>{% endif %}
+                                {% if starter_kit.documentation %}<a href="{{ starter_kit.documentation }}">Documentation</a><br>{% elseif github %}<a href="{{ github }}">Documentation</a><br>{% endif %}
+                                {% if starter_kit.changelog %}<a href="{{ starter_kit.changelog }}">Changelog</a><br>{% elseif github %}<a href="{{ github }}">Changelog</a><br>{% endif %}
+                                {% if starter_kit.bugs %}<a href="{{ starter_kit.bugs }}">Issues</a>{% elseif github %}<a href="{{ github }}">Issues</a><br>{% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex content-center flex-wrap p-6 pt-0">
+                        <div class="w-full">
+                            <p class="m-0 opacity-50">Categories</p>
+                            <p>
+                                {% set categories = category|replace({' ': ''}) %}
+                                {% for cat in categories|split(',') %}
+                                    <a class="underline" href="{{ url() }}/flextype/downloads/extend/starter_kits/categories/{{ cat|trim }}/">{{ cat|trim }}</a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-900 ">
+                        <a class="bg-amber-300 dark:bg-amber-800 dark:hover:bg-amber-900 dark:hover:text-white hover:text-slate-900 hover:bg-amber-400 no-underline block text-center py-2"
+                        href="{{ github }}/releases/download/v{{ starter_kit.version }}/{{ slug }}-{{ starter_kit.version }}.zip">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    
+    <div>
+        <div class="p-2 mt-8">
+            <h4 class="text-2xl">Other Starter Kits by {{ starter_kit.author.name }}</h4>
+            {% if author.email is not empty %}
+                {% set related_starter_kits = entries().fetch('flextype/downloads/extend/starter-kits', {'collection': true})
+                                                .where('author.email', 'eq', author.email)
+                                                .where('visibility', 'nin', ['draft', 'hidden'])
+                                                .random(6) %}
+
+                {% if related_starter_kits|length > 0 %}
+                    <div class="flex content-center flex-wrap mt-5">
+                        {% for related_starter_kit in related_starter_kits %}
+                            {% if related_starter_kit.slug != slug %}
+                            <a href="{{ url() }}/{{ related_starter_kit.id }}" class="w-full p-2 lg:w-6/12 no-underline ">
+                                <div class="flex p-6 align-middle">
+                                    <img src="{{ related_starter_kit.preview }}" alt="" class="w-40 p-6 border border-black mx-4">
+                                    <div class="text-left">
+                                        <h4 class="text-xl p-0 m-0 block">{{ related_starter_kit.title }}</h4>
+                                        <p class="m-0">
+                                            {{ related_starter_kit.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <hr class="mb-6 border-b border-slate-800 dark:border-slate-500">
+
+        <div class="p-2">
+            <a href="{{ url() }}/flextype/downloads/extend/starter-kits">More Starter Kits</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

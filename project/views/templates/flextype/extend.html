@@ -1,0 +1,40 @@
+{% extends 'views/templates/partials/base.html' %}
+{% block content %}
+{% include 'views/templates/flextype/partials/nav.html' %}
+
+    <div class="container mx-auto pb-24" >
+        <div class="uppercase text-center mt-24 mb-24">
+            <div>
+                <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/flextype/downloads/extend/plugins/{{ name }}/">{{ title }}</a></h1>
+            </div>
+            <div>
+                <span class="opacity-50"><a class="no-underline" href="{{ url() }}/flextype/downloads/">{{ entry.txt_downloads|raw }}</a></span>
+            </div>
+        </div>
+        <div>
+            <div class="flex content-center flex-wrap mt-12 justify-center bg-white border rounded-lg border-slate-900 dark:border-slate-500">
+                <div class="w-full lg:w-6/12 p-6 text-center border-r border-slate-900 dark:border-slate-500">
+                    <div class="p-12 h-full">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('plug', 'fontawesome|solid') }}</div>
+                        <h4 class="text-3xl">Plugins</h4>
+                        <div class="h-24 mb-10">
+                            Extend and customize Flextype functionality with plugins.
+                            <br>
+                        </div>
+                        <a class="button dark:border-slate-500" href="{{ url() }}/flextype/downloads/extend/plugins/">Browse Plugins</a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 p-6 text-center border-r border-slate-900">
+                    <div class="p-12 h-full">
+                        <div class="icon-svg-large mb-5 text-center">{{ icon('rocket', 'fontawesome|solid') }}</div>
+                        <h4 class="text-3xl">Starter Kits</h4>
+                        <div class="h-24 mb-10">
+                            Start your new Flextype project with beautifully designed boilerplates.
+                        </div>
+                        <a class="button dark:border-slate-500" href="{{ url() }}/flextype/downloads/extend/starter-kits/">Browse Starter Kits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

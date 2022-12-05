@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="{{ registry().get('flextype.settings.locale') }}">
+<head>
+    {% block head %}
+        <meta charset="{{ registry().get('flextype.settings.charset')|lower }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% if seo.description %}{{ seo.description }}{% elseif description %}{{ description }}{% else %}{{ registry().get('plugins.site.settings.description') }}{% endif %}">
+        <meta name="keywords" content="{% if keywords %}{{ keywords }}{% else %}{{ registry().get('plugins.site.settings.keywords') }}{% endif %}">
+        <meta name="robots" content="{% if robots %}{{ robots }}{% else %}{{ registry().get('plugins.site.settings.robots') }}{% endif %}">
+        <meta name="generator" content="Powered by Flextype"/>
+        <meta name="yandex-verification" content="43db5e67acec9539" />
+        <meta name="google-site-verification" content="XyouR0hgvSfKtO4fRBGJ5NCcbivoHxHdTIfeqFElADo" />
+        <meta name="google-site-verification" content="QCOiDmY3CImL3EPYu4WstZRkkOZKPr6LGOstWU1ZGXI" />
+        
+        {% do emitter().emit('onThemeMeta') %}
+
+        <title>{% apply spaceless %}{% include "views/templates/partials/seo-title.html" %}{% endapply %}</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        {% do registry().set('assets.site.css.dev', 'project/assets/dist/css/dev.min.css') %}
+
+        {% if registry().has('assets.site.css') %}
+            {% for css in registry().get('assets.site.css') %}
+                {#<link href="{{ url() }}/{{ css }}" rel="stylesheet">#}
+            {% endfor %}
+        {% endif %}
+
+        {% do emitter().emit('onThemeHeader') %}
+
+        <style>
+            body {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+                padding: 0;
+                margin: 0;
+            }
+
+            .tab-panel {
+                display: none;
+            }
+
+            .tab-panel.active {
+                display: block;
+            }
+
+            .tab-control.active {
+                background: rgb(252,211,77);
+            }
+
+
+            .nav-link.active {
+                background: rgb(252,211,77); 
+            }
+
+            code {
+                position: relative;
+                font-size: 0.75em;
+                opacity: .9;
+                padding-top: 0.15rem;
+                padding-bottom: 0.15rem;
+                font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+            }
+
+            code.hljs {
+                font-size: 0.75em;
+                opacity: .9;
+                font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+            }
+
+            pre > code.hljs {
+                position: relative;
+                font-size: 0.75em;
+                opacity: .9;
+                font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+            }
+            
+            .hljs{color:#24292e;background:#fff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:700}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:700}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}
+
+        </style>
+
+        <link href="https://yarnpkg.com/en/package/normalize.css" rel="stylesheet">
+        <script src="https://cdn.master.co/css"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
+
+    {% endblock %}
+</head>
+<body style="background: rgb(252, 250, 244);">
+    <header class="bg:white b:1px|solid|rgb(31,41,55) d:flex align-items:center mx:auto max-w:1200px px:4 px:0@lg overflow:hidden" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;">
+        <a href="{{ url() }}/" class="bg:rgb(252,211,77):hover m:0 p:0 py:9px px:13.5px font-size:13.5px line-height:18px font-weight:600 text-align:center br:1px|solid|rgb(31,41,55) text-decoration:none color:rgb(31,41,55) bg:rgb(252,211,77):hover">
+            AWILUM
+        </a>
+        <a class="bg:rgb(252,211,77):hover
+            {{ strings(id).contains('masterblocks') ? 'bg:rgb(252,211,77)' : '' }}
+            m:0 p:0 py:9px px:13.5px font-size:13.5px line-height:18px font-weight:600 uppercase text-align:center br:1px|solid|rgb(31,41,55) text-decoration:none color:rgb(31,41,55)" href="{{ url() }}/projects/">
+            Projects
+        </a>
+        <div class="d:flex" style="margin-left: auto;">
+            <a class="bg:rgb(252,211,77):hover 
+            {{ strings(id).contains('donate') ? 'bg:rgb(252,211,77)' : '' }}
+            m:0 p:0 py:9px px:13.5px font-size:13.5px line-height:18px font-weight:600 uppercase text-align:center bl:1px|solid|rgb(31,41,55) text-decoration:none color:rgb(31,41,55)" href="{{ url() }}/donate/">
+                Donate
+            </a>
+            <a class="bg:rgb(252,211,77):hover
+            {{ strings(id).contains('about') ? 'bg:rgb(252,211,77)' : '' }}
+            m:0 p:0 py:9px px:13.5px font-size:13.5px line-height:18px font-weight:600 uppercase text-align:center bl:1px|solid|rgb(31,41,55) text-decoration:none color:rgb(31,41,55)" href="{{ url() }}/about/">
+                About
+            </a>
+        </div>
+    </header>
+    <main role="main" class="mx:auto max-w:1200px px:4 px:0@lg">
+        <div class="align-items:center pb:40 mt:40">
+            <div class="w:full">
+                <h1 class="mb:0 font-size:44px">MasterCSS Blocks</h1>
+                <h2 class="opacity:.5 mt:0 font-size:24px">A collection of MasterCSS building blocks</h2>
+            </div>
+            <div class="w:full">
+                <a href="{{getBaseUrl()}}/masterblocks/headers" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'headers' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Headers</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'headers')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'heroes' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Heroes</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'heroes')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'blog' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Blog</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'blog')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'content' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Content</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'content')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'cta' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">CTA</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'cta')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mr:8 mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'testimonials' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Testimonials</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'testimonials')"|shortcodes }}</span></a>
+                <a href="{{getBaseUrl()}}/masterblocks/heroes" class="bg:white d:inline-block b:1|solid|rgb(31,41,55) font-size:.8em color:rgb(31,41,55) text-decoration:none mt:10@<=md nav-link bg:rgb(252,211,77):hover {{ slug == 'footers' ? 'active' : '' }}"><span class="p:4|10 d:inline-block">Footers</span><span class="bl:1|solid|rgb(31,41,55) p:4|10 d:inline-block">{{ "(getBlocksCount category:'footers')"|shortcodes }}</span></a>
+            </div>
+        </div>
+        <section>
+            {% block content %}{% endblock %}
+        </section>
+        <footer class="my:50 font-size:.8em text-align:center">
+            <p class="mb:0">Copyright © <a href="{{ url() }}/about/" class="color:rgb(31,41,55)">Sergey Romanenko</a></p>
+            <p class="mt:4">POWERED BY <a href="{{ url() }}/flextype/" class="color:rgb(31,41,55)">FLEXTYPE</a></p>
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </main>
+    {% if registry().has('assets.site.js') %}
+        {% for js in registry().get('assets.site.js') %}
+            {% if js %}
+                <script type="text/javascript" src="{{ url() }}/{{ js }}"></script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <script>
+
+     
+        hljs.highlightAll();
+
+    </script>
+    {% do emitter().emit('onThemeTail') %}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(87767318, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87767318" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    </body>
+</html>

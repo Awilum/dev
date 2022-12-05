@@ -1,0 +1,35 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+{% include 'views/templates/flextype/partials/nav.html' %}
+
+{% set txt = entries().fetch('flextype/documentation') %}
+<div class="container mx-auto pb-24 px-4 lg:px-0">
+    <h1 class="uppercase text-center text-3xl lg:text-6xl mt-24 mb-24">
+        DOCUMENTATION
+    </h1>
+    <div class="flex content-center flex-wrap mt-12">
+        {% set docsCategories = entries().fetch('flextype/documentation', {'collection': true})
+        .sortByAsc('order')
+        .onlyFromCollection(['title', 'id']) %}
+        
+        {% for category in docsCategories %}
+        <div class="w-full lg:w-4/12 p-3">
+            <div class="p-12 h-full">
+                <h3 class="mt-10 lg:mt-0 text-3xl">{{ category.title }}</h3>
+                {% set pages = entries().fetch(category.id, {'collection': true})
+                                               .sortByAsc('order')
+                                               .onlyFromCollection(['title', 'id', 'visibility'])%}
+                <ul class="list-none m-0">
+                {% for page in pages %} 
+                    {% if page.visibility != 'draft' %}       
+                        <li class="flex items-center"><a href="{{ url() }}/{{ page.id }}/">{{ page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

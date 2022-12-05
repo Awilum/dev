@@ -1,0 +1,19 @@
+<ul class="p-0 m-0">
+{% for post in blog.copy()
+    .where('visibility', 'nin', ['draft', 'hidden'])
+    .where('template', 'ncontains', 'blog-tags')
+    .where('template', 'ncontains', 'blog-tag')
+    .sortBy('published_at', 'DESC')
+    .limit(blogPostsRecentLimit) %}
+    <li class="mb-1 ml-0 list-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+        <line x1="8" y1="8" x2="12" y2="8" />
+        <line x1="8" y1="12" x2="12" y2="12" />
+        <line x1="8" y1="16" x2="12" y2="16" />
+        </svg>
+        <a href="{{ url() }}/{{ post.id }}/">{{ post.title }}</a>
+    </li>
+{% endfor %}
+</ul>

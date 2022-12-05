@@ -1,0 +1,16 @@
+{% extends 'views/templates/partials/base.html' %}
+
+{% block content %}
+{% include 'views/templates/thermage/partials/nav.html' %}
+<div class="uppercase text-center pt-24 pb-24 m-0 px-4 lg:px-0">
+    <div>
+        <h1 class="text-3xl lg:text-6xl mb-0"><a class="no-underline" href="{{ url() }}/{{ id }}/">{{ title }}</a></h1>
+        <div class="text-sm lg:text-lg">
+            <span class="opacity-60"><a class="no-underline" href="{{ url() }}/thermage/documentation/">Documentation</a></span>
+        </div>
+    </div>
+</div>
+<div class="px-4 lg:px-0">
+    {{ content|shortcodes|markdown|raw }}
+</div>
+{% endblock %}

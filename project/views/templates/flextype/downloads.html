@@ -1,0 +1,36 @@
+{% extends 'views/templates/partials/base.html' %}
+{% block content %}
+{% include 'views/templates/flextype/partials/nav.html' %}
+<div class="container mx-auto pb-24">
+    <h1 class="uppercase text-center text-3xl lg:text-6xl m-0 mt-24 mb-24">
+        {{ title|raw }}
+    </h1>
+    <h2 class="text-center m-0 pl-6 pr-6 lg:pl-40 lg:pr-40 pb-24 text-xl font-normal">
+        {{ description|raw }}
+    </h2>
+    <div class="flex content-center flex-wrap mt-12 justify-center border bg-white rounded-lg border-slate-900 dark:border-slate-500">
+        <div class="w-full lg:w-6/12 p-6 text-center border-r border-slate-900 dark:border-slate-500">
+            <div class="p-12 h-full plate">
+                <div class="icon-svg-large mb-5 text-center">{{ icon('download', 'fontawesome|solid') }}</div>
+                <h4 class="text-3xl">Flextype</h4>
+                <div class="h-20 mb-10">
+                    Release package contains:<br>
+                    <div class="no-underline px-2 py-1 mb-2 inline-block"><b>Flextype 1.0.0-alpha.3</b></div>
+                </div>
+                <a class="button dark:border-slate-500" href="https://github.com/flextype/flextype/releases/download/v1.0.0-alpha.3/flextype-1.0.0-alpha.3.zip">Download</a>
+            </div>
+        </div>
+        <div class="w-full lg:w-6/12 p-6 text-center">
+            <div class="p-12 h-full plate">
+                <div class="icon-svg-large mb-5 text-center">{{ icon('star', 'fontawesome|solid') }}</div>
+                <h4 class="text-3xl">Extend</h4>
+                <div class="h-20 mb-10">
+                    Extend and Customize Flextype Core Functionality by adding plugins and other packages.
+                    <br>
+                </div>
+                <a class="button dark:border-slate-500" href="{{ url() }}/flextype/downloads/extend/">Extend</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

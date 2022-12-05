@@ -1,0 +1,16 @@
+{% extends 'views/templates/partials/base.html' %}
+{% block content %}
+<div class="container mx-auto pb-24">
+    <h1 class="uppercase text-center text-3xl lg:text-6xl mt-24 mb-24">
+        {{ title|raw }}
+    </h1>
+    {% if description %}
+    <h2 class="text-center m-0 pb-24 pl-6 pr-6 lg:pl-40 lg:pr-40 text-xl font-normal">
+        {{ description|raw }}
+    </h2>
+    {% endif %}
+    <div class="releases lg:px-20">
+        {{ content|shortcodes|markdown|raw }}
+    </div>
+</div>
+{% endblock %}
