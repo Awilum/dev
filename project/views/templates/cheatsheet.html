@@ -8,16 +8,20 @@
         </picture></themed-picture>
     </a>
     {% else %}
-    <h1 class="text-6xl p-0 mt-16 mb-0 font-bold text-center uppercase">{{ title }}</h1>
+    <h1 class="text-5xl lg:text-9xl p-0 mt-16 mb-2 text-center uppercase font-bold">{{ title }}</h1>
     {% endif %}
 
     <h2 class="text-center m-0 p-0 pl-6 pr-6 lg:pl-40 lg:pr-40 mt-4 text-xl font-normal">
         CHEETSHEET
     </h2>
-    <div class="text-center mb-20 mt-4 opacity-70">
+    {% if profile %}
+    <div class="text-center opacity-70">
         <a href="{{ profile.website }}">website</a> |
         <a href="{{ profile.documentation }}">documentation</a> | 
         <a href="{{ profile.repository }} ">repository</a>
     </div>
-    {{ content|markdown|shortcodes|raw }}
+    {% endif %}
+    <div class="mt-20">
+        {{ content|markdown|shortcodes|raw }}
+    </div>
 {% endblock %}

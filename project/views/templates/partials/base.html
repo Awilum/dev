@@ -71,11 +71,19 @@
         {% endfor %}
     {% endif %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
-
     <script>
 
-     
+        
+        function showModal(id) {
+            document.getElementById('modal-content-' + id).style.display = 'block';
+            document.getElementById('modal-' + id).style.display = 'flex';
+        }
+
+        function closeModal(id) {
+            document.getElementById('modal-content-' + id).style.display = 'none';
+            document.getElementById('modal-' + id).style.display = 'none';
+        }
+
         hljs.highlightAll();
 
         var $tabs = function (target) {

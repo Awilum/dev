@@ -82,7 +82,7 @@
 
     code {
         position: relative;
-        font-size: 0.75em;
+        font-size: 0.80em;
         opacity: .9;
         padding-top: 0.15rem;
         padding-bottom: 0.15rem;
@@ -91,7 +91,7 @@
     }
 
     code.hljs {
-        font-size: 0.75em;
+        font-size: 0.85em;
         opacity: .9;
         @apply rounded-lg;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -99,7 +99,7 @@
 
     pre > code.hljs {
         position: relative;
-        font-size: 0.75em;
+        font-size: 0.80em;
         opacity: .9;
         @apply p-4 py-4 mb-10 rounded-lg;
         font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -910,6 +910,42 @@
     }
 
 
+    .card {
+        width: 100%;
+        text-align: left;
+        border: 1px solid #0d111a;
+        border-radius: 0.5rem;
+
+        font-weight: 300;
+        font-size: .95em;
+        overflow: hidden;
+        margin-bottom: 40px;
+     
+        @apply text-slate-100;
+    }
+
+    .card-header {
+        @apply bg-amber-300 text-slate-900 font-semibold;
+
+        border-bottom-width: 1px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        border-color: #0d111a;
+    }
+
+    .card-content {
+        @apply text-slate-900;
+
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        background: rgb(248,250,252);
+    }
+
+
     /* tables */
 
     .table {
@@ -943,7 +979,7 @@
 
     table {
         font-weight: 300;
-        font-size: .85em;
+        font-size: .95em;
         overflow: hidden;
         margin-bottom: 40px;
         width: 100%;

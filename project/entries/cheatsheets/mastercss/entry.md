@@ -1,9 +1,5 @@
 ---
-title: 'Master CSS'
-visibility: visible
-routable: true
-published_at: '26-05-2020 14:46'
-created_at: '26-05-2020 14:46'
+title: Master CSS
 description: 'A Virtual CSS language with enhanced syntax.'
 template: cheatsheet
 profile:
@@ -11,7 +7,7 @@ profile:
   documentation: https://docs.master.co/css
   repository: https://github.com/master-co/css
 seo:
-  title: 'Master CSS Cheat Sheet.'
+  title: 'Master CSS Cheatsheet.'
   description: 'A Virtual CSS language with enhanced syntax.'
 ---
 ### [Appearance](https://docs.master.co/css/appearance) 

@@ -2,8 +2,40 @@
 
 {% block content %}
 <h1 class="text-5xl lg:text-9xl p-0 mt-16 mb-16 font-bold text-center uppercase">{{ title }}</h1>
+
 <div class="lg:flex justify-center">
     <div class="w-full lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 p-4">
+        <h3 class="text-lg font-bold  pt-0 mb-0 mt-0 p-0">
+            <a href="{{ url() }}/masterblocks">Master Blocks</a>
+        </h3>
+        <div class="text-xs border-b pb-2 italic mb-4 border-slate-900 dark:border-slate-500 flex items-center">
+            css, html
+        </div>
+        <div>
+            Collection of carefully crafted and elegantly designed building blocks for MasterCSS.
+            <br><br>
+            These blocks provide the perfect foundation for any modern website builed on top of MasterCSS. 
+            With a vast array of options to choose from, you'll have everything you need to create a truly remarkable online presence.
+        </div>
+    </div>
+</div>
+
+<div class="lg:flex justify-center">
+    <div class="w-full lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 mt-10 p-4">
+        <h3 class="text-lg font-bold  pt-0 mb-0 mt-0 p-0">
+            <a href="{{ url() }}/cheatsheets">Cheatsheets</a>
+        </h3>
+        <div class="text-xs border-b pb-2 italic mb-4 border-slate-900 dark:border-slate-500 flex items-center">
+            css, html
+        </div>
+        <div>
+            Awesome cheatsheets for popular programming languages, frameworks and development tools.
+        </div>
+    </div>
+</div>
+
+<div class="lg:flex justify-center">
+    <div class="w-full lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 mt-10 p-4">
         <h3 class="text-lg font-bold  pt-0 mb-0 mt-0 p-0">
             <a href="{{ url() }}/thermage">Thermage</a>
         </h3>
@@ -15,6 +47,7 @@
         </div>
     </div>
 </div>
+
 <div class="lg:flex justify-center">
     <div class="w-fulll lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 mt-10 p-4">
         <h3 class="text-lg font-bold  pt-0 mb-0 mt-0 p-0">
@@ -33,9 +66,9 @@
                 <li class="mb-2"><a href="{{ url() }}/flextype/downloads/extend/plugins/feed/">Feed</a> - Supports Atom 1.0, RSS and JSON feed types and allows you to generate feeds for entries.</li>
             </ul>
             <div class="font-bold border-b pb-2 mb-4 border-slate-900 dark:border-slate-500">Starter Kits</div>
-            <ul>
+            <ul class="m-0 p-0">
                 <li class="mb-2"><a href="{{ url() }}/flextype/downloads/extend/starter-kits/clean/">Clean</a> - Minimalist Starter Kit for a blog or personal site.</li>
-                <li class="mb-2"><a href="{{ url() }}/flextype/downloads/extend/starter-kits/simpledoc/">Simpledoc</a> - Minimalist Starter Kit for a documentation site.</li>
+                <li><a href="{{ url() }}/flextype/downloads/extend/starter-kits/simpledoc/">Simpledoc</a> - Minimalist Starter Kit for a documentation site.</li>
             </ul>
         </div>
     </div>
@@ -51,7 +84,7 @@
         <div>
             Set of decoupled and reusable PHP building blocks for kickass Web Applications.<br><br>
             <div class="font-bold border-b pb-2 mb-4 border-slate-900 dark:border-slate-500">Packages</div>
-            <ul>
+            <ul class="m-0 p-0">
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/arrays/">Arrays</a> - Arrays Package provide a fluent, object-oriented interface for working with arrays, allowing you to chain multiple arrays operations together using a more readable syntax compared to traditional PHP arrays functions.</li>
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/benchmark/">Benchmark</a> - Benchmark Package provide basic functionality for benchmarking.</li>
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/strings/">Strings</a> - Strings Package provide a fluent, object-oriented interface for working with multibyte strings, allowing you to chain multiple string operations together using a more readable syntax compared to traditional PHP strings functions.</li>
@@ -60,7 +93,7 @@
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/macroable/">Macroable</a> - Macroable Package is a trait that, gives you the ability in effect to add new methods to a class at runtime.</li>
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/view/">View</a> - View Package provides basic methods for creating extendable PHP Views.</li>
                 <li class="mb-2"><a href="{{ url() }}/glowyphp/registry/">Registry</a> - Registry Package provides a fluent, object-oriented interface for storing data globally in a well managed fashion, helping to prevent global meltdown.</li>
-                <li class="mb-2"><a href="{{ url() }}/glowyphp/csrf/">Csrf</a> - Csrf Package provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.</li>
+                <li><a href="{{ url() }}/glowyphp/csrf/">Csrf</a> - Csrf Package provides Cross Site Request Forgery protection by comparing provided token with session token to ensure request validity.</li>
             </ul>
         </div>
     </div>
@@ -80,29 +113,40 @@
         </div>
     </div>
 </div>
+
 <div class="lg:flex justify-center">
     <div class="w-full lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 mt-10 p-4">
         <h3 class="text-lg font-bold pt-0 mb-0 mt-0 p-0">
-            <a href="https://github.com/Awilum/wp-api-explorer">WordPress Api Explorer</a>
+            <a href="https://wordpress.org/">WordPress Plugins</a>
         </h3>
         <div class="text-xs border-b pb-2 italic mb-4 dark:border-slate-500 border-slate-900 flex items-center">
             php
         </div>
         <div>
-            Plugin for WordPress adds API Explorer link for pages, posts, tags, categories and comments.
+            <div class="font-bold border-b pb-2 mb-4 border-slate-900 dark:border-slate-500">Plugins</div>
+            <ul class="m-0 p-0">
+                <li class="mb-2"><a href="https://github.com/Awilum/wp-html-minifier">HTML Minifier</a> - Allows to improve your website overall performance by minifing HTML output across your entire website.</li>
+                <li><a href="https://github.com/Awilum/wp-api-explorer">Api Explorer</a> - Adds API Explorer link for pages, posts, tags, categories and comments.</li>
+            </ul>
         </div>
     </div>
 </div>
+
 <div class="lg:flex justify-center">
     <div class="w-full lg:w-6/12 bg-white border border-slate-900 dark:border-slate-500 dark:bg-slate-700 mt-10 p-4">
         <h3 class="text-lg font-bold pt-0 mb-0 mt-0 p-0">
-            <a href="https://github.com/Awilum/wp-html-minifier">WordPress HTML Minifier</a>
+            <a href="https://craftcms.com/">Craft CMS Plugins</a>
         </h3>
         <div class="text-xs border-b pb-2 italic mb-4 dark:border-slate-500 border-slate-900 flex items-center">
             php
         </div>
         <div>
-            Plugin for WordPress allows to improve your website overall performance by minifing HTML output across your entire website.
+            <div class="font-bold border-b pb-2 mb-4 border-slate-900 dark:border-slate-500">Plugins</div>
+            <ul class="m-0 p-0">
+                <li class="mb-2"><a href="https://github.com/craft-plugins/benchmark">Benchmark</a> - Simple benchmark plugin with basic functionality for benchmarking.</li>
+                <li class="mb-2"><a href="https://github.com/craft-plugins/benchmark">Nice</a> - A nice plugin with nice functions for nice data representation.</li>
+                <li><a href="https://github.com/craft-plugins/reading-time">Reading Time</a> - Reading Time plugin shows the estimated reading time of the content, in seconds or minutes.</li>
+            </ul>
         </div>
     </div>
 </div>
