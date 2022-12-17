@@ -1,0 +1,16 @@
+# Global
+.composer
+composer.lock
+vendor/
+.phpunit.result.cache
+node_modules
+assets/
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+*.swp
+
+# phpstorm
+.idea/*
