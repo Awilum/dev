@@ -20,7 +20,7 @@ echo "Install icon vendors";
 cd ../;
 cd icon;
 npm install;
-npm gulp;
+gulp;
 
 echo "Install site vendors";
 cd ../;
@@ -40,4 +40,4 @@ composer install;
 echo "Rebuild styles";
 cd ../../;
 npm install;
-npx tailwindcss -i ./assets/src/css/styles.css -o ./assets/dist/css/styles.css --minify
+npx tailwindcss -i ./assets/src/css/dev.css -o ./assets/dist/css/dev.css --minify
