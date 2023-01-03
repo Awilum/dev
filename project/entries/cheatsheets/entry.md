@@ -14,7 +14,7 @@ seo:
 <div class="lg:flex">
    <div class="p-6 w-full lg:w-3/12 bg-white mb-4 rounded-lg border border-slate-900">
    <a href="(getBaseUrl)/cheatsheets/linux">        
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_logo.jpg?20090908114920" alt="" class="src">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_logo.jpg?20090908114920" alt="" class="src m-auto">
    </a>
  <div class="text-xl font-normal pt-4 mt-8 p-0 border-t text-center border-slate-900">
 Linux
