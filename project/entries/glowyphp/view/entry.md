@@ -14,7 +14,7 @@ View Package provides basic methods for creating extendable PHP Views.
 * **✓** Increase code reuse with view <a href="#extends-and-ingeritance">extends and inheritance</a>.
 * **✓** Built-in <a href="#escaping-helpers">escaping helpers</a>.
 * **✓** Easy to <a href="#extend">extend</a> core using macros.
-* **✓** Data <a href="{{ url() }}/glowyphp/view/methods/share/">sharing</a> across views.
+* **✓** Data <a href="(getBaseUrl)/glowyphp/view/methods/share/">sharing</a> across views.
 * **✓** Framework-agnostic, will work with any project.
 
 ### Installation
