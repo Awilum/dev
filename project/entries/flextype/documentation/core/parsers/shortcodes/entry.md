@@ -348,7 +348,7 @@ Parse textile text.
 %opening parenthesis%/textile%closing parenthesis%
 ```
 
-##### <a name="shortcode-textile"></a> `markdown`
+##### <a name="shortcode-markdown"></a> `markdown`
 
 Parse markdown text.
 
