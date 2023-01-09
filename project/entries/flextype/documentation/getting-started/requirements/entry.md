@@ -32,7 +32,7 @@ For local development you may install one of this amazing servers:
 
 * [XAMPP](https://www.apachefriends.org/index.html) is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 
-* [MAMP](https://www.mamp.info/mamp/mac/) is a free, local server environment that can be installed under macOS and Windows with just a few clicks. MAMP provides them with all the tools they need to run WordPress on their desktop PC for testing or development purposes, for example. With the help of our local DNS server NAMO, you can even easily test your projects on mobile devices. It doesn't matter if you prefer Apache or Nginx or if you want to work with PHP, Python, Perl or Ruby.
+* [MAMP](https://www.mamp.info/en/mac/) is a free, local server environment that can be installed under macOS and Windows with just a few clicks. MAMP provides them with all the tools they need to run WordPress on their desktop PC for testing or development purposes, for example. With the help of our local DNS server NAMO, you can even easily test your projects on mobile devices. It doesn't matter if you prefer Apache or Nginx or if you want to work with PHP, Python, Perl or Ruby.
 
 * [EasyPHP](https://www.easyphp.org) is a complete and ready-to-use PHP development environment on Windows including the web server Apache, the SQL Server MySQL and others development tools.
 
