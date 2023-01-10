@@ -54,7 +54,7 @@ class Sitemap {
             }
 
             // Prepare data
-            $entry_to_add['loc']        = $entry['id'] . $trailingSlash;
+            $entry_to_add['loc']        = $entry['id'] . ($trailingSlash ? '/' : '');
             $entry_to_add['lastmod']    = $entry['modified_at'];
             $entry_to_add['changefreq'] = $entry['changefreq'];
             $entry_to_add['priority']   = $entry['priority'];
