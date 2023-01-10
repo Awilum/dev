@@ -5,6 +5,7 @@ namespace Flextype\Plugin\Sitemap\Controllers;
 use Flextype\Plugin\Sitemap\Sitemap;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use function Flextype\registry;
 
 class SitemapController
 {
