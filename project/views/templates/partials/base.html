@@ -31,7 +31,7 @@
     {% endblock %}
 </head>
 <body class="antialiased text-gray-800" style="background: rgb(252, 250, 244);">
-    <header class="bg-white dark:bg-slate-800 border-b border-t border-l border-r border-slate-900 flex items-center container mx-auto max-w-[1200px] rounded-br-lg rounded-bl-lg" style="overflow:hidden">
+    <header class="bg-white border-b border-t border-l border-r border-slate-900 flex items-center container mx-auto max-w-[1200px] rounded-br-lg rounded-bl-lg" style="overflow:hidden">
         <a href="{{ url() }}/" class="nav-link {{ strings(id).contains('home') ? 'active' : '' }} m-0 p-0 p-6 py-2 px-3 text-xs font-semibold text-center border-r border-slate-900 brand-logo no-underline">
             AWILUM
         </a>
@@ -86,7 +86,7 @@
             </a>
         </div>
     </header>
-
+    
     <main role="main" class="container mx-auto max-w-[1200px] px-4 lg:px-0">
         <section>
             {% block content %}{% endblock %}
