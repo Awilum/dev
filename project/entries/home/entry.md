@@ -7,5 +7,5 @@ created_at: '26-05-2020 14:46'
 description: ''
 template: home
 seo:
-  title: PHP, JavasSript, HTML, CSS Developer Sergey Romanenko
+  title: Software Development Web Portal by Sergey Romanenko
 ---

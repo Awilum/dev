@@ -92,9 +92,13 @@
             {% block content %}{% endblock %}
         </section>
         <footer class="py-20 text-sm text-center">
-            <p class="m-0">Copyright © <a href="{{ url() }}/about/">Sergey Romanenko</a></p>
-            <p class="m-0 text-xs">POWERED BY <a href="{{ url() }}/flextype/">FLEXTYPE</a></p>
-            <p class="m-0 text-xs"><a href="{{ url() }}/sitemap.xml"">SITEMAP</a></p>
+            <p class="m-0 text-xs">
+                POWERED BY <a href="{{ url() }}/flextype/">FLEXTYPE</a><span class="px-2">|</span> 
+                <a href="{{ url() }}/sitemap.xml">SITEMAP</a><span class="px-2">|</span> 
+                <a target="_blank" href="https://github.com/Awilum/dev">SOURCE CODE</a><span class="px-2">|</span>
+                TOTAL PAGES: 744
+            </p>
+            <p class="m-0 mt-2 text-xs">Copyright © <a href="{{ url() }}/about/">Sergey Romanenko</a></p>
             {% block footer %}
             {% endblock %}
         </footer>
